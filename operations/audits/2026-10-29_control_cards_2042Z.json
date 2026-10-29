@@ -1,0 +1,345 @@
+{
+  "schema": "PHILBOT_CONTROL_CARD_AUDIT_V1",
+  "at": "2026-10-29T20:42:26Z",
+  "site": {
+    "project_id": "appgprj_6a7a3354c9808191933250182cf3f584",
+    "commit_sha": "70d2df9e47a270d4772de83eca943c69e4e6a142",
+    "version": 81,
+    "deployment": {
+      "id": "appgdep_6ae3af7f15148191ba0866dc3231cb8a",
+      "project_id": "appgprj_6a7a3354c9808191933250182cf3f584",
+      "title": "PhilBot Control",
+      "version_id": "appgprj_6a7a3354c9808191933250182cf3f584~appgver_3d1172cbae308191b05f19293cccb7ed",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://philbot-control.chapsrl19.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6a7a3354c9808191933250182cf3f584",
+      "failure_message": null,
+      "env_set_revision": 13,
+      "updated_at": "2026-10-29T20:41:45.047894+00:00"
+    },
+    "ownerOnlyPreserved": true
+  },
+  "rootCauses": {
+    "dashboard": "The real-account load ran only on mount or manual refresh, while a 30-second clock marked the same observations stale after 120 seconds. Shadow cards already had independent polling.",
+    "history": "The response awaited full trade backfill after the balance reads, allowing old historical work to age fresh balances.",
+    "personal": "Exchange balance near zero is real. Snapshot PNL uses initial equity as denominator; subsequent net deposit of 94.32905971 USDT explains cumulative -167.24% of initial capital without treating the deposit as profit."
+  },
+  "changes": [
+    "Visible-tab 30-second polling, visibility/focus/online refresh, one in-flight request and cleanup.",
+    "Per-request AsyncLocalStorage keeps env/waitUntil isolated; history backfill moved to Cloudflare waitUntil.",
+    "Real stale/future/unknown balance safeguards and withdrawal-plan completeness retained.",
+    "PERSONAL displays PNL dollars, initial capital and net flows alongside the existing percentage."
+  ],
+  "validation": {
+    "localTests": 155,
+    "testsPassed": 155,
+    "typescript": "PASS",
+    "build": "PASS",
+    "liveDashboardHttp": 200,
+    "liveDashboardConnected": 12,
+    "liveWorkerErrors": 0,
+    "browser": "Local preview rendered; private production UI requires ChatGPT login in cloud browser, so final visual live values not certified.",
+    "snapshot": {
+      "updatedAt": "2026-10-29T20:42:08.350Z",
+      "connected": 12,
+      "accounts": [
+        {
+          "id": "sniper-hl",
+          "status": "live",
+          "equity": 0,
+          "sourceAt": "2026-10-29T20:42:06.170Z",
+          "positions": 0
+        },
+        {
+          "id": "rafale-hl",
+          "status": "live",
+          "equity": 559.481847,
+          "sourceAt": "2026-10-29T20:42:07.303Z",
+          "positions": 19
+        },
+        {
+          "id": "r20-hl",
+          "status": "live",
+          "equity": 595.36,
+          "sourceAt": "2026-10-29T20:42:07.818Z",
+          "positions": 0,
+          "entryReady": true
+        },
+        {
+          "id": "recent40-corr12-hl",
+          "status": "live",
+          "equity": 667.831598,
+          "sourceAt": "2026-10-29T20:42:08.117Z",
+          "positions": 5,
+          "entryReady": true
+        },
+        {
+          "id": "sniper-blofin",
+          "status": "live",
+          "equity": 227.56325767545067,
+          "sourceAt": "2026-10-29T20:42:05.342Z",
+          "positions": 0
+        },
+        {
+          "id": "rafale-blofin",
+          "status": "live",
+          "equity": 93.54790652220971,
+          "sourceAt": "2026-10-29T20:42:06.006Z",
+          "positions": 0
+        },
+        {
+          "id": "rafale2-swing-blofin",
+          "status": "live",
+          "equity": 728.1771631655353,
+          "sourceAt": "2026-10-29T20:42:05.484Z",
+          "positions": 21
+        },
+        {
+          "id": "rafale2-dp60-blofin",
+          "status": "live",
+          "equity": 394.5163094905433,
+          "sourceAt": "2026-10-29T20:42:05.613Z",
+          "positions": 20
+        },
+        {
+          "id": "rafale-bitunix",
+          "status": "live",
+          "equity": 7.3267434e-9,
+          "sourceAt": "2026-10-29T20:42:04.479Z",
+          "positions": 0,
+          "entryReady": false
+        },
+        {
+          "id": "personal27-manual-blofin",
+          "status": "live",
+          "equity": 757.6546590728648,
+          "sourceAt": "2026-10-29T20:42:05.877Z",
+          "positions": 1,
+          "entryReady": true
+        },
+        {
+          "id": "outsider-hl",
+          "status": "live",
+          "equity": 714.655851,
+          "sourceAt": "2026-10-29T20:41:52.241Z",
+          "positions": 3,
+          "entryReady": true
+        },
+        {
+          "id": "personal-readonly-blofin",
+          "status": "live",
+          "equity": 1.6e-17,
+          "sourceAt": "2026-10-29T20:42:06.552Z",
+          "positions": 0
+        }
+      ],
+      "hybrid": [
+        {
+          "asset": "SAND",
+          "side": "SHORT",
+          "size": 3470,
+          "stop": 0.06194,
+          "protections": [
+            {
+              "kind": "SL",
+              "trigger": 0.06194,
+              "size": 3470,
+              "reduceOnly": true
+            }
+          ]
+        }
+      ],
+      "personal": {
+        "h": {
+          "available": true,
+          "estimated": true,
+          "referenceAt": 1792183963152,
+          "partialPeriod": true,
+          "metricKind": "pnl",
+          "cashFlowsVerified": true,
+          "requestedStart": 1790714528350,
+          "startAt": 1792183963152,
+          "endAt": 1793306526552,
+          "startEquity": 140.28854273133413,
+          "endEquity": 1.6e-17,
+          "pnl": -234.61760244133413,
+          "series": [
+            0,
+            4.962802964610205,
+            -31.98998072818084,
+            -65.12903774997241,
+            -92.30862839841629,
+            -86.94237356358312,
+            -92.08193563965072,
+            -100.79724246849881,
+            -46.978880868498806,
+            -66.37161077365467,
+            -126.78907191488884,
+            -115.1003210047947,
+            -117.34482153991605,
+            -81.77328502209227,
+            -95.15372455632249,
+            -169.56250672532485,
+            -169.56250672532485,
+            -168.29270094897123,
+            -170.71539899462206,
+            -172.5245938179554,
+            -175.1148482430844,
+            -175.30316922245999,
+            -177.7244993168427,
+            -178.6845905168427,
+            -166.8976306167297,
+            -176.13592201995908,
+            -163.54377675456826,
+            -234.61760244133413
+          ],
+          "equitySeries": [
+            140.28854273133413,
+            145.25134569594434,
+            108.2985620031533,
+            75.15950498136172,
+            47.97991433291785,
+            53.34616916775101,
+            48.20660709168341,
+            39.491300262835324,
+            93.30966186283533,
+            73.91693195767947,
+            13.499470816445296,
+            25.18822172653944,
+            22.94372119141808,
+            152.84431741924186,
+            139.46387788501164,
+            65.05509571600926,
+            65.05509571600926,
+            66.32490149236288,
+            63.902203446712065,
+            62.093008623378736,
+            59.502754198249725,
+            59.31443321887416,
+            56.89310312449143,
+            55.93301192449143,
+            67.71997182460441,
+            58.48168042137506,
+            71.07382568676587,
+            1.6e-17
+          ],
+          "timestamps": [
+            1792183963152,
+            1792225415604,
+            1792266306115,
+            1792308610270,
+            1792350049862,
+            1792391536653,
+            1792433387119,
+            1792474866168,
+            1792516464253,
+            1792557912028,
+            1792598999930,
+            1792640854951,
+            1792682438270,
+            1792724031667,
+            1792765954519,
+            1792807532201,
+            1792849041951,
+            1792890048891,
+            1792931748606,
+            1792973821700,
+            1793015172464,
+            1793056717516,
+            1793098496224,
+            1793139915145,
+            1793181753640,
+            1793223155038,
+            1793264881035,
+            1793306526552
+          ],
+          "volume": 0,
+          "netFlows": 94.32905971
+        },
+        "cashflowAudit": {
+          "verified": true,
+          "source": "BloFin /asset/bills · filtres Futures USDT entrants et sortants",
+          "count": 1,
+          "coveredFrom": 1792183963152,
+          "coveredTo": 1793306528350
+        }
+      }
+    }
+  },
+  "nativeHybrid": {
+    "at": "2026-10-29T20:36:59.718Z",
+    "equity": 755.1641741428648,
+    "asset": "SAND",
+    "side": "SHORT",
+    "size": 3470,
+    "nativeSL": {
+      "trigger": 0.06194,
+      "size": 3470,
+      "reduceOnly": true
+    },
+    "ordersSubmittedByDiagnostic": 0
+  },
+  "scope": {
+    "tradingServicesChanged": false,
+    "financialStrategyChanged": false,
+    "staleEntriesReplayed": 0
+  },
+  "cleanup": {
+    "credentialReferenceNamesCleared": [
+      "CARD_PERSONAL_TOKEN",
+      "CARD_HYBRID_TOKEN"
+    ],
+    "helperReplacedWithNonNetworkCompletionMarker": true,
+    "state": {
+      "environment": {
+        "id": "46cc9607-080a-493d-a358-6518a6a87323",
+        "name": "production"
+      },
+      "services": [
+        {
+          "serviceId": "0774e087-bd4b-4c79-819b-472b82674727",
+          "serviceName": "philbot-audit-positions-telegram-20261029",
+          "state": "online",
+          "statusText": "Online",
+          "activeDeployments": [
+            {
+              "id": "f49ad7c0-83aa-407f-ba95-5b5a44b7ba35",
+              "status": "SUCCESS",
+              "createdAt": "2026-10-29T20:41:30.314Z",
+              "statusUpdatedAt": "2026-10-29T20:41:36.886Z"
+            }
+          ],
+          "replicaStatus": {
+            "running": 0,
+            "crashed": 0,
+            "total": 1
+          },
+          "cronJob": null,
+          "issues": {
+            "warningCount": 0,
+            "criticalCount": 0
+          },
+          "recentFailures": 0,
+          "recentFailedDeployments": [],
+          "hasIssues": false,
+          "isCronJob": false,
+          "hasVolume": false
+        }
+      ],
+      "pendingWork": [],
+      "summary": {
+        "totalServices": 1,
+        "servicesWithIssues": 0,
+        "totalFailures": 0
+      }
+    }
+  },
+  "openItems": [
+    "Telegram native delivery proof via n8n still unresolved, not recertified here.",
+    "Phoenix shadow history/feed and Equilibre SUBMITTING reconciliation remain open.",
+    "Normalized per-trade PERSONAL quantities/fees were not recertified by this card repair; account PNL uses equity net of transfers."
+  ]
+}
