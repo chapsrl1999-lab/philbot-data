@@ -1,5 +1,32 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## Contrôle bot par bot — 29 octobre 2026, 17:06 UTC / 13:06 Québec — EN COURS
+Le tableau ci-dessous est une photographie des lectures successives, pas une certification de réception Telegram ni de disponibilité future.
+
+| Bot | Heure UTC | Positions | Résultat vérifié |
+|---|---|---:|---|
+| RAFALE2 + Phoenix / Hyperliquid | 16:20 | 20 réelles | Attribution et SL natifs individuels conformes; préflight OK. |
+| DP60 / BloFin | 16:53:54 | 22 réelles | Tous les SL individuels conformes; décisions/intentions/Telegram en attente = 0. Le premier contrôle temporaire gérait mal reduceOnly=\"true\" (chaîne); corrigé dans le diagnostic, pas un incident réel de protection. |
+| SWING 1H / BloFin | 16:20 | 21 réelles | Owners concordants et préflight OK. Ce bot prévoit AA_FLIP/TIME_30D sans stop natif fixe; aucune protection ajoutée ni stratégie modifiée. |
+| HWR / BloFin | 16:20 | 1 réelle | SL natif conforme; ordersPossible/signalsReady/diamondsReady/préflight OK; pas de halt. |
+| OUTSIDER / HL | 16:20 | 4 réelles | SL natifs individuels conformes; liveReady, blockers=[], agent vérifié. |
+| RECENT40 / HL | 16:00–16:12 | 4 réelles | Version 3450148, données 63/63 et exécuteur RUNNING; quatre stops relus indépendamment. |
+| R20 / HL (projet dédié 3663d4df) | 16:53 | 0 réelle | Live, nouvelles entrées autorisées, executionReady; accountValue 595,36 USD; outbox native vide. |
+| Range Wave / BloFin | 17:04 | 0 réelle | ACTIVE, modèle octobre prêt, clôture 17:00 traitée, flux alignés et aucune erreur; source réellement installée à distinguer du SHA configuré. |
+| Continuation / BloFin R1 | 17:02 | 0 réelle | BLOQUÉ : 78 contextes sur 79, EPIC manquant, 39 refus CONTEXT_INCOMPLETE / 7j; Health ancien faussement vert sur ce cas. |
+| Équilibre / Bitunix | 17:04 | 0 réelle | Entrées volontairement en pause, sorties armées. Une intention persistante produit une alerte PENDING_INTENTS : à examiner, pas effacée. |
+| Snapback V10 / HL et ancien SWING28 | 16:20 / Health | 0 réelle | Arrêt voulu conservé; pas de réarmement. |
+| TRAINS / Bitunix | 17:02 | 5 virtuelles | SHADOW; equity 612,28 vs 605,74 initial, PnL total +6,54 USDT; marks complets. Pas d'ordres réels. |
+| Phoenix V1 ET Phoenix Dual / Bitunix | 17:04 | 0 virtuelle | Les deux instances répondent, mais chaque variante affiche 1000 initial / 1000 actuel, zéro trade, zéro signal reçu; historique et alimentation non validés (#65 reste ouvert). Pas de volume durable. |
+
+**Correction Continuation en déploiement** : commit `601eb8b2a88d121b16385471f0881243fbbfa615`, déploiement Railway `8936eea2-4ce0-4dfc-9aa6-215efd45c071`. EPICUSDT USD-M a été officiellement réglé/retiré le 20 oct 2026 à 09:00 UTC (annonce Binance 290a660c0b2e4e888c582cd29ecf9ecc; ne pas confondre avec la radiation spot du 28 oct). Le correctif garde le contrat TradingView et seed à 79, exige les 78 sources encore actives pour les nouveaux batches et refuse toute nouvelle candidature EPIC; les autres sources manquantes restent bloquantes. Sauvegarde exclusive de l'état existant avant démarrage du moteur, historique/slots/dédup conservés, aucun batch précédemment rejeté rejoué. Readiness métier ajoutée au statut et à la source Health. **117 tests locaux passent**, dont reproduction des 78/79, maintien fail-closed, anti-rejeu et sauvegarde; validation Railway/live encore en cours. Ne pas déclarer la nouvelle frontière réelle traitée avant preuve.
+
+**Telegram : résultat limité et explicite.** Résumés clairement marqués CONTRÔLE envoyés un par un par les routes existantes pour HL, DP60, Swing1h, HWR, Outsider, Continuation, RangeWave, Équilibre, Snapback et Recent40. Tous acceptés par le webhook/relais HTTP 200. DP60 a reçu un résumé v2 corrigé après normalisation du diagnostic. Le webhook n8n répond avant de fournir un message_id Telegram : deliveryVerified=false, receipt=null. Donc aucune réception finale certifiée. Aucun ordre ou faux signal d'entrée généré. Tentative d'accès au workflow n8n : formulaire de connexion observé, demande d'authentification sécurisée expirée et navigateur ensuite non répondant; aucun accès confirmé au dernier nœud Telegram. Pas de clé divulguée ni de contournement.
+
+Le script ponctuel d'audit `0774e087-bd4b-4c79-819b-472b82674727` tourne jusqu'à fin puis 0 réplique, sans cron. Ses références d'accès doivent être vidées en fin d'audit. Les scripts de diagnostic ne sont pas de nouveaux moteurs de trading.
+
+---
+
 ## État effectif vérifié — 29 octobre 2026, 12:01 Québec (16:01 UTC)
 **RECENT40 : rattrapage terminé, exécution rétablie et nouvelle clôture traitée après déploiement. Le chantier global PhilBot reste ouvert; pas de garantie de disponibilité permanente ni de rentabilité déduite de ces contrôles.**
 
