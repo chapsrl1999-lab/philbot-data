@@ -1,4 +1,21 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
+
+## Dernier point — reprise du chantier bloqué, 29 octobre 2026 vers 11:55 Québec (15:55 UTC)
+**RECENT40 seulement : rattrapage des prix corrigé et vérifié; reprise de l'exécuteur PAS ENCORE VALIDÉE. Les autres bots ne sont pas recertifiés par cette intervention.**
+
+- Cause du backlog reproduite : après la réparation FIL, premier trou au 28 oct 00:00 UTC, vieux d'environ 40 heures; archive officielle du 28 encore HTTP 404. Le secours REST se limitait à 128 bougies (environ 30 heures utilisables en 15m), donc excluait ce trou sans tentative. Les 63 flux courants ne suffisaient pas à rendre le préfixe complet.
+- Correctif **installé** `69034a456102f5284e7b3bacd159b6a7c3f6268c`, déploiement `96f6ab2b-bc81-4646-b2ba-fef74089adcf` SUCCESS : secours borné à 512 bougies, récupération contiguë dans une transaction, six prédécesseurs exacts et accord de toutes les bougies existantes dans la fenêtre; aucun remplacement de prix consommé, aucune tolérance ajoutée, aucun saut de curseur. Barrière d'entrée strictement postérieure à la récupération des longs retards.
+- Validation : **113 tests locaux réussis** pour ce premier correctif; totalité des étapes Dockerfile 29/29 terminée. Copie indépendante via API publique de **63 sources / 20 160 bougies existantes** : **6 385 trous** remplis à partir de 63 réponses officielles, minimum six recouvrements, préfixe complet jusqu'au 29 oct 15:30 UTC, zéro ordre. Même quantité de bougies récupérée en production 15:45:40–15:45:58 UTC.
+- Recalcul terminé à 15:47:18 UTC : `status=CURRENT`, `lastBatch=target=1793288700000` (15:45 UTC), `modelReady=true`, **159 batches rattrapés, admitted=0, entrySuppressedBatches=159**. Les décisions historiques consultées restent STALE. Préflight API VERIFIED et exécuteur RECONCILED avec quatre positions à 15:45:42 UTC. Le livre réel et les stops restent gérés par les garde-fous natifs existants; la conformité individuelle après toute la reprise reste à confirmer.
+- **Anomalie encore ouverte :** exécuteur `BLOCKED / HYPERLIQUID_READ_UNAVAILABLE` depuis 15:47:48 UTC; Health indique toujours EXECUTION_NOT_READY et 4/4 protections agrégées aux cycles 15:49:56, 15:50:55, 15:51:56 UTC. Cause HTTP précise inconnue; **ne pas affirmer 429**, problème de clé ou panne globale sans preuve. Un test indépendant depuis une Fonction Railway obtient HTTP 200 aux cinq lectures userAbstraction, spotClearinghouseState, clearinghouseState, frontendOpenOrders et userFees à 15:52:53 UTC. Une autre sortie réseau ne certifie pas celle du bot.
+- Défaut de readiness confirmé : l'ancien `/ready` retournait 200 avec données CURRENT même lorsque l'exécuteur était BLOCKED. Second correctif **TESTÉ (123 tests locaux ciblés), commit créé et déploiement lancé, PAS ENCORE VÉRIFIÉ** : `34501482f85e993e7473a51d6b52bfa03a3e4efb`. /ready exige RUNNING + API VERIFIED + absence d'erreurs pour LIVE; le transport ne publie que le code HTTP borné, sans corps, URL, clé ou compte. Ce patch ne résout pas à lui seul la panne réseau.
+- Service RECENT40 toujours épinglé au SHA déployé, volume inchangé `b7380595-2aca-49af-8099-f92ca69707f4` sur /data; aucun changement de stratégie, risque, clés, budget, transfert ou replay d'entrées. Retour arrière CODE possible vers 69034a4 ou 8ad8bbc; ne pas effacer les prix ajoutés ni abaisser la barrière d'entrée.
+- Diagnostic temporaire `recent40-api-read-diagnostic-20261029`, service `f19917c2-31ce-4ade-8d97-6a64cc8cb797`, projet RECENT40 : script terminé, **0/1 réplique en exécution**, sans volume ni cron. Suppression tentée mais revue automatique refusée (« action non approuvée »); laissé terminé, aucun nouveau poller récurrent.
+- **À terminer :** confirmer SHA 3450148 installé; lire le code HTTP effectif de l'exécuteur, résoudre la cause si persistante; obtenir /ready 200 avec exécuteur RUNNING; deux cycles Health sans incident et Guardian rétabli; vérifier réception des prochains vrais paquets /candles. Ne fermer ni #63 ni le chantier global avant preuves et contrôle de non-récurrence.
+
+---
+
+## Historique des contrôles antérieurs (photographies, non état présent)
 Dernière constitution : 2026-10-29 (America/Toronto) · niveau : partiel, preuves vérifiées ci-dessous seulement
 
 ## Objectif et source de vérité
