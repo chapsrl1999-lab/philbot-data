@@ -1733,5 +1733,31 @@
     "n8n authentication required to inspect final Telegram node and obtain native delivery proof",
     "Phoenix historical ledgers, signal reception and persistence remain open",
     "Equilibre persisted SUBMITTING intent remains unresolved; entries stay paused"
-  ]
+  ],
+  "guardianCycles": [
+    {
+      "at": "2026-10-29T18:06:02.642609987Z",
+      "message": "[GUARDIAN][STATUS] status=CRITICAL source=error polls=20508 active=3 critical=1 warning=2 extras=2/2 transitions=1"
+    },
+    {
+      "at": "2026-10-29T18:06:02.642614937Z",
+      "message": "[GUARDIAN][ACTIVE] {\"incidents\":[{\"severity\":\"CRITICAL\",\"code\":\"GUARDIAN_HEALTH_UNAVAILABLE\",\"bot\":\"PHILBOT_HEALTH\",\"venue\":\"RAILWAY\",\"asset\":\"PORTFOLIO\"},{\"severity\":\"WARNING\",\"code\":\"SOURCE_RESTARTED_RECENTLY\",\"bot\":\"CONTINUATION\",\"venue\":\"BLOFIN_R1\",\"asset\":\"PORTFOLIO\"},{\"severity\":\"WARNING\",\"code\":\"TELEGRAM_DELIVERY_UNVERIFIED\",\"bot\":\"PHILBOT_HEALTH\",\"venue\":\"TELEGRAM\",\"asset\":\"PORTFOLIO\"}],\"remaining\":0}"
+    },
+    {
+      "at": "2026-10-29T18:06:42.528592791Z",
+      "message": "[GUARDIAN][STATUS] status=WARNING source=ok polls=20509 active=1 critical=0 warning=1 extras=2/2 transitions=2"
+    },
+    {
+      "at": "2026-10-29T18:06:42.528596071Z",
+      "message": "[GUARDIAN][ACTIVE] {\"incidents\":[{\"severity\":\"WARNING\",\"code\":\"TELEGRAM_DELIVERY_UNVERIFIED\",\"bot\":\"PHILBOT_HEALTH\",\"venue\":\"TELEGRAM\",\"asset\":\"PORTFOLIO\"}],\"remaining\":0}"
+    }
+  ],
+  "guardianVerifiedAt": "2026-10-29T18:06:42.528Z",
+  "guardianVerifiedStatus": {
+    "sourceOk": true,
+    "status": "WARNING",
+    "critical": 0,
+    "warning": 1,
+    "onlyIncident": "TELEGRAM_DELIVERY_UNVERIFIED"
+  }
 }
