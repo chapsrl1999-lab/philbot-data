@@ -1,0 +1,1737 @@
+{
+  "schema": "PHILBOT_SCAN_ROBUSTNESS_AUDIT_V1",
+  "at": "2026-10-29T18:07:22Z",
+  "timezone": "America/Toronto",
+  "ordersSubmittedByDiagnostics": 0,
+  "deployments": {
+    "continuation": {
+      "sha": "4e4af86dd8a6dbb74b4b93c58ec830bffd31a7bd",
+      "id": "726ada18-a215-4b89-9bdd-f29a98a96c39",
+      "status": "SUCCESS",
+      "localTests": 120
+    },
+    "health": {
+      "sha": "f61ca648c70f7fe266eb08b1efcb64dcdaac9aaf",
+      "id": "1f6bb197-ddf3-4b8f-8d75-2d129eb12584",
+      "status": "SUCCESS",
+      "localTests": 146
+    },
+    "guardian": {
+      "sha": "fb10afadde3854069c8404f262d6c289ac7c9c01",
+      "id": "0873341e-0008-4b3c-8553-328f626fd017",
+      "status": "SUCCESS",
+      "localTests": 43
+    }
+  },
+  "catalogUniverse": {
+    "http": 200,
+    "rows": [
+      {
+        "asset": "1000BONK",
+        "pair": "1000BONKUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "1000PEPE",
+        "pair": "1000PEPEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "AAVE",
+        "pair": "AAVEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ADA",
+        "pair": "ADAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "AERO",
+        "pair": "AEROUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ALGO",
+        "pair": "ALGOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "APE",
+        "pair": "APEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ARB",
+        "pair": "ARBUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ATOM",
+        "pair": "ATOMUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "AVAX",
+        "pair": "AVAXUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "BCH",
+        "pair": "BCHUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "BERA",
+        "pair": "BERAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "BNB",
+        "pair": "BNBUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "BRETT",
+        "pair": "BRETTUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "BTC",
+        "pair": "BTCUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "CAKE",
+        "pair": "CAKEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "COMP",
+        "pair": "COMPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "CRV",
+        "pair": "CRVUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "DEXE",
+        "pair": "DEXEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "DOGE",
+        "pair": "DOGEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "DOT",
+        "pair": "DOTUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "EIGEN",
+        "pair": "EIGENUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ENA",
+        "pair": "ENAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "EPIC",
+        "pair": "EPICUSDT",
+        "status": "SETTLING",
+        "deliveryDate": 1792486800000
+      },
+      {
+        "asset": "ETH",
+        "pair": "ETHUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "FARTCOIN",
+        "pair": "FARTCOINUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "FET",
+        "pair": "FETUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "FLOKI",
+        "pair": "1000FLOKIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "GALA",
+        "pair": "GALAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "GRT",
+        "pair": "GRTUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "GWEI",
+        "pair": "GWEIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "HBAR",
+        "pair": "HBARUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "H",
+        "pair": "HUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "HYPE",
+        "pair": "HYPEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ICP",
+        "pair": "ICPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "INJ",
+        "pair": "INJUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "JTO",
+        "pair": "JTOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "KAS",
+        "pair": "KASUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "LAYER",
+        "pair": "LAYERUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "LDO",
+        "pair": "LDOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "LINK",
+        "pair": "LINKUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "LTC",
+        "pair": "LTCUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "MEGA",
+        "pair": "MEGAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "MOODENG",
+        "pair": "MOODENGUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "MORPHO",
+        "pair": "MORPHOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "NEAR",
+        "pair": "NEARUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ONDO",
+        "pair": "ONDOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "OP",
+        "pair": "OPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ORDI",
+        "pair": "ORDIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "PARTI",
+        "pair": "PARTIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "PENDLE",
+        "pair": "PENDLEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "PENGU",
+        "pair": "PENGUUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "PNUT",
+        "pair": "PNUTUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "POL",
+        "pair": "POLUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "POPCAT",
+        "pair": "POPCATUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "PUMP",
+        "pair": "PUMPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "RENDER",
+        "pair": "RENDERUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "RUNE",
+        "pair": "RUNEUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SEI",
+        "pair": "SEIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SHIB",
+        "pair": "1000SHIBUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SOL",
+        "pair": "SOLUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SPX",
+        "pair": "SPXUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "STRK",
+        "pair": "STRKUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SUI",
+        "pair": "SUIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "SYN",
+        "pair": "SYNUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "TAO",
+        "pair": "TAOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "TIA",
+        "pair": "TIAUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "TRUMP",
+        "pair": "TRUMPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "TRX",
+        "pair": "TRXUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "TURBO",
+        "pair": "TURBOUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "UNI",
+        "pair": "UNIUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "VELVET",
+        "pair": "VELVETUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "VIRTUAL",
+        "pair": "VIRTUALUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "WIF",
+        "pair": "WIFUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "WLD",
+        "pair": "WLDUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "XLM",
+        "pair": "XLMUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "XPL",
+        "pair": "XPLUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "XRP",
+        "pair": "XRPUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      },
+      {
+        "asset": "ZEC",
+        "pair": "ZECUSDT",
+        "status": "TRADING",
+        "deliveryDate": 4133404800000
+      }
+    ]
+  },
+  "before": {
+    "at": "2026-10-29T17:59:13.883Z",
+    "status": {
+      "ok": true,
+      "strategy": "CONTINUATION",
+      "mode": "LIVE",
+      "contract": {
+        "strategy": "CONTINUATION",
+        "payloadVersion": "1-live",
+        "scriptVersion": "1.1.0-frozen",
+        "winnerId": "wideBuffer240__r22_l7_s3p5_h168__r22Velocity25"
+      },
+      "assets": 79,
+      "executionReady": false,
+      "executionError": "CONTEXT_INCOMPLETE",
+      "scanProgress": {
+        "schema": "PHILBOT_SCAN_PROGRESS_V1",
+        "cadenceMs": 3600000,
+        "graceMs": 300000,
+        "lastProcessedAt": 1793293200000,
+        "lastReceivedAt": 1793293242154,
+        "expectedContexts": 79,
+        "receivedContexts": 78,
+        "missingContexts": [
+          "EPIC"
+        ],
+        "lastBatchComplete": false
+      },
+      "sourceAvailability": {
+        "configuredAssets": 79,
+        "activeAssets": 78,
+        "retiredAssets": [
+          "EPIC"
+        ],
+        "lastBatchAt": 1793293200000,
+        "lastBatchAccepted": false,
+        "missingContexts": [],
+        "lastBatchRejection": "CONTEXT_INCOMPLETE",
+        "catalog": {
+          "lastCheckAt": 1793296602427,
+          "lastSuccessAt": 1793296602427,
+          "error": null,
+          "symbolCount": 942,
+          "unavailable": [
+            {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "status": "SETTLING",
+              "deliveryDate": 1792486800000
+            }
+          ],
+          "retirements": {
+            "EPIC": {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "effectiveAt": 1793296800000,
+              "deliveryDate": 1792486800000,
+              "confirmedAt": 1793296602427,
+              "reason": "BINANCE_NATIVE_SETTLEMENT",
+              "confirmations": 2
+            }
+          }
+        }
+      },
+      "pendingBatches": 0,
+      "pendingOutcomes": 0,
+      "openSlots": 0,
+      "openLiveSlots": 0,
+      "lastBatch": {
+        "t0": 1793293200000,
+        "processedAt": 1793293246735,
+        "contexts": 78,
+        "candidates": 1,
+        "result": {
+          "ok": false,
+          "reason": "CONTEXT_INCOMPLETE",
+          "missingContexts": [
+            "EPIC"
+          ],
+          "candidates": 1
+        }
+      },
+      "decisions7d": {
+        "total": 39,
+        "reasons": {
+          "CONTEXT_INCOMPLETE": 39
+        }
+      },
+      "causal": {
+        "scoreRows": 760,
+        "velocityOutcomes": 3840,
+        "flowRows": 46
+      },
+      "causalSeed": {
+        "asOf": "2026-09-02T00:00:00.000Z",
+        "source": "Binance Futures public 15m archives + funding-rate REST history",
+        "scoreRows": 1135,
+        "velocityOutcomes": 4169,
+        "flowRows": 9,
+        "generatedAt": "2026-09-02T19:05:58.434Z"
+      },
+      "updatedAt": 1793296602568
+    }
+  },
+  "freshBatch": {
+    "at": "2026-10-29T18:01:03.115Z",
+    "status": {
+      "ok": true,
+      "strategy": "CONTINUATION",
+      "mode": "LIVE",
+      "contract": {
+        "strategy": "CONTINUATION",
+        "payloadVersion": "1-live",
+        "scriptVersion": "1.1.0-frozen",
+        "winnerId": "wideBuffer240__r22_l7_s3p5_h168__r22Velocity25"
+      },
+      "assets": 79,
+      "executionReady": true,
+      "executionError": null,
+      "scanProgress": {
+        "schema": "PHILBOT_SCAN_PROGRESS_V1",
+        "cadenceMs": 3600000,
+        "graceMs": 300000,
+        "lastProcessedAt": 1793296800000,
+        "lastReceivedAt": 1793296842996,
+        "expectedContexts": 78,
+        "receivedContexts": 78,
+        "missingContexts": [],
+        "lastBatchComplete": true
+      },
+      "sourceAvailability": {
+        "configuredAssets": 79,
+        "activeAssets": 78,
+        "retiredAssets": [
+          "EPIC"
+        ],
+        "lastBatchAt": 1793296800000,
+        "lastBatchAccepted": true,
+        "missingContexts": [],
+        "lastBatchRejection": null,
+        "catalog": {
+          "lastCheckAt": 1793296602427,
+          "lastSuccessAt": 1793296602427,
+          "error": null,
+          "symbolCount": 942,
+          "unavailable": [
+            {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "status": "SETTLING",
+              "deliveryDate": 1792486800000
+            }
+          ],
+          "retirements": {
+            "EPIC": {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "effectiveAt": 1793296800000,
+              "deliveryDate": 1792486800000,
+              "confirmedAt": 1793296602427,
+              "reason": "BINANCE_NATIVE_SETTLEMENT",
+              "confirmations": 2
+            }
+          }
+        }
+      },
+      "pendingBatches": 0,
+      "pendingOutcomes": 0,
+      "openSlots": 0,
+      "openLiveSlots": 0,
+      "lastBatch": {
+        "t0": 1793296800000,
+        "processedAt": 1793296845597,
+        "contexts": 78,
+        "candidates": 0,
+        "result": {
+          "ok": true,
+          "candidates": 0,
+          "accepted": 0,
+          "rejected": 0
+        }
+      },
+      "decisions7d": {
+        "total": 39,
+        "reasons": {
+          "CONTEXT_INCOMPLETE": 39
+        }
+      },
+      "causal": {
+        "scoreRows": 760,
+        "velocityOutcomes": 3840,
+        "flowRows": 46
+      },
+      "causalSeed": {
+        "asOf": "2026-09-02T00:00:00.000Z",
+        "source": "Binance Futures public 15m archives + funding-rate REST history",
+        "scoreRows": 1135,
+        "velocityOutcomes": 4169,
+        "flowRows": 9,
+        "generatedAt": "2026-09-02T19:05:58.434Z"
+      },
+      "updatedAt": 1793296845682
+    }
+  },
+  "continuationFinal": {
+    "at": "2026-10-29T18:06:09.512Z",
+    "status": {
+      "ok": true,
+      "strategy": "CONTINUATION",
+      "mode": "LIVE",
+      "contract": {
+        "strategy": "CONTINUATION",
+        "payloadVersion": "1-live",
+        "scriptVersion": "1.1.0-frozen",
+        "winnerId": "wideBuffer240__r22_l7_s3p5_h168__r22Velocity25"
+      },
+      "assets": 79,
+      "executionReady": true,
+      "executionError": null,
+      "scanProgress": {
+        "schema": "PHILBOT_SCAN_PROGRESS_V1",
+        "cadenceMs": 3600000,
+        "graceMs": 300000,
+        "lastProcessedAt": 1793296800000,
+        "lastReceivedAt": 1793296842996,
+        "expectedContexts": 78,
+        "receivedContexts": 78,
+        "missingContexts": [],
+        "lastBatchComplete": true
+      },
+      "sourceAvailability": {
+        "configuredAssets": 79,
+        "activeAssets": 78,
+        "retiredAssets": [
+          "EPIC"
+        ],
+        "lastBatchAt": 1793296800000,
+        "lastBatchAccepted": true,
+        "missingContexts": [],
+        "lastBatchRejection": null,
+        "catalog": {
+          "lastCheckAt": 1793296602427,
+          "lastSuccessAt": 1793296602427,
+          "error": null,
+          "symbolCount": 942,
+          "unavailable": [
+            {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "status": "SETTLING",
+              "deliveryDate": 1792486800000
+            }
+          ],
+          "retirements": {
+            "EPIC": {
+              "asset": "EPIC",
+              "pair": "EPICUSDT",
+              "effectiveAt": 1793296800000,
+              "deliveryDate": 1792486800000,
+              "confirmedAt": 1793296602427,
+              "reason": "BINANCE_NATIVE_SETTLEMENT",
+              "confirmations": 2
+            }
+          }
+        }
+      },
+      "pendingBatches": 0,
+      "pendingOutcomes": 0,
+      "openSlots": 0,
+      "openLiveSlots": 0,
+      "lastBatch": {
+        "t0": 1793296800000,
+        "processedAt": 1793296845597,
+        "contexts": 78,
+        "candidates": 0,
+        "result": {
+          "ok": true,
+          "candidates": 0,
+          "accepted": 0,
+          "rejected": 0
+        }
+      },
+      "decisions7d": {
+        "total": 39,
+        "reasons": {
+          "CONTEXT_INCOMPLETE": 39
+        }
+      },
+      "causal": {
+        "scoreRows": 760,
+        "velocityOutcomes": 3840,
+        "flowRows": 46
+      },
+      "causalSeed": {
+        "asOf": "2026-09-02T00:00:00.000Z",
+        "source": "Binance Futures public 15m archives + funding-rate REST history",
+        "scoreRows": 1135,
+        "velocityOutcomes": 4169,
+        "flowRows": 9,
+        "generatedAt": "2026-09-02T19:05:58.434Z"
+      },
+      "updatedAt": 1793296845682
+    }
+  },
+  "healthFinal": {
+    "at": 1793297170922,
+    "revision": "f61ca648c70f7fe266eb08b1efcb64dcdaac9aaf",
+    "aggregate": {
+      "ok": true,
+      "status": "WARNING",
+      "generatedAt": "2026-10-29T18:06:10.920Z",
+      "bots": {
+        "total": 11,
+        "sourcesOk": 11
+      },
+      "positions": {
+        "open": 72,
+        "tracked": 72,
+        "attributed": 72,
+        "classifiedByRegistry": 0,
+        "registryAttributed": 0,
+        "total": 72
+      },
+      "protections": {
+        "verified": 72,
+        "eligible": 72
+      },
+      "nativeStops": {
+        "present": 51,
+        "required": 51
+      },
+      "incidents": {
+        "counts": {
+          "INFO": 0,
+          "WARNING": 1,
+          "CRITICAL": 0
+        },
+        "items": [
+          {
+            "severity": "WARNING",
+            "code": "TELEGRAM_DELIVERY_UNVERIFIED",
+            "bot": "PHILBOT_HEALTH",
+            "venue": "TELEGRAM",
+            "account": "PHILBOT_ALERTS",
+            "asset": "PORTFOLIO",
+            "error": "Le relais a accepté, sans preuve de réception Telegram.",
+            "deliveryLevel": "RELAY_ACCEPTED",
+            "lastAttemptAt": 1793297028159,
+            "lastVerifiedAt": null,
+            "notificationOwner": "GUARDIAN"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "bot": "RAFALE2",
+          "venue": "BITUNIX",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RANGE_WAVE",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RAFALE2",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 20,
+          "tracked": 20,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 20,
+          "owners": 20,
+          "nativeStops": {
+            "present": 20,
+            "required": 20
+          }
+        },
+        {
+          "bot": "RAFALE2_DP60",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 21,
+          "tracked": 21,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 21,
+          "owners": 21,
+          "nativeStops": {
+            "present": 21,
+            "required": 21
+          }
+        },
+        {
+          "bot": "CONTINUATION",
+          "venue": "BLOFIN_R1",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "SWING_V28",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "SNAPBACK_V10R1",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RAFALE2_SWING",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 21,
+          "tracked": 21,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 21,
+          "owners": 42,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "HYBRID_R4",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 1,
+          "tracked": 1,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 1,
+          "owners": 0,
+          "nativeStops": {
+            "present": 1,
+            "required": 1
+          }
+        },
+        {
+          "bot": "OUTSIDER",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 4,
+          "tracked": 4,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 4,
+          "owners": 0,
+          "nativeStops": {
+            "present": 4,
+            "required": 4
+          }
+        },
+        {
+          "bot": "RECENT40",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 5,
+          "tracked": 5,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 5,
+          "owners": 0,
+          "nativeStops": {
+            "present": 5,
+            "required": 5
+          }
+        }
+      ],
+      "pipeline": {
+        "observed": 18,
+        "pendingCritical": 0,
+        "failedCritical": 0,
+        "inFlight": 0,
+        "completed": 18
+      },
+      "registry": {
+        "configured": 31,
+        "active": 0,
+        "retired": 22,
+        "symbolOnlyMatching": false
+      },
+      "telegramHealth": {
+        "configured": true,
+        "delivery": {
+          "lastAttemptAt": 1793297028159,
+          "lastAcceptedAt": 1793297028159,
+          "level": "RELAY_ACCEPTED",
+          "lastReceipt": null
+        },
+        "newOrReminder": 0,
+        "resolutions": 0,
+        "repeatMs": 3600000
+      }
+    },
+    "sources": [
+      {
+        "bot": "RAFALE2",
+        "venue": "BITUNIX",
+        "ok": true,
+        "proof": {
+          "positions": 0,
+          "nativeRequired": true,
+          "checks": []
+        }
+      },
+      {
+        "bot": "RANGE_WAVE",
+        "venue": "BLOFIN",
+        "ok": true,
+        "proof": {
+          "positions": 0,
+          "nativeRequired": true,
+          "checks": []
+        }
+      },
+      {
+        "bot": "RAFALE2",
+        "venue": "HYPERLIQUID",
+        "ok": true,
+        "proof": {
+          "positions": 20,
+          "nativeRequired": true,
+          "checks": [
+            {
+              "asset": "ATOM",
+              "direction": "LONG",
+              "size": 6.09,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "CRV",
+              "direction": "SHORT",
+              "size": 29.7,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "COMP",
+              "direction": "SHORT",
+              "size": 0.45,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "ADA",
+              "direction": "SHORT",
+              "size": 141,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MINA",
+              "direction": "SHORT",
+              "size": 164,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "GALA",
+              "direction": "SHORT",
+              "size": 5182,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "WIF",
+              "direction": "SHORT",
+              "size": 48,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "TAO",
+              "direction": "LONG",
+              "size": 0.04,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "AR",
+              "direction": "SHORT",
+              "size": 26.49,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "ENA",
+              "direction": "LONG",
+              "size": 48,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MNT",
+              "direction": "SHORT",
+              "size": 21.1,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "HBAR",
+              "direction": "SHORT",
+              "size": 243,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "POPCAT",
+              "direction": "LONG",
+              "size": 235,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "BRETT",
+              "direction": "LONG",
+              "size": 6224,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "POL",
+              "direction": "SHORT",
+              "size": 121,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "XLM",
+              "direction": "SHORT",
+              "size": 165,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "SAND",
+              "direction": "SHORT",
+              "size": 299,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "XPL",
+              "direction": "LONG",
+              "size": 138,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "WLFI",
+              "direction": "SHORT",
+              "size": 200,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MEGA",
+              "direction": "SHORT",
+              "size": 217,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            }
+          ]
+        }
+      },
+      {
+        "bot": "RAFALE2_DP60",
+        "venue": "BLOFIN",
+        "ok": true,
+        "executionReady": true,
+        "executionError": null,
+        "proof": {
+          "positions": 21,
+          "nativeRequired": true,
+          "checks": [
+            {
+              "asset": "BRETT",
+              "direction": "LONG",
+              "size": 146.1,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "XTZ",
+              "direction": "LONG",
+              "size": 106,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MNT",
+              "direction": "SHORT",
+              "size": 6,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "QNT",
+              "direction": "LONG",
+              "size": 1.2,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "XPL",
+              "direction": "LONG",
+              "size": 65,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "POPCAT",
+              "direction": "LONG",
+              "size": 5.5,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MELANIA",
+              "direction": "LONG",
+              "size": 300,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "WLFI",
+              "direction": "SHORT",
+              "size": 99,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "MINA",
+              "direction": "SHORT",
+              "size": 73,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "HBAR",
+              "direction": "SHORT",
+              "size": 1.1,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "GWEI",
+              "direction": "LONG",
+              "size": 1.6,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "CRV",
+              "direction": "SHORT",
+              "size": 6,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "ENA",
+              "direction": "LONG",
+              "size": 0.5,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "AR",
+              "direction": "SHORT",
+              "size": 492,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "APT",
+              "direction": "SHORT",
+              "size": 2,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "SAND",
+              "direction": "SHORT",
+              "size": 64,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "ADA",
+              "direction": "SHORT",
+              "size": 4.31,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "CRO",
+              "direction": "SHORT",
+              "size": 3,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "GALA",
+              "direction": "SHORT",
+              "size": 63,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "WIF",
+              "direction": "SHORT",
+              "size": 10,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "GRT",
+              "direction": "SHORT",
+              "size": 4,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            }
+          ]
+        }
+      },
+      {
+        "bot": "CONTINUATION",
+        "venue": "BLOFIN_R1",
+        "ok": true,
+        "executionReady": true,
+        "executionError": null,
+        "proof": {
+          "positions": 0,
+          "nativeRequired": true,
+          "checks": []
+        }
+      },
+      {
+        "bot": "SWING_V28",
+        "venue": "HYPERLIQUID",
+        "ok": true,
+        "proof": {
+          "positions": 0,
+          "nativeRequired": true,
+          "checks": []
+        }
+      },
+      {
+        "bot": "SNAPBACK_V10R1",
+        "venue": "HYPERLIQUID",
+        "ok": true,
+        "executionReady": false,
+        "executionError": "armed,entries,protection",
+        "proof": {
+          "positions": 0,
+          "nativeRequired": true,
+          "checks": []
+        }
+      },
+      {
+        "bot": "RAFALE2_SWING",
+        "venue": "BLOFIN",
+        "ok": true,
+        "proof": {
+          "positions": 21,
+          "nativeRequired": false
+        }
+      },
+      {
+        "bot": "HYBRID_R4",
+        "venue": "BLOFIN",
+        "ok": true,
+        "executionReady": true,
+        "executionError": null,
+        "proof": {
+          "positions": 1,
+          "nativeRequired": true,
+          "checks": [
+            {
+              "asset": "SAND",
+              "direction": "SHORT",
+              "size": 3470,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            }
+          ]
+        }
+      },
+      {
+        "bot": "OUTSIDER",
+        "venue": "HYPERLIQUID",
+        "ok": true,
+        "executionReady": true,
+        "executionError": null,
+        "proof": {
+          "positions": 4,
+          "nativeRequired": true,
+          "checks": [
+            {
+              "asset": "ATOM",
+              "direction": "LONG",
+              "size": 24.29,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "DYDX",
+              "direction": "LONG",
+              "size": 1964,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "SUI",
+              "direction": "SHORT",
+              "size": 109.8,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "CRV",
+              "direction": "SHORT",
+              "size": 391,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            }
+          ]
+        }
+      },
+      {
+        "bot": "RECENT40",
+        "venue": "HYPERLIQUID",
+        "ok": true,
+        "executionReady": true,
+        "executionError": null,
+        "proof": {
+          "positions": 5,
+          "nativeRequired": true,
+          "checks": [
+            {
+              "asset": "ATOM",
+              "direction": "SHORT",
+              "size": 118.6,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "DYDX",
+              "direction": "LONG",
+              "size": 1699.2,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "SUI",
+              "direction": "SHORT",
+              "size": 88.1,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "CRV",
+              "direction": "SHORT",
+              "size": 211.3,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            },
+            {
+              "asset": "AXS",
+              "direction": "SHORT",
+              "size": 540.4,
+              "nativeStops": 1,
+              "quantityCovered": true,
+              "protectiveSide": true,
+              "reduceOnly": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "guardianFinal": {
+    "ok": true,
+    "service": "PHILBOT_GUARDIAN",
+    "revision": "fb10afadde3854069c8404f262d6c289ac7c9c01",
+    "notificationRouting": {
+      "healthOwned": 0,
+      "guardianOwned": 3
+    },
+    "mode": "READ_ONLY",
+    "pollMs": 60000,
+    "sourceConfigured": true,
+    "requireVolume": true,
+    "storage": {
+      "ok": true,
+      "mounted": true,
+      "requiredMountPath": "/monitor-data",
+      "statePath": "/monitor-data/guardian-state.json",
+      "eventPath": "/monitor-data/guardian-events.ndjson"
+    },
+    "notifierConfigured": true,
+    "notifierDelivery": {
+      "lastAttemptAt": 1793297144582,
+      "level": "RELAY_ACCEPTED",
+      "receipt": null,
+      "deliveryVerified": false
+    },
+    "withdrawalMonitor": {
+      "configured": true,
+      "pollMs": 900000,
+      "lastCheckAt": 1793297144596,
+      "lastSuccessAt": 1793297162029,
+      "lastError": null,
+      "lastPendingKey": null
+    },
+    "r20": {
+      "configured": true,
+      "lastRead": {
+        "at": 1793297144261,
+        "ok": true,
+        "mode": "LIVE"
+      }
+    }
+  },
+  "healthCycles": [
+    {
+      "at": "2026-10-29T18:05:38.232774687Z",
+      "message": "[PHILBOT-HEALTH] prêt port=8080 sources=11 poll=30000ms read-only=true registry=31 telegram=ON controlFeed=ON"
+    },
+    {
+      "at": "2026-10-29T18:05:39.536436088Z",
+      "message": "[PHILBOT-HEALTH] WARNING sources=11/11 positions=72/72 protections=72/72 executionFailures=0 pipelineStalls=0 critical=0 warning=1 registry=0/31 retired=22 telegram=RELAY_ACCEPTED"
+    },
+    {
+      "at": "2026-10-29T18:05:39.540013924Z",
+      "message": "[PHILBOT-HEALTH][SOURCE] CONTINUATION/BLOFIN_R1 ok=true positions=0 tracked=0 protected=0 registryAttributed=0 incidents={}"
+    },
+    {
+      "at": "2026-10-29T18:06:11.728745581Z",
+      "message": "[PHILBOT-HEALTH] WARNING sources=11/11 positions=72/72 protections=72/72 executionFailures=0 pipelineStalls=0 critical=0 warning=1 registry=0/31 retired=22 telegram=RELAY_ACCEPTED"
+    },
+    {
+      "at": "2026-10-29T18:06:11.728767510Z",
+      "message": "[PHILBOT-HEALTH][SOURCE] CONTINUATION/BLOFIN_R1 ok=true positions=0 tracked=0 protected=0 registryAttributed=0 incidents={}"
+    },
+    {
+      "at": "2026-10-29T18:07:11.496605649Z",
+      "message": "[PHILBOT-HEALTH] WARNING sources=11/11 positions=72/72 protections=72/72 executionFailures=0 pipelineStalls=0 critical=0 warning=1 registry=0/31 retired=22 telegram=RELAY_ACCEPTED"
+    },
+    {
+      "at": "2026-10-29T18:07:11.496624649Z",
+      "message": "[PHILBOT-HEALTH][SOURCE] CONTINUATION/BLOFIN_R1 ok=true positions=0 tracked=0 protected=0 registryAttributed=0 incidents={}"
+    }
+  ],
+  "automationUpdates": {
+    "externalGuard": {
+      "id": "6a92119ca7c88191b4a579829192fee3",
+      "scheduleUnchanged": true,
+      "scope": "read-only scan progress and notification delivery evidence"
+    },
+    "maintenance": {
+      "id": "6ae32b80a2848191af3800dcb3d9bac5",
+      "scheduleUnchanged": true,
+      "scope": "repair actual scan faults after current operating-state reconciliation"
+    }
+  },
+  "telegram": {
+    "health": "RELAY_ACCEPTED",
+    "guardian": "RELAY_ACCEPTED",
+    "nativeMessageId": null,
+    "deliveryVerified": false,
+    "browserObservedError": "Wrong username or password",
+    "workflowEdited": false
+  },
+  "openItems": [
+    "n8n authentication required to inspect final Telegram node and obtain native delivery proof",
+    "Phoenix historical ledgers, signal reception and persistence remain open",
+    "Equilibre persisted SUBMITTING intent remains unresolved; entries stay paused"
+  ]
+}
