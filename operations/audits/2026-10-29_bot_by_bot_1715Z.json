@@ -1,0 +1,3405 @@
+{
+  "schema": "PHILBOT_SEQUENTIAL_BOT_AUDIT_V1",
+  "date": "2026-10-29",
+  "timezone": "America/Toronto",
+  "ordersSubmittedByAudit": 0,
+  "telegramProofLevel": "RELAY_ACCEPTED_NOT_NATIVE_DELIVERY",
+  "bots": [
+    {
+      "key": "hl",
+      "at": "2026-10-29T17:07:24.215Z",
+      "sourceOk": true,
+      "positions": 20,
+      "liveArm": true,
+      "proof": [
+        {
+          "asset": "ATOM",
+          "dir": "LONG",
+          "qty": 6.09,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            586227618901
+          ]
+        },
+        {
+          "asset": "CRV",
+          "dir": "SHORT",
+          "qty": 29.7,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            584246415761
+          ]
+        },
+        {
+          "asset": "COMP",
+          "dir": "SHORT",
+          "qty": 0.45,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            584946955877
+          ]
+        },
+        {
+          "asset": "ADA",
+          "dir": "SHORT",
+          "qty": 141,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            575694644884
+          ]
+        },
+        {
+          "asset": "MINA",
+          "dir": "SHORT",
+          "qty": 164,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            585005318964
+          ]
+        },
+        {
+          "asset": "GALA",
+          "dir": "SHORT",
+          "qty": 5182,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            574273043441
+          ]
+        },
+        {
+          "asset": "WIF",
+          "dir": "SHORT",
+          "qty": 48,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            568744778015
+          ]
+        },
+        {
+          "asset": "TAO",
+          "dir": "LONG",
+          "qty": 0.04,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            585590617752
+          ]
+        },
+        {
+          "asset": "AR",
+          "dir": "SHORT",
+          "qty": 26.49,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            583427825913
+          ]
+        },
+        {
+          "asset": "ENA",
+          "dir": "LONG",
+          "qty": 48,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            583945763029
+          ]
+        },
+        {
+          "asset": "MNT",
+          "dir": "SHORT",
+          "qty": 21.1,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            588307681765
+          ]
+        },
+        {
+          "asset": "HBAR",
+          "dir": "SHORT",
+          "qty": 243,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            584999047713
+          ]
+        },
+        {
+          "asset": "POPCAT",
+          "dir": "LONG",
+          "qty": 235,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            587150983942
+          ]
+        },
+        {
+          "asset": "BRETT",
+          "dir": "LONG",
+          "qty": 6224,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            589107582039
+          ]
+        },
+        {
+          "asset": "POL",
+          "dir": "SHORT",
+          "qty": 121,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            583966141573
+          ]
+        },
+        {
+          "asset": "XLM",
+          "dir": "SHORT",
+          "qty": 165,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            583307393724
+          ]
+        },
+        {
+          "asset": "SAND",
+          "dir": "SHORT",
+          "qty": 299,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            580563021612
+          ]
+        },
+        {
+          "asset": "XPL",
+          "dir": "LONG",
+          "qty": 138,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            587327548795
+          ]
+        },
+        {
+          "asset": "WLFI",
+          "dir": "SHORT",
+          "qty": 200,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            585074525348
+          ]
+        },
+        {
+          "asset": "MEGA",
+          "dir": "SHORT",
+          "qty": 217,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": null,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            589068813315
+          ]
+        }
+      ],
+      "state": {
+        "readOk": true,
+        "stateReadOk": true,
+        "statePath": "/data/rafale2_hl_state.json",
+        "persistenceExpected": false,
+        "persistentMounted": true,
+        "mountPath": "/data",
+        "ownershipDurability": "EXCHANGE_NATIVE_CLOID",
+        "ownerRecoveryBootstrap": null,
+        "ownerCount": 20,
+        "pendingExitCount": 0,
+        "exhaustedExitCount": 0
+      },
+      "status": {
+        "ok": true,
+        "liveArm": true
+      }
+    },
+    {
+      "key": "dp60",
+      "at": "2026-10-29T17:07:24.377Z",
+      "sourceOk": true,
+      "positions": 22,
+      "liveArm": true,
+      "executionReady": true,
+      "executionError": null,
+      "proof": [
+        {
+          "asset": "BRETT",
+          "dir": "LONG",
+          "qty": 146.1,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029769806"
+          ]
+        },
+        {
+          "asset": "XTZ",
+          "dir": "LONG",
+          "qty": 106,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029740833"
+          ]
+        },
+        {
+          "asset": "MNT",
+          "dir": "SHORT",
+          "qty": 6,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029739689"
+          ]
+        },
+        {
+          "asset": "QNT",
+          "dir": "LONG",
+          "qty": 1.2,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029710598"
+          ]
+        },
+        {
+          "asset": "XPL",
+          "dir": "LONG",
+          "qty": 65,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029702679"
+          ]
+        },
+        {
+          "asset": "POPCAT",
+          "dir": "LONG",
+          "qty": 5.5,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029695926"
+          ]
+        },
+        {
+          "asset": "MELANIA",
+          "dir": "LONG",
+          "qty": 300,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029680184"
+          ]
+        },
+        {
+          "asset": "WLFI",
+          "dir": "SHORT",
+          "qty": 99,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029600897"
+          ]
+        },
+        {
+          "asset": "MINA",
+          "dir": "SHORT",
+          "qty": 73,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029597927"
+          ]
+        },
+        {
+          "asset": "HBAR",
+          "dir": "SHORT",
+          "qty": 1.1,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029597668"
+          ]
+        },
+        {
+          "asset": "GWEI",
+          "dir": "LONG",
+          "qty": 1.6,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029557905"
+          ]
+        },
+        {
+          "asset": "CRV",
+          "dir": "SHORT",
+          "qty": 6,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029550272"
+          ]
+        },
+        {
+          "asset": "POL",
+          "dir": "SHORT",
+          "qty": 5,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029534609"
+          ]
+        },
+        {
+          "asset": "ENA",
+          "dir": "LONG",
+          "qty": 0.5,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029533629"
+          ]
+        },
+        {
+          "asset": "AR",
+          "dir": "SHORT",
+          "qty": 492,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029511645"
+          ]
+        },
+        {
+          "asset": "APT",
+          "dir": "SHORT",
+          "qty": 2,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029464131"
+          ]
+        },
+        {
+          "asset": "SAND",
+          "dir": "SHORT",
+          "qty": 64,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029359582"
+          ]
+        },
+        {
+          "asset": "ADA",
+          "dir": "SHORT",
+          "qty": 4.31,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029017550"
+          ]
+        },
+        {
+          "asset": "CRO",
+          "dir": "SHORT",
+          "qty": 3,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10028997052"
+          ]
+        },
+        {
+          "asset": "GALA",
+          "dir": "SHORT",
+          "qty": 63,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10028902741"
+          ]
+        },
+        {
+          "asset": "WIF",
+          "dir": "SHORT",
+          "qty": 10,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10028472443"
+          ]
+        },
+        {
+          "asset": "GRT",
+          "dir": "SHORT",
+          "qty": 4,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10028345884"
+          ]
+        }
+      ],
+      "state": {
+        "readOk": true,
+        "persistenceExpected": true,
+        "persistentMounted": true,
+        "mountPath": "/data",
+        "ownerCount": 22,
+        "pendingOrderCount": 0,
+        "totalSlots": 22,
+        "openLiveSlots": 22,
+        "updatedAt": "2026-10-29T17:06:52.585Z"
+      },
+      "status": {
+        "mode": "LIVE",
+        "blockers": [],
+        "execution": {
+          "unresolvedIntents": 0,
+          "enabled": true,
+          "armedAt": 1789082992591,
+          "trackedPositions": 22,
+          "pendingDecisions": 0,
+          "pendingTelegram": 0,
+          "telegramConfigured": true,
+          "processedSinceBoot": 37,
+          "lastResult": {
+            "code": "EXIT_NO_OWNER"
+          },
+          "recentIntents": [
+            {
+              "id": "DP60baacb22a506cef2ef5c5e32d",
+              "status": "PROTECTED",
+              "createdAt": 1793201649090,
+              "instId": "XTZ-USDT",
+              "direction": "LONG",
+              "size": 106,
+              "entryPrice": 0.2755,
+              "requestedStopPrice": 0.2562,
+              "stopPrice": 0.2563,
+              "riskCash": 2.0351999999999997,
+              "leverage": 7,
+              "protectionError": null,
+              "protectionDiagnostic": null
+            },
+            {
+              "id": "DP604d2af472f8da5845065b2c5e",
+              "status": "FLAT",
+              "createdAt": 1793206053070,
+              "instId": "TURBO-USDT",
+              "direction": "SHORT",
+              "size": 0.7,
+              "entryPrice": 0.000815,
+              "requestedStopPrice": 0.0008414,
+              "stopPrice": 0.000841,
+              "riskCash": 0.18199999999999986,
+              "leverage": 15,
+              "protectionError": null,
+              "protectionDiagnostic": null
+            },
+            {
+              "id": "DP606dc4bd8f250b50107b7c8e21",
+              "status": "FLAT",
+              "createdAt": 1793251967821,
+              "instId": "DYDX-USDT",
+              "direction": "SHORT",
+              "size": 42,
+              "entryPrice": 0.1088,
+              "requestedStopPrice": 0.1133,
+              "stopPrice": 0.1133,
+              "riskCash": 0.18900000000000017,
+              "leverage": 12,
+              "protectionError": null,
+              "protectionDiagnostic": null
+            },
+            {
+              "id": "DP601c7a8f2a8f853a9dae1ebb89",
+              "status": "PROTECTED",
+              "createdAt": 1793257373169,
+              "instId": "BRETT-USDT",
+              "direction": "LONG",
+              "size": 146.1,
+              "entryPrice": 0.004588,
+              "requestedStopPrice": 0.004421,
+              "stopPrice": 0.004425,
+              "riskCash": 2.3814300000000115,
+              "leverage": 14,
+              "protectionError": null,
+              "protectionDiagnostic": null
+            },
+            {
+              "id": "DP60fbc55428c80a426369228250",
+              "status": "FLAT",
+              "createdAt": 1793282575398,
+              "instId": "INJ-USDT",
+              "direction": "SHORT",
+              "size": 18.9,
+              "entryPrice": 8.027,
+              "requestedStopPrice": 8.151,
+              "stopPrice": 8.144,
+              "riskCash": 2.211299999999983,
+              "leverage": 34,
+              "protectionError": null,
+              "protectionDiagnostic": null
+            }
+          ],
+          "recentDecisions": [
+            {
+              "id": "1e0520699465b99e14f482c64affd84d055271f71a888efd9d6ad5b78d931d70",
+              "eventAt": 1793198700000,
+              "coin": "MNT",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "edd16b3e67721ee866208e39a4cb8d812a3203d626bc1629bc60b160e76a5c16",
+              "eventAt": 1793199600000,
+              "coin": "DASH",
+              "direction": "LONG",
+              "interval": "30",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "c260aa396a793be5004055c72737eb18f05f5d5f6f6feb79d3cfc254c4e97eb3",
+              "eventAt": 1793201400000,
+              "coin": "XTZ",
+              "direction": "LONG",
+              "interval": "30",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "d13161afa21ebdca09ada2478589611449950ba044e9f877b89d9365061846ef",
+              "eventAt": 1793205900000,
+              "coin": "TURBO",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "a33b56f61b399325e2281552e095ddd3b2d6ea618a5f06af280f77246dae6646",
+              "eventAt": 1793243700000,
+              "coin": "VIRTUAL",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "QUALITY_GATE",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": "SENT",
+              "telegramError": null
+            },
+            {
+              "id": "083d56a936eb8e2cf7faab6c422ada1caa04415264995ccb8a1408480fa1599c",
+              "eventAt": 1793245500000,
+              "coin": "NEO",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "QUALITY_GATE",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": "SENT",
+              "telegramError": null
+            },
+            {
+              "id": "5dfd05fd487f4a2923213b1fe926ae5c712dcc19f98817482bf7200232e84ce7",
+              "eventAt": 1793251800000,
+              "coin": "DYDX",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "dea5ed93696cd5299e282b6f61cf2e49aef40d5d8f8a820be7ee674ffdfdce07",
+              "eventAt": 1793253600000,
+              "coin": "MEGA",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "QUALITY_GATE",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": "SENT",
+              "telegramError": null
+            },
+            {
+              "id": "4ad28cf2e3e162a8bb9d7bdb2f9705c5bf4cb073895d9aa07eaf790e1d4afaac",
+              "eventAt": 1793257200000,
+              "coin": "BRETT",
+              "direction": "LONG",
+              "interval": "30",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            },
+            {
+              "id": "ce3e980bfd40d610655912f73c007a336b3547f76cc2bb9b71ac5ea729595f9d",
+              "eventAt": 1793282400000,
+              "coin": "INJ",
+              "direction": "SHORT",
+              "interval": "15",
+              "status": "COMPLETED",
+              "resultCode": "ENTRY_PROTECTED",
+              "protectionError": null,
+              "protectionDiagnostic": null,
+              "telegramStatus": null,
+              "telegramError": null
+            }
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "key": "swing",
+      "at": "2026-10-29T17:07:24.771Z",
+      "sourceOk": true,
+      "positions": 21,
+      "liveArm": true,
+      "proof": [
+        {
+          "asset": "PEPE",
+          "dir": "LONG",
+          "qty": 1.51,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0000042591,
+          "deadline": 1795827600000
+        },
+        {
+          "asset": "BTC",
+          "dir": "LONG",
+          "qty": 3.2,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 77692.3711473662,
+          "deadline": 1795816800000
+        },
+        {
+          "asset": "DOT",
+          "dir": "SHORT",
+          "qty": 70.4,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 1.2155624224,
+          "deadline": 1795460400000
+        },
+        {
+          "asset": "NEAR",
+          "dir": "SHORT",
+          "qty": 1.2,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 5.519129996,
+          "deadline": 1795431600000
+        },
+        {
+          "asset": "VIRTUAL",
+          "dir": "SHORT",
+          "qty": 188,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.7227778495,
+          "deadline": 1795366800000
+        },
+        {
+          "asset": "PENGU",
+          "dir": "SHORT",
+          "qty": 195,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0086352302,
+          "deadline": 1795363200000
+        },
+        {
+          "asset": "ICP",
+          "dir": "LONG",
+          "qty": 3006,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 2.5827530672,
+          "deadline": 1795208400000
+        },
+        {
+          "asset": "XLM",
+          "dir": "SHORT",
+          "qty": 4.6,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.2037648308,
+          "deadline": 1794661200000
+        },
+        {
+          "asset": "H",
+          "dir": "LONG",
+          "qty": 99,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0439924097,
+          "deadline": 1794445200000
+        },
+        {
+          "asset": "AVAX",
+          "dir": "SHORT",
+          "qty": 5.1,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 12.1109211075,
+          "deadline": 1794074400000
+        },
+        {
+          "asset": "POPCAT",
+          "dir": "SHORT",
+          "qty": 134.4,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0573218338,
+          "deadline": 1794006000000
+        },
+        {
+          "asset": "PENDLE",
+          "dir": "SHORT",
+          "qty": 28,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 2.6158609969,
+          "deadline": 1793998800000
+        },
+        {
+          "asset": "GWEI",
+          "dir": "SHORT",
+          "qty": 15.8,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0260138272,
+          "deadline": 1793998800000
+        },
+        {
+          "asset": "DOGE",
+          "dir": "SHORT",
+          "qty": 0.97,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.1001200733,
+          "deadline": 1793998800000
+        },
+        {
+          "asset": "TURBO",
+          "dir": "SHORT",
+          "qty": 7.1,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0011279737,
+          "deadline": 1793991600000
+        },
+        {
+          "asset": "SHIB",
+          "dir": "SHORT",
+          "qty": 14,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0000061825,
+          "deadline": 1793991600000
+        },
+        {
+          "asset": "FARTCOIN",
+          "dir": "SHORT",
+          "qty": 289,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.1974192683,
+          "deadline": 1793988000000
+        },
+        {
+          "asset": "PNUT",
+          "dir": "SHORT",
+          "qty": 116.1,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0580237019,
+          "deadline": 1793984400000
+        },
+        {
+          "asset": "WIF",
+          "dir": "SHORT",
+          "qty": 220,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.2784028456,
+          "deadline": 1793966400000
+        },
+        {
+          "asset": "UNI",
+          "dir": "SHORT",
+          "qty": 5.7,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 9.8687758991,
+          "deadline": 1793966400000
+        },
+        {
+          "asset": "MEGA",
+          "dir": "SHORT",
+          "qty": 114,
+          "ok": true,
+          "ownerMatched": true,
+          "protection": "MANAGED_EXIT_WITHOUT_NATIVE_STOP",
+          "band": 0.0539297002,
+          "deadline": 1793937600000
+        }
+      ],
+      "state": {
+        "readOk": true,
+        "stateReadOk": true,
+        "statePath": "/data/rafale2_swing_state.json",
+        "persistenceExpected": true,
+        "persistentMounted": true,
+        "mountPath": "/data",
+        "ownershipDurability": "PERSISTENT_STATE_DEDICATED_ACCOUNT",
+        "ownerCount": 21,
+        "pendingOrderCount": 0
+      },
+      "status": {
+        "ok": true,
+        "mode": "LIVE",
+        "liveArm": true,
+        "blockers": []
+      }
+    },
+    {
+      "key": "hwr",
+      "at": "2026-10-29T17:07:25.661Z",
+      "sourceOk": true,
+      "positions": 1,
+      "liveArm": true,
+      "executionReady": true,
+      "executionError": null,
+      "proof": [
+        {
+          "asset": "SAND",
+          "dir": "SHORT",
+          "qty": 3470,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            "10029359397"
+          ]
+        }
+      ],
+      "state": {
+        "readOk": true,
+        "persistenceExpected": false,
+        "pendingOrderCount": 0
+      },
+      "status": {
+        "mode": "COLLECTION_WITH_LIVE_EXECUTOR",
+        "latestBoundary": 1793293200000
+      }
+    },
+    {
+      "key": "outsider",
+      "at": "2026-10-29T17:07:25.702Z",
+      "sourceOk": true,
+      "positions": 4,
+      "liveArm": true,
+      "executionReady": true,
+      "executionError": null,
+      "proof": [
+        {
+          "asset": "ATOM",
+          "dir": "LONG",
+          "qty": 24.29,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            null
+          ]
+        },
+        {
+          "asset": "DYDX",
+          "dir": "LONG",
+          "qty": 1964,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            null
+          ]
+        },
+        {
+          "asset": "SUI",
+          "dir": "SHORT",
+          "qty": 109.8,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            null
+          ]
+        },
+        {
+          "asset": "CRV",
+          "dir": "SHORT",
+          "qty": 391,
+          "ok": true,
+          "ownerMatched": true,
+          "nativeStops": 1,
+          "sizeCovered": true,
+          "sideValid": true,
+          "priceMatchesOwner": true,
+          "stopOrders": [
+            null
+          ]
+        }
+      ],
+      "state": {
+        "readOk": true,
+        "persistenceExpected": false,
+        "pendingOrderCount": 0
+      },
+      "status": {
+        "ready": true,
+        "liveReady": true,
+        "mode": "live",
+        "blockers": [],
+        "execution": {
+          "ordersEnabled": true,
+          "activationTime": 1793269800656,
+          "activationUtc": "2026-10-29T10:30:00.656Z",
+          "handled": 158,
+          "staleEntries": 21,
+          "skippedExits": 55,
+          "lastAction": {
+            "at": 1793291477751,
+            "type": "EXIT",
+            "sleeve": "CORE",
+            "symbol": "SHIB",
+            "sourceId": "CORE|SHIB|SHORT|1793107800000"
+          },
+          "lastError": null,
+          "halted": null,
+          "ownerLockProof": null
+        }
+      }
+    },
+    {
+      "key": "continuation",
+      "at": "2026-10-29T17:07:26.256Z",
+      "sourceOk": true,
+      "positions": 0,
+      "liveArm": true,
+      "executionReady": false,
+      "executionError": "CONTEXT_INCOMPLETE",
+      "sourceAvailability": {
+        "configuredAssets": 79,
+        "activeAssets": 78,
+        "retiredAssets": [
+          "EPIC"
+        ],
+        "lastBatchAt": 1793293200000,
+        "lastBatchAccepted": false,
+        "missingContexts": [],
+        "lastBatchRejection": "CONTEXT_INCOMPLETE"
+      },
+      "proof": [],
+      "state": {
+        "readOk": true,
+        "statePath": "/data/continuation_state.json.gz",
+        "compression": "gzip",
+        "totalSlots": 71,
+        "openLiveSlots": 0,
+        "recentSlots": [
+          {
+            "candidateId": "CONTINUATION-BRETT-1792353600000",
+            "symbol": "BRETT",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792353643025,
+            "expiresAt": 1792958443025,
+            "closedAt": 1792360915729,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-GWEI-1792324800000",
+            "symbol": "GWEI",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792324838099,
+            "expiresAt": 1792929638099,
+            "closedAt": 1792327813741,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-PARTI-1792242000000",
+            "symbol": "PARTI",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_SAFETY",
+            "openedAt": 1792242036406,
+            "expiresAt": 1792846836406,
+            "closedAt": 1792515593694,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-BERA-1792170000000",
+            "symbol": "BERA",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_TIME",
+            "openedAt": 1792170046851,
+            "expiresAt": 1792774846851,
+            "closedAt": 1792774846924,
+            "closeReason": "TIME",
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-TIA-1792134000000",
+            "symbol": "TIA",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792134050112,
+            "expiresAt": 1792738850112,
+            "closedAt": 1792332265210,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-INJ-1792119600000",
+            "symbol": "INJ",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792119645195,
+            "expiresAt": 1792724445195,
+            "closedAt": 1792174854638,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-BRETT-1792033200000",
+            "symbol": "BRETT",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792033247573,
+            "expiresAt": 1792638047573,
+            "closedAt": 1792080914221,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-KAS-1792033200000",
+            "symbol": "KAS",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792033244864,
+            "expiresAt": 1792638044864,
+            "closedAt": 1792133229315,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-JTO-1792033200000",
+            "symbol": "JTO",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792033242303,
+            "expiresAt": 1792638042303,
+            "closedAt": 1792607447283,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-FET-1792008000000",
+            "symbol": "FET",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1792008049867,
+            "expiresAt": 1792612849867,
+            "closedAt": 1792077008508,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-BERA-1791997200000",
+            "symbol": "BERA",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791997247397,
+            "expiresAt": 1792602047397,
+            "closedAt": 1792026615170,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-EPIC-1791957600000",
+            "symbol": "EPIC",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791957656959,
+            "expiresAt": 1792562456959,
+            "closedAt": 1791957961248,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-OP-1791925200000",
+            "symbol": "OP",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791925240604,
+            "expiresAt": 1792530040604,
+            "closedAt": 1791969252865,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-H-1791853200000",
+            "symbol": "H",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791853254411,
+            "expiresAt": 1792458054411,
+            "closedAt": 1791963186502,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-ARB-1791342000000",
+            "symbol": "ARB",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791342055236,
+            "expiresAt": 1791946855236,
+            "closedAt": 1791682068067,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-MOODENG-1791342000000",
+            "symbol": "MOODENG",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_TIME",
+            "openedAt": 1791342052623,
+            "expiresAt": 1791946852623,
+            "closedAt": 1791946852733,
+            "closeReason": "TIME",
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-PENDLE-1791342000000",
+            "symbol": "PENDLE",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791342050153,
+            "expiresAt": 1791946850153,
+            "closedAt": 1791852715698,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-PNUT-1791342000000",
+            "symbol": "PNUT",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791342047887,
+            "expiresAt": 1791946847887,
+            "closedAt": 1791735768517,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-INJ-1791320400000",
+            "symbol": "INJ",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791320444245,
+            "expiresAt": 1791925244245,
+            "closedAt": 1791336268237,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-RENDER-1791288000000",
+            "symbol": "RENDER",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791288055921,
+            "expiresAt": 1791892855921,
+            "closedAt": 1791338490538,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-FET-1791190800000",
+            "symbol": "FET",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791190836607,
+            "expiresAt": 1791795636607,
+            "closedAt": 1791210921391,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-BNB-1791165600000",
+            "symbol": "BNB",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791165645312,
+            "expiresAt": 1791770445312,
+            "closedAt": 1791172723918,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-STRK-1791068400000",
+            "symbol": "STRK",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791068590438,
+            "expiresAt": 1791673390438,
+            "closedAt": 1791307859156,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-WLD-1791025200000",
+            "symbol": "WLD",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1791025245004,
+            "expiresAt": 1791630045004,
+            "closedAt": 1791225396821,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-CAKE-1790967600000",
+            "symbol": "CAKE",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790967645005,
+            "expiresAt": 1791572445005,
+            "closedAt": 1791047629538,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-ATOM-1790967600000",
+            "symbol": "ATOM",
+            "direction": "SHORT",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790967642480,
+            "expiresAt": 1791572442480,
+            "closedAt": 1791027566000,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-APE-1790949600000",
+            "symbol": "APE",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790949655028,
+            "expiresAt": 1791554455028,
+            "closedAt": 1790951583883,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-GALA-1790928000000",
+            "symbol": "GALA",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790928054829,
+            "expiresAt": 1791532854829,
+            "closedAt": 1791267138987,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-DEXE-1790920800000",
+            "symbol": "DEXE",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790920845125,
+            "expiresAt": 1791525645125,
+            "closedAt": 1790928051141,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          },
+          {
+            "candidateId": "CONTINUATION-AAVE-1790917200000",
+            "symbol": "AAVE",
+            "direction": "LONG",
+            "mode": "LIVE",
+            "status": "CLOSED_RECONCILED",
+            "openedAt": 1790917247364,
+            "expiresAt": 1791522047364,
+            "closedAt": 1791001673733,
+            "closeReason": null,
+            "closeAttempts": null,
+            "lastCloseAttemptAt": null,
+            "lastCloseError": null
+          }
+        ],
+        "updatedAt": 1793293246808,
+        "persistenceExpected": true,
+        "persistentMounted": true,
+        "mountPath": "/data"
+      },
+      "status": {
+        "ok": true,
+        "mode": "LIVE",
+        "lastBatch": {
+          "t0": 1793293200000,
+          "processedAt": 1793293246735,
+          "contexts": 78,
+          "candidates": 1,
+          "result": {
+            "ok": false,
+            "reason": "CONTEXT_INCOMPLETE",
+            "missingContexts": [
+              "EPIC"
+            ],
+            "candidates": 1
+          }
+        },
+        "sourceAvailability": {
+          "configuredAssets": 79,
+          "activeAssets": 78,
+          "retiredAssets": [
+            "EPIC"
+          ],
+          "lastBatchAt": 1793293200000,
+          "lastBatchAccepted": false,
+          "missingContexts": [],
+          "lastBatchRejection": "CONTEXT_INCOMPLETE"
+        },
+        "executionReady": false,
+        "executionError": "CONTEXT_INCOMPLETE",
+        "causal": {
+          "scoreRows": 760,
+          "velocityOutcomes": 3840,
+          "flowRows": 46
+        },
+        "decisions7d": {
+          "total": 39,
+          "reasons": {
+            "CONTEXT_INCOMPLETE": 39
+          }
+        }
+      }
+    },
+    {
+      "key": "rangewave",
+      "at": "2026-10-29T17:07:26.454Z",
+      "sourceOk": true,
+      "positions": 0,
+      "liveArm": true,
+      "proof": [],
+      "state": {
+        "readOk": true,
+        "statePath": "/data/range_wave_blofin_state.json",
+        "persistenceExpected": true,
+        "persistentMounted": null,
+        "mountPath": "/data",
+        "ownerCount": 0,
+        "pendingOrderCount": 0,
+        "updatedAt": 1793293205293
+      },
+      "status": {
+        "ok": true,
+        "liveArm": true,
+        "phase": "ACTIVE",
+        "dataReady": true,
+        "currentModelReady": true,
+        "lastSignalCycleAt": 1793293205293
+      }
+    },
+    {
+      "key": "bitunix",
+      "at": "2026-10-29T17:07:26.530Z",
+      "sourceOk": true,
+      "positions": 0,
+      "liveArm": true,
+      "proof": [],
+      "state": {
+        "readOk": true,
+        "statePath": "/data/rafale2_bitunix_state.json",
+        "persistenceExpected": true,
+        "persistentMounted": true,
+        "mountPath": "/data",
+        "pendingExitCount": 0,
+        "exhaustedExitCount": 0
+      },
+      "status": {
+        "ok": true,
+        "liveArm": true
+      }
+    },
+    {
+      "key": "snapback",
+      "at": "2026-10-29T17:07:26.706Z",
+      "sourceOk": true,
+      "positions": 0,
+      "liveArm": false,
+      "executionReady": false,
+      "executionError": "armed,entries,protection",
+      "proof": [],
+      "state": {
+        "readOk": true,
+        "persistenceExpected": true,
+        "persistentMounted": true
+      },
+      "status": {
+        "ok": true,
+        "requestedExecOn": false,
+        "paused": false,
+        "entryMode": false
+      }
+    }
+  ],
+  "recent40": {
+    "source": {
+      "bot": "RECENT40",
+      "venue": "HYPERLIQUID",
+      "account": "recent40-corr12-hl",
+      "ok": true,
+      "generatedAt": "2026-10-29T17:09:38.500Z",
+      "expectedLive": true,
+      "liveArm": true,
+      "executionReady": true,
+      "executionError": null,
+      "ownerModel": "DEDICATED_ACCOUNT",
+      "positions": [
+        {
+          "asset": "ATOM",
+          "symbol": "ATOM",
+          "direction": "SHORT",
+          "size": 118.6,
+          "entry": 1.6536,
+          "mark": 1.6204,
+          "protections": [
+            {
+              "kind": "SL",
+              "trigger": 1.7222,
+              "size": 118.6,
+              "reduceOnly": true,
+              "orderId": 584584140510,
+              "cloid": "0x6c182ba8e2cee509827d2180755c8db0",
+              "market": true
+            }
+          ]
+        },
+        {
+          "asset": "DYDX",
+          "symbol": "DYDX",
+          "direction": "LONG",
+          "size": 1699.2,
+          "entry": 0.10433,
+          "mark": 0.11561,
+          "protections": [
+            {
+              "kind": "SL",
+              "trigger": 0.09873,
+              "size": 1699.2,
+              "reduceOnly": true,
+              "orderId": 586587770419,
+              "cloid": "0x549e72166c88260a491462842e251ae9",
+              "market": true
+            }
+          ]
+        },
+        {
+          "asset": "SUI",
+          "symbol": "SUI",
+          "direction": "SHORT",
+          "size": 88.1,
+          "entry": 0.9257,
+          "mark": 0.9443600000000001,
+          "protections": [
+            {
+              "kind": "SL",
+              "trigger": 1.0071,
+              "size": 88.1,
+              "reduceOnly": true,
+              "orderId": 585514564585,
+              "cloid": "0x7d6e5610aeac2ea9716d66d20d0cd033",
+              "market": true
+            }
+          ]
+        },
+        {
+          "asset": "CRV",
+          "symbol": "CRV",
+          "direction": "SHORT",
+          "size": 211.3,
+          "entry": 0.35529,
+          "mark": 0.33252999999999994,
+          "protections": [
+            {
+              "kind": "SL",
+              "trigger": 0.38611,
+              "size": 211.3,
+              "reduceOnly": true,
+              "orderId": 584246496438,
+              "cloid": "0x668d8aa118963d94a329f92f3c1a17b5",
+              "market": true
+            }
+          ]
+        }
+      ],
+      "owners": [],
+      "contract": {
+        "protection": {
+          "sl": true,
+          "tp": false
+        },
+        "strictProtectionEvidence": true,
+        "sizeTolerancePct": 0.01
+      },
+      "stateDiagnostics": {
+        "readOk": true,
+        "persistenceExpected": false,
+        "pendingOrderCount": 0
+      },
+      "monitoredPositionCount": 4,
+      "monitoringScope": "EXCHANGE_POSITIONS_AND_NATIVE_STOPS",
+      "accountReadAt": "2026-10-29T17:09:48.744Z",
+      "positionDetailsError": null,
+      "dataDiagnostics": {
+        "lastBatch": 1793293200000,
+        "firstMissingClose": null,
+        "missingAtFirstGap": [],
+        "recoveryWindowMs": 2100000,
+        "batchDelayMs": 588616,
+        "rootCode": null,
+        "conflict": null
+      }
+    },
+    "proof": [
+      {
+        "asset": "ATOM",
+        "dir": "SHORT",
+        "qty": 118.6,
+        "ok": true,
+        "ownerMatched": true,
+        "nativeStops": 1,
+        "sizeCovered": true,
+        "sideValid": true,
+        "priceMatchesOwner": true,
+        "stopOrders": [
+          584584140510
+        ]
+      },
+      {
+        "asset": "DYDX",
+        "dir": "LONG",
+        "qty": 1699.2,
+        "ok": true,
+        "ownerMatched": true,
+        "nativeStops": 1,
+        "sizeCovered": true,
+        "sideValid": true,
+        "priceMatchesOwner": true,
+        "stopOrders": [
+          586587770419
+        ]
+      },
+      {
+        "asset": "SUI",
+        "dir": "SHORT",
+        "qty": 88.1,
+        "ok": true,
+        "ownerMatched": true,
+        "nativeStops": 1,
+        "sizeCovered": true,
+        "sideValid": true,
+        "priceMatchesOwner": true,
+        "stopOrders": [
+          585514564585
+        ]
+      },
+      {
+        "asset": "CRV",
+        "dir": "SHORT",
+        "qty": 211.3,
+        "ok": true,
+        "ownerMatched": true,
+        "nativeStops": 1,
+        "sizeCovered": true,
+        "sideValid": true,
+        "priceMatchesOwner": true,
+        "stopOrders": [
+          584246496438
+        ]
+      }
+    ]
+  },
+  "r20": {
+    "at": "2026-10-29T17:07:28.119Z",
+    "card": {
+      "bot": "R20_HL",
+      "venue": "HYPERLIQUID",
+      "virtual": false,
+      "mode": "LIVE",
+      "status": "OK",
+      "accountValueUsd": 595.36,
+      "positions": 0,
+      "attributed": 0,
+      "protections": {
+        "verified": 0,
+        "eligible": 0
+      },
+      "liveArm": true,
+      "expectedLive": true,
+      "executionReady": true,
+      "newEntriesEnabled": true,
+      "incidents": {
+        "critical": 0,
+        "warning": 0,
+        "total": 0
+      },
+      "lastCheck": 1793293613483,
+      "controlNote": null
+    },
+    "notifications": {
+      "strategyId": "R20_RANGE_REVERSAL",
+      "mode": "LIVE",
+      "available": true,
+      "generatedAt": "2026-10-29T17:06:55.705Z",
+      "nativeTelegram": {
+        "configured": true,
+        "pending": 0,
+        "totalAccepted": 1,
+        "lastError": null,
+        "lastAccepted": {
+          "id": "R20_NATIVE_TEST",
+          "at": "2026-10-29T15:05:12.492Z",
+          "receipt": null,
+          "deliveryVerified": false,
+          "kind": "TEST"
+        },
+        "testAccepted": true
+      }
+    }
+  },
+  "additionalTelegramTests": [
+    {
+      "bot": "TRAINS Bitunix — SIMULATION",
+      "http": 200,
+      "accepted": true,
+      "nativeReceipt": null
+    },
+    {
+      "bot": "PHOENIX Bitunix — deux simulateurs",
+      "http": 200,
+      "accepted": true,
+      "nativeReceipt": null
+    },
+    {
+      "bot": "R20_HL_AND_SWING28_STATUS",
+      "http": 200,
+      "accepted": true,
+      "nativeReceipt": null
+    }
+  ],
+  "continuation": {
+    "deployedSha": "601eb8b2a88d121b16385471f0881243fbbfa615",
+    "deployment": "8936eea2-4ce0-4dfc-9aa6-215efd45c071",
+    "localTests": 117,
+    "railwayPredeployTests": 136,
+    "newHourlyBatchStillPendingAt": "2026-10-29T17:10:00Z",
+    "oldBatchNotReplayed": true,
+    "liveStatus": {
+      "ok": true,
+      "strategy": "CONTINUATION",
+      "mode": "LIVE",
+      "contract": {
+        "strategy": "CONTINUATION",
+        "payloadVersion": "1-live",
+        "scriptVersion": "1.1.0-frozen",
+        "winnerId": "wideBuffer240__r22_l7_s3p5_h168__r22Velocity25"
+      },
+      "assets": 79,
+      "executionReady": false,
+      "executionError": "CONTEXT_INCOMPLETE",
+      "sourceAvailability": {
+        "configuredAssets": 79,
+        "activeAssets": 78,
+        "retiredAssets": [
+          "EPIC"
+        ],
+        "lastBatchAt": 1793293200000,
+        "lastBatchAccepted": false,
+        "missingContexts": [],
+        "lastBatchRejection": "CONTEXT_INCOMPLETE"
+      },
+      "pendingBatches": 0,
+      "pendingOutcomes": 0,
+      "openSlots": 0,
+      "openLiveSlots": 0,
+      "lastBatch": {
+        "t0": 1793293200000,
+        "processedAt": 1793293246735,
+        "contexts": 78,
+        "candidates": 1,
+        "result": {
+          "ok": false,
+          "reason": "CONTEXT_INCOMPLETE",
+          "missingContexts": [
+            "EPIC"
+          ],
+          "candidates": 1
+        }
+      },
+      "decisions7d": {
+        "total": 39,
+        "reasons": {
+          "CONTEXT_INCOMPLETE": 39
+        }
+      },
+      "causal": {
+        "scoreRows": 760,
+        "velocityOutcomes": 3840,
+        "flowRows": 46
+      },
+      "causalSeed": {
+        "asOf": "2026-09-02T00:00:00.000Z",
+        "source": "Binance Futures public 15m archives + funding-rate REST history",
+        "scoreRows": 1135,
+        "velocityOutcomes": 4169,
+        "flowRows": 9,
+        "generatedAt": "2026-09-02T19:05:58.434Z"
+      },
+      "updatedAt": 1793293246808
+    },
+    "liveStatusAt": "2026-10-29T17:14:45.455Z",
+    "verifiedHealthCycles": [
+      1793293614593,
+      1793293789852,
+      1793294086892
+    ],
+    "guardianRecognizesNotReady": true
+  },
+  "equilibre": {
+    "deployedSha": "2ae30bee0b2a012949e5c275cf4e07058c09d187",
+    "deployment": "7ec8fec8-e30b-4e28-92fc-a905d838e745",
+    "status": "SUCCESS",
+    "localTests": 9,
+    "compromisPredeployTests": 34,
+    "liveStatus": {
+      "legacyEntryArm": false,
+      "replacement": {
+        "bot": "EQUILIBRE",
+        "name": "PhilBot Équilibre",
+        "strategy": "COMPROMIS_RETENU",
+        "requested": true,
+        "liveArm": false,
+        "entryArm": false,
+        "exitsArmed": true,
+        "status": {
+          "ok": true,
+          "bot": "EQUILIBRE",
+          "name": "PhilBot Équilibre",
+          "strategy": "COMPROMIS_RETENU",
+          "version": "2026-10-18-live-v1",
+          "profile": "joint_portfolio_r75",
+          "tradingEnabled": false,
+          "executionEnabled": true,
+          "entriesEnabled": false,
+          "entriesPaused": true,
+          "exitsEnabled": true,
+          "observation": {
+            "mode": "SIGNALS_ONLY",
+            "virtualPortfolio": false,
+            "observedEntries": 73,
+            "latestEntry": {
+              "at": 1793291430756,
+              "barTime": 1793291400000,
+              "asset": "M",
+              "direction": "SHORT",
+              "price": 1.0686,
+              "stop": 1.1452878517485159,
+              "actionId": "68f233a63fdd2ec122b319b7d3eb549aa58c3a653eb3866abad482163d1822a1"
+            }
+          },
+          "policy": {
+            "riskPct": 0.75,
+            "openRiskCapPct": 20,
+            "marginCapPct": 85,
+            "maxLeverage": 20
+          },
+          "lastBatchAt": 1793293230102,
+          "lastBatchBarTime": 1793293200000,
+          "lastBatchCode": "BATCH_DONE",
+          "lastError": null,
+          "processedActions": 246,
+          "pendingIntents": 1,
+          "intentStatusCounts": {
+            "DONE": 101,
+            "SUBMITTING": 1
+          }
+        },
+        "telegram": {
+          "version": "2026-10-24-text-contract-v3",
+          "configured": true,
+          "route": "RAFALE2_TELEGRAM_WEBHOOK",
+          "lastAttemptAt": null,
+          "lastSuccessAt": null,
+          "lastKind": null,
+          "lastCode": null,
+          "lastError": null,
+          "lastReceiptLevel": null,
+          "lastEvent": null,
+          "lastEntryNotification": null,
+          "recentNotifications": [],
+          "startupTest": {
+            "nonce": "telegram-rewire-2026-10-19T03-26-18-814Z-v1",
+            "notifierVersion": "2026-10-24-text-contract-v3",
+            "ok": true,
+            "code": "RELAY_ACCEPTED",
+            "receiptLevel": "RELAY_ACCEPTED",
+            "at": 1792843466236
+          }
+        },
+        "monitor": {
+          "enabled": true,
+          "version": "2026-10-18-cycle-v1",
+          "cadenceMinutes": 15,
+          "graceSeconds": 130,
+          "notificationMode": "ANOMALY_RECOVERY_ONLY",
+          "nextCheckAt": 1793294230000,
+          "lastCheckAt": 1793293330006,
+          "lastBarTime": 1793293200000,
+          "lastCode": "CYCLE_ANOMALY",
+          "issues": [
+            {
+              "code": "PENDING_INTENTS",
+              "count": 1
+            }
+          ],
+          "incidentActive": true,
+          "incidentFingerprint": "PENDING_INTENTS:{\"code\":\"PENDING_INTENTS\",\"count\":1}",
+          "lastAlertAt": 1793290630008,
+          "recoveryPending": false,
+          "lastDeliveryCode": "RELAY_ACCEPTED",
+          "lastNotifiedFingerprint": "PENDING_INTENTS:{\"code\":\"PENDING_INTENTS\",\"count\":1}"
+        }
+      },
+      "exitGuard": {
+        "venue": "BITUNIX",
+        "enabled": true,
+        "live": true,
+        "maxAttempts": 2,
+        "tracked": 0,
+        "attempts": 0,
+        "resolved": 0,
+        "exhausted": 0,
+        "terminal": 0,
+        "lastResult": null,
+        "pending": 0,
+        "exhaustedPending": 0,
+        "scheduled": 0
+      }
+    },
+    "warning": "Persistent SUBMITTING=1 remains unresolved; terminal-count bug fixed without clearing actual unknown intent.",
+    "positions": 0
+  },
+  "phoenix": {
+    "v1": {
+      "key": "PHOENIX_V1_VIRTUAL",
+      "at": "2026-10-29T17:04:25.582Z",
+      "status": {
+        "ok": true,
+        "schema": "PHILBOT_BITUNIX_DUAL_SHADOW_V1",
+        "virtual": true,
+        "liveOrderCapability": false,
+        "version": "2026-10-01-dual-shadow-v1",
+        "generatedAt": "2026-10-29T17:04:25.567Z",
+        "variants": [
+          {
+            "id": "prototype",
+            "bot": "BITUNIX_PROTO_PHOENIX_SHADOW",
+            "label": "Prototype Bitunix + Phoenix",
+            "venue": "BITUNIX",
+            "virtual": true,
+            "liveOrderCapability": false,
+            "initialCapitalUsd": 1000,
+            "accountValueUsd": 1000,
+            "cashUsd": 1000,
+            "floatingPnlUsd": 0,
+            "pnlTotalUsd": 0,
+            "pnlTotalPct": 0,
+            "pnl24hUsd": 0,
+            "pnl24hPct": 0,
+            "pnl7dUsd": 0,
+            "pnl7dPct": 0,
+            "pnl14dUsd": 0,
+            "pnl14dPct": 0,
+            "pnl30dUsd": 0,
+            "pnl30dPct": 0,
+            "drawdownPct": 0,
+            "maxDrawdownPct": 0,
+            "pf": null,
+            "winRatePct": null,
+            "expectancyR": null,
+            "closedTrades": 0,
+            "wins": 0,
+            "losses": 0,
+            "grossProfitUsd": 0,
+            "grossLossUsd": 0,
+            "feesUsd": 0,
+            "fundingUsd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "positionsOpen": 0,
+            "notionalUsd": 0,
+            "marginUsedUsd": 0,
+            "marginPct": 0,
+            "openRiskPct": 0,
+            "highWaterUsd": 1000,
+            "pendingConfirmations": 0,
+            "phoenix": {
+              "active": false,
+              "factor": 1,
+              "drawdownPct": null,
+              "episodeDays": null,
+              "healthR": null,
+              "healthN": 0,
+              "fastHealthR": null,
+              "fastN": 0,
+              "recovery": null,
+              "override": null,
+              "alignedMedian24": null,
+              "at": null
+            },
+            "positions": [],
+            "recentTrades": [],
+            "lastUpdateUtc": "2026-10-29T17:00:00.000Z",
+            "executionModel": {
+              "venue": "BITUNIX",
+              "marginMode": "CROSS_SIMULATED",
+              "feesPerSide": 0.0006,
+              "orderBookVwap": true,
+              "funding": true,
+              "stopTrigger": "MARK_PRICE_POLLED",
+              "confirmation": "next native closed bar >= 0.1R; original diamonds immediate"
+            },
+            "version": "2026-10-01-dual-shadow-v1"
+          },
+          {
+            "id": "original",
+            "bot": "BITUNIX_ORIGINAL_PHOENIX_SHADOW",
+            "label": "RAFALE2 Bitunix + Phoenix — entrées originales",
+            "venue": "BITUNIX",
+            "virtual": true,
+            "liveOrderCapability": false,
+            "initialCapitalUsd": 1000,
+            "accountValueUsd": 1000,
+            "cashUsd": 1000,
+            "floatingPnlUsd": 0,
+            "pnlTotalUsd": 0,
+            "pnlTotalPct": 0,
+            "pnl24hUsd": 0,
+            "pnl24hPct": 0,
+            "pnl7dUsd": 0,
+            "pnl7dPct": 0,
+            "pnl14dUsd": 0,
+            "pnl14dPct": 0,
+            "pnl30dUsd": 0,
+            "pnl30dPct": 0,
+            "drawdownPct": 0,
+            "maxDrawdownPct": 0,
+            "pf": null,
+            "winRatePct": null,
+            "expectancyR": null,
+            "closedTrades": 0,
+            "wins": 0,
+            "losses": 0,
+            "grossProfitUsd": 0,
+            "grossLossUsd": 0,
+            "feesUsd": 0,
+            "fundingUsd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "positionsOpen": 0,
+            "notionalUsd": 0,
+            "marginUsedUsd": 0,
+            "marginPct": 0,
+            "openRiskPct": 0,
+            "highWaterUsd": 1000,
+            "pendingConfirmations": 0,
+            "phoenix": {
+              "active": false,
+              "factor": 1,
+              "drawdownPct": null,
+              "episodeDays": null,
+              "healthR": null,
+              "healthN": 0,
+              "fastHealthR": null,
+              "fastN": 0,
+              "recovery": null,
+              "override": null,
+              "alignedMedian24": null,
+              "at": null
+            },
+            "positions": [],
+            "recentTrades": [],
+            "lastUpdateUtc": "2026-10-29T17:00:00.000Z",
+            "executionModel": {
+              "venue": "BITUNIX",
+              "marginMode": "CROSS_SIMULATED",
+              "feesPerSide": 0.0006,
+              "orderBookVwap": true,
+              "funding": true,
+              "stopTrigger": "MARK_PRICE_POLLED",
+              "confirmation": "original entries immediate"
+            },
+            "version": "2026-10-01-dual-shadow-v1"
+          }
+        ],
+        "ingest": {
+          "received": 0,
+          "duplicates": 0,
+          "lastAt": null
+        },
+        "market": {
+          "lastPoll": 1793293465518,
+          "lastError": null
+        }
+      }
+    },
+    "dual": {
+      "key": "PHOENIX_DUAL_VIRTUAL",
+      "at": "2026-10-29T17:04:25.614Z",
+      "status": {
+        "ok": true,
+        "schema": "PHILBOT_BITUNIX_DUAL_SHADOW_V1",
+        "virtual": true,
+        "liveOrderCapability": false,
+        "version": "2026-10-01-dual-shadow-v1",
+        "generatedAt": "2026-10-29T17:04:25.613Z",
+        "variants": [
+          {
+            "id": "prototype",
+            "bot": "BITUNIX_PROTO_PHOENIX_SHADOW",
+            "label": "Prototype Bitunix + Phoenix",
+            "venue": "BITUNIX",
+            "virtual": true,
+            "liveOrderCapability": false,
+            "initialCapitalUsd": 1000,
+            "accountValueUsd": 1000,
+            "cashUsd": 1000,
+            "floatingPnlUsd": 0,
+            "pnlTotalUsd": 0,
+            "pnlTotalPct": 0,
+            "pnl24hUsd": 0,
+            "pnl24hPct": 0,
+            "pnl7dUsd": 0,
+            "pnl7dPct": 0,
+            "pnl14dUsd": 0,
+            "pnl14dPct": 0,
+            "pnl30dUsd": 0,
+            "pnl30dPct": 0,
+            "drawdownPct": 0,
+            "maxDrawdownPct": 0,
+            "pf": null,
+            "winRatePct": null,
+            "expectancyR": null,
+            "closedTrades": 0,
+            "wins": 0,
+            "losses": 0,
+            "grossProfitUsd": 0,
+            "grossLossUsd": 0,
+            "feesUsd": 0,
+            "fundingUsd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "positionsOpen": 0,
+            "notionalUsd": 0,
+            "marginUsedUsd": 0,
+            "marginPct": 0,
+            "openRiskPct": 0,
+            "highWaterUsd": 1000,
+            "pendingConfirmations": 0,
+            "phoenix": {
+              "active": false,
+              "factor": 1,
+              "drawdownPct": null,
+              "episodeDays": null,
+              "healthR": null,
+              "healthN": 0,
+              "fastHealthR": null,
+              "fastN": 0,
+              "recovery": null,
+              "override": null,
+              "alignedMedian24": null,
+              "at": null
+            },
+            "positions": [],
+            "recentTrades": [],
+            "lastUpdateUtc": "2026-10-29T17:00:00.000Z",
+            "executionModel": {
+              "venue": "BITUNIX",
+              "marginMode": "CROSS_SIMULATED",
+              "feesPerSide": 0.0006,
+              "orderBookVwap": true,
+              "funding": true,
+              "stopTrigger": "MARK_PRICE_POLLED",
+              "confirmation": "next native closed bar >= 0.1R; original diamonds immediate"
+            },
+            "version": "2026-10-01-dual-shadow-v1"
+          },
+          {
+            "id": "original",
+            "bot": "BITUNIX_ORIGINAL_PHOENIX_SHADOW",
+            "label": "RAFALE2 Bitunix + Phoenix — entrées originales",
+            "venue": "BITUNIX",
+            "virtual": true,
+            "liveOrderCapability": false,
+            "initialCapitalUsd": 1000,
+            "accountValueUsd": 1000,
+            "cashUsd": 1000,
+            "floatingPnlUsd": 0,
+            "pnlTotalUsd": 0,
+            "pnlTotalPct": 0,
+            "pnl24hUsd": 0,
+            "pnl24hPct": 0,
+            "pnl7dUsd": 0,
+            "pnl7dPct": 0,
+            "pnl14dUsd": 0,
+            "pnl14dPct": 0,
+            "pnl30dUsd": 0,
+            "pnl30dPct": 0,
+            "drawdownPct": 0,
+            "maxDrawdownPct": 0,
+            "pf": null,
+            "winRatePct": null,
+            "expectancyR": null,
+            "closedTrades": 0,
+            "wins": 0,
+            "losses": 0,
+            "grossProfitUsd": 0,
+            "grossLossUsd": 0,
+            "feesUsd": 0,
+            "fundingUsd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "positionsOpen": 0,
+            "notionalUsd": 0,
+            "marginUsedUsd": 0,
+            "marginPct": 0,
+            "openRiskPct": 0,
+            "highWaterUsd": 1000,
+            "pendingConfirmations": 0,
+            "phoenix": {
+              "active": false,
+              "factor": 1,
+              "drawdownPct": null,
+              "episodeDays": null,
+              "healthR": null,
+              "healthN": 0,
+              "fastHealthR": null,
+              "fastN": 0,
+              "recovery": null,
+              "override": null,
+              "alignedMedian24": null,
+              "at": null
+            },
+            "positions": [],
+            "recentTrades": [],
+            "lastUpdateUtc": "2026-10-29T17:00:00.000Z",
+            "executionModel": {
+              "venue": "BITUNIX",
+              "marginMode": "CROSS_SIMULATED",
+              "feesPerSide": 0.0006,
+              "orderBookVwap": true,
+              "funding": true,
+              "stopTrigger": "MARK_PRICE_POLLED",
+              "confirmation": "original entries immediate"
+            },
+            "version": "2026-10-01-dual-shadow-v1"
+          }
+        ],
+        "ingest": {
+          "received": 0,
+          "duplicates": 0,
+          "lastAt": null
+        },
+        "market": {
+          "lastPoll": 1793293463788,
+          "lastError": null
+        }
+      }
+    },
+    "vaultCurrentRead": {
+      "http": 200,
+      "root": {
+        "keys": [
+          "schema",
+          "version",
+          "createdAt",
+          "updatedAt",
+          "streams",
+          "ingest",
+          "market"
+        ],
+        "schema": "philbot.bitunix.phoenix.dual-shadow.v1",
+        "version": "2026-10-01-dual-shadow-v1",
+        "createdAt": 1793193666715,
+        "updatedAt": 1793293990592,
+        "streams": {
+          "keys": [
+            "prototype",
+            "original"
+          ],
+          "cash": null,
+          "positions": null,
+          "trades": null
+        },
+        "ingest": {
+          "keys": [
+            "received",
+            "duplicates",
+            "lastAt"
+          ],
+          "cash": null,
+          "positions": null,
+          "trades": null
+        },
+        "market": {
+          "keys": [
+            "lastPoll",
+            "lastError"
+          ],
+          "cash": null,
+          "positions": null,
+          "trades": null
+        }
+      },
+      "engines": {
+        "prototype": {
+          "root": {
+            "keys": [
+              "id",
+              "label",
+              "fute",
+              "tested",
+              "witness",
+              "pending"
+            ],
+            "id": "prototype",
+            "label": "Prototype Bitunix + Phoenix",
+            "fute": {
+              "keys": [
+                "cash",
+                "open",
+                "accepted",
+                "curve"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": null
+            },
+            "tested": {
+              "keys": [
+                "id",
+                "label",
+                "cash",
+                "open",
+                "trades",
+                "curve",
+                "fees",
+                "funding",
+                "high",
+                "peakTime",
+                "worstEpisodeDd",
+                "maxDd",
+                "maxMarginPct",
+                "maxOpenRiskPct",
+                "events",
+                "seen",
+                "lastPhoenix",
+                "lastUpdate"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": 0
+            },
+            "witness": {
+              "keys": [
+                "id",
+                "label",
+                "cash",
+                "open",
+                "trades",
+                "curve",
+                "fees",
+                "funding",
+                "high",
+                "peakTime",
+                "worstEpisodeDd",
+                "maxDd",
+                "maxMarginPct",
+                "maxOpenRiskPct",
+                "events",
+                "seen",
+                "lastPhoenix",
+                "lastUpdate"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": 0
+            },
+            "pending": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            }
+          },
+          "tested": {
+            "keys": [
+              "id",
+              "label",
+              "cash",
+              "open",
+              "trades",
+              "curve",
+              "fees",
+              "funding",
+              "high",
+              "peakTime",
+              "worstEpisodeDd",
+              "maxDd",
+              "maxMarginPct",
+              "maxOpenRiskPct",
+              "events",
+              "seen",
+              "lastPhoenix",
+              "lastUpdate"
+            ],
+            "id": "prototype",
+            "label": "Prototype Bitunix + Phoenix",
+            "cash": 1000,
+            "open": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "trades": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "curve": {
+              "length": 113,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "fees": 0,
+            "funding": 0,
+            "high": 1000,
+            "peakTime": 1793293200000,
+            "worstEpisodeDd": 0,
+            "maxDd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "events": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "seen": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "lastPhoenix": null,
+            "lastUpdate": 1793293200000
+          },
+          "witness": {
+            "keys": [
+              "id",
+              "label",
+              "cash",
+              "open",
+              "trades",
+              "curve",
+              "fees",
+              "funding",
+              "high",
+              "peakTime",
+              "worstEpisodeDd",
+              "maxDd",
+              "maxMarginPct",
+              "maxOpenRiskPct",
+              "events",
+              "seen",
+              "lastPhoenix",
+              "lastUpdate"
+            ],
+            "id": "prototype-witness",
+            "label": "Prototype Bitunix + Phoenix witness",
+            "cash": 1000,
+            "open": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "trades": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "curve": {
+              "length": 113,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "fees": 0,
+            "funding": 0,
+            "high": 1000,
+            "peakTime": 1793293200000,
+            "worstEpisodeDd": 0,
+            "maxDd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "events": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "seen": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "lastPhoenix": null,
+            "lastUpdate": 1793293200000
+          }
+        },
+        "original": {
+          "root": {
+            "keys": [
+              "id",
+              "label",
+              "fute",
+              "tested",
+              "witness",
+              "pending"
+            ],
+            "id": "original",
+            "label": "RAFALE2 Bitunix + Phoenix — entrées originales",
+            "fute": {
+              "keys": [
+                "cash",
+                "open",
+                "accepted",
+                "curve"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": null
+            },
+            "tested": {
+              "keys": [
+                "id",
+                "label",
+                "cash",
+                "open",
+                "trades",
+                "curve",
+                "fees",
+                "funding",
+                "high",
+                "peakTime",
+                "worstEpisodeDd",
+                "maxDd",
+                "maxMarginPct",
+                "maxOpenRiskPct",
+                "events",
+                "seen",
+                "lastPhoenix",
+                "lastUpdate"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": 0
+            },
+            "witness": {
+              "keys": [
+                "id",
+                "label",
+                "cash",
+                "open",
+                "trades",
+                "curve",
+                "fees",
+                "funding",
+                "high",
+                "peakTime",
+                "worstEpisodeDd",
+                "maxDd",
+                "maxMarginPct",
+                "maxOpenRiskPct",
+                "events",
+                "seen",
+                "lastPhoenix",
+                "lastUpdate"
+              ],
+              "cash": 1000,
+              "positions": null,
+              "trades": 0
+            },
+            "pending": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            }
+          },
+          "tested": {
+            "keys": [
+              "id",
+              "label",
+              "cash",
+              "open",
+              "trades",
+              "curve",
+              "fees",
+              "funding",
+              "high",
+              "peakTime",
+              "worstEpisodeDd",
+              "maxDd",
+              "maxMarginPct",
+              "maxOpenRiskPct",
+              "events",
+              "seen",
+              "lastPhoenix",
+              "lastUpdate"
+            ],
+            "id": "original",
+            "label": "RAFALE2 Bitunix + Phoenix — entrées originales",
+            "cash": 1000,
+            "open": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "trades": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "curve": {
+              "length": 113,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "fees": 0,
+            "funding": 0,
+            "high": 1000,
+            "peakTime": 1793293200000,
+            "worstEpisodeDd": 0,
+            "maxDd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "events": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "seen": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "lastPhoenix": null,
+            "lastUpdate": 1793293200000
+          },
+          "witness": {
+            "keys": [
+              "id",
+              "label",
+              "cash",
+              "open",
+              "trades",
+              "curve",
+              "fees",
+              "funding",
+              "high",
+              "peakTime",
+              "worstEpisodeDd",
+              "maxDd",
+              "maxMarginPct",
+              "maxOpenRiskPct",
+              "events",
+              "seen",
+              "lastPhoenix",
+              "lastUpdate"
+            ],
+            "id": "original-witness",
+            "label": "RAFALE2 Bitunix + Phoenix — entrées originales witness",
+            "cash": 1000,
+            "open": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "trades": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "curve": {
+              "length": 113,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "fees": 0,
+            "funding": 0,
+            "high": 1000,
+            "peakTime": 1793293200000,
+            "worstEpisodeDd": 0,
+            "maxDd": 0,
+            "maxMarginPct": 0,
+            "maxOpenRiskPct": 0,
+            "events": {
+              "length": 0,
+              "firstAt": null,
+              "lastAt": null
+            },
+            "seen": {
+              "keys": [],
+              "cash": null,
+              "positions": null,
+              "trades": null
+            },
+            "lastPhoenix": null,
+            "lastUpdate": 1793293200000
+          }
+        }
+      }
+    },
+    "feedCause": "Source tee executes only while LEGACY_ENTRY_ARM=true. That arm is deliberately false under Equilibre cutover; no synthetic/stale signals replayed."
+  },
+  "trains": {
+    "mode": "SHADOW",
+    "at": "2026-10-29T17:04:25.504Z",
+    "performance": {
+      "ok": true,
+      "mode": "SHADOW",
+      "at": "2026-10-29T17:04:25.497Z",
+      "currency": "USDT",
+      "initialEquity": 605.74,
+      "cash": 605.4368849031401,
+      "realizedNetPnl": -0.3031150968598695,
+      "floatingPnl": 6.688402500000033,
+      "totalPnl": 6.3852874031401825,
+      "equity": 612.1252874031402,
+      "roiPct": 1.0541300563179146,
+      "estimatedExitFees": 0.30712813836,
+      "equityAfterEstimatedExitFees": 611.8181592647802,
+      "positionCount": 5,
+      "trainCount": 5,
+      "positions": [
+        {
+          "asset": "H",
+          "direction": "LONG",
+          "trains": 1,
+          "size": 747,
+          "mark": 0.05757,
+          "floatingPnl": 0.9188100000000015
+        },
+        {
+          "asset": "ICP",
+          "direction": "LONG",
+          "trains": 1,
+          "size": 42,
+          "mark": 2.603,
+          "floatingPnl": 1.3440000000000012
+        },
+        {
+          "asset": "DEXE",
+          "direction": "LONG",
+          "trains": 1,
+          "size": 31.92,
+          "mark": 1.608,
+          "floatingPnl": 0
+        },
+        {
+          "asset": "BTC",
+          "direction": "LONG",
+          "trains": 1,
+          "size": 0.0029,
+          "mark": 81185.6,
+          "floatingPnl": -0.32363999999997467
+        },
+        {
+          "asset": "PEPE",
+          "direction": "LONG",
+          "trains": 1,
+          "size": 13473,
+          "mark": 0.0054022,
+          "floatingPnl": 4.749232500000005
+        }
+      ],
+      "missingMarks": [],
+      "coverage": "Mark-to-market; model taker fees on executed entries and exits; open exits estimated separately; funding and slippage not modeled"
+    }
+  },
+  "closingHealth": {
+    "at": 1793294086892,
+    "aggregate": {
+      "ok": false,
+      "status": "CRITICAL",
+      "generatedAt": "2026-10-29T17:14:46.891Z",
+      "bots": {
+        "total": 11,
+        "sourcesOk": 11
+      },
+      "positions": {
+        "open": 72,
+        "tracked": 72,
+        "attributed": 72,
+        "classifiedByRegistry": 0,
+        "registryAttributed": 0,
+        "total": 72
+      },
+      "protections": {
+        "verified": 72,
+        "eligible": 72
+      },
+      "nativeStops": {
+        "present": 51,
+        "required": 51
+      },
+      "incidents": {
+        "counts": {
+          "INFO": 0,
+          "WARNING": 2,
+          "CRITICAL": 1
+        },
+        "items": [
+          {
+            "severity": "CRITICAL",
+            "code": "EXECUTION_NOT_READY",
+            "bot": "CONTINUATION",
+            "venue": "BLOFIN_R1",
+            "account": "CONTINUATION_R1",
+            "executionError": "CONTEXT_INCOMPLETE",
+            "executionWaitKind": null,
+            "controlDataUsable": false,
+            "notificationOwner": "HEALTH"
+          },
+          {
+            "severity": "WARNING",
+            "code": "SOURCE_RESTARTED_RECENTLY",
+            "bot": "RAFALE2",
+            "venue": "BITUNIX",
+            "account": "RAFALE2_BITUNIX",
+            "restartedAt": 1793294086889,
+            "bootId": "1b5f1c0d-5bde-4734-9fc4-b3f1391d0736",
+            "notificationOwner": "HEALTH"
+          },
+          {
+            "severity": "WARNING",
+            "code": "SOURCE_RESTARTED_RECENTLY",
+            "bot": "CONTINUATION",
+            "venue": "BLOFIN_R1",
+            "account": "CONTINUATION_R1",
+            "restartedAt": 1793293613837,
+            "bootId": "0db7e007-7e09-4722-8c3a-4cf404b1aceb",
+            "notificationOwner": "HEALTH"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "bot": "RAFALE2",
+          "venue": "BITUNIX",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RANGE_WAVE",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RAFALE2",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 20,
+          "tracked": 20,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 20,
+          "owners": 20,
+          "nativeStops": {
+            "present": 20,
+            "required": 20
+          }
+        },
+        {
+          "bot": "RAFALE2_DP60",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 22,
+          "tracked": 22,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 22,
+          "owners": 22,
+          "nativeStops": {
+            "present": 22,
+            "required": 22
+          }
+        },
+        {
+          "bot": "CONTINUATION",
+          "venue": "BLOFIN_R1",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "SWING_V28",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "SNAPBACK_V10R1",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 0,
+          "tracked": 0,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 0,
+          "owners": 0,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "RAFALE2_SWING",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 21,
+          "tracked": 21,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 21,
+          "owners": 42,
+          "nativeStops": {
+            "present": 0,
+            "required": 0
+          }
+        },
+        {
+          "bot": "HYBRID_R4",
+          "venue": "BLOFIN",
+          "ok": true,
+          "positions": 1,
+          "tracked": 1,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 1,
+          "owners": 0,
+          "nativeStops": {
+            "present": 1,
+            "required": 1
+          }
+        },
+        {
+          "bot": "OUTSIDER",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 4,
+          "tracked": 4,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 4,
+          "owners": 0,
+          "nativeStops": {
+            "present": 4,
+            "required": 4
+          }
+        },
+        {
+          "bot": "RECENT40",
+          "venue": "HYPERLIQUID",
+          "ok": true,
+          "positions": 4,
+          "tracked": 4,
+          "classified": 0,
+          "registryAttributed": 0,
+          "protected": 4,
+          "owners": 0,
+          "nativeStops": {
+            "present": 4,
+            "required": 4
+          }
+        }
+      ],
+      "pipeline": {
+        "observed": 32,
+        "pendingCritical": 0,
+        "failedCritical": 0,
+        "inFlight": 0,
+        "completed": 32
+      },
+      "registry": {
+        "configured": 31,
+        "active": 0,
+        "retired": 22,
+        "symbolOnlyMatching": false
+      },
+      "telegramHealth": {
+        "configured": true,
+        "newOrReminder": 0,
+        "resolutions": 0,
+        "repeatMs": 3600000
+      }
+    },
+    "pausedSources": [
+      {
+        "bot": "SWING_V28",
+        "liveArm": false,
+        "expectedLive": false,
+        "positions": 0
+      },
+      {
+        "bot": "SNAPBACK_V10R1",
+        "liveArm": false,
+        "expectedLive": false,
+        "positions": 0
+      }
+    ],
+    "equilibre": {
+      "bot": "RAFALE2",
+      "venue": "BITUNIX",
+      "account": "RAFALE2_BITUNIX",
+      "ok": true,
+      "generatedAt": "2026-10-29T17:14:46.000Z",
+      "expectedLive": true,
+      "liveArm": true,
+      "ownerModel": "STATE_OWNERS",
+      "positions": [],
+      "owners": [],
+      "contract": {
+        "protection": {
+          "sl": true,
+          "tp": false
+        },
+        "priceTolerancePct": 0.25,
+        "sizeTolerancePct": 0.5
+      },
+      "stateDiagnostics": {
+        "readOk": true,
+        "statePath": "/data/rafale2_bitunix_state.json",
+        "persistenceExpected": true,
+        "persistentMounted": true,
+        "mountPath": "/data",
+        "pendingExitCount": 0,
+        "exhaustedExitCount": 0
+      },
+      "telemetry": {
+        "bootId": "1b5f1c0d-5bde-4734-9fc4-b3f1391d0736",
+        "startedAt": 1793294056628,
+        "uptimeMs": 29372,
+        "restartedRecently": true,
+        "restartDetectedAt": 1793294086889
+      }
+    }
+  }
+}
