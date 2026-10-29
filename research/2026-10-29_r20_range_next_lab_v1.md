@@ -1,4 +1,6 @@
 # PhilBot — décision de recherche RANGE après Carver 26/27
+
+> **NOTE DE PÉRIMÈTRE — 29 octobre 2026 : PLAN DE RECHERCHE REMPLACÉ**\n> Ce document conserve son audit historique mais **N'EST PLUS un plan actif pour la recherche autonome de range**. Son projet de comparaison et d'ablation ne doit pas être lancé dans ce laboratoire. La recherche se déroule indépendamment selon `research/2026-10-29_range_edge_first_lab_v1.md`. Aucun bot existant n'entre dans cette recherche, pas même comme témoin. Ne pas réinterpréter les observations de ce document comme une instruction de modifier une stratégie en live.\n\n
 Date : 2026-10-29 (Québec)
 
 ## RECTIFICATION IMPORTANTE — R20 HYPERLIQUID LIVE, 29 octobre 2026
