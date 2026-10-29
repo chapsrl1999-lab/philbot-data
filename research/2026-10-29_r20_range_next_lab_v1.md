@@ -1,5 +1,13 @@
 # PhilBot — décision de recherche RANGE après Carver 26/27
 Date : 2026-10-29 (Québec)
+
+## RECTIFICATION IMPORTANTE — R20 HYPERLIQUID LIVE, 29 octobre 2026
+- Philippe confirme que R20 vient d'être mis en LIVE. Le journal d'exploitation `operations/PHILBOT_OPERATING_STATE_V1.md` documente le contrôle métier au **29 octobre 17:07 UTC** : projet Railway dédié `philbot-r20-shadow`, service **`philbot-r20-hl`**, mode LIVE, `executionReady=true` et `newEntriesEnabled=true`, zéro position à ce moment. Cet état est une photographie datée, et non une garantie sur les entrées suivantes.
+- Revérification directe du **service Railway** : environnement production, 1/1 replica ONLINE, volume `/data` attaché, dernier déploiement SUCCESS `cd7dd539-41d7-4099-9a56-b5d4371334e4` créé 2026-10-29T15:00:14Z, source installée `73a725d29c908a76b4d97333f2c96bfdb105360d`, aucun changement staged. Contrôles HTTP Railway /monitor, /guardian (200 jusqu'à 19:51 UTC) et /ready (deux 200 dans l'échantillon) ; ces statuts n'attestent ni le corps JSON actuel ni une correspondance individuelle ordre-stop.
+- La lecture OAuth des valeurs `R20_HL_EXEC_ON`, `R20_HL_NEW_ENTRIES` et `R20_HL_ACTIVATION_APPROVED` est **masquée par Railway** ; noms présents, valeurs non relues. Le contrôle métier positif daté ci-dessus demeure la preuve d'activation la plus précise accessible pendant cette passe.
+- L'autre service `r20-shadow` continue d'exister distinctement : ne jamais le confondre avec le compte live. Aucun changement de stratégie, compte, sizing, stop, configuration Railway, Telegram, ordres ou alimentation effectué dans ce journal.
+- **Nouvelle règle de recherche : R20 LIVE reste strictement figé** pendant les recherches Carver/range. Les candidats B/C seront testés hors ligne, puis comparés à R20 avec un témoin gelé ; aucun changement de R20 LIVE sans autorisation de stratégie séparée. Il reste à vérifier la correspondance individuelle et la réception Telegram des futurs événements réels : des HTTP 200 de relais ne sont pas des accusés de réception natifs.
+
 Statut : **AUDIT DES RÉSULTATS TERMINÉ ; nouvelles stratégies PROPOSÉES, PAS ENCORE TESTÉES**.
 Périmètre : uniquement recherche hors ligne, aucun changement live, d'ordres, de sizing, de stop, d'univers ou de coûts Railway.
 
