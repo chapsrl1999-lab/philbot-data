@@ -1,0 +1,437 @@
+{
+  "schema": "PHILBOT_TRAINS_CONTROL_AND_VIEWS_V1",
+  "at": "2026-10-29T22:12:00Z",
+  "siteVersion": 83,
+  "sourceCommit": "4763e5c12b5e2ed77c5d67b998f7e29db44b8e4a",
+  "deployment": {
+    "id": "appgdep_6ae3c49a27f8819199bfcecf75580318",
+    "project_id": "appgprj_6a7a3354c9808191933250182cf3f584",
+    "title": "PhilBot Control",
+    "version_id": "appgprj_6a7a3354c9808191933250182cf3f584~appgver_7429e2106ca48191a244fe5ef80c5864",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://philbot-control.chapsrl19.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a7a3354c9808191933250182cf3f584",
+    "failure_message": null,
+    "env_set_revision": 13,
+    "updated_at": "2026-10-29T22:11:46.016043+00:00"
+  },
+  "intermediateVersion82": "appgdep_6ae3c364725481918eb612066dfd069d",
+  "bridge": {
+    "serviceId": "4277073e-9e88-41b9-a474-6a7d36abaa2e",
+    "deploymentId": "c207f9b2-bbcb-48ed-89c1-229c33703d83",
+    "upstreamTokenUsesRailwayReference": true,
+    "existingPhoenixRoutePreserved": true,
+    "exactPreviousSource": "operations/backups/2026-10-29_shadow_proxy_pre_trains.mjs"
+  },
+  "changes": [
+    "TRAINS read-only card, positions, realized/floating PNL, persisted journal, reduction-based WR/PF, actual hourly observations plus subsequent D1 snapshots.",
+    "TRAINS uses the existing read bridge and existing server-side Site token. No new permanent service, cron or exchange credential.",
+    "Snapback and Equilibre real strategy cards moved to Retires; all twelve real account balances/history remain included in financial consolidation.",
+    "Explicit Virtuels tab retains both Phoenix variants, TRAINS, R20 shadow and Equilibre SIGNALS_ONLY observation.",
+    "Equilibre observation reports 78 recorded entry signals, not virtual trades or PNL. Explicit pause now prevents ready=true if the engine separately reports entriesPaused=true.",
+    "Phoenix historical recovery remains visibly unresolved; current 1000/0 snapshots never certify earlier returns."
+  ],
+  "verified": {
+    "readAt": "2026-10-29T22:11:53.577Z",
+    "connected": 12,
+    "equilibre": {
+      "available": true,
+      "live": false,
+      "tradingEnabled": false,
+      "legacyEntriesDisabled": true,
+      "entryReady": false,
+      "policy": {
+        "riskPct": 0.75,
+        "openRiskCapPct": 20,
+        "marginCapPct": 85,
+        "maxLeverage": 20
+      },
+      "lastBatchAt": 1793311232150,
+      "lastBatchCode": "BATCH_DONE",
+      "lastBatchRecent": true,
+      "lastError": null,
+      "processedActions": 251,
+      "pendingIntents": 1,
+      "observation": {
+        "mode": "SIGNALS_ONLY",
+        "virtualPortfolio": false,
+        "observedEntries": 78,
+        "latestEntry": {
+          "at": 1793301315037,
+          "asset": "SOL",
+          "direction": "LONG",
+          "price": 100.27
+        }
+      },
+      "telegram": {
+        "configured": true,
+        "route": "RAFALE2_TELEGRAM_WEBHOOK",
+        "lastSuccessAt": 1793310430421,
+        "lastCode": "RELAY_ACCEPTED",
+        "startupTestOk": true,
+        "startupTestAt": 1792843466236
+      },
+      "flatCleanup": {
+        "pending": 0,
+        "removedCount": 0,
+        "lastCheckedAt": 1793311879022
+      },
+      "warning": "moteur live non confirmé · exécution Compromis non armée · entrées volontairement suspendues"
+    },
+    "trains": {
+      "schema": "PHILBOT_TRAINS_CONTROL_V1",
+      "virtual": true,
+      "liveOrderCapability": false,
+      "mode": "SHADOW",
+      "generatedAt": "2026-10-29T22:12:00.230Z",
+      "metrics": {
+        "initialEquity": 605.74,
+        "cash": 605.4368849031401,
+        "realizedNetPnl": -0.3031150968598695,
+        "floatingPnl": -24.762549499999988,
+        "totalPnl": -25.065664596859847,
+        "equity": 580.6743354031402,
+        "roiPct": -4.1380236730048985,
+        "estimatedExitFees": 0.28825756716
+      },
+      "positions": [
+        {
+          "asset": "H",
+          "symbol": "HUSDT",
+          "direction": "LONG",
+          "size": 747,
+          "entry": 0.05634,
+          "mark": 0.05399,
+          "pnl": -1.7554499999999984,
+          "leverage": 4,
+          "openedAt": 1793131200000,
+          "deadline": 1795723200000,
+          "trains": 1,
+          "trimmed": 0,
+          "band": 0.042155453977
+        },
+        {
+          "asset": "ICP",
+          "symbol": "ICPUSDT",
+          "direction": "LONG",
+          "size": 42,
+          "entry": 2.571,
+          "mark": 2.417,
+          "pnl": -6.468000000000015,
+          "leverage": 7,
+          "openedAt": 1793134800000,
+          "deadline": 1795726800000,
+          "trains": 1,
+          "trimmed": 0,
+          "band": 2.318908766509
+        },
+        {
+          "asset": "DEXE",
+          "symbol": "DEXEUSDT",
+          "direction": "LONG",
+          "size": 31.92,
+          "entry": 1.608,
+          "mark": 1.491,
+          "pnl": -3.73464,
+          "leverage": 5,
+          "openedAt": 1793210400000,
+          "deadline": 1795802400000,
+          "trains": 1,
+          "trimmed": 0,
+          "band": 1.275272715387
+        },
+        {
+          "asset": "BTC",
+          "symbol": "BTCUSDT",
+          "direction": "LONG",
+          "size": 0.0029,
+          "entry": 81297.2,
+          "mark": 78840.1,
+          "pnl": -7.125589999999974,
+          "leverage": 7,
+          "openedAt": 1793224800000,
+          "deadline": 1795816800000,
+          "trains": 1,
+          "trimmed": 0,
+          "band": 77692.37114736623
+        },
+        {
+          "asset": "PEPE",
+          "symbol": "1000PEPEUSDT",
+          "direction": "LONG",
+          "size": 13473,
+          "entry": 0.0050497,
+          "mark": 0.0046282,
+          "pnl": -5.6788695,
+          "leverage": 6,
+          "openedAt": 1793235600000,
+          "deadline": 1795827600000,
+          "trains": 1,
+          "trimmed": 0,
+          "band": 0.0042591109999999995
+        }
+      ],
+      "journal": [
+        {
+          "id": "bf3ba707d60699bd81985be6882048470168504c483e50fcec5b87e6d83f27cd",
+          "at": 1793131236992,
+          "action": "ENTRY",
+          "asset": "H",
+          "direction": "LONG",
+          "code": "SHADOW_TRAIN_OPENED",
+          "reason": "",
+          "pnl": null,
+          "size": null
+        },
+        {
+          "id": "c784ba740f1eb96a748482e2f93567e7a541a9e06fc668e7455b4dba7ace83be",
+          "at": 1793134819122,
+          "action": "ENTRY",
+          "asset": "ICP",
+          "direction": "LONG",
+          "code": "SHADOW_TRAIN_OPENED",
+          "reason": "",
+          "pnl": null,
+          "size": null
+        },
+        {
+          "id": "3d6899470fd82cc410f154ad04fe7dec852c30e793a50b006ad73a9f7a26cd36",
+          "at": 1793210440061,
+          "action": "ENTRY",
+          "asset": "DEXE",
+          "direction": "LONG",
+          "code": "SHADOW_TRAIN_OPENED",
+          "reason": "",
+          "pnl": null,
+          "size": null
+        },
+        {
+          "id": "da9fedcd248061c89fd4230a63c0db1da6f323940478acdef33e6a3b6e0b8c0c",
+          "at": 1793224827462,
+          "action": "ENTRY",
+          "asset": "BTC",
+          "direction": "LONG",
+          "code": "SHADOW_TRAIN_OPENED",
+          "reason": "",
+          "pnl": null,
+          "size": null
+        },
+        {
+          "id": "f7c57d55e17f1d9e618d6fd9cec4f242e3658d917a266b276677fa0299ee9825",
+          "at": 1793235625985,
+          "action": "ENTRY",
+          "asset": "PEPE",
+          "direction": "LONG",
+          "code": "SHADOW_TRAIN_OPENED",
+          "reason": "",
+          "pnl": null,
+          "size": null
+        }
+      ],
+      "journalComplete": true,
+      "missingMarks": [],
+      "evidence": {
+        "entries": 5,
+        "trims": 0,
+        "exits": 0,
+        "firstEntryAt": 1793131236992,
+        "processStartedAt": 1793238156769,
+        "persistentMounted": true,
+        "stateReadable": true,
+        "retainedAcrossRestart": true,
+        "telegramConfigured": true,
+        "heartbeatEnabled": false,
+        "rosterAssets": 65
+      },
+      "observations": [
+        {
+          "recordedAt": 1793238186933,
+          "equity": 605.14
+        },
+        {
+          "recordedAt": 1793241756984,
+          "equity": 597.11
+        },
+        {
+          "recordedAt": 1793245356983,
+          "equity": 598.63
+        },
+        {
+          "recordedAt": 1793248957009,
+          "equity": 600.41
+        },
+        {
+          "recordedAt": 1793252557044,
+          "equity": 604.15
+        },
+        {
+          "recordedAt": 1793256157102,
+          "equity": 601.27
+        },
+        {
+          "recordedAt": 1793259757072,
+          "equity": 598.35
+        },
+        {
+          "recordedAt": 1793263357086,
+          "equity": 598.77
+        },
+        {
+          "recordedAt": 1793266957115,
+          "equity": 600.45
+        },
+        {
+          "recordedAt": 1793270557106,
+          "equity": 598.87
+        },
+        {
+          "recordedAt": 1793274157134,
+          "equity": 600.88
+        },
+        {
+          "recordedAt": 1793277757133,
+          "equity": 600.64
+        },
+        {
+          "recordedAt": 1793281357152,
+          "equity": 599.61
+        },
+        {
+          "recordedAt": 1793284957154,
+          "equity": 606.98
+        },
+        {
+          "recordedAt": 1793288557175,
+          "equity": 611.64
+        },
+        {
+          "recordedAt": 1793292157208,
+          "equity": 611.74
+        },
+        {
+          "recordedAt": 1793295757169,
+          "equity": 608.5
+        },
+        {
+          "recordedAt": 1793299357238,
+          "equity": 604.49
+        },
+        {
+          "recordedAt": 1793302957293,
+          "equity": 606.67
+        },
+        {
+          "recordedAt": 1793306557224,
+          "equity": 588.96
+        },
+        {
+          "recordedAt": 1793310157261,
+          "equity": 587.28
+        },
+        {
+          "recordedAt": 1793311657085,
+          "equity": 575.9319329031401
+        },
+        {
+          "recordedAt": 1793311731549,
+          "equity": 577.6994919031401
+        },
+        {
+          "recordedAt": 1793311773485,
+          "equity": 578.1465324031401
+        },
+        {
+          "recordedAt": 1793311920230,
+          "equity": 580.6743354031402
+        }
+      ],
+      "historyNote": "Mesures horaires enregistrées dans le moteur, puis lectures Control. Aucun point reconstruit avant la première mesure."
+    },
+    "phoenix": {
+      "generatedAt": "2026-10-29T22:12:00.524Z",
+      "variants": [
+        {
+          "id": "prototype",
+          "equity": 1000,
+          "trades": 0,
+          "positions": 0
+        },
+        {
+          "id": "original",
+          "equity": 1000,
+          "trades": 0,
+          "positions": 0
+        }
+      ]
+    }
+  },
+  "tests": {
+    "siteSuite": {
+      "passed": 163,
+      "total": 163
+    },
+    "typescript": "PASS",
+    "build": "PASS",
+    "integration": "HTTP read bridge -> Site API -> SQLite virtual-only snapshot; existing Phoenix route retained; auth/write-path/secret redaction/freshness/PnL/duplicate checks",
+    "copyValidation": {
+      "sourceRevision": "89e78b8cf03b0e5b15d26b8e636ac854e5c82cf7",
+      "positionsCopied": 5,
+      "assetTested": "BTC",
+      "initialSize": 0.0029,
+      "trimSize": 0.0007,
+      "remaining": 0.0022,
+      "duplicateIgnored": true,
+      "partialRestartPreserved": true,
+      "exitPersisted": true,
+      "exchangeWrites": 0,
+      "productionLedgerUnchanged": true
+    },
+    "browser": "Preview verified Current vs Retired and Virtuels contains Phoenix x2, TRAINS and Equilibre observation. Private production data verified through authenticated Site APIs; remote-browser logged-in visual data not certified."
+  },
+  "trial": {
+    "requestedDurationDays": 3,
+    "alertsInstalledDate": "2026-10-26",
+    "firstPersistedEntry": "2026-10-27T20:00:36.992Z",
+    "naturalEntries": 5,
+    "naturalTrims": 0,
+    "naturalExits": 0,
+    "copyTestsDoNotIncrementNaturalCounters": true,
+    "livePreflight": {
+      "ok": false,
+      "blockers": [
+        "CREDENTIALS_NOT_ENABLED",
+        "EXCLUSIVE_ACCOUNT_NOT_ACKNOWLEDGED"
+      ]
+    },
+    "telegramNativeProof": false,
+    "healthCentralNotYetConnected": true
+  },
+  "safety": {
+    "tradingEnginesRedeployed": false,
+    "realOrdersSent": 0,
+    "virtualLedgerReset": false,
+    "staleSignalsReplayed": false,
+    "accountIdsUnchanged": true,
+    "ownerOnlySitePreserved": true
+  },
+  "cleanup": {
+    "temporaryReferenceNamesCleared": [
+      "TR_CARD_READ",
+      "TR_GATE_READ",
+      "TR_PROXY_CODE",
+      "TR_PROXY_TOKEN"
+    ],
+    "helperDeployment": "096f677c-2fb5-4b13-80ae-fbdb82a94481",
+    "running": 0,
+    "crashed": 0,
+    "cron": false
+  },
+  "remaining": [
+    "Phoenix older historical ledger and signal input not restored.",
+    "Equilibre unresolved SUBMITTING intent preserved.",
+    "TRAINS native Bitunix preflight/account preparation and central Health/Telegram proof not completed by this display repair."
+  ]
+}
