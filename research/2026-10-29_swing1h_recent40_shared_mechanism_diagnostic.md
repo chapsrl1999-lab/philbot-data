@@ -46,3 +46,18 @@ Les deux candidats ayant une performance live affichée croissante ne sont pas d
 - Test sur départs multiples et holdout chronologique; aucun modèle n'est promu parce qu'il a réussi sur les captures d'octobre. Ne pas utiliser R20 ni modifier un bot existant.
 
 **État : diagnostic source terminé ; hypothèse P1 proposée, PAS TESTÉE; aucune source de rendement future démontrée; aucun déploiement ni modification live, même sur comptes existants.**
+
+## ADDENDUM — distinction durée de position contre sélectivité, 29 octobre 2026
+
+Observation supplémentaire de Philippe (captures/lecture du 29 octobre, non extraite d'un registre de fills complet) : **Swing 1h conserve majoritairement ses SHORT depuis des semaines** ; des rebonds temporaires n'ont pas provoqué le flip de la bande AA et le moteur est resté en position. **Sélectif** (carte `RAFALE2-SÉLECTIF / Recent40-CORR12` sur PhilBot Control) **effectue des trades plus courts et tente de ne retenir que les meilleurs setups**. Le score sélectionne par percentile de classement, pas par probabilité certifiée de gain. Les deux profils ne doivent plus être réduits à « deux bots exploitant le même mouvement ».
+
+**Leviers distincts, code réellement vérifié :**
+- Swing (Pine v`swing-recycle-1h-candidate-2026-08-31`) : AA ZLEMA350, ATR350 max ×5,5, STC200/75/125/0,05, recoil 9, **sortie uniquement AA_FLIP ou TIME_30D** ; **aucun stop natif fixe**. La bande AA est une référence de taille, non une perte bornée : dire « n'a pas touché le SL » serait inexact. Robustesse face à des replis mineurs et PnL flottant ≠ profit clôturé et protégé.
+- Sélectif / Recent40-CORR12 (contrat `RECENT40_CORR12_HL_V1`) : 78 recettes 15m/30m individualisées, STC+AA, sélection percentile >=0,60 par modèle calibré mensuellement, puis caps de risque et corrélation ; stops natifs et sortie FLIP_AA. **Savoir si le score a vraiment amélioré l'espérance future est encore inconnu** tant que l'ablation causale score vs candidats non sélectionnés n'est pas vérifiée.
+
+**Question de recherche à préserver avant les prochains tests :**
+1. Pour Swing, quelle fraction du PnL net et du DD MTM vient des tendances individuelles conservées à travers des rebonds (plutôt que du bon timing d'entrée) ? Dates d'entrée → dernière clôture, MFE/MAE, durée, flottant, performance si sortie à des repères *préenregistrés* plutôt qu'une sélection a posteriori.
+2. Pour Sélectif, le **rang de sélection** prédit-il un excès d'espérance réalisé sur le même actif, sens, timeframe et régime comparé aux candidats rejetés, en prenant en compte exposition, coûts, effet de capacité et stops ?
+3. Les SHORT gagnants ne seraient-ils pas surtout un pari directionnel commun sur la faiblesse des altcoins ? Mesurer l'alpha après neutralisation du bêta commun BTC/ETH (sans convertir la recherche en trading de paires déjà testé/rejeté).
+
+**Décision :** rechercher séparément (a) la capacité de *tenir la bonne direction locale* et (b) la capacité de *choisir les entrées payantes*. Ne pas inventer un nouveau bot avant cette attribution. Aucun ordre, changement de stratégie, sizing, protection ou déploiement live effectué. R20 totalement hors périmètre.
