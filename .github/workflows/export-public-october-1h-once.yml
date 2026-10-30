@@ -1,0 +1,26 @@
+name: Export October 2026 public 1h candles once
+on:
+  push:
+    branches:
+      - research/public-market-candles-20261029
+    paths:
+      - .github/workflows/export-public-october-1h-once.yml
+permissions:
+  contents: read
+jobs:
+  only_prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public Binance Oct 1–28 official ZIP + SHA256
+        run: |
+          python3 -m py_compile research/public_market_export/oct_1h_daily.py
+          python3 research/public_market_export/oct_1h_daily.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-october-1h-2026
+          path: public_oct_1h/
+          retention-days: 7
+          if-no-files-found: ignore
