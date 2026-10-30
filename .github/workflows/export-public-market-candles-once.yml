@@ -1,0 +1,30 @@
+name: Export public historical USD-M candles once
+on:
+  push:
+    branches:
+      - research/public-market-candles-20261029
+    paths:
+      - .github/workflows/export-public-market-candles-once.yml
+permissions:
+  contents: read
+concurrency:
+  group: public-binance-candles-once
+  cancel-in-progress: false
+jobs:
+  public_market_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate exporter source
+        run: python3 -m py_compile research/public_market_export/export_candles_once.py
+      - name: Download public Binance monthly archives and validate SHA256
+        run: python3 research/public_market_export/export_candles_once.py
+      - name: Preserve all public-data output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-verified-1h-15m-candles-20261029
+          path: market_only_public_candles/
+          retention-days: 7
+          if-no-files-found: warn
