@@ -1,3 +1,9 @@
+# RECTIFICATIF — 29 octobre 2026 : hypothèse suivante déjà testée
+
+La recommandation de tester ensuite les écarts relatifs entre cryptomonnaies était **une duplication d'études antérieures**, pas une piste nouvelle. En particulier le lot50 PCA/OU (66 comptes) avait déjà échoué en 2026 (−69,38 %, PF dollars jambes 0,729, DD MTM 79,45 %), le lot28 sur la force relative 4h/1h (60 comptes) avait déjà été rejeté, et le lot49 financement relatif (48 comptes) avait échoué. L'analyse détaillée figure dans `research/2026-10-29_range_root_cause_mechanisms_v1.md` et l'état conservé `RESEARCH_STATE_V3.json`. **L'hypothèse finale de ce fichier est RETIRÉE comme prochaine expérience**, mais les mesures de sa première partie restent intactes. Aucun bot existant ni R20 impliqué.
+
+---
+
 # PhilBot — recherche de rendement en range : résultats EDGE-FIRST V2
 Date : 29 octobre 2026 (Québec). **Recherche exécutée hors ligne. Aucune stratégie ou infrastructure de trading modifiée.**
 
