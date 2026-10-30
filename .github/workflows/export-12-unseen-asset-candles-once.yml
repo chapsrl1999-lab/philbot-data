@@ -1,0 +1,29 @@
+name: Research 12 unseen assets public Binance candles once
+on:
+  push:
+    branches:
+      - research/public-market-candles-20261029
+    paths:
+      - .github/workflows/export-12-unseen-asset-candles-once.yml
+permissions:
+  contents: read
+concurrency:
+  group: research-12-unseen-assets-candles-20261029
+  cancel-in-progress: false
+jobs:
+  only_public_candles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download ONLY public data and validate monthly/daily SHA256
+        run: |
+          python3 -m py_compile research/public_market_export/holdout12_pure_candles_once.py
+          python3 research/public_market_export/holdout12_pure_candles_once.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: preregistered-12-asset-public-data-20261029
+          path: holdout12_public_ohlcv/
+          retention-days: 7
+          if-no-files-found: warn
