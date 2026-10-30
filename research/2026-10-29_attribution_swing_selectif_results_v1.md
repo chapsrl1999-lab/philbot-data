@@ -1,3 +1,9 @@
+## ADDENDUM — suite d'attribution 34 actifs
+
+Les comparateurs additionnels de cette étude ont été exécutés le 29 oct. 2026, documentés dans [v2, 34 actifs](./2026-10-29_swing_stc_aa_attribution_34assets_results_v2.md). Corriger toute impression que l'entrée STC serait sans valeur : **son timing à horizon fixe n'a pas prouvé un avantage**, mais **l'interaction entrée STC + sortie AA** affiche un surplus moyen descriptif d'environ +0,99 point en 2025 et +0,88 point en jan–sept2026 sur 34 actifs (IC95 englobant zéro), avec un contrôle transversal 12 actifs non optimisés. Ce **n'est pas une rentabilité démontrée**, pas une confirmation prospective, et ne déclenche aucun nouveau bot. La simple fermeture "gagnant et plus fort que BTC à72h" a été testée et rejetée. Les résultats et limites historiques plus haut dans ce document restent inchangés.
+
+---
+
 # PhilBot — Étude d'attribution Swing 1h vs Sélectif/Recent40 (29 octobre 2026)
 **STATUT : expériences historiques calculées hors ligne ; résultats exploratoires et non validés en live. AUCUN bot modifié. R20 totalement exclu.**
 
