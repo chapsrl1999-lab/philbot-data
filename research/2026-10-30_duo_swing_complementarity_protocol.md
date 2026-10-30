@@ -1,0 +1,9 @@
+# DUO vs Swing — préenregistrement 2026-10-30
+Analyse strictement hors ligne, aucun bot ni compte modifié, R20 exclu.
+Hypothèse: le DUO en compte simulé complète Swing là où les semaines du Swing sont perdantes.
+Sources gelées: DUO original mega_lab/out/curve_duo_positions18_risk0.0075_continuous.npz (5m 2024-01-01→2026-10-25), DUO trades_duo_positions18_risk0.0075_continuous.csv, Swing 34 actifs scénario 2024-Oct2026 continu dans philbot_compte1000_swing34_audit.json. Ces deux comptes simulés ne sont pas les deux comptes live.
+Alignement: 04:00 UTC quotidien sur 2024-01-01→2026-10-24, semaines ISO UTC échantillonnées le lundi 04:00 (dernière observation disponible par semaine).
+Comparateurs, un seul choix sans optimisation: Swing 1000 seul; DUO 1000 seul; indice composé de deux sous-comptes à capital initial 500/500, sans rééquilibrage, Equity_combined = 0,5*SwingEquity + 0,5*DUOEquity.
+Mesures: capitaux finaux, PNL%, DD MTM maximal et durée sous sommet, pire semaine, proportion des semaines où DUO est positif pendant les semaines Swing négatives, par année 2024, 2025 et janvier-octobre 2026 et total; corrélations retours quotidiens/hebdo; dix pires semaines Swing et DUO. PF original indépendamment, pas de PF de portefeuille combiné inventé.
+Critère: complémentarité robuste seulement si DUO positif dans >50% des semaines Swing négatives dans CHACUN des groupes 2024, 2025, 2026 ET si indice 50/50 réduit DD ET améliore la pire semaine de Swing; enfin PF DUO stress >1 sur les trois années. Sinon rejet dans cette forme, aucun ajustement de poids.
+Limites: simulation d'indices, non compte partagé, absence de funding réel BloFin, marque Binance différente, 22/34 assets vs DUO30, pas d'exécution sur compte 500$ ni preuve de complémentarité live; historiques déjà vus, non prospective.
