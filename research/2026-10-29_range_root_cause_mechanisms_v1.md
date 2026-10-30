@@ -1,3 +1,18 @@
+# RECTIFICATIF — archives antérieures retrouvées le 29 octobre 2026
+
+**RETRAIT DES RECOMMANDATIONS DE REFAIRE FUNDING OU ÉCARTS RELATIFS COMME PISTES NOUVELLES.** Avant cette note, une revue avait proposé funding/basis et valeur relative sans consulter l'inventaire antérieur PhilBot. C'était une erreur de continuité. Les mécanismes déjà testés sont détaillés ci-dessous, et leurs résultats ne justifient pas un nouveau cycle de reparamétrage.
+
+- **ANCRE v1.2 (14 août 2026)** : 8 actifs spot/perp, 18 configurations, une seule opération par configuration, meilleure +0,0176 USD sur 1 000 et **zéro opération hors échantillon**. Source originale Library `PhilBot_ANCRE_LAB_v1_2_2026-08-14.json`.
+- **Lot49 financement relatif (26 octobre 2026)** : 30 actifs, 48 comptes, règle principale janvier–septembre 2026 **−37,79 %**, PF dollars jambes 0,936, DD MTM 55,11 %, 216,33 jours sous sommet; funding encaissé 90,57 USD contre commissions 766,15 USD. Source originale Library `PhilBot_Financement_Relatif_Lot49.html` et `RESEARCH_STATE_V3.json`.
+- **Lot50 résidus PCA/OU relatifs (octobre 2026)** : 66 comptes, adaptation crypto avec signaux PCA mais **sans vraie couverture factorielle**, résultat primaire 2026 **−69,38 %**, PF dollars jambes 0,729, DD 79,45 %. Cela rejette cette adaptation, PAS toute la théorie de l'arbitrage statistique. Source `RESEARCH_STATE_V3.json`.
+- **Lot55 perp/indice (octobre 2026)** : 66 comptes, 2026 **−21,13 %**, PF dollars jambes 0,403. Source `RESEARCH_STATE_V3.json`.
+- **Lot99 écart de cotation BTC/EUR et BTC/USD (29 octobre 2026)** : 100 comptes, 2026 1h **−5,83 % / PF 0,403**, 4h **−4,13 % / PF 0,741**, stress plus mauvais; aucune configuration qualifiée. Source originale Library `Rapport_Lot99_Ecarts_Carnets.html`.
+- **Lot76 carnet d'ordres** : contrôle de disponibilité de sources L2 échoué/incomplet; **aucun backtest financier de market making passif**, donc ne pas le confondre avec le lot99 et ne pas déclarer le market making rentable ou refuté sur cette seule base.
+
+**Décision :** funding, arbitrage spot/perp, perp/indice, stratégies relatives / PCA et écarts BTC interdevises testés sont **ARCHIVÉS / NON RETENUS dans leur forme testée**, sans relance pour chercher un réglage gagnant. Une nouvelle hypothèse n'est admissible que si elle énonce une source économique réellement différente et des preuves nouvelles. Ne pas utiliser R20 dans ce laboratoire. Aucun bot live modifié.
+
+---
+
 # PhilBot — Pourquoi les bots de range échouent et changement de méthode
 29 octobre 2026. **DIAGNOSTIC ET ORIENTATION DE RECHERCHE, pas de résultat de nouvelle stratégie et aucune modification live.**
 Périmètre **R20 exclu intégralement** (ni référence, ni objet de comparaison, ni variante). Aucune exécution en bourse, aucun service Railway, aucune modification de code des bots.
