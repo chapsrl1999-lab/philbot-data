@@ -4,6 +4,8 @@
 
 **NOUVELLE PANNE ACTIVE CONFIRMÉE : CONTINUATION / BLOFIN_R1, lot horaire21:00Z /17:00Toronto explicitement incomplet77/78, LAYER absent, puis contexte refusé BATCH_ALREADY_CLOSED. BOT BLOQUÉ / TRADING IMPOSSIBLE pour les admissions selon Health EXECUTION_NOT_READY.** Alerte française ChatGPT indépendante préparée pour la sortie de cette garde; pas de prétention de livraison push/Telegram. Aucun bot, ordre, stop, risque, code runtime ou réglage Railway modifié. Seul journal d'exploitation autorisé écrit.
 
+**Vérification finale** : Health21:03:05.511351579Z /17:03:05.511 resteCRITICAL pourCONTINUATION; Guardian21:03:31.279199817Z confirme. RECENT40 n'a plus d'incident dansHealth21:03:05 niGuardian21:03:31 : reprise observée après le délai transitoire.30SLdéclarés/21sansSLinchangés.
+
 ### Incident nouveau CONTINUATION-LAYER-20261031T2100
 - Dernier contrôle16:31 sain sur lot16h78/78. **17:00:55.628908970Toronto /21:00:55.628908970Z** : un POST/continuation/webhook HTTP400, durée10ms. La garde ne publie pas le chemin protégé contenant un jeton. Pas de499 dans ce lot.
 - **17:01:01.167164730 /21:01:01.167164730Z** : runtime exact `[CONTINUATION][INGRESS_REJECT] event=CONTEXT asset=LAYER batch=1793480400000 code=BATCH_ALREADY_CLOSED`. Le contexte LAYER a été refusé après clôture du lot; l'instant exact où le lot a été fermé et la cause du retard initial ne sont pas établis. Ne pas confondre timestamp proxyHTTP400 et timestamp d'émission du log.
