@@ -1,5 +1,27 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## Garde indépendante — 31 octobre 2026, 09:55 UTC / 05:55 America/Toronto
+**NOUVEL INCIDENT MULTI-BOTS HYPERLIQUID : erreurs502/timeouts, diagnostics incomplets et exécutionRECENT40 bloquée entre environ05:33 et05:37 locale, maintenant rétablis.** Ce n'est pas une panne du connecteur ni une coupure généraleRailway démontrée. Bots strictement en lecture seule;seulcejournalactualiséetrelu. Début réel inconnu;premièrespreuvesci-dessous.
+
+### Incident corrélé de lectures Hyperliquid, 09:32:59–09:37:09 UTC
+- **RAFALE2 HL** : HTTP GET /philbot-health/source503 **09:32:59.065Z,09:33:59.112Z,09:35:09.021Z,09:36:09.068Z**. Health SOURCE_UNAVAILABLE durantquatrecontrôles09:33:09→09:36:09. **OUTSIDER** : GET /control503 **09:32:59.131Z,09:33:59.200Z,09:35:07.123Z,09:35:21.957Z,09:36:07.293Z**,sourceinaccessibleHealthmêmescontrôles. SWING_V28 source aussiinaccessible;ilestdistinctduSWING1hBloFin.
+- **RECENT40** : runtime **09:32:59.454Z execution=BLOCKED,error=HYPERLIQUID_READ_UNAVAILABLE_HTTP_502**,puis09:34:39.871 HYPERLIQUID_READ_UNAVAILABLE. **BOT BLOQUÉ / TRADING IMPOSSIBLE à ces instants** malgréRailwaySUCCESS. RECONCILED **09:36:30.428Z**,openOwnedPositions0. Health POSITION_DETAILS_UNAVAILABLE09:33–09:35 etEXECUTION_NOT_READY09:34–09:36,retirés09:37.
+- **SNAPBACK V10R1** : logsRECONCILE **502 Bad Gateway à09:33:07.345Z et09:34:07.371Z**,puis **timeout10000ms09:35:17.730Z**;HealthPOSITION_DETAILS_UNAVAILABLE09:33–09:34,absent09:35. HTTP/healthduconteneurreste200 :cela necontreditpasl'échecamont.
+- **R20HL** : Guardian09:33–09:35 EXTRA_SOURCE_UNHEALTHY/SOURCE_UNAVAILABLE,puisEXECUTION_NOT_READY09:34–09:35;HTTP/ready503 **09:35:21.363Z**. RetraitGuardian09:36:19,extras2/2. LecodeTRADE_CONFIRMED_TELEGRAM_MISSINGfigureaussidanscesinstantanésdégradés,**maisaucuntradeoumessage_idnatifn'estprouvédanscettepasse** :nepasinventerunenouvellenotificationnativemanquéeàpartirdeceseulcode.
+- Healthtombeà **8/11sources et49/49 agrégés09:33–09:36**,contre74/74 justeavant;**cesvaleursneprouventni25clôturesninombredepositionssansstop**. Retour **11/11,73/73 à09:37:09.966Z**,confirmé09:38 et09:53–54. Guardian09:37:09puis09:53 uniquementTelegramnonvérifié.
+- AutreblocageDP60 EXECUTION_NOT_READYà09:33Guardian,retiré09:34;sourcediagnosticcausenonretournéici,**nepasattribuerautomatiquementàHyperliquid**. HWR/OUTSIDERfrontière09:31réglée09:32.
+- **Risque/actionimmédiate :** indisponibilitépartagée de lectures/rapprochements etperte temporairedevisibilitésurcomptes/protections;originecôtéAPI/routageamontnonétablieau-delàdes502/timeoutsobservés. Recontrôlerpositions/fills/stopsnatifsdesbotsconcernés,diagnostiquerrequêtesetdélaisHyperliquid,conserverguards/journaux.SRE#64pourreprise;pasdereplay,ordre,réarmementouprotectiondésactivée. Aucunstopmanquant,défaillancegénéraleRailwayoupertefinancièreconfirmé.
+
+### Contrôle courant, périmètre et incidents connus
+- Quatreprojets/36servicesréellementinventoriés,aucunnouveaudéploiement/FAILED/CRASHED,5SLEEPINGconnus;ancienpatchDP60videintact. Health09:53:04 et09:54:04 :11/11sources, **73/73 positions/protections AGRÉGÉES**,0erreurrécente,0stall,0critical,1warningTelegram,registry0/31. HL19/19,DP6020/20,CONT2/2,SWING1h21/21,HWR5/5,OUTSIDER5/5,RANGE_WAVE1/1,RECENT400/0;autres0/0. **StopsnatifsOID/qty/trigger/reduceOnly/ownershipnoncertifiésindividuellement**. R20extrasGuardianhorsdutotal11/73.
+- DP60MEGA/auditdequalification#73resteouvert,PR74noninstallée selon dernièrepreuve;pasnouveaudéploiement,retour20/20n'estpasauditMEGA.APT#71NONRÉPARÉmalgréexpiryHealth6h;aucunréarmementniréconciliationnativeprouvée,dernierbilan00:21locale,pasderappelidentiqueavant≈6h.
+- CONTINUATIONdernier09:00/05:00localecomplet **78/78**,missing=[],EPICdéjàretiré,confirmé09:46:02;cycle10:00pasencoredû,aucuningresshorairedansfenêtre09:12–09:55. DéfautACKconnu noncorrigé,sanscontextes/tradesperdusdéduits.CataloguenatifBinancenonrelu,pasdenouvelleconclusionderetrait. RECENT40dernier09:45 **CURRENT/RUNNING/modelReady=true,63/63**,confirméHealth09:54;POST/candles1h **183/1832xx**,24h **4340×2xx/28×4xx/0×5xxsur4368**. PasdefeedConflictactuelprouvé;ingestionacceptéeneprouvepascapacitéd'exécutionpendantblocage.
+- PhoenixV1/dualsansvolume,mêmesdéploiements28oct,runtimevide,V1control85HTTP200/dual0HTTPdansfenêtre;aucunresetnouveauattesté,ledger/flux/performanceinconnus,aucunarrêtsanspreuvedesconsommateurs.
+- Gmailrecherchefraîcheuniquementavisconnu30oct16:12:07Z60,08USD/80USD,cycle04nov;aucunnouveaustop/ressource/failure/limite.Ancien55,08USD28oct12:26Z,tendance≈2,32USD/j,80USDsous48hnonsuggéréàchargeconstante; **usage/capACTUELSnonconsultablesauconnecteur**,projectionnongarantie,aucunelimitemodifiée.Issues63/64/65/71/73reluesOPEN.TelegramRELAY_ACCEPTED/DELIVERY_UNVERIFIED,sansmessage_idnatifnilivraisonfinaleprouvée;aucunpushprétendu.
+
+Aucunbot,ordre,stop,code,stratégie,variable,configuration,limite,replay,réarmement,redémarrageoudéploiementmodifié.
+
+
 ## Garde indépendante — 31 octobre 2026, 09:12 UTC / 05:12 America/Toronto
 **Nouvelles preuves : défaut de qualification DP60 confirmé indépendamment dans le code installé; cinq nouvelles pertes brèves de visibilité R20_HL, toutes rétablies.** Lecture seule des bots; seul ce journal actualisé et relu. Aucun stop réellement absent démontré.
 
