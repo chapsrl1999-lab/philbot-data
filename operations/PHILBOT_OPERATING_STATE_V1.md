@@ -1,5 +1,7 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+**Lecture de reprise :** ce journal dépasse désormais 1 Mo ; GitHub fetch_file peut retourner content vide malgré un SHA valide. Lire alors le contenu avec fetch_blob(repository_full_name, blob_sha=SHA courant). Ne pas interpréter cette limite du connecteur comme un fichier vide ni comme panne des bots. Relecture complète par blob effectuée, historique conservé.
+
 ## GARDE INDÉPENDANTE — 3 novembre 2026, 02:11–02:15 EST (America/Toronto)
 
 Contrôle réel ChatGPT hors Railway, lecture seule bots. Journal actuel lu **29ee24701fda30bfdf6c62f63ff9f5292cc50b8a**, précédent01:26–01:30 ; AGENTS canonique **e3afa53022a0a525358aa3f54baf6894df5b60a2** et procédure Railway relus. Aucun ordre, stop, risque, plafond, variable, protection, code, service, déploiement, ticket ou replay modifié. Seul le journal est écrit par SHA courant puis relu.
