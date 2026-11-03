@@ -1,6 +1,8 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
-## GARDE INDÉPENDANTE — 3 novembre 2026, 11:14–11:16 EST (America/Toronto)
+## GARDE INDÉPENDANTE — 3 novembre 2026, 11:14–11:17 EST (America/Toronto)
+
+**Contrôle final 11:17 EST :** Guardian confirme le retrait des warnings de synchronisation à **16:16:33.922178548Z /11:16:33.922 EST** ; seul TELEGRAM_DELIVERY_UNVERIFIED demeure. Cette preuve complète le statut provisoire ci-dessous, sans certifier la livraison Telegram ni les stops natifs.
 
 Contrôle réel ChatGPT hors Railway, strictement en lecture seule pour les bots, comptes, ordres, stops, protections, risque et configuration. Révision courante du journal **5cfc15544608736eccee10246ceb95cbc42fa7c9** chargée par blob (>1Mo), état courant et historique pertinent réconciliés ; AGENTS canonique **e3afa53022a0a525358aa3f54baf6894df5b60a2** et procédure Railway relus. Seule écriture autorisée : ce journal avec SHA frais et relecture intégrale. Aucun bot, ordre, stop, variable, plafond, déploiement, ticket, automation ou replay modifié.
 
