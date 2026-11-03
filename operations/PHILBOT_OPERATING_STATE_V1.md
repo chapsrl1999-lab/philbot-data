@@ -1,5 +1,61 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 3 novembre 2026, 07:09–07:14 EST (America/Toronto)
+
+Contrôle réel ChatGPT hors Railway, lecture seule bots et comptes. Journal courant blob **8fa5eb35f3c53695f6154757a90a3c2fdc541392** lu intégralement par fetch_blob (>1Mo), SHA frais identique avant écriture ; historique préservé. AGENTS canonique e3afa53022a0a525358aa3f54baf6894df5b60a2 et procédure Railway relus. Aucun ordre, stop, risque, protection, variable, plafond, bot, code, déploiement, service, ticket, automation ni replay modifié. Seule écriture autorisée : ce journal puis relecture intégrale.
+
+### R20_HL / Hyperliquid — récurrence dense de pertes de visibilité, pas panne continue certifiée
+
+- **Onze nouveaux épisodes Guardian CRITICAL SOURCE_UNAVAILABLE R20_HL** depuis la garde précédente, chacun retiré au poll suivant. Horaires UTC exacts (America/Toronto = UTC−5h) :
+  - 11:17:34.469048166Z → 11:18:34.878204312Z ;
+  - 11:19:34.744073316Z → 11:20:34.772459405Z ;
+  - 11:26:35.540168525Z → 11:27:35.347066611Z ;
+  - 11:33:36.640502788Z → 11:34:37.087559390Z ;
+  - 11:37:28.423066638Z → 11:38:28.474489821Z ;
+  - 11:39:28.607373515Z → 11:40:28.844960776Z ;
+  - 11:43:30.084958873Z → 11:44:30.791037748Z ;
+  - 11:47:31.089446300Z → 11:48:31.270946982Z ;
+  - 11:52:32.140570826Z → 11:53:32.158802211Z ;
+  - 12:03:36.735124182Z → 12:04:36.654837545Z ;
+  - **12:07:37.551022661Z /07:07:37.551EST → 12:08:37.988242446Z /07:08:37.988EST**.
+- Il s'agit d'instants d'alerte et de retrait observés, PAS des débuts/fins natifs exacts ni de onze minutes d'arrêt mesurées. Dernier ACTIVE12:08:37.988Z ne garde que Telegram ; aucun nouvel ACTIVE ensuite jusqu'au relevé12:11:38. Classe connue, mais densité nouvelle (11 épisodes dans ~51min, contre2 épisodes retournés dans la fenêtre précédente09:33–11:14UTC) : **preuve matérielle à escalader une fois**, sans prétendre nouvelle cause ou coupure générale.
+- R20 dédié fce7c440 SUCCESS inchangé, runtime vide11:16→12:10. Logs proxy11:16→12:10 : **165GET200 =110/monitor+55/guardian**, aucun autre statut, durée max4183ms ; derniers/monitor12:10:29.272884334Z4183ms et/guardian12:10:29.272935505Z1963ms. HTTP200 n'atteste pas contenu ni qualification métier. Payload indépendant /ready et cause contenu/fraîcheur/latence/amont **NON CERTIFIÉS** ; pas extrapolation des erreurs de l'outil web de la passe précédente.
+- Guardian source=ok/extras2/2 ; **R20 hors10sourcesprincipalesHealth et71projections**. Risque : impossibilité intermittente de certifier la santé métier, le compte et les protections R20. **Aucun ordre manqué, perte, stop absent ou arrêt moteur prouvé ; ne pas dire BOT BLOQUÉ/TRADING IMPOSSIBLE sur SOURCE_UNAVAILABLE seul.**
+- Escalade #64 : rapprocher les11horodatages du JSON exact /guardian et/monitor, âge du snapshot/readiness/error natif et latences ; contrôler compte/positions/stops individuels en lecture seule ; ne pas augmenter aveuglément les polls ni étendre simplement les délais pour masquer l'alerte. Vérifier stabilité sur contrôles suivants. Aucun correctif ou réparation automatique présumé.
+
+### Couverture plateforme et protections
+
+- Quatre inventaires Railway +environment_status : **29services21/5/2/1**, volumes lus, pas arrêt généralisé ni nouvelle releaseLIVE. Healthbf69a2b1,Guardian02163c12,HWR06cf6aeb,CONT4963b533,B&Caefc2043,R3d343b30e,OUT01992741,RECENT9db49713,TRIPLE2227e988,Swing347623e4,R20fce7c440,SNAPV102f7dd60f,DP6067bde292 inchangés. HWRpatch5b4303e7STAGED5 (statusénumère2opérations),nonappliqué ;proxyControlSLEEPINGattendu.
+- **Health12:09:30.971473907Z /07:09:30.971EST WARNING10/10sources,71projections,37/37conformité,13/13SLrequisreconnus,executionFailures0,pipelineStalls0,critical0/warning1**. **71=13positions soumises contratSLreconnu +24Swing1h sansSLnatifparcontrat +34TRIPLE mixtes**,pas71positionsavecSL ;TRIPLEhors37/37et13/13. Aucun accroissement Swing24sansSL ni changement de politique observé. OID/CLoID/sens/quantité/trigger/reduceOnly/fills et toussous-comptes **NON CERTIFIÉS individuellement**, frais/réserves etreadinessdirectsdetousmoteursnoncertifiés.
+- RechercheHealthfiltrée11:16→12:10 :aucunEXECUTION_NOT_READY/POSITION_DETAILS_UNAVAILABLE/SOURCE_CATALOG_UNAVAILABLE/SOURCE_UNAVAILABLEretourné. GuardianhorsR20uniquementwarningssync15m<2minrésorbés ;paspannecontinueHWR/OUT/RECENT.
+- PhoenixV1mêmeca5a1de0sansvolume,dualretirévolontairement ;aucun nouveauredéploiement/resetprouvé,ledger/ROI/fluxnoncertifiés#65. DP60OFFvolontaire,CONTdésarméOBSERVEvolontaire,pasréarmement. Swing/SNAPV10/R20sansnouveauruntime :driversexecutionReadydirects/deuxcycles **NONVÉRIFIÉS**,pasgelinféréd'unlogvide.
+
+### Nouveaux cycles métier
+
+- **CONTINUATION12hUTC/07hEST78/78**,missing[],EPICretiré,lastReceived12:00:45.415Z ;premièreSCAN **12:01:28.570989348Z**. FenêtreexacteHTTP **11:11–12:11UTC78POST202,0rejet/499**,aucunINGRESS_REJECTnouveau. Ancienlot08h75/78APE/POPCAT/SPXquorum≠exhaustivité restehistoriquementincomplet,déjàalerté04:20,pasnouveau doublon ;contrat79historique/78actifsconservé,catalogueBinancenatifcourantnonretéléchargé,pasréinscription/retrait/replay.
+- **RECENT40** nouvellesclôtures11:30/11:45/12h CURRENT/LIVE,modelReadytrue,apiCheckStatusVERIFIED,63/63,firstMissingClosenull ;dernière **12:00:53.717086483Z**,HealthSCAN12:09complete63/63,missing[],lastProcessed12h. **POST/candles http_requests1h194/1942xx100%,0×4xx/5xx ;24h4331/4402=98.39%,71×4xx,0×5xx**. Pasnouveau409soutenu/feedConflict/checkpointbloquantdémontré ;71refushistoriques≠acceptés≠tradesmanqués.
+- **HWR PREPARED_RUNTIMEoktrue11:30:50.133708793Z,11:45:49.538919876Z,12:00:52.900720811Z**. Derniercollector **12:09:57.091166003Z READY/ordersPossibletrue**,verified=hwrVerified12h,blocking/haltnull,errornull ;NO_FRESH_BOUNDARYentrebornesnonpanne. Snapshot12:00:50.140Zequity716.2041/disponible694.0283/1position,age546135msaucollector,paslectureinstantanée/fraisgarantis. Huitsocketsconnected,reconnectingfalse,failure0,nextReconnectnull ;dernierPARTIAL_SILENCEXTZUSDTcontexte12:08:27.061Z,marketRecoveryREADY/missingPairs[]. PasEPICseul,aucunereconnexionglobale/échec>5minprouvé.
+- **OUTSIDER** sixévénementsstructurésmessagevideinspectés,troisclôtures11:30/11:45/12h synchronisées,lastErrornull ;dernièreobservation **12:01:26.358946701Z**. Health6positions/6protectedagrégées,paspreuveOIDnatif.
+- **RAFALE3**11:3017/17,puis12h30/30+17/17,0signal/0erreurBARRE,1positionouverte ;dernière **12:01:44.924905205Z**. Aucun nouveau429retourné11:16→12:10 ;les429UNIconnusne sontpasdéclarésdéfinitivementrésolus,nistoprecertifié. MigrationvolontaireLIVErespectée.
+- B&C12hBARRE **12:03:04.502755707Z**,positions/signaux/ordres[],equity304.60.
+
+### TRIPLE — cycle12h terminé après chargement prolongé, nouvelle pièce ONDO ; #92 non corrigé
+
+- Même version installée **2227e988 /9872081dcd21fa60cbffdb17d6f80c19b4ae675d**,list_deploymentsrelu,PR93NONINSTALLÉE. #92OPENupdated09:24:03Z,#63/#64/#65OPENinchangées. BilanprolongéTRIPLEdéjànotifié06:17,pasnouveau doublonhoraire.
+- Runtime12h **12:06:05.906539779Z CANDIDATS n110**,puis **12:06:05.906554939Z CHARGEMENTactifs110** (payload12:06:03.283/284Z),contre111auxcyclesantérieurs. **Aucun CHARGE/BARRE12h encore retourné aux lectures répétées jusqu'à12:11:43UTC ;cycle12hNONVÉRIFIÉ**,pasannoncécomplet ni arrêtmoteurcertain. DernièreBARREacquise11h,8pièces/equityindicative398.77dansjournalprécédent. Changement110candidats ne prouve pas radiation,pertecontexte ouchangemendestratégie ;aucuneréintroductiond'actif.
+- Sourceeffective **triple/server.mjs blobf6088e4b406558469f46a61306696ba44b97a2da** surSHAinstallé relue : timer30s avec busy autourawaitm.tick,alertecycle>3h aprèsretourm.tick. Ce mécanisme ne certifie ni progression durantunlongchargement,niabsenceblocage ;aucunelapsedlatencySLAinventé. Ne pas qualifierlaBARRE12hréussie surSUCCESSouHealthinchangé. Contrôleprochainrelevé requis surfindechargement/lastClose/errorssansreplay.
+- **Vérification finale12:13UTC : CHARGE12:12:49.819721204Z (payload12:12:41.617Z),110actifs/398secondes ; ENTREE12:12:49.819723844Z (payload12:12:43.090Z),idTRPE200ONDO498252,ONDOUSDT SHORT3599contrats,entry0.3863,stopannoncé0.4022,target0.3385 ; BARRE12:12:49.819739784Z,payload12:12:43.853Z,close12h,9pièces,sortiesTemps0,flux[],equityindicative399.2. Cycle12h terminé, donc statut provisoireNONVÉRIFIÉci-dessus dépassé par cette preuve finale. Chargement398scontre206sprécédent, pas arrêtcontinu affirmé ; aucunfill,OIDTPSL,reduceOnly,taillenative ouownershipcertifié pourONDO. Contrats ne sont pas montantUSDT.**
+- AuditTPSLtoutespages/détails/historique/fills/ownership**9pièces**+flux/DOGEENA/ONDO,backuprestaurableetvalidationcomplètehorsprod restent requis #83/#92/#64. RisqueP0codereproduitinchangé,aucunenouvellefausseSORTIEliveoustopabsentprouvé. Ne pas fermer les tickets sur13/13HealthhorsTRIPLE.
+
+- DernierHealthrecontrôlé12:12:31.725939350Z71/37/13inchangé,sourceTRIPLE34/2 etsnapshotupdated12:11:25.252Z : **cettelectureprécèdeONDO12:12:43,pasvalidationpostentrée**. Ne pas annoncer couvertureONDOcertifiée.
+
+### Courriels, budget, marché et notification
+
+- Gmaildepuis11:16UTC :4nouveauxmailscrashPERSONAL **11:19:04/11:32:28/11:48:56/12:02:49Z**,dernierplaintextlu ;pasnouveaumailhardstop/quota/ressources/autrefailure retourné. PERSONALdep **71426113-3655-4fbc-ad6e-fa264c511841 CRASHED12:02:48.026Z**,runtime **PERSONAL_SNAPSHOT_HTTP_40112:02:45.430331071Z /07:02:45.430EST** ;GuardianControl401 **12:11:38.730071145Z /07:11:38.730EST**. Panneconnue#82,historique/PnL/surveillanceretraitsnonfiables,paséchecordresLIVEprouvé. Dernierbilan02:15,prochainvers08:15siinchangé,pasrappelinchangémaintenant.
+- Deuxmailsbudgetrelus : **28oct12:26:22Z55.08USD/55hardstop**, **30oct16:12:07Z60.08USD/80avis75%,cycle4nov2026**. Pentehistorique+5USD/51.76h≈2.32USD/jNONextrapolée ;**usage/hardcapactuelsRailwayNONVÉRIFIÉS**,pasdatehardstop24–48hcertifiée,aucunplafondmodifié.
+- https://hyperliquid.statuspage.io/ et/historyrelues12:10UTC :AllSystemsOperational,pasincident2/3novniannoncefuture24hvisible. API/api/v2/scheduled-maintenances.jsoninaccessibleoutilweb :APINONVÉRIFIÉE,paspanneExchangedéduiteou5xxglobalprouvé. Aucunenouvellemaintenanceànotifier ;aprèsfuturefenêtreannoncée,recontrôlersourcesetSLindividuels,sanssignauxpérimés.
+- Telegram **RELAY_ACCEPTED/deliveryVerifiedfalse/receiptnull**,message_idnatifabsent :WARNINGnonrésolu,paslivraisoncertifiée. **Décision : alertecibléeR20sur11nouveauxépisodesetdensitéaccrue**,pasrépétitionbilanTRIPLE/PERSONALinchangé ;cycleTRIPLE12hfinalementterminéetnouvelleONDOgardésaujournal,sanscertificationnative. Aucunprétentionpush/Telegramreçu. Gardecomplémentairehorairecontinue,sansgarantieimmédiate,surveillanceexterneplusfréquentenécessaire.
+
 ## GARDE INDÉPENDANTE — 3 novembre 2026, 06:13–06:17 EST (America/Toronto)
 
 Contrôle réel indépendant ChatGPT hors Railway. Journal courant **608054214d6653b2406251c0691e016526319cd6** lu par blob (>1Mo), incluant garde04:32 et maintenance04:25, SHA frais identique relu avant écriture. AGENTS canonique **e3afa53022a0a525358aa3f54baf6894df5b60a2** et procédure Railway lus. Aucun ordre, stop, protection, risque, plafond, variable, bot, service, déploiement, code, ticket, automation ou replay modifié ; seule écriture autorisée = ce journal puis relecture intégrale. **Nouvelle récurrence de perte de visibilité R20_HL confirmée par Guardian**, pas panne générale ni stop absent inventé.
