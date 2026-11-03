@@ -1,6 +1,6 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
-## GARDE INDÉPENDANTE — 3 novembre 2026, 08:10–08:17 EST (America/Toronto)
+## GARDE INDÉPENDANTE — 3 novembre 2026, 08:10–08:16 EST (America/Toronto)
 
 Contrôle réel ChatGPT hors Railway, lecture seule bots/comptes/configuration. Journal courant **3c6adf83b2c9fead9fd29a3d9aa788b5063caefa** lu intégralement par blob (>1Mo), incluant garde07:14 ; AGENTS canonique **e3afa53022a0a525358aa3f54baf6894df5b60a2** et procédure Railway relus. Aucun ordre, stop, protection, risque, variable, plafond, code, service, déploiement, ticket, automation ou replay modifié par cette garde. Seule écriture autorisée = ce journal sous SHA frais puis relecture. **Bilan périodique ~six heures PERSONAL/Control à notifier ; pas nouvelle panne LIVE généralisée. Gmail partiellement indisponible par rate limit, ne pas assimiler à panne de bots.**
 
