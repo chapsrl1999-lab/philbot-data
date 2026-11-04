@@ -11,7 +11,7 @@ INSTR = ["BRENTCMDUSD", "LIGHTCMDUSD", "GASCMDUSD", "DIESELCMDUSD", "XAUUSD", "X
          "EURUSD", "USDJPY", "GBPUSD", "AUDUSD", "USDCAD", "USDCHF", "NZDUSD", "EURJPY", "EURGBP", "GBPJPY", "BTCUSD", "ETHUSD"]
 MINUTE = ["BRENTCMDUSD", "LIGHTCMDUSD", "GASCMDUSD", "XAUUSD", "XAGUSD", "USA500IDXUSD", "USATECHIDXUSD", "USA30IDXUSD", "DEUIDXEUR", "EURUSD", "USDJPY", "GBPUSD"]
 
-def get(url, tries=4):
+def get(url, tries=3):
     for k in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -50,13 +50,15 @@ log = []; now = dt.datetime.utcnow()
 ONLY = os.environ.get("INSTR")
 if ONLY: INSTR = [ONLY]; MINUTE = [m for m in MINUTE if m == ONLY] if os.environ.get("WITH_MINUTE") == "1" else []
 from concurrent.futures import ThreadPoolExecutor
+DEADLINE = time.time() + 35 * 60; T0 = time.time()
+os.makedirs('data', exist_ok=True)
 def one_month(args):
     ins, y, m = args
     raw = get(f"{BASE}/{ins}/{y}/{m:02d}/BID_candles_hour_1.bi5")
     t0 = int(dt.datetime(y, m + 1, 1, tzinfo=dt.timezone.utc).timestamp())
     got = parse(raw, t0) if raw else []
     # repli minute seulement si le mois horaire est vide (les actions n'ont que ~150 bougies/mois, c'est normal)
-    if not got:
+    if not got and raw is None and time.time() < DEADLINE:   # repli minute seulement sur erreur réseau, pas sur 404
         got = month_from_minutes(ins, y, m)
     return (y, m, got, raw is None)
 for ins in INSTR:
@@ -66,7 +68,8 @@ for ins in INSTR:
     if rows:
         with gzip.open(f"{OUT}/{ins}_1h.csv.gz", "wt", newline="") as f:
             w = csv.writer(f); w.writerow(["t", "o", "h", "l", "c", "v"]); w.writerows(rows)
-    log.append(f"{ins} 1h: {len(rows)} bougies, {miss} échecs")
+    log.append(f"{ins} 1h: {len(rows)} bougies, {miss} échecs réseau, {sum(1 for _,_,g,_ in res if g)} mois avec données, {time.time()-T0:.0f} s")
+    open('data/DUKA_LOG.txt', 'w').write('\n'.join(log))
     print(log[-1], flush=True)
 
 start = now - dt.timedelta(days=3 * 365)
