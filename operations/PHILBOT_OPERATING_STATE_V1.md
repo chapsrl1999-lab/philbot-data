@@ -19,7 +19,7 @@
 | B&C BloFin LIVE | `19eda6c1a583a359e32b3ad2b2dce1da9bafa96f` | 0 position au cycle 12 h; clôture LINK native non recertifiée. |
 | B&C SHADOW | `1f5b502ce549e271409b45df98544222b2f9f240` | Dernière equity indicative 940,34, ROI/PnL exact non recertifié, ne pas réinitialiser. |
 | CONTINUATION OBSERVE | `4c760d6d85ff53983c9a8bea8aacc50bac3b263c` | Lot 12 h **77/78 INJ** manquant avec refus BATCH_ALREADY_CLOSED à 17:00:51Z; Health lastBatchComplete=true et missingContexts INJ discordants; catalogue exhaustif non recertifié, aucune entrée LIVE. Issue #64. |
-| RAFALE2 SWING1h BloFin | `33fe33ab61eaeef0f704916bd3b6915514a54b41` (service `philbot-snapback`, identité ancienne à revérifier) | Health 24 positions sans SL natif par contrat; gestion runtime indispensable; stops individuels non supposés. |
+| Service Railway `philbot-snapback` (identité fonctionnelle non certifiée) | `33fe33ab61eaeef0f704916bd3b6915514a54b41` | SUCCESS process uniquement, aucun rattachement fiable à SWING1h ou SNAPBACK sans audit runtime. |\n| RAFALE2 SWING1h BloFin (source Health) | **SHA non attribuable de manière sûre avec cet inventaire** | Health 24 positions sans SL natif par contrat; moteur de sortie crucial, arrêts/stops/fills non recertifiés. |
 | SWING SHADOW | `ffe7dbfef8aef85311b83ecfd1c1c76c95099294` | Volume présent, ROI/PnL pas recertifiés. |
 | HWR R4 BloFin | `cf56cf62e2acf99c6f29dfbf5997881e009c9d66` | Clôtures 15m préparées; PARTIAL_SILENCE EPIC isolé, projection 1→0 à 17:09, vraie livraison et positions non recertifiées; 5 modifications STAGED préexistantes, NON APPLIQUÉES. |
 | OUTSIDER HL | `ce45eb710386bae956947aca44003d94458b13da` | 2 positions projetées et synchronisation revenue; ORDER_RESULT_UNKNOWN antérieur non rapproché nativement. |
