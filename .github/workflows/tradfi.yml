@@ -11,12 +11,12 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       max-parallel: 20
       matrix:
-        instr: [XAUUSD, XAGUSD, LIGHTCMDUSD, BRENTCMDUSD, USATECHIDXUSD, USA500IDXUSD, AAPLUSUSD, MSFTUSUSD, NVDAUSUSD, AMZNUSUSD,
+        instr: [XAUUSD, LIGHTCMDUSD, USATECHIDXUSD, AAPLUSUSD, MSFTUSUSD, NVDAUSUSD, AMZNUSUSD,
                 GOOGLUSUSD, METAUSUSD, TSLAUSUSD, AMDUSUSD, NFLXUSUSD, AVGOUSUSD, PLTRUSUSD, COINUSUSD, MSTRUSUSD, MUUSUSD]
     steps:
       - uses: actions/checkout@v4
