@@ -1,5 +1,12 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 4 novembre 2026, 21:48 EST (America/Toronto)
+
+- Quatre projets Railway / 30 services, aucun arrêt général ni nouveau déploiement prioritaire observé. Health **02:48:27.581614282Z** : 7/7 sources configurées, 57 projections, conformité 30/30, 6/6 stops natifs requis reconnus, 24 Swing1h sans SL natif par contrat, TRIPLE 27 hors ratio. Aucun critique sur ce périmètre. Guardian **02:46:45.827Z** seul TELEGRAM_DELIVERY_UNVERIFIED, pas de message_id natif.
+- HWR deux clôtures PREPARED_RUNTIME OK (02:30:55.279Z et 02:45:50.376Z), ordersPossible=true **02:47:50.998Z** ; OUTSIDER observation native **02:45:56.727Z**, lastError=null. RECENT40 **02:45:21.804Z** CURRENT/RUNNING, modèle prêt, firstMissingClose=null, scan 63/63 ; POST /candles **182/182** 2xx sur 1h, **4373/4382** sur 24h, 9 4xx et zéro 5xx. Aucun retour FIL soutenu démontré.
+- TRIPLE #92 sans nouveau journal d'exécution dans la fenêtre : les trois entrées déjà signalées restent à rapprocher côté BloFin, pas de preuve de stop absent ou de certification native individuelle. RAFALE3 altsVsBtc=null, 7 alts et repli ×0,7 encore à 02:48:18.647Z, état connu. CONTINUATION OBSERVE hors Health, clôture de 21h métier NON VÉRIFIÉE, 22h non due. DP60, SNAPBACK et R20 HL sans logs métier frais ; Phoenix V1 sans nouveau redéploiement ni preuve de restauration.
+- Gmail : deux nouveaux avis crash PERSONAL #82, dernier 401 **02:47:47.819Z**, sans aggravation distincte. Aucun nouvel avis de facturation, plafond non vérifié. Statuspage Hyperliquid et historique consultés, aucune nouvelle fenêtre affichée, API de maintenance inaccessible à la consultation. Aucune mutation LIVE, ni ordre, ni replay.
+
 ## GARDE INDÉPENDANTE — 4 novembre 2026, 21:26 EST (America/Toronto)
 
 - **TRIPLE/BloFin #92 — trois nouvelles entrées short journalisées** : HYPEUSDT 2 contrats à **02:09:54.023Z**, LTCUSDT 0,66 à **02:09:55.458Z**, BCHUSDT 1,1 à **02:09:56.316Z** ; stops déclarés 91,608 / 59,49 / 301,07. Registre 8→11 pièces ; Health rapporte encore 27 positions et 3 protections agrégées pour TRIPLE (hors ratio), ne valide pas ces trois stops individuellement. Pas de preuve de stop absent ni de fill natif. Escalade : rapprocher IDs, fills, quantités, sens, déclencheurs et reduceOnly dans les ordres natifs BloFin toutes pages, sans rejouer ni changer un ordre. IRYS code1 connu ; correctif #92 non déployé selon reprise.
