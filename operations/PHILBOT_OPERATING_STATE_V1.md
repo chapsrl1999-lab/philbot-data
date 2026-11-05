@@ -1,5 +1,11 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 5 novembre 2026, 05:35 EST (America/Toronto)
+
+- Contrôle incrémental des quatre projets/30 services depuis05:23 : aucun nouveau critique, changement moteur ni arrêt général observés. Health **10:34:40.277Z**7/7 sources,60projections,9/9SL requis reconnus,24Swing1h sansSLnatifparcontrat,27TRIPLEhorsratio ; pas de rapprochement natif individuel. Guardian **10:32:45.154Z** seul TELEGRAM_DELIVERY_UNVERIFIED, aucun message_id.
+- HWR05:30 PREPARED_RUNTIMEOK **10:30:55.069Z**, ordersPossible=true **10:34:52.386Z**. OUTSIDER observationnative **10:31:58.032Z** sanslastError. RECENT40 **10:30:31.121Z**CURRENT/RUNNING modèleprêt,firstMissingClose=null,scan63/63 ; POST/candles182/1822xx1h et4355/4381sur24h(26 4xx,zéro5xx),pasretourFILsoutenu.
+- Pas de nouveau journal TRIPLE/B&C/CONTINUATION/DP60/SNAPBACK/R20HL/Phoenix dans cette courtefenêtre ; ne prouve pas une panne ni validationmétier. RAFALE3 indicealts/BTCnull,repli×0,7 connu. PERSONAL#82 dernier401 **10:34:13.220Z** etunmailcrash,classeinchangée. Aucun nouveaumailbudget,plafondnonvérifié. HyperliquidStatuspage/historique sans nouvellefenêtre affichée,APImaintenanceinaccessible. Aucun ordre,replay ou changementLIVE.
+
 ## GARDE INDÉPENDANTE — 5 novembre 2026, 05:23 EST (America/Toronto)
 
 - Quatre projets Railway / 30 services, aucun nouveau déploiement prioritaire ni coupure générale observés. Health **10:22:37.988964712Z** : 7/7 sources configurées, 60 projections, conformité 33/33, **9/9 SL natifs requis reconnus**, **24 Swing1h sans SL natif par contrat**, TRIPLE 27 hors ratio. Aucun stop natif individuel certifié. Guardian 10:16:51.667Z seul TELEGRAM_DELIVERY_UNVERIFIED, pas de message_id. Pas de nouveau critique confirmé.
