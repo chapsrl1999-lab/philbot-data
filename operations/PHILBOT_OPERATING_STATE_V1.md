@@ -1,5 +1,13 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 5 novembre 2026, 08:15 EST (America/Toronto)
+
+- **CONTINUATION / BloFin OBSERVE — nouveau rejet de contexte07h**, H rejeté `BATCH_ALREADY_CLOSED` à **12:00:48.540621354Z /07:00:48.541 EST** ; proxy77×202+1×400 sur routeeffective. Lot08h : **77×202** entre13:00:01.963Z et13:00:40.119Z, fenêtre13:00–13:05 contrôlée, aucun499 ni rejet visible. Pas de preuve de78contextesuniques, identité de l'éventuel contexte absent08h NON DÉTERMINÉE, état final persisté NON VÉRIFIÉ ; pas de77/78métier affirmé. Source horsHealth toujours ; rapprocher réception/fermeture etétat persisté,sansreplay ni remiseLIVE. Ce n'est pas une panne d'ordreLIVE démontrée.
+- Quatreprojets/30services, pas nouveau déploiementmoteur ou coupuregénérale. Health **13:14:43.899160712Z**7/7sourcesconfigurées,60projections,33/33conformité,**9/9stopsnatifsrequisreconnus**,**24Swing1hsansSLnatifparcontrat**,27TRIPLEhorsratio. Aucune certificationnativeindividuelle. Guardian13:02:50.178ZseulTELEGRAM_DELIVERY_UNVERIFIED,aucunmessage_id ; retraits401 **13:12:46.226Z**.
+- HWRclôtures07:30,07:45,08hPREPARED_RUNTIMEOK,dernière **13:00:51.798Z** ; OUTSIDERobservationnative **13:01:22.846Z**sanslastError. RECENT40 **13:01:43.173Z**CURRENT/RUNNING,modèleprêt,firstMissingClose=null,scan63/63 ; POST/candles180/1802xx1h et4349/4371sur24h(22 4xx,zéro5xx),pasretourFILsoutenu. Cycle08:15 tout juste engagé,noncertifié danscerelevé. RAFALE3 08h30/30 1h,17/17 30m,zéroerreur,indicealts/BTCnull,repli×0,7 connu.
+- TRIPLE07h/08h10pièces,aucune nouvelleentrée/sortie journalisée ; défaut#92 noninstallé,productionSHAinchangé d'aprèsreprise maintenance08:06–08:11,tests causaux horsprod necertifient pasfills/stopsnatifs. B&Cdeuxclôturestraitées. DP60/SNAPBACK/R20HLsanslogsmétierfrais,Phoenixsansnouveaudéploiementnirestaurationprouvée.
+- CinqnouveauxmailscrashPERSONAL#82,dernier401 **13:04:36.138Z**,classeinchangée. Aucun nouvelavisbudget,plafondcourantnonvérifié. StatuspageHyperliquid/historique sansnouvellefenêtre affichée,APImaintenanceinaccessible. Aucunordre,replay,mutationLIVEouprotectionchangée.
+
 ## MAINTENANCE PRÉVENTIVE — 5 novembre 2026, 08:06–08:11 EST (13:06–13:11 UTC) — TRIPLE #92, test causal sur SHA réellement installé
 
 - **AGENTS et reprise** : AGENTS.md default lu (blob `e3afa53022a0a525358aa3f54baf6894df5b60a2`), puis révision actuelle de ce journal (blob initial `93e86bd1335caafa08d18e900dc8ad7b77936ace`) et issues #63/#64/#65/#82/#85/#92. Quatre projets Railway inspectés, 30 services (22 zesty, 5 dp60, 1 RECENT40, 2 R20), aucun déploiement nouveau du moteur TRIPLE. Un patch STAGED dans zesty et dp60 sur services AUTRES que TRIPLE, non appliqué.
