@@ -1,5 +1,12 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 4 novembre 2026, 23:15 EST (America/Toronto)
+
+- Quatre projets Railway, 30 services, pas de coupure générale ni nouveau déploiement prioritaire observé. Health **04:14:28.843638911Z** : 7/7 sources configurées, 57 projections, conformité 30/30, 6/6 SL natifs requis reconnus, 24 Swing1h sans SL natif par contrat, TRIPLE 27 hors ratio, zéro critique. Aucune certification native unitaire des stops. Guardian 04:01:46.586Z seul TELEGRAM_DELIVERY_UNVERIFIED après synchronisation ; aucun message_id natif.
+- Dernière clôture confirmée à 23h : HWR PREPARED_RUNTIME OK **04:00:55.407Z** ; OUTSIDER observation native **04:01:20.283Z** lastError=null ; RECENT40 **04:00:34.470Z** CURRENT/RUNNING, modèle prêt, aucun gap restant et Health 63/63. RECENT40 vu WAITING_FOR_DATA à **04:15:03.399Z** au début du cycle suivant, pas un blocage durable démontré. POST /candles 182/182 2xx sur 1h, 4369/4378 sur 24h (9 4xx, 0 5xx), pas de retour FIL soutenu. HWR GMX PARTIAL_SILENCE isolé sans reconnexion sur cette ligne.
+- CONTINUATION OBSERVE : 22h et 23h **78×202 chacun, zéro 499** sur la route effective ; lots métier NON VÉRIFIÉS, pas de log applicatif et source hors Health. RAFALE3 23h 30/30 1h, 17/17 30m, zéro erreur, indice alts/BTC toujours null, repli ×0,7. B&C deux clôtures, TRIPLE 11 pièces aux deux, aucune nouvelle entrée/sortie journalisée par ces lots ; trois entrées précédentes toujours à rapprocher nativement chez BloFin. DP60, SNAPBACK, R20 HL sans logs métier frais ; Phoenix V1 sans nouveau déploiement ni preuve de restauration.
+- Cinq nouveaux avis Gmail de crash PERSONAL #82, dernier 401 cron **04:04:31.158Z**, retraits Guardian 401 **04:14:43.558Z**, pas d'aggravation distincte. Aucun nouvel avis budgétaire, plafond courant non vérifié. Page officielle Hyperliquid et historique consultés, aucune nouvelle fenêtre affichée, API maintenance inaccessible à la consultation. Aucun ordre, replay ou mutation LIVE.
+
 ## GARDE INDÉPENDANTE — 4 novembre 2026, 21:48 EST (America/Toronto)
 
 - Quatre projets Railway / 30 services, aucun arrêt général ni nouveau déploiement prioritaire observé. Health **02:48:27.581614282Z** : 7/7 sources configurées, 57 projections, conformité 30/30, 6/6 stops natifs requis reconnus, 24 Swing1h sans SL natif par contrat, TRIPLE 27 hors ratio. Aucun critique sur ce périmètre. Guardian **02:46:45.827Z** seul TELEGRAM_DELIVERY_UNVERIFIED, pas de message_id natif.
