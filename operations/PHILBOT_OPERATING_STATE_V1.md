@@ -1,5 +1,14 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 6 novembre 2026, 03:14 EST (America/Toronto)
+
+- Quatre projets Railway, 30 services inventoriés, déploiements prioritaires inchangés. Aucun nouvel arrêt général. #63/#64/#65 ouverts.
+- Health 03:13:52.524 : 7/7 sources configurées, 74 projections, conformité 42/42, **18/18 stops requis reconnus en agrégat** (RAFALE3 5, OUTSIDER 3, RECENT40 9, HWR 1). Swing1h 24 sans stop natif par contrat, inchangé. TRIPLE 32 positions/4 protections déclarées, hors ratio ; aucune absence de stop déduite. Frais/réserves, appariement natif indépendant par OID, taille et reduceOnly non certifiés. Guardian 03:01:59.855 seul TELEGRAM_DELIVERY_UNVERIFIED, pas de message_id natif.
+- HWR clôture 03h PREPARED_RUNTIME ok à 03:00:57.048 : FIL short 6506 contrats, ordre 8000068547793 et protectionVerified=true selon moteur, Health 1/1 ; pas de contrôle natif indépendant du stop. READY/ordersPossible=true à 03:13:50.789, EPICUSDT silence partiel sans reconnexion prévue. OUTSIDER observation structurée 03:01:10.245, synchronisée sur 03h, lastError=null, pas de halt. RECENT40 LIVE/CURRENT/RUNNING 03:00:48.490, modèle prêt et scan complet 63/63, firstMissingClose=null. POST /candles 182/182 2xx sur 1h ; 4309/4314 sur 24h (99,88 %, cinq 4xx, zéro 5xx), aucun retour FIL soutenu démontré.
+- RAFALE3 #94 : rafale déjà connue de suivi 429 à 02:43:53.583 sur DOGE/kPEPE/ETH, SHA inchangé. Scans 03h 30/30 et 17/17 sans erreur, cinq positions ; candidat NEAR refusé TROP_PETIT, notionnel 4,19, pas de preuve d'une panne d'admission. Suivi individuel non certifié. TRIPLE 03h terminé 03:09:53.027 ; shorts SUI 113 contrats à 03:09:51.359 et FIL 1097 contrats à 03:09:52.649 déclarés, stops déclarés 0,9102/0,858, fill/TPSL non rapprochés chez BloFin, #92 et IRYS connus. Ne pas assimiler les deux entrées FIL HWR et TRIPLE à un doublon sans contrôle des comptes.
+- CONTINUATION OBSERVE : 78 réponses 202 à 03h, zéro 499, 78 contextes uniques persistés NON VÉRIFIÉS. B&C 03h sans position déclarée. Équilibre : 02:15/02:30/02:45/03h uniquement PENDING_INTENTS, dernier 03:02:18.371 ; pas de nouvel indicateur de lot incomplet dans cette fenêtre, ni reprise/rattrapage certifiés. DP60/SNAPBACK/R20 sans preuve métier fraîche. Phoenix V1 sans volume, déploiement inchangé.
+- PERSONAL 401 à 03:02:37.749, quatre mails de crash ; retrait Guardian 401 à 03:04:00.148, incidents connus. Aucun nouvel avis budgétaire ni plafond dur courant confirmé. [Hyperliquid Statuspage](https://hyperliquid.statuspage.io/) et historique consultés, aucune maintenance prochaine affichée, API upcoming/active non lisibles via ce canal. Aucun ordre, replay ou changement aux bots/protections/plafond ; seule écriture : journal.
+
 ## GARDE INDÉPENDANTE — 6 novembre 2026, 02:10 EST (America/Toronto)
 
 - Quatre projets Railway, 30 services inventoriés, déploiements prioritaires inchangés. Aucun nouvel arrêt général. #63/#64/#65 ouverts.
