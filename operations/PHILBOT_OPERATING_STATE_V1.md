@@ -1,5 +1,13 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 5 novembre 2026, 21:15 EST (America/Toronto)
+
+- Quatre projets Railway, 30 services inventoriés, mêmes déploiements prioritaires, aucun nouvel arrêt général. #63/#64/#65 ouverts. Journaux depuis 20:20 EST.
+- Health 21:14:43.630 : 7/7 sources configurées, 72 projections, conformité 41/41, 16/16 stops requis reconnus en agrégat (RAFALE3 4, OUTSIDER 3, RECENT40 9). 25 Swing1h sans stop natif par contrat, stable ; 31 TRIPLE hors ratio, 3 protections affichées, pas d'absence de stop déduite. Appariement natif individuel et frais/réserves non certifiés. Guardian 21:02:54.254 seul TELEGRAM_DELIVERY_UNVERIFIED, aucun message_id natif.
+- HWR clôtures 20:30/20:45/21h PREPARED_RUNTIME ok ; READY/ordersPossible=true à 21:14:03.376, EPICUSDT PARTIAL_SILENCE sans reconnexion prévue. OUTSIDER structuré synchronisé sur 21h à 21:01:44.195, lastError=null ; aucun nouveau halt. RECENT40 LIVE/CURRENT/RUNNING à 21:02:02.919, modèle prêt, scan complet 63/63 ; POST /candles 177/177 2xx sur 1h et 4292/4310 sur 24h (99,58 %, 18 4xx, 0 5xx), pas de retour FIL démontré. À 21:15:14, nouvelle clôture encore en attente HWR/RECENT40, moins de 15 secondes écoulées, aucune panne persistante déduite.
+- RAFALE3 e67c1b7 : clôture 21h 30/30 et 17/17 sans erreur de scan, 4 positions, contexte actualisé. Aucun nouveau 429 dans la fenêtre, pas de preuve de suivi individuel rétabli (#94), ni de cas comparable ADA. CONTINUATION OBSERVE : 78 réponses 202 à 21h, zéro 499 dans cette clôture, aucune preuve de 78 contextes uniques persistés ; métier NON VÉRIFIÉ. B&C et TRIPLE ont traité 21h ; IRYS 102167 connu. Équilibre PENDING_INTENTS connu à 21:02:14.803. DP60/SNAPBACK/R20 sans preuve métier fraîche ; Phoenix V1 sans volume, déploiement inchangé.
+- PERSONAL 401 à 21:04:32.555, trois nouveaux mails de crash, retrait Guardian 401 à 21:07:56.132, problèmes connus. Aucun nouvel avis budgétaire ni plafond dur courant confirmé. [Statut Hyperliquid](https://hyperliquid.statuspage.io/) et historique consultés, aucune maintenance prochaine affichée ; API upcoming/active non lisibles par ce canal. Aucun ordre, replay, changement de bot, plafond ou protection ; seule écriture : journal.
+
 ## GARDE INDÉPENDANTE — 5 novembre 2026, 20:21 EST (America/Toronto)
 
 - Quatre projets Railway, 30 services inventoriés, journaux prioritaires depuis 23:48Z, aucune coupure générale. Issues #63/#64/#65 ouvertes. 
