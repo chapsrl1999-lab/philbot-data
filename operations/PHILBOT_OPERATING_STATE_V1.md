@@ -1,5 +1,15 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## GARDE INDÉPENDANTE — 5 novembre 2026, 23:59 EST (America/Toronto)
+
+- Quatre projets Railway, 30 services, déploiements prioritaires inchangés. Journaux depuis 23:06. Aucune coupure générale ; #63/#64/#65 ouverts.
+- **Équilibre / Bitunix : nouvelle anomalie de lot** à **23:47:13.781065973 EST**, clôture 23:45, CYCLE_ANOMALY TV_GROUPS_MISSING et BATCH_NOT_PROCESSED en plus de PENDING_INTENTS connu. Aucun rattrapage observé avant minuit, groupes précis et impact entrée/sortie non vérifiés, aucun trade perdu ni stop manquant déduit. Rapprocher les groupes TradingView reçus/attendus, état persisté et intentions ; vérifier le traitement des sorties et protections Bitunix avant intervention, sans replay. Source hors Health. Relais Telegram RELAY_ACCEPTED à 23:47:13.781055603, aucun message_id natif.
+- **TRIPLE** : deuxième cycle post e793973, clôture 23h, achevé à 23:09:43.726 moteur, 110 actifs chargés en 205 s, aucune entrée/sortie déclarée ; IRYS IGNORE observé. Premier cycle tardif UNI déjà signalé, fill/TPSL non rapprochés, #92 non résolu. Deux cycles observés ne certifient pas protections natives ni fraîcheur d'UNI.
+- **Health 23:59:41.970** : 7/7 sources configurées, 72 projections, conformité 41/41, 17/17 stops natifs requis reconnus en agrégat (RAFALE3 5, OUTSIDER 3, RECENT40 9), 24 Swing1h sans SL natif par contrat, TRIPLE 31 hors ratio, 3 protections affichées sans déduction de manque. Appariement natif individuel, frais/réserves non certifiés. Guardian 23:47:01.550 seul TELEGRAM_DELIVERY_UNVERIFIED.
+- RAFALE3 #94 : deux 429 de suivi ETH/DOGE à 23:28:53.640 ; scan 23:30 17/17 à 23:31:11.434 sans erreur de scan, pas de reprise individuelle attestée. HWR clôtures 23:15/23:30/23:45 PREPARED_RUNTIME ok, READY/ordersPossible=true à 23:59:07.227 ; silences partiels isolés sans reconnexion prévue. OUTSIDER synchronisé 23:45 à 23:45:55.226, lastError=null, pas de halt observé. RECENT40 LIVE/CURRENT/RUNNING à 23:45:34.775, modèle prêt, 63/63, firstMissingClose=null ; POST /candles 183/183 2xx sur 1h, 4296/4314 sur 24h (99,58 %, 18 4xx, zéro 5xx), pas de retour FIL démontré.
+- CONTINUATION OBSERVE : 78 réponses 202, zéro 499 à la dernière clôture 23h, aucun log applicatif ; 78 contextes uniques persistés NON VÉRIFIÉS. DP60/SNAPBACK/R20/B&C sans nouveau log dans la fenêtre ; Phoenix V1 sans volume, déploiement inchangé, continuité non certifiée.
+- PERSONAL 401 à 23:49:33.589, trois nouveaux mails de crash, retrait Guardian 401 à 23:56:57.424, incidents connus. Aucun nouvel avis budget, plafond courant non vérifié. [Hyperliquid Statuspage](https://hyperliquid.statuspage.io/) opérationnel, historique consulté, aucune fenêtre prochaine affichée, API upcoming/active non lisibles via ce canal. Aucun ordre, replay, changement de bot ou protection ; seule écriture : journal.
+
 ## GARDE INDÉPENDANTE — 5 novembre 2026, 23:06 EST (America/Toronto)
 
 - Quatre projets Railway, 30 services, déploiements prioritaires inchangés depuis 22:08. #63/#64/#65 ouverts. Aucune coupure générale.
