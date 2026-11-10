@@ -1,5 +1,10 @@
 # PHILBOT — ÉTAT D'EXPLOITATION VERSIONNÉ V1
 
+## COMPLÉMENT MAINTENANCE CASCADE — 10 novembre 2026 04:59 UTC — CI refusée avant tests (NON DÉPLOYÉ)
+
+- Contrôle GitHub Actions de PR #101 sur commit candidat `66e5a686872c728940ddf4426ecfbd5b78774c6a` : [run #42758746121](https://github.com/chapsrl1999-lab/philbot-signer/actions/runs/42758746121) `failure` tentative 1, relance des jobs échoués via connecteur `success:true`, tentative 2 également `failure`. GitHub retourne **`steps:[]`** pour les deux jobs et le téléchargement des journaux renvoie `404 BlobNotFound` ; pas de preuve d'exécution de `node --check` ni de `node --test`. **Échec pré-tests/non expliqué ; NE PAS déclarer la suite Node PASS.** [Complément issue #100](https://github.com/chapsrl1999-lab/philbot-signer/issues/100#issuecomment-6759419042). Les 8 validations V8 isolées et comparaisons ancien/candidat de l'entrée précédente ne remplacent pas la suite officielle. PR #101 toujours DRAFT ; LIVE CASCADE inchangé `f3a418d7`. Aucune opération sur compte, stop, ordres, paramètres, capital ou déploiement. Critères sauvegarde restaurable/ownership/SL natifs + intégration restent bloquants.
+
+
 ## MAINTENANCE PRÉVENTIVE — 9 novembre 2026 23 h 55 EST / 10 novembre 04:55 UTC — CASCADE P0 #100, preuve native stricte (NON DÉPLOYÉE)
 
 - **Périmètre unique corrigé hors production : CASCADE Bitunix REAL, PR DRAFT #101.** AGENTS.md canonique relu ; reprise de la révision courante de ce journal avant mutation. Audit Railway sur cinq projets : 24 services opérationnellement inventoriés dans quatre projets (multiasset vide), aucun déploiement en cours, aucun staged sur zesty-learning/RECENT40/R20, **un patch STAGED préexistant de lecteur DP60, laissé intact**. Les issues #63/#64/#65/#94/#97/#100/#102 sont OPEN. Aucun ordre, stop, changement de stratégie, sizing, levier, capital, verrou, état durable ni service LIVE modifié.
