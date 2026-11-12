@@ -1,0 +1,7 @@
+CVX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17214 heures (118 mois finis)
+TMO : cette passe 1 reçus, 2 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15753 heures (108 mois finis)
+ADP : cette passe 0 reçus, 2 vides, 1 en erreur ; en main 1566 jours (8 années finies), 11932 heures (83 mois finis)
+FCX : cette passe 0 reçus, 2 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+NSC : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15332 heures (105 mois finis)
+USB : cette passe 0 reçus, 2 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15694 heures (108 mois finis)
+149 s
