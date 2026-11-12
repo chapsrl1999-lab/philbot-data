@@ -1,0 +1,7 @@
+V : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17210 heures (118 mois finis)
+JD : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+MO : cette passe 0 reçus, 0 vides, 1 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+DOCU : cette passe 0 reçus, 0 vides, 1 en erreur ; en main 903 jours (4 années finies), 7753 heures (54 mois finis)
+MCK : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15755 heures (108 mois finis)
+SYY : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1863 jours (8 années finies), 14436 heures (100 mois finis)
+112 s
