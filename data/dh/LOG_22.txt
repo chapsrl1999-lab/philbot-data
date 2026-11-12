@@ -1,0 +1,8 @@
+WMT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15693 heures (108 mois finis)
+SQ : cette passe 0 reçus, 0 vides, 1 en erreur ; en main 1293 jours (6 années finies), 10327 heures (72 mois finis)
+PG : cette passe 0 reçus, 0 vides, 1 en erreur ; en main 2246 jours (9 années finies), 17057 heures (117 mois finis)
+DHR : cette passe 0 reçus, 2 vides, 1 en erreur ; en main 2051 jours (9 années finies), 15603 heures (107 mois finis)
+MAR : cette passe 1 reçus, 2 vides, 1 en erreur ; en main 2051 jours (9 années finies), 15617 heures (107 mois finis)
+STZ : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15333 heures (105 mois finis)
+W : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 910 jours (4 années finies), 7801 heures (54 mois finis)
+206 s
