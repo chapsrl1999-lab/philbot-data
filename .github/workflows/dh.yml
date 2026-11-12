@@ -1,0 +1,35 @@
+name: actions-jour-heure
+on:
+  push:
+    branches: [research/actions-5min]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: actions-dh
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 52
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Reprise des données déjà téléchargées
+        run: git fetch -q origin "dh-${{ matrix.shard }}" && git checkout -q FETCH_HEAD -- data || true
+      - run: python research_data/fetch_duka_dh.py
+        env: { SHARD: "${{ matrix.shard }}", NSHARD: "40" }
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
+          git checkout --orphan "dh-${{ matrix.shard }}"
+          git rm -r --cached -q . || true
+          git add -f data
+          git commit -q -m "Dukascopy jour + heure, lot ${{ matrix.shard }}" && git push -f origin "dh-${{ matrix.shard }}"
