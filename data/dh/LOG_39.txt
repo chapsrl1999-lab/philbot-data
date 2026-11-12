@@ -1,0 +1,7 @@
+KO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17209 heures (118 mois finis)
+WFC : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17209 heures (118 mois finis)
+AIG : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16626 heures (114 mois finis)
+FTNT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 912 jours (4 années finies), 7810 heures (54 mois finis)
+NUE : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+VRTX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15692 heures (108 mois finis)
+1 s
