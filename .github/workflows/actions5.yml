@@ -1,7 +1,5 @@
 name: actions-5min
 on:
-  push:
-    branches: [research/actions-5min]
   workflow_dispatch:
 permissions:
   contents: write
