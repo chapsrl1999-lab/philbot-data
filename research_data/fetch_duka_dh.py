@@ -63,7 +63,7 @@ def run(jobs):
                 else: CNT[sym][2] += 1
 run([(sym, "d", y, None) for y in range(now.year, 2014, -1) for sym in mine if todo(sym, f"d{y}-None")])
 alive = [sym for sym in mine if DATA[sym]["d"] or DATA[sym]["h"] or not any(ST[sym].get(f"d{y}-None", "").startswith("vide") for y in (now.year, now.year - 1, now.year - 2))]
-run([(sym, "h", y, m) for y in range(now.year, 2014, -1) for m in range(11, -1, -1) if dt.datetime(y, m + 1, 1) <= now for sym in alive if todo(sym, f"h{y}-{m}") and not ST[sym].get(f"d{y}-None", "").startswith("vide")])
+run([(sym, "h", y, m) for y in range(now.year, 2014, -1) for m in range(11, -1, -1) if dt.datetime(y, m + 1, 1) <= now for sym in alive if todo(sym, f"h{y}-{m}") and (y == now.year or not ST[sym].get(f"d{y}-None", "").startswith("vide"))])   # le fichier journalier de l'année en cours n'existe pas encore : ne pas en déduire que l'horaire manque
 logs = []
 for sym in mine:
     for tag in ("d", "h"):
