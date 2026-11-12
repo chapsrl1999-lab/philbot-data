@@ -1,0 +1,56 @@
+SPY | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLE | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLB | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+AAPL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+TSLA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MSTR | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+TSM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+BAC | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+BA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SOFI | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+KO | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+TXN | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+F | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ABNB | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XYZ | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+CSCO | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+GE | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MS | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MRVL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SPOT | 1d HTTP 429 0 | 1h délai 0 | 5m délai 0
+RTX | 1d délai 0 | 1h délai 0 | 5m délai 0
+MO | 1d délai 0 | 1h délai 0 | 5m délai 0
+REGN | 1d délai 0 | 1h délai 0 | 5m délai 0
+AIG | 1d délai 0 | 1h délai 0 | 5m délai 0
+APP | 1d délai 0 | 1h délai 0 | 5m délai 0
+BSX | 1d délai 0 | 1h délai 0 | 5m délai 0
+CI | 1d délai 0 | 1h délai 0 | 5m délai 0
+CPRT | 1d délai 0 | 1h délai 0 | 5m délai 0
+DASH | 1d délai 0 | 1h délai 0 | 5m délai 0
+DXCM | 1d délai 0 | 1h délai 0 | 5m délai 0
+ENPH | 1d délai 0 | 1h délai 0 | 5m délai 0
+EXPE | 1d délai 0 | 1h délai 0 | 5m délai 0
+GEV | 1d délai 0 | 1h délai 0 | 5m délai 0
+HUM | 1d délai 0 | 1h délai 0 | 5m délai 0
+KHC | 1d délai 0 | 1h délai 0 | 5m délai 0
+LIN | 1d délai 0 | 1h délai 0 | 5m délai 0
+MCHP | 1d délai 0 | 1h délai 0 | 5m délai 0
+MET | 1d délai 0 | 1h délai 0 | 5m délai 0
+NEE | 1d délai 0 | 1h délai 0 | 5m délai 0
+NXPI | 1d délai 0 | 1h délai 0 | 5m délai 0
+PCAR | 1d délai 0 | 1h délai 0 | 5m délai 0
+PWR | 1d délai 0 | 1h délai 0 | 5m délai 0
+SE | 1d délai 0 | 1h délai 0 | 5m délai 0
+SPGI | 1d délai 0 | 1h délai 0 | 5m délai 0
+TMUS | 1d délai 0 | 1h délai 0 | 5m délai 0
+TWLO | 1d délai 0 | 1h délai 0 | 5m délai 0
+USB | 1d délai 0 | 1h délai 0 | 5m délai 0
+WDAY | 1d délai 0 | 1h délai 0 | 5m délai 0
+ZTS | 1d délai 0 | 1h délai 0 | 5m délai 0
+CCL | 1d délai 0 | 1h délai 0 | 5m délai 0
+DOCS | 1d délai 0 | 1h délai 0 | 5m délai 0
+LI | 1d délai 0 | 1h délai 0 | 5m délai 0
+PATH | 1d délai 0 | 1h délai 0 | 5m délai 0
+RKLB | 1d délai 0 | 1h délai 0 | 5m délai 0
+W | 1d délai 0 | 1h délai 0 | 5m délai 0
+2776 s
