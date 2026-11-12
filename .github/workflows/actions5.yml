@@ -1,4 +1,4 @@
-name: actions-5min
+name: actions-yahoo
 on:
   push:
     branches: [research/actions-5min]
@@ -9,31 +9,40 @@ concurrency:
   group: actions-5min
   cancel-in-progress: true
 jobs:
-  fetch:
+  yahoo:
     runs-on: ubuntu-latest
-    timeout-minutes: 58
+    timeout-minutes: 55
     strategy:
       fail-fast: false
-      max-parallel: 10
       matrix:
-        instr: [AAPL, MSFT, NVDA, AMZN, GOOGL, TSLA, AMD, NFLX, AVGO, PLTR, MU, INTC, HOOD, ORCL, BABA, TSM, UBER, ARM, SMCI, LLY,
-                JPM, BAC, WMT, COST, V, MA, DIS, BA, NKE, PYPL, SHOP, SNOW, CRWD, SOFI, RIVN, MARA, XOM, CVX, PFE, KO, PEP, MCD, ADBE, CRM, QCOM, TXN,
-                ASML, IBM, GS, UNH, JNJ, F, GM, BRKB, DELL, PANW, NOW, ABNB, DKNG, RBLX, NET, DDOG, ZM, SQ, PDD, JD, NVO, GME, AMC, CSCO, T, VZ, HD, LOW,
-                CAT, GE, MRK, ABBV, TMO, C, WFC, MS, AXP, SBUX, BKNG, AMAT, LRCX, MRVL, ADI, ROKU, SNAP, PINS, LYFT, SPOT, TGT, CVS, UPS, FDX, LMT, RTX,
-                DE, MMM, HON, PG, CL, MO, PM, BMY, GILD, AMGN, MRNA, REGN, ISRG, USA500IDX, USATECHIDX]
+        shard: [0, 1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - name: Reprise des données déjà téléchargées
-        run: git fetch -q origin "d5-${{ matrix.instr }}" && git checkout -q FETCH_HEAD -- data || true
-      - run: python research_data/fetch_duka_5m.py
-        env: { INSTR: "${{ matrix.instr == 'USA500IDX' && 'USA500IDXUSD' || matrix.instr == 'USATECHIDX' && 'USATECHIDXUSD' || format('{0}USUSD', matrix.instr) }}" }
+      - run: python research_data/fetch_yahoo.py
+        env: { SHARD: "${{ matrix.shard }}", NSHARD: "6" }
       - name: Commit data
         if: always()
         run: |
           git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
-          git checkout --orphan "d5-${{ matrix.instr }}"
+          git checkout --orphan "yh-${{ matrix.shard }}"
           git rm -r --cached -q . || true
           git add -f data
-          git commit -q -m "Dukascopy ${{ matrix.instr }} (5 min, depuis les fichiers 1 min)" && git push -f origin "d5-${{ matrix.instr }}"
+          git commit -q -m "Yahoo, lot ${{ matrix.shard }}" && git push -f origin "yh-${{ matrix.shard }}"
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python research_data/diag_duka.py
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
+          git checkout --orphan "diag-duka"
+          git rm -r --cached -q . || true
+          git add -f data
+          git commit -q -m "Diagnostic Dukascopy" && git push -f origin "diag-duka"
