@@ -1,0 +1,7 @@
+SHOP : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+VZ : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15693 heures (108 mois finis)
+REGN : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+ENPH : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 910 jours (4 années finies), 7802 heures (54 mois finis)
+MMC : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+TTWO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 910 jours (4 années finies), 7459 heures (52 mois finis)
+1 s
