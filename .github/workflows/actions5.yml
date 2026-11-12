@@ -14,9 +14,9 @@ jobs:
     timeout-minutes: 58
     strategy:
       fail-fast: false
-      max-parallel: 12
+      max-parallel: 10
       matrix:
-        instr: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, FB, TSLA, AMD, NFLX, AVGO, PLTR, COIN, MSTR, MU, INTC, HOOD, ORCL, BABA, TSM, UBER, ARM, SMCI, LLY,
+        instr: [AAPL, MSFT, NVDA, AMZN, GOOGL, TSLA, AMD, NFLX, AVGO, PLTR, MU, INTC, HOOD, ORCL, BABA, TSM, UBER, ARM, SMCI, LLY,
                 JPM, BAC, WMT, COST, V, MA, DIS, BA, NKE, PYPL, SHOP, SNOW, CRWD, SOFI, RIVN, MARA, XOM, CVX, PFE, KO, PEP, MCD, ADBE, CRM, QCOM, TXN,
                 ASML, IBM, GS, UNH, JNJ, F, GM, BRKB, DELL, PANW, NOW, ABNB, DKNG, RBLX, NET, DDOG, ZM, SQ, PDD, JD, NVO, GME, AMC, CSCO, T, VZ, HD, LOW,
                 CAT, GE, MRK, ABBV, TMO, C, WFC, MS, AXP, SBUX, BKNG, AMAT, LRCX, MRVL, ADI, ROKU, SNAP, PINS, LYFT, SPOT, TGT, CVS, UPS, FDX, LMT, RTX,
@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
+      - name: Reprise des données déjà téléchargées
+        run: git fetch -q origin "d5-${{ matrix.instr }}" && git checkout -q FETCH_HEAD -- data || true
       - run: python research_data/fetch_duka_5m.py
         env: { INSTR: "${{ matrix.instr == 'USA500IDX' && 'USA500IDXUSD' || matrix.instr == 'USATECHIDX' && 'USATECHIDXUSD' || format('{0}USUSD', matrix.instr) }}" }
       - name: Commit data
