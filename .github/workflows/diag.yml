@@ -1,0 +1,23 @@
+name: diag-sources
+on:
+  push:
+    branches: [research/diag-sources]
+permissions:
+  contents: write
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python research_data/diag_sources.py
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
+          git checkout --orphan "diag-out"
+          git rm -r --cached -q . || true
+          git add -f data
+          git commit -q -m "Diagnostic des sources" && git push -f origin "diag-out"
