@@ -29,43 +29,48 @@ def parse(raw, t0):
         s, o, c, l, h, v = struct.unpack(">iiiiif", data[i:i + 24])
         if v > 0: out.append([t0 + s, o, h, l, c, round(v, 4)])
     return out
-now = dt.datetime.utcnow(); logs = []
+now = dt.datetime.utcnow(); cur = (now.year, now.month - 1)
+# Ordre : d'abord les fichiers journaliers de toutes les actions du lot (12 par action), puis les fichiers horaires, du mois le plus récent au plus ancien,
+# en tournant sur les actions. Tout est écrit à la fin (limite de temps stricte), et la passe suivante reprend ce qui manque.
+ST, DATA, CNT = {}, {}, {}
 for sym in mine:
-    ins = sym + "USUSD"; fs = f"{OUT}/{sym}_etat.json"; st = json.load(open(fs)) if os.path.exists(fs) else {}; data = {"d": {}, "h": {}}
+    fs = f"{OUT}/{sym}_etat.json"; ST[sym] = json.load(open(fs)) if os.path.exists(fs) else {}; DATA[sym] = {"d": {}, "h": {}}; CNT[sym] = [0, 0, 0]
     for tag in ("d", "h"):
         f = f"{OUT}/{sym}_1{tag}.csv.gz"
         if os.path.exists(f):
             for r in csv.reader(gzip.open(f, "rt")):
-                if r[0] != "t": data[tag][int(r[0])] = r
-    jobs = [("d", y, None) for y in range(now.year, 2014, -1)] + [("h", y, m) for y in range(now.year, 2014, -1) for m in range(11, -1, -1) if dt.datetime(y, m + 1, 1) <= now]
-    jobs = [j for j in jobs if st.get(f"{j[0]}{j[1]}-{j[2]}", "") != "ok" and st.get(f"{j[0]}{j[1]}-{j[2]}", "") != "vide2"]
-    cur = (now.year, now.month - 1); n_ok = n_vide = n_err = 0; first = True
-    def one(j):
-        tag, y, m = j
-        url = f"{BASE}/{ins}/{y}/BID_candles_day_1.bi5" if tag == "d" else f"{BASE}/{ins}/{y}/{m:02d}/BID_candles_hour_1.bi5"
-        raw = get(url, 6 if not first else 3); t0 = int(dt.datetime(y, 1 if tag == "d" else m + 1, 1, tzinfo=dt.timezone.utc).timestamp())
-        if raw is None: return j, None
-        if not raw: return j, []
-        try: return j, parse(raw, t0)
-        except Exception: return j, None
-    for a0 in range(0, len(jobs), 14):
-        if time.time() > DEADLINE: break
-        with ThreadPoolExecutor(2) as ex:
-            for (tag, y, m), g in ex.map(one, jobs[a0:a0 + 14]):
+                if r[0] != "t": DATA[sym][tag][int(r[0])] = r
+todo = lambda sym, key: ST[sym].get(key, "") not in ("ok", "vide2")
+def one(j):
+    sym, tag, y, m = j; ins = sym + "USUSD"
+    url = f"{BASE}/{ins}/{y}/BID_candles_day_1.bi5" if tag == "d" else f"{BASE}/{ins}/{y}/{m:02d}/BID_candles_hour_1.bi5"
+    raw = get(url, 4); t0 = int(dt.datetime(y, 1 if tag == "d" else m + 1, 1, tzinfo=dt.timezone.utc).timestamp())
+    if raw is None: return j, None
+    if not raw: return j, []
+    try: return j, parse(raw, t0)
+    except Exception: return j, None
+def run(jobs):
+    for a0 in range(0, len(jobs), 12):
+        if time.time() > DEADLINE: return
+        with ThreadPoolExecutor(3) as ex:
+            for (sym, tag, y, m), g in ex.map(one, jobs[a0:a0 + 12]):
                 key = f"{tag}{y}-{m}"
-                if g: 
-                    for r in g: data[tag][r[0]] = r
-                    n_ok += 1
-                    if not ((tag == "d" and y == now.year) or (tag == "h" and (y, m) == cur)): st[key] = "ok"
-                elif g == []: st[key] = "vide2" if st.get(key) == "vide" else "vide"; n_vide += 1
-                else: n_err += 1
-        if a0 == 0 and n_ok == 0 and not data["d"] and not data["h"]: break            # rien sur les 14 fichiers les plus récents : action absente (ou tout bloqué) → suivante
-        first = False
+                if g:
+                    for r in g: DATA[sym][tag][r[0]] = r
+                    CNT[sym][0] += 1
+                    if not ((tag == "d" and y == now.year) or (tag == "h" and (y, m) == cur)): ST[sym][key] = "ok"
+                elif g == []: ST[sym][key] = "vide2" if ST[sym].get(key) == "vide" else "vide"; CNT[sym][1] += 1
+                else: CNT[sym][2] += 1
+run([(sym, "d", y, None) for y in range(now.year, 2014, -1) for sym in mine if todo(sym, f"d{y}-None")])
+alive = [sym for sym in mine if DATA[sym]["d"] or DATA[sym]["h"] or not any(ST[sym].get(f"d{y}-None", "").startswith("vide") for y in (now.year, now.year - 1, now.year - 2))]
+run([(sym, "h", y, m) for y in range(now.year, 2014, -1) for m in range(11, -1, -1) if dt.datetime(y, m + 1, 1) <= now for sym in alive if todo(sym, f"h{y}-{m}") and not ST[sym].get(f"d{y}-None", "").startswith("vide")])
+logs = []
+for sym in mine:
     for tag in ("d", "h"):
-        if data[tag]:
+        if DATA[sym][tag]:
             with gzip.open(f"{OUT}/{sym}_1{tag}.csv.gz", "wt", newline="") as f:
-                w = csv.writer(f); w.writerow(["t", "o", "h", "l", "c", "v"]); w.writerows([data[tag][k] for k in sorted(data[tag], key=int)])
-    json.dump(st, open(fs, "w"))
-    left = sum(1 for j in jobs if st.get(f"{j[0]}{j[1]}-{j[2]}", "") not in ("ok", "vide2"))
-    logs.append(f"{sym} : {n_ok} fichiers reçus, {n_vide} vides, {n_err} en erreur ; en main {len(data['d'])} jours, {len(data['h'])} heures ; reste {left} fichiers ; {time.time() - T0:.0f} s"); print(logs[-1], flush=True)
-    open(f"{OUT}/LOG_{SH}.txt", "w").write("\n".join(logs) + "\n")
+                w = csv.writer(f); w.writerow(["t", "o", "h", "l", "c", "v"]); w.writerows([DATA[sym][tag][k] for k in sorted(DATA[sym][tag], key=int)])
+    json.dump(ST[sym], open(f"{OUT}/{sym}_etat.json", "w"))
+    okd = sum(1 for k, v in ST[sym].items() if k[0] == "d" and v == "ok"); okh = sum(1 for k, v in ST[sym].items() if k[0] == "h" and v == "ok")
+    logs.append(f"{sym} : cette passe {CNT[sym][0]} reçus, {CNT[sym][1]} vides, {CNT[sym][2]} en erreur ; en main {len(DATA[sym]['d'])} jours ({okd} années finies), {len(DATA[sym]['h'])} heures ({okh} mois finis){'' if sym in alive else ' ; absente chez Dukascopy ?'}")
+open(f"{OUT}/LOG_{SH}.txt", "w").write("\n".join(logs) + f"\n{time.time() - T0:.0f} s\n"); print("\n".join(logs), flush=True)
