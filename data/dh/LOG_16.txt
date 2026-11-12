@@ -1,0 +1,8 @@
+UBER : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1313 jours (6 années finies), 10491 heures (73 mois finis)
+ABNB : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+FDX : cette passe 1 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+CMG : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2171 jours (9 années finies), 16610 heures (114 mois finis)
+KR : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+SHW : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15319 heures (105 mois finis)
+LCID : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+92 s
