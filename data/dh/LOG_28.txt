@@ -1,0 +1,7 @@
+NKE : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+CSCO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17211 heures (118 mois finis)
+AMGN : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17216 heures (118 mois finis)
+EL : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15332 heures (105 mois finis)
+MELI : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+TRV : cette passe 0 reçus, 2 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+2 s
