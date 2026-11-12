@@ -1,0 +1,56 @@
+IWM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLY | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLC | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+NVDA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+NFLX | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+INTC | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ARM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+COST | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+PYPL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MARA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MCD | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+IBM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+BRK-B | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+RBLX | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+JD | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+VZ | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ABBV | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SBUX | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ROKU | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+CVS | 1d HTTP 429 0 | 1h délai 0 | 5m délai 0
+MMM | 1d délai 0 | 1h délai 0 | 5m délai 0
+BMY | 1d délai 0 | 1h délai 0 | 5m délai 0
+ABT | 1d délai 0 | 1h délai 0 | 5m délai 0
+AMT | 1d délai 0 | 1h délai 0 | 5m délai 0
+BDX | 1d délai 0 | 1h délai 0 | 5m délai 0
+CB | 1d délai 0 | 1h délai 0 | 5m délai 0
+CME | 1d délai 0 | 1h délai 0 | 5m délai 0
+CSX | 1d délai 0 | 1h délai 0 | 5m délai 0
+DHR | 1d délai 0 | 1h délai 0 | 5m délai 0
+EBAY | 1d délai 0 | 1h délai 0 | 5m délai 0
+EQIX | 1d délai 0 | 1h délai 0 | 5m délai 0
+FI | 1d délai 0 | 1h délai 0 | 5m délai 0
+HAL | 1d délai 0 | 1h délai 0 | 5m délai 0
+IDXX | 1d délai 0 | 1h délai 0 | 5m délai 0
+KLAC | 1d délai 0 | 1h délai 0 | 5m délai 0
+LUV | 1d délai 0 | 1h délai 0 | 5m délai 0
+MCO | 1d délai 0 | 1h délai 0 | 5m délai 0
+MNST | 1d délai 0 | 1h délai 0 | 5m délai 0
+NOC | 1d délai 0 | 1h délai 0 | 5m délai 0
+OKTA | 1d délai 0 | 1h délai 0 | 5m délai 0
+PH | 1d délai 0 | 1h délai 0 | 5m délai 0
+RIOT | 1d délai 0 | 1h délai 0 | 5m délai 0
+SLB | 1d délai 0 | 1h délai 0 | 5m délai 0
+SYK | 1d délai 0 | 1h délai 0 | 5m délai 0
+TSCO | 1d délai 0 | 1h délai 0 | 5m délai 0
+UAL | 1d délai 0 | 1h délai 0 | 5m délai 0
+VRTX | 1d délai 0 | 1h délai 0 | 5m délai 0
+WM | 1d délai 0 | 1h délai 0 | 5m délai 0
+AI | 1d délai 0 | 1h délai 0 | 5m délai 0
+CHWY | 1d délai 0 | 1h délai 0 | 5m délai 0
+FUBO | 1d délai 0 | 1h délai 0 | 5m délai 0
+NCLH | 1d délai 0 | 1h délai 0 | 5m délai 0
+PTON | 1d délai 0 | 1h délai 0 | 5m délai 0
+SOUN | 1d délai 0 | 1h délai 0 | 5m délai 0
+ZIM | 1d délai 0 | 1h délai 0 | 5m délai 0
+2766 s
