@@ -1,0 +1,7 @@
+MA : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16620 heures (114 mois finis)
+NVO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+PM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+DUK : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16622 heures (114 mois finis)
+MCO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+TEAM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 910 jours (4 années finies), 7802 heures (54 mois finis)
+0 s
