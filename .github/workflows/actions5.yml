@@ -3,6 +3,8 @@ on:
   push:
     branches: [research/actions-5min]
   workflow_dispatch:
+    inputs:
+      passe: { description: "Numéro de la passe (relance automatique)", required: false, default: "1" }
 permissions:
   contents: write
 concurrency:
@@ -33,3 +35,25 @@ jobs:
           git rm -r --cached -q . || true
           git add -f data
           git commit -q -m "Dukascopy ${{ matrix.instr }} (5 min, depuis les fichiers 1 min)" && git push -f origin "d5-${{ matrix.instr }}"
+
+  # Relance automatique : une nouvelle passe tant que le plafond n'est pas atteint (dépôt public : minutes gratuites).
+  # Un push fait avec le jeton du workflow ne relance rien ; workflow_dispatch, oui.
+  relance:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    permissions: { actions: write, contents: read }
+    steps:
+      - name: Passe suivante
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PASSE: ${{ github.event.inputs.passe || '1' }}
+          MAX: "12"
+        run: |
+          n=$((PASSE + 1))
+          if [ "$n" -le "$MAX" ]; then
+            gh workflow run actions5.yml -R "${{ github.repository }}" --ref research/actions-5min -f passe="$n"
+            echo "passe $n lancée"
+          else
+            echo "plafond de $MAX passes atteint : arrêt"
+          fi
