@@ -1,0 +1,8 @@
+AMD : cette passe 1 reçus, 4 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+ASML : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+MRVL : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+BK : cette passe 2 reçus, 2 vides, 1 en erreur ; en main 2173 jours (9 années finies), 16616 heures (114 mois finis)
+HUM : cette passe 2 reçus, 4 vides, 3 en erreur ; en main 2051 jours (9 années finies), 15755 heures (108 mois finis)
+PGR : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15334 heures (105 mois finis)
+WYNN : cette passe 2 reçus, 5 vides, 1 en erreur ; en main 2042 jours (9 années finies), 15692 heures (108 mois finis)
+271 s
