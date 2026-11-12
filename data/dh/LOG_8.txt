@@ -1,0 +1,8 @@
+AVGO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17214 heures (118 mois finis)
+GS : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17216 heures (118 mois finis)
+ROKU : cette passe 0 reçus, 3 vides, 0 en erreur ; en main 1282 jours (6 années finies), 10392 heures (72 mois finis)
+BSX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16626 heures (114 mois finis)
+IDXX : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 913 jours (4 années finies), 7823 heures (54 mois finis)
+PLD : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+ZTS : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 908 jours (4 années finies), 7788 heures (54 mois finis)
+40 s
