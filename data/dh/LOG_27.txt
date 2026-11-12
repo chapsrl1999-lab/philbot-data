@@ -1,0 +1,7 @@
+BA : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17211 heures (118 mois finis)
+AMC : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+GILD : cette passe 1 reçus, 1 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17213 heures (118 mois finis)
+EBAY : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+MDT : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+TMUS : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 909 jours (4 années finies), 7795 heures (54 mois finis)
+2 s
