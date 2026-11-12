@@ -1,0 +1,7 @@
+DIS : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17215 heures (118 mois finis)
+GME : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+BMY : cette passe 3 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16615 heures (114 mois finis)
+EA : cette passe 1 reçus, 0 vides, 2 en erreur ; en main 2173 jours (9 années finies), 16188 heures (112 mois finis)
+MDLZ : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+TJX : cette passe 1 reçus, 0 vides, 1 en erreur ; en main 2051 jours (9 années finies), 15755 heures (108 mois finis)
+179 s
