@@ -1,0 +1,8 @@
+MSFT : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17217 heures (118 mois finis)
+MCD : cette passe 2 reçus, 1 vides, 2 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+AXP : cette passe 1 reçus, 2 vides, 2 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+AMT : cette passe 2 reçus, 1 vides, 3 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+GLW : cette passe 2 reçus, 1 vides, 1 en erreur ; en main 2173 jours (9 années finies), 16623 heures (114 mois finis)
+OKTA : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+WBD : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+447 s
