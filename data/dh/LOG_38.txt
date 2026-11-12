@@ -1,0 +1,7 @@
+PFE : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17209 heures (118 mois finis)
+C : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17214 heures (118 mois finis)
+ADSK : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1992 jours (8 années finies), 15345 heures (106 mois finis)
+FSLR : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+NTES : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+VLO : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15694 heures (108 mois finis)
+1 s
