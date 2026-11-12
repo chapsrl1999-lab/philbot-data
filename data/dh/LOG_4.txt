@@ -1,0 +1,8 @@
+GOOGL : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17219 heures (118 mois finis)
+QCOM : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+AMAT : cette passe 0 reçus, 1 vides, 1 en erreur ; en main 2173 jours (9 années finies), 16625 heures (114 mois finis)
+BDX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1506 jours (7 années finies), 11507 heures (81 mois finis)
+HLT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+OXY : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16617 heures (114 mois finis)
+WM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+106 s
