@@ -1,0 +1,8 @@
+NFLX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2242 jours (9 années finies), 17189 heures (118 mois finis)
+IBM : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17206 heures (118 mois finis)
+ADI : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 1992 jours (8 années finies), 15345 heures (106 mois finis)
+BLK : cette passe 0 reçus, 2 vides, 1 en erreur ; en main 640 jours (4 années finies), 5471 heures (40 mois finis)
+ICE : cette passe 0 reçus, 0 vides, 1 en erreur ; en main 2049 jours (9 années finies), 15743 heures (108 mois finis)
+PH : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1990 jours (8 années finies), 15332 heures (105 mois finis)
+ZS : cette passe 0 reçus, 2 vides, 0 en erreur ; en main 909 jours (4 années finies), 7794 heures (54 mois finis)
+241 s

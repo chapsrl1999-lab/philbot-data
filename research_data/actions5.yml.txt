@@ -1,0 +1,33 @@
+name: actions-5min
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: actions-5min
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        instr: [AAPL, ADBE, AMD, AMZN, APP, ARM, ASML, AVGO, BABA, COST, CRCL, CRM, CRWD, DELL, DIS, DKNG, GME, GOOGL, GS, HOOD, IBM, INTC, JPM, KO, LLY, MARA, MSFT, MU, NET, NFLX, NOW, NVDA, NVO, ORCL, PANW, PDD, PLTR, PYPL, QCOM, RDDT, RIVN, SHOP, SMCI, SNOW, SOFI, TSLA, TSM, TXN, UBER, V, WMT, ZM, USA500IDX]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Reprise des données déjà téléchargées
+        run: git fetch -q origin "d5-${{ matrix.instr }}" && git checkout -q FETCH_HEAD -- data || true
+      - run: python research_data/fetch_duka_5m.py
+        env: { INSTR: "${{ matrix.instr == 'USA500IDX' && 'USA500IDXUSD' || format('{0}USUSD', matrix.instr) }}" }
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
+          git checkout --orphan "d5-${{ matrix.instr }}"
+          git rm -r --cached -q . || true
+          git add -f data
+          git commit -q -m "Dukascopy ${{ matrix.instr }} (5 min, depuis les fichiers 1 min)" && git push -f origin "d5-${{ matrix.instr }}"
