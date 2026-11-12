@@ -1,0 +1,7 @@
+MARA : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+MRK : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+ABT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16623 heures (114 mois finis)
+EW : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+NEM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16619 heures (114 mois finis)
+UNP : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2042 jours (9 années finies), 15695 heures (108 mois finis)
+9 s
