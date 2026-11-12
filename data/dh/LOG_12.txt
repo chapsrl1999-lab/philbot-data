@@ -1,0 +1,8 @@
+HOOD : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+GM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+SPOT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 891 jours (4 années finies), 7667 heures (54 mois finis)
+CHTR : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+KHC : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16628 heures (114 mois finis)
+RIOT : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+CCL : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 890 jours (4 années finies), 7662 heures (53 mois finis)
+1 s
