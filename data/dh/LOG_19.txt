@@ -1,0 +1,8 @@
+LLY : cette passe 0 reçus, 1 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16620 heures (114 mois finis)
+NET : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+DE : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16625 heures (114 mois finis)
+CSX : cette passe 1 reçus, 2 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+LULU : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 910 jours (4 années finies), 7802 heures (54 mois finis)
+SO : cette passe 2 reçus, 2 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15753 heures (108 mois finis)
+NIO : cette passe 0 reçus, 2 vides, 1 en erreur ; en main 1281 jours (6 années finies), 10232 heures (72 mois finis)
+279 s
