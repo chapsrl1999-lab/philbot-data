@@ -40,18 +40,16 @@ if os.path.exists(F):
         if r[0] == "t": continue
         d = dt.datetime.fromtimestamp(int(r[0]), dt.timezone.utc).date(); res.setdefault(d, []).append([int(r[0]), int(r[1]), int(r[2]), int(r[3]), int(r[4]), float(r[5])])
 log = [f"{INS} : reprise avec {len(res)} jours déjà en main"]
-if not res:
-    probe = [d for d in days if (today - d).days <= 45][-12:]
-    with ThreadPoolExecutor(6) as ex: alive = sum(1 for _, g in ex.map(day, probe) if g)
-    log.append(f"sonde : {alive} jours avec données sur les 12 derniers")
-else: alive = 1
+alive = 1                                   # plus de sonde : Dukascopy répond souvent 503, la sonde écartait de vraies actions
 if alive:
     todo = [d for d in reversed(days) if d not in res and state.get(str(d), 0) < 2]; got = vide = err = 0
-    with ThreadPoolExecutor(3) as ex:
-        for d, g in ex.map(day, todo):
-            if g: res[d] = g; state[str(d)] = 0; got += 1
-            elif g == []: state[str(d)] = state.get(str(d), 0) + 1; vide += 1
-            else: err += 1
+    for a0 in range(0, len(todo), 90):                                        # par tranches : si les 90 premiers jours ne donnent rien, l'action n'existe pas ici (ou tout est bloqué) → on arrête
+        with ThreadPoolExecutor(3) as ex:
+            for d, g in ex.map(day, todo[a0:a0 + 90]):
+                if g: res[d] = g; state[str(d)] = 0; got += 1
+                elif g == []: state[str(d)] = state.get(str(d), 0) + 1; vide += 1
+                else: err += 1
+        if (a0 == 0 and got == 0 and not res) or time.time() > DEADLINE: break
     log.append(f"cette passe : {len(todo)} jours demandés, {got} reçus, {vide} vides, {err} en erreur ou hors délai, {time.time() - T0:.0f} s")
     if res:
         with gzip.open(F, "wt", newline="") as f:
