@@ -1,0 +1,8 @@
+MU : cette passe 2 reçus, 3 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+JNJ : cette passe 2 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17215 heures (118 mois finis)
+PINS : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+CB : cette passe 1 reçus, 1 vides, 0 en erreur ; en main 913 jours (4 années finies), 7823 heures (54 mois finis)
+INTU : cette passe 1 reçus, 2 vides, 0 en erreur ; en main 1984 jours (8 années finies), 15295 heures (105 mois finis)
+PSX : cette passe 3 reçus, 5 vides, 1 en erreur ; en main 1065 jours (6 années finies), 7275 heures (51 mois finis)
+BIDU : cette passe 2 reçus, 11 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+305 s
