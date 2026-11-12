@@ -1,0 +1,55 @@
+DIA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLP | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SMH | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+AMZN | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+AVGO | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+HOOD | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SMCI | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+V | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SHOP | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XOM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ADBE | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+GS | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+DELL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+NET | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+NVO | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+HD | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+TMO | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+BKNG | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SNAP | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+UPS | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m délai 0
+HON | 1d délai 0 | 1h délai 0 | 5m délai 0
+GILD | 1d délai 0 | 1h délai 0 | 5m délai 0
+ACN | 1d délai 0 | 1h délai 0 | 5m délai 0
+ANET | 1d délai 0 | 1h délai 0 | 5m délai 0
+BIIB | 1d délai 0 | 1h délai 0 | 5m délai 0
+CDNS | 1d délai 0 | 1h délai 0 | 5m délai 0
+CMG | 1d délai 0 | 1h délai 0 | 5m délai 0
+CTAS | 1d délai 0 | 1h délai 0 | 5m délai 0
+DLTR | 1d délai 0 | 1h délai 0 | 5m délai 0
+EL | 1d délai 0 | 1h délai 0 | 5m délai 0
+ETN | 1d délai 0 | 1h délai 0 | 5m délai 0
+FSLR | 1d délai 0 | 1h délai 0 | 5m délai 0
+HCA | 1d délai 0 | 1h délai 0 | 5m délai 0
+ILMN | 1d délai 0 | 1h délai 0 | 5m délai 0
+KMB | 1d délai 0 | 1h délai 0 | 5m délai 0
+LVS | 1d délai 0 | 1h délai 0 | 5m délai 0
+MDLZ | 1d délai 0 | 1h délai 0 | 5m délai 0
+MPC | 1d délai 0 | 1h délai 0 | 5m délai 0
+NSC | 1d délai 0 | 1h délai 0 | 5m délai 0
+ON | 1d délai 0 | 1h délai 0 | 5m délai 0
+PLD | 1d délai 0 | 1h délai 0 | 5m délai 0
+ROST | 1d délai 0 | 1h délai 0 | 5m délai 0
+SNPS | 1d délai 0 | 1h délai 0 | 5m délai 0
+SYY | 1d délai 0 | 1h délai 0 | 5m délai 0
+TT | 1d délai 0 | 1h délai 0 | 5m délai 0
+ULTA | 1d délai 0 | 1h délai 0 | 5m délai 0
+VST | 1d délai 0 | 1h délai 0 | 5m délai 0
+WMB | 1d délai 0 | 1h délai 0 | 5m délai 0
+ASTS | 1d délai 0 | 1h délai 0 | 5m délai 0
+CLSK | 1d délai 0 | 1h délai 0 | 5m délai 0
+HIMS | 1d délai 0 | 1h délai 0 | 5m délai 0
+NIO | 1d délai 0 | 1h délai 0 | 5m délai 0
+QS | 1d délai 0 | 1h délai 0 | 5m délai 0
+TOST | 1d délai 0 | 1h délai 0 | 5m délai 0
+2768 s
