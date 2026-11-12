@@ -1,0 +1,7 @@
+XOM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2246 jours (9 années finies), 17213 heures (118 mois finis)
+ABBV : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+ACN : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 912 jours (4 années finies), 7816 heures (54 mois finis)
+EXPE : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15758 heures (108 mois finis)
+NOC : cette passe 1 reçus, 0 vides, 0 en erreur ; en main 2173 jours (9 années finies), 16623 heures (114 mois finis)
+URI : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 908 jours (4 années finies), 7788 heures (54 mois finis)
+105 s
