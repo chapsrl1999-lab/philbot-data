@@ -1,0 +1,37 @@
+name: actions-5min
+on:
+  push:
+    branches: [research/actions-5min]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: actions-5min
+  cancel-in-progress: true
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 58
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        instr: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, FB, TSLA, AMD, NFLX, AVGO, PLTR, COIN, MSTR, MU, INTC, HOOD, ORCL, BABA, TSM, UBER, ARM, SMCI, LLY,
+                JPM, BAC, WMT, COST, V, MA, DIS, BA, NKE, PYPL, SHOP, SNOW, CRWD, SOFI, RIVN, MARA, XOM, CVX, PFE, KO, PEP, MCD, ADBE, CRM, QCOM, TXN,
+                ASML, IBM, GS, UNH, JNJ, F, GM, BRKB, DELL, PANW, NOW, ABNB, DKNG, RBLX, NET, DDOG, ZM, SQ, PDD, JD, NVO, GME, AMC, CSCO, T, VZ, HD, LOW,
+                CAT, GE, MRK, ABBV, TMO, C, WFC, MS, AXP, SBUX, BKNG, AMAT, LRCX, MRVL, ADI, ROKU, SNAP, PINS, LYFT, SPOT, TGT, CVS, UPS, FDX, LMT, RTX,
+                DE, MMM, HON, PG, CL, MO, PM, BMY, GILD, AMGN, MRNA, REGN, ISRG, USA500IDX, USATECHIDX]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python research_data/fetch_duka_5m.py
+        env: { INSTR: "${{ matrix.instr == 'USA500IDX' && 'USA500IDXUSD' || matrix.instr == 'USATECHIDX' && 'USATECHIDXUSD' || format('{0}USUSD', matrix.instr) }}" }
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "research-bot"; git config user.email "research-bot@users.noreply.github.com"
+          git checkout --orphan "d5-${{ matrix.instr }}"
+          git rm -r --cached -q . || true
+          git add -f data
+          git commit -q -m "Dukascopy ${{ matrix.instr }} (5 min, depuis les fichiers 1 min)" && git push -f origin "d5-${{ matrix.instr }}"
