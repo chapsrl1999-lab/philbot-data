@@ -1,0 +1,8 @@
+SMCI : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+RBLX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+RTX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 888 jours (4 années finies), 7637 heures (53 mois finis)
+COP : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15757 heures (108 mois finis)
+LIN : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+SNPS : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 909 jours (4 années finies), 7795 heures (54 mois finis)
+NCLH : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 911 jours (4 années finies), 7809 heures (54 mois finis)
+0 s
