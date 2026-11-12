@@ -47,7 +47,7 @@ if not res:
 else: alive = 1
 if alive:
     todo = [d for d in reversed(days) if d not in res and state.get(str(d), 0) < 2]; got = vide = err = 0
-    with ThreadPoolExecutor(5) as ex:
+    with ThreadPoolExecutor(3) as ex:
         for d, g in ex.map(day, todo):
             if g: res[d] = g; state[str(d)] = 0; got += 1
             elif g == []: state[str(d)] = state.get(str(d), 0) + 1; vide += 1
