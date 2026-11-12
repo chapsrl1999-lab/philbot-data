@@ -254,3 +254,35 @@ Dernière vérification : 12 novembre 2026. Source de vérité détaillée : ope
 - Hyperliquid Statuspage officielle consultée directement : All Systems Operational; maintenance réseau du 12 nov. terminée à 11:05Z; aucune fenêtre future visible dans les prochaines 24 h.
 - Tickets de reprise : #63/#64/#65/#97/#92/#112 OPEN; #77 CLOSED. Nouvelle notification urgente requise uniquement pour l'escalade R20 CRITICAL ci-dessus; #63/#92/#112 et Telegram restent des incidents connus sans nouvelle preuve d'impact réel dans cette fenêtre.
 - Aucune réparation automatique supposée. Aucune action de trading ni modification de protection; seul ce journal versionné est consigné.
+
+
+## Garde externe ChatGPT — 2026-11-12 23:53:27Z (18:53:27 America/Toronto)
+
+Contrôle indépendant Railway/Gmail/GitHub/Statuspage, strictement en lecture seule pour les bots. Dernière preuve opérationnelle retenue : 2026-11-12T23:53:27Z. Aucun ordre, replay, changement de bot, de protection, de risque ou de limite de facturation.
+
+### Health / Guardian — incident nouveau puis récupération
+- philbot-health et philbot-guardian sont ONLINE, 1/1 réplique, volumes montés.
+- Health à 23:53:27Z : WARNING, sources 7/7, positions 63/63 suivies, conformité 34/34, 21/21 stops natifs requis présents, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=1. Détail : BANDE_CYCLE 1/1, RAFALE3 11/11, TRIPLE 29/29 (4 protected seulement; ne pas généraliser), RAFALE2_SWING 13/13, HYBRID_R4 5/5, OUTSIDER 4/4, RECENT40 0. Le total 63/63 ne signifie PAS 63 positions avec SL natif.
+- **Nouvel incident transitoire confirmé** : 23:51:56.696Z, Health CRITICAL POSITION_DETAILS_UNAVAILABLE pour HYBRID_R4/BLOFIN. Le résumé est passé de 63 positions/21 SL requis à 58 positions/16 SL requis et la ligne Hybrid de 5/5/5 à 0/0/0. Ce zéro était une perte de détails, pas une preuve de fermeture. Dernière photo de compte moteur connue à 23:45:50.551Z : 5 positions, equity≈884.61, disponible≈456.61, devenue âgée d'environ 6 minutes.
+- Guardian a observé GUARDIAN_HEALTH_UNAVAILABLE / source=error à 23:51:57.330Z; son GET /health a eu HTTP 499 à 23:51:48.670Z et son appel /personal27/control HTTP 499 à 23:51:49.662Z. **Récupération au contrôle suivant** : à 23:52:47.329Z Health revient à 7/7, 63/63 et Hybrid 5/5; Guardian source=ok, /health et /personal27/control répondent 200. Health reste stable à 23:53:27Z. Durée observée ≈51 s entre détection et récupération; début exact inconnu. Aucun stop manquant ni fermeture réelle démontrés.
+- L'alerte Health a été relayée, mais deliveryVerified=false / receipt=none : livraison Telegram non prouvée. La tentative de notification indépendante ChatGPT a échoué (canal de notification non disponible, 404); ne pas prétendre qu'une notification séparée a été livrée.
+
+### Déploiements Guardian — post-déploiement non assimilé à une réparation définitive
+- Déploiement 275b665e-e81f-4311-a61c-ad269ad21542, commit installé 7f1002846b703486b4e59771b5880a0287732d8d, branche fix/triple-guardian-stop-policy-20261101, SUCCESS à 23:47:02Z; tests 53/53, 0 échec. Premier contrôle post-déploiement : R20 EXTRA_SOURCE_UNHEALTHY restait CRITICAL.
+- Nouveau commit de branche bd194d51fb87f11a6522b293f517a183df147798, puis déploiement 04fa6714-bfd0-4fe5-b249-f5a339a9ad7a SUCCESS à 23:51:39Z. Commit installé = commit de la branche; tests 54/54, 0 échec. Il met à jour la gravité des incidents persistants selon la dernière observation. Contrôles suivants : à 23:51:57Z, incident transitoire GUARDIAN_HEALTH_UNAVAILABLE; à 23:52:47Z, source=ok, EXTRA_SOURCE_UNHEALTHY R20 passé WARNING. **EXECUTION_NOT_READY R20 demeure CRITICAL**. La récupération de la lecture Health est constatée sur deux contrôles, pas une garantie permanente; poursuivre les prochains cycles.
+- Ne pas conclure que R20 est DRAIN_ONLY sur la seule base du message de commit. Le mode natif courant n'a pas été indépendamment confirmé dans ce contrôle.
+
+### Incidents métier toujours actifs / connus
+- R20_HL / Hyperliquid : service ONLINE mais BOT BLOQUÉ / TRADING IMPOSSIBLE, Guardian EXECUTION_NOT_READY toujours CRITICAL. GET /ready : 0×2xx, 2×4xx, 8×5xx sur 1 h; 0×2xx, 38×4xx, 256×5xx sur 24 h. Issue #97 ouverte; aucune preuve nouvelle de position/stop natif individuel. Ne pas le renotifier comme incident neuf à chaque heure.
+- HYBRID_R4/BLOFIN : après récupération de la lecture, 5/5 positions de nouveau suivies/protégées agrégées. Le chemin HWR approuvé reste non qualifié : hwrReady=false, currentPolicyInputComplete=false, liveQualified=false, approved113.ordersPossible=false, lastRecovery=INCOMPLETE_SIGNALS; le ordersPossible=true du collecteur global ne valide pas la voie approuvée. Conserver le blocage connu et ne pas prétendre que le moteur peut trader.
+- RAFALE3/HL : dernières clôtures 30m 17/17 et 1h 30/30, erreurs 0; Health 11 positions/11 suivies/11 protégées. Pas de nouveau 429 observé dans la fenêtre inspectée.
+- BANDE_CYCLE/BLOFIN : BNB présent dans le log, Health 1/1 suivi/protégé. OUTSIDER/HL : Health 4/4, lastError=null, calibration mensuelle prête; le dernier déploiement actif reste SUCCESS après le build échoué antérieur.
+- TRIPLE/BLOFIN : Health 29/29 suivies, 4 protégées agrégées; issue #92 reste ouverte, aucun nouveau faux fill/stop absent démontré.
+- QUATRE REAL sur philbot-cascade-shadow : pas de volume persistant et Health ne le couvre pas; issue #112 reste ouverte. Les logs moteur indiquent 0 position à la dernière clôture observée, mais cela ne remplace pas un inventaire Bitunix natif. Aucun nouveau déploiement ni preuve d'exposition nouvelle.
+- RECENT40 : POST /candles = 181×2xx, 0×4xx/5xx sur 1 h; 4 350×2xx, 0×4xx/5xx sur 24 h. Scan Health à 23:53:27Z : 63/63 contextes, missing=[], batch complet. Le mode reste OBSERVATION_ONLY / execution DISABLED; incident FIL historique #63 non résolu, aucun 409 nouveau observé.
+- CONTINUATION : 75 POST /continuation/webhook en HTTP 202, 0×4xx/499 dans la fenêtre d'environ 70 min; 24 h : 1 786×2xx et 34×4xx. Le lot strict 78/78 contextes n'est pas confirmé par cette seule métrique.
+- PHILBOT-HEALTH ne couvre que 7 sources; R20 et QUATRE restent hors de son agrégat. Les volumes Phoenix Shadow restent absents selon l'inventaire; philbot-snapback-v10r1 absent et volume philbot-snapback-data détaché. Dans le projet DP60, philbot-dp60-readonly reste live-with-staged-changes (une modification ressource ancienne, depuis le 5 nov.), sans volume; aucun service actif nommé rafale2-blofin-dp60 trouvé.
+
+### Facturation et maintenance de marché
+- Gmail : aucun nouveau mail Railway après le contrôle précédent. Dernier usage confirmé : 10,04 USD le 7 nov. (contre 5,08 USD le 5 nov.); soft limit 5 USD déjà atteint, cycle finissant le 4 déc. Le hard cap actuel n'est pas vérifié. Les anciennes valeurs 55 USD / 55,08 USD (28 oct.) et 80 USD / 60,08 USD (30 oct.) ne décrivent pas le cycle courant.
+- Hyperliquid Statuspage : All Systems Operational. Network upgrade du 12 nov. annoncé à 10:45 UTC, en cours à 10:45, terminé à 11:05 UTC. Aucune maintenance future dans les prochaines 24 h au moment du contrôle : https://hyperliquid.statuspage.io/
