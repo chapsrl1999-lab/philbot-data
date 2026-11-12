@@ -1,0 +1,8 @@
+PLTR : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1315 jours (6 années finies), 10449 heures (73 mois finis)
+UNH : cette passe 0 reçus, 3 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15754 heures (108 mois finis)
+SNAP : cette passe 0 reçus, 3 vides, 0 en erreur ; en main 2051 jours (9 années finies), 15755 heures (108 mois finis)
+BX : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+ILMN : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 1986 jours (8 années finies), 15298 heures (105 mois finis)
+PNC : cette passe 0 reçus, 2 vides, 1 en erreur ; en main 2051 jours (9 années finies), 15756 heures (108 mois finis)
+AFRM : cette passe 0 reçus, 0 vides, 0 en erreur ; en main 0 jours (0 années finies), 0 heures (0 mois finis) ; absente chez Dukascopy ?
+208 s
