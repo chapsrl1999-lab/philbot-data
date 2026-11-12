@@ -1,0 +1,55 @@
+XLK | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+XLI | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+GLD | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+GOOGL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+PLTR | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+ORCL | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+LLY | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+MA | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+SNOW | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+CVX | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+CRM | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+UNH | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+PANW | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+DDOG | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+GME | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+LOW | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+C | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+AMAT | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+PINS | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m HTTP 429 0
+FDX | 1d HTTP 429 0 | 1h HTTP 429 0 | 5m délai 0
+PG | 1d délai 0 | 1h délai 0 | 5m délai 0
+AMGN | 1d délai 0 | 1h délai 0 | 5m délai 0
+ADP | 1d délai 0 | 1h délai 0 | 5m délai 0
+APD | 1d délai 0 | 1h délai 0 | 5m délai 0
+BK | 1d délai 0 | 1h délai 0 | 5m délai 0
+CEG | 1d délai 0 | 1h délai 0 | 5m délai 0
+COF | 1d délai 0 | 1h délai 0 | 5m délai 0
+CVNA | 1d délai 0 | 1h délai 0 | 5m délai 0
+DOCU | 1d délai 0 | 1h délai 0 | 5m délai 0
+ELV | 1d délai 0 | 1h délai 0 | 5m délai 0
+ETSY | 1d délai 0 | 1h délai 0 | 5m délai 0
+FTNT | 1d délai 0 | 1h délai 0 | 5m délai 0
+HLT | 1d délai 0 | 1h délai 0 | 5m délai 0
+INTU | 1d délai 0 | 1h délai 0 | 5m délai 0
+KR | 1d délai 0 | 1h délai 0 | 5m délai 0
+LYV | 1d délai 0 | 1h délai 0 | 5m délai 0
+MDT | 1d délai 0 | 1h délai 0 | 5m délai 0
+MSCI | 1d délai 0 | 1h délai 0 | 5m délai 0
+NTES | 1d délai 0 | 1h délai 0 | 5m délai 0
+ORLY | 1d délai 0 | 1h délai 0 | 5m délai 0
+PNC | 1d délai 0 | 1h délai 0 | 5m délai 0
+RSG | 1d délai 0 | 1h délai 0 | 5m délai 0
+SO | 1d délai 0 | 1h délai 0 | 5m délai 0
+TEAM | 1d délai 0 | 1h délai 0 | 5m délai 0
+TTD | 1d délai 0 | 1h délai 0 | 5m délai 0
+UNP | 1d délai 0 | 1h délai 0 | 5m délai 0
+WBA | 1d délai 0 | 1h délai 0 | 5m délai 0
+WYNN | 1d délai 0 | 1h délai 0 | 5m délai 0
+BIDU | 1d délai 0 | 1h délai 0 | 5m délai 0
+COHR | 1d délai 0 | 1h délai 0 | 5m délai 0
+IONQ | 1d délai 0 | 1h délai 0 | 5m délai 0
+OKLO | 1d délai 0 | 1h délai 0 | 5m délai 0
+RDDT | 1d délai 0 | 1h délai 0 | 5m délai 0
+UPST | 1d délai 0 | 1h délai 0 | 5m délai 0
+2767 s
