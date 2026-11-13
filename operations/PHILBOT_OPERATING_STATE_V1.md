@@ -865,3 +865,31 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision de dép
 - Hyperliquid officiel : page d'état consultée, tous systèmes opérationnels et aucune maintenance nouvelle dans les 24 heures observée.
 - État Health après reprise : incident HYBRID_R4 critique retiré; restent le blocage R20 connu, `SOURCE_RESTARTED_RECENTLY` HYBRID_R4 et `TELEGRAM_DELIVERY_UNVERIFIED`.
 
+## Garde indépendante — 2026-11-13 13:32 America/Toronto
+
+Contrôle strictement en lecture seule des bots et de Railway. Révision courante relue juste avant écriture : `1629ffd05ec0d6658b62db7f8a230cac18c3cc6f`.
+
+### Nouvelle panne LIVE confirmée — OUTSIDER / Hyperliquid / position SUI sans stop natif
+
+- Dernier contrôle sain avant apparition : 12:30:22.885 EST, OUTSIDER 6 positions suivies/protégées.
+- Première détection exacte par Health : **12:31:21.235 EST**. OUTSIDER passe à 7 positions, 7 suivies mais seulement 6 protégées; `SL_MISSING=1`, `EXECUTION_NOT_READY=1`, conformité 34/35 et SL natifs requis 20/21. Le début réel se situe entre 12:30:22.885 et 12:31:21.235.
+- Actif identifié par Health : **SUI**. L'alerte spécifique `SL_MISSING asset=SUI` est envoyée au relais à 12:35:21.610 EST, mais `deliveryVerified=false`, `receipt=none`; aucune preuve de `message_id` Telegram natif.
+- Cause confirmée par les journaux structurés et le commit installé : une entrée SUI a été remplie sur Hyperliquid mais la réponse d'ordre a été perdue (`ORDER_RESULT_UNKNOWN`). L'intention durable restait `SENT/UNKNOWN` avec owner à 0; `recoverHalt()` la rejetait comme `UNATTRIBUTED_ACCOUNT_POSITION`, empêchant l'installation du stop natif.
+- Blocage observé toutes les 30 s jusqu'à 12:41:20.832 EST. Le nouveau runtime échoue d'abord au boot avec `NATIVE_STOP_NOT_CONFIRMED` à 12:42:37.771 EST, puis journalise `OUTSIDER_LIVE_SAFETY_RECOVERED` à 12:43:17.735 EST : 7 owners, 7 positions, 7 stops vérifiés, pending=0.
+- Health confirme 7/7 protégées et 21/21 SL natifs requis à 12:43:23.763 EST; l'incident `EXECUTION_NOT_READY` disparaît à 12:44:14.629 EST. Fenêtre d'exposition prouvée : environ 12 minutes entre première détection et confirmation de protection.
+- Déploiement correctif réel : Railway `c4e1dfea-dd76-44b4-a168-3b063e69fd2a`, SUCCESS à 12:41:34.824 EST, commit GitHub `da4689b40c0e14fcbb617a863911f7650f25e70d`. Le diff attribue une position uniquement à une intention ENTRY durable du même symbole, résout le cloid exact, installe un seul stop et refuse les tailles étrangères. Build : **197/197 tests, 0 échec**.
+- État courant à 13:31:22.896 EST : Health WARNING uniquement pour Telegram, 7/7 sources, 64/64 positions suivies, 35/35 contrats conformes, 21/21 SL natifs requis présents, 0 sans SL natif; OUTSIDER 7/7 suivies/protégées, HYBRID_R4 4/4, RAFALE3 10/10. Cela ne garantit pas individuellement tous les OID/trigger/reduceOnly.
+- Action opérateur : conserver les verrous fail-closed; vérifier les deux prochaines clôtures OUTSIDER et le maintien exact des 7 stops natifs sans doublon d'entrée; ne pas rejouer SUI ni modifier un ordre depuis la garde.
+
+### Autres vérifications
+
+- HYBRID_R4 commit `5b433...` : `PREPARED_RUNTIME ok=true` observé aux clôtures 12:45, 13:00, 13:15 et 13:30 EST; `ordersPossible=true`, `readiness=READY`, `halt=null` à 13:31. La validation connectée de la nouvelle révision reste toutefois `successfulBoundaries=0` et `twoConsecutiveHourlyBoundaries=false`; validation horaire complète NON PROUVÉE.
+- RECENT40 `POST /candles` : 182/182 réponses 2xx sur 1 h et 4 374/4 374 sur 24 h; 0 réponse 4xx/5xx. Batch courant 63/63 complet à 13:31:22; aucune preuve de rejet 409 ou de nouveau `feedConflict`.
+- CONTINUATION : 75 POST vers le webhook réel, tous HTTP 202 sur la dernière heure; aucun 4xx/5xx et aucun 499. Le lot strict 78/78 contextes reste NON VÉRIFIÉ.
+- Déploiements récents : Guardian commit `66142cc...` (délai d'alarme HWR après redémarrage), OUTSIDER correctif ci-dessus, services SHADOW BRIQUES et suivi. Aucun de ces déploiements n'est déclaré validé par son seul statut SUCCESS.
+- R20 reste `EXECUTION_NOT_READY` connu. Aucun nouvel incident Recent40/FIL ou SHADOW distinct n'est déduit sans preuve nouvelle.
+- Railway : 28 services inventoriés; aucune coupure généralisée. `philbot-personal-snapshots` reste CRASHED et le proxy de contrôle SLEEPING, états connus.
+- Gmail : aucun nouveau courriel Railway depuis la garde précédente concernant hard limit, arrêt de déploiements, ressources ou failure; les résultats visibles sont antérieurs. Hard cap actuel toujours non vérifiable depuis ces seuls mails.
+- Hyperliquid Statuspage officielle : All Systems Operational; maintenance du 12 novembre terminée; aucune nouvelle maintenance annoncée dans les 24 h.
+- Aucun ordre, replay, rollback, modification de bot, risque ou protection n'a été effectué.
+
