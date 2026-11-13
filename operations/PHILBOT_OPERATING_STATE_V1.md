@@ -909,3 +909,19 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Hyperliquid Statuspage officielle : All Systems Operational, aucune maintenance planifiée dans les 24 h; la maintenance du 12 novembre est terminée.
 - Telegram : relais accepté mais aucun `message_id` natif; livraison toujours NON VÉRIFIÉE, défaut connu et non déclaré résolu.
 - Aucun ordre, replay, rollback, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
+
+
+## Garde indépendante — 13 novembre 2026, 14:37 EST (America/Toronto)
+
+- Nouveau passage strictement en lecture seule; comparaison à la garde de 14:19. Aucun nouvel incident LIVE, aucune coupure généralisée et aucune nouvelle alerte urgente.
+- Railway : inventaire réel des quatre environnements relu. Services prioritaires en déploiement `SUCCESS`; aucun changement récent des runtimes LIVE. États connus inchangés : `philbot-personal-snapshots` CRASHED, proxy de contrôle SLEEPING, changement DP60 encore STAGED et non appliqué.
+- Health à 14:36:21.183 EST : WARNING uniquement pour Telegram; 7/7 sources, 64/64 positions suivies, conformité 35/35, 21/21 SL natifs requis présents, 0 SL natif requis manquant, 0 failure d'exécution, 0 pipeline stall. Détail courant : RAFALE3 10/10, TRIPLE 29 suivies dont 4 protégées nativement, RAFALE2_SWING 14/14, HYBRID_R4 4/4, OUTSIDER 7/7.
+- Guardian à 14:31:44.316 EST : CRITICAL uniquement pour le blocage R20 déjà connu (`EXECUTION_NOT_READY` / BOT BLOQUÉ / TRADING IMPOSSIBLE), plus `EXTRA_SOURCE_UNHEALTHY` R20 et `TELEGRAM_DELIVERY_UNVERIFIED`. Les deux warnings transitoires `MARKET_DATA_DELAY` de 14:30 ont disparu à 14:31.
+- OUTSIDER : clôture 14:30 observée avec `OUTSIDER_ORIGINAL_REFERENCE` puis `OUTSIDER_NATIVE_OBSERVATION`, `lastError=null`, aucun halt; Health confirme 7/7 protégées. Le correctif SUI poursuit donc ses cycles suivants sans nouvelle anomalie observée.
+- HYBRID_R4 : à la clôture 14:30, blocage transitoire `CANDLE_FINALIZATION_PENDING`, puis `PREPARED_RUNTIME ok=true` à 14:31:06 et `ordersPossible=true` à 14:31:13; `halt=null`. Des `MARKET_STREAM_PARTIAL_SILENCE` ont brièvement cité EPIC et d'autres paires, mais `consecutiveFailures=0`, `nextReconnectAt=null` et l'exécuteur est resté READY : aucune reconnexion globale ni panne >5 min prouvée.
+- RECENT40 : `POST /candles` 182/182 en 2xx sur 1 h et 4 374/4 374 sur 24 h; 0 réponse 4xx/5xx. Batch 63/63 complet à 14:31 et toujours complet à 14:35; aucune nouvelle preuve de `feedConflict` ou checkpoint conflict.
+- CONTINUATION : 75 POST en 2xx sur 1 h, aucun 4xx/5xx; aucun 499 observé. Le contrat strict 78/78 contextes reste NON VÉRIFIÉ.
+- Gmail : aucun nouveau courriel Railway de hard limit, arrêt de déploiements, warning ressources ou failure depuis la garde précédente. Le hard cap courant reste non vérifiable depuis les seuls courriels, mais aucune interruption généralisée n'est observée sur Railway.
+- Hyperliquid Statuspage officielle : All Systems Operational; aucune maintenance planifiée visible dans les 24 h, maintenance du 12 novembre terminée.
+- Telegram : relais accepté, mais toujours aucun `message_id` natif; livraison NON VÉRIFIÉE, état connu non déclaré résolu.
+- Aucun ordre, replay, rollback, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
