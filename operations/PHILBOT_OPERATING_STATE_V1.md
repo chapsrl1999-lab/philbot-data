@@ -842,3 +842,26 @@ Contrôle indépendant effectué depuis ChatGPT, en lecture seule sur les bots, 
 
 ### Conclusion
 Aucune nouvelle panne P0 distincte, aucune coupure générale, aucune source Health principale inaccessible, aucune position native prouvée sans stop, aucun hard stop Railway actuel confirmé et aucune nouvelle rupture Telegram distincte. L’épisode R20 SOURCE_UNAVAILABLE d’un seul cycle appartient à l’incident intermittent #97 et s’est résorbé; R20 reste néanmoins bloqué. Les nouvelles positions OUTSIDER sont 6/6 suivies/protégées selon Health, avec limites de preuve native individuelle consignées. Les déploiements QUATRE/BRIQUES sont SHADOW et non encore validés par les cycles suivants. Aucune alerte urgente répétitive déclenchée.
+
+## Garde indépendante — 2026-11-13 11:36 America/Toronto
+
+Contrôle strictement en lecture seule des bots et de Railway. Révision de départ du présent fichier relue juste avant écriture : `59b9792bd454fccaca2dbc66577e615c76f3356c`.
+
+### Nouvelle panne LIVE transitoire confirmée — HYBRID_R4 / BloFin
+
+- Premier déploiement de `hybrid-r4-read-check` au commit réel `5b43377f557d1530cb53f1f57e18b4fddbbb3e36` devenu actif vers 11:29:19 EST; nouveau déploiement du même commit `42282fbb-9c4a-48ec-bf39-50b0bf04ae36` terminé `SUCCESS` à 11:34:19.988 EST.
+- Le commit GitHub existe et modifie réellement le risque par contrat : Premium/Core/PB2/PB3 5 % → 6,5 %, PB1 6 % → 7,8 %; plafonds annoncés inchangés. La note de déploiement indique 327/330 tests, avec trois échecs déclarés préexistants (`five_minute_chart`, `market_chart`, `market_stream`). Le replay déclaré passe de 49 % à 57 % de baisse maximale; ce résultat n'est pas une validation des cycles LIVE suivants.
+- Health a détecté `LIVE_MODE_UNEXPECTED` à 11:29:42.554 EST et l'a conservé sur cinq contrôles jusqu'à 11:33:43.930 EST. Guardian l'a classé CRITICAL. Après le second redémarrage, Health a observé `EXECUTION_NOT_READY` à 11:34:44.184 EST, puis seulement `SOURCE_RESTARTED_RECENTLY` à 11:35:45.395 EST.
+- État métier après reprise observée : `HYBRID_R4_PREPARED_RUNTIME ok=true` à 11:35:01.031 EST; `ordersPossible=true`, `readiness.status=READY`, `halt=null`, `preflightOk=true`, révision installée `5b433...` à 11:35:31.189 EST. La validation connectée de cette nouvelle révision indique encore `successfulBoundaries=0`, `twoConsecutiveHourlyBoundaries=false` : reprise immédiate observée, mais correctif/paramétrage NON VALIDÉ sur deux clôtures suivantes.
+- Couverture de protection pendant l'incident : HYBRID_R4 4 positions / 4 suivies / 4 protégées; Health global 64/64 positions conformes, 34/34 contrats conformes, 20/20 SL natifs requis présents et 0 sans SL natif dans cette classification. Cela ne constitue pas une preuve individuelle complète des OID, déclencheurs et `reduceOnly`.
+- Telegram : l'alerte Health a été acceptée par le relais, mais `deliveryVerified=false`, `receipt=none`; aucune preuve de `message_id` natif. Livraison Telegram NON VÉRIFIÉE.
+- Action opérateur requise : conserver les verrous et le comportement fail-closed; rapprocher le commit installé et la révision approuvée dans le suivi SRE #64; vérifier les deux prochaines clôtures avec `PREPARED_RUNTIME`, `ordersPossible`, positions/protections natives et absence de nouvel `EXECUTION_NOT_READY`. Aucun ordre, replay, rollback, modification de risque ni désactivation de protection n'a été effectué par cette garde.
+
+### Autres contrôles de ce passage
+
+- Railway : inventaire contrôlé sur les quatre projets demandés (28 services). Aucun arrêt généralisé constaté. `philbot-personal-snapshots` reste CRASHED et le proxy de contrôle SLEEPING, états connus à ne pas confondre avec une coupure générale.
+- R20 reste en `EXECUTION_NOT_READY` connu; aucun changement significatif démontré pendant ce passage. Recent40/FIL et les anciens conflits connus n'ont pas été renotifiés sans nouvelle preuve significative.
+- Gmail : aucun nouveau courriel Railway de hard limit, arrêt de déploiements, alerte de ressources ou échec depuis le contrôle précédent. Le hard cap actuel demeure non vérifié par un relevé de facturation.
+- Hyperliquid officiel : page d'état consultée, tous systèmes opérationnels et aucune maintenance nouvelle dans les 24 heures observée.
+- État Health après reprise : incident HYBRID_R4 critique retiré; restent le blocage R20 connu, `SOURCE_RESTARTED_RECENTLY` HYBRID_R4 et `TELEGRAM_DELIVERY_UNVERIFIED`.
+
