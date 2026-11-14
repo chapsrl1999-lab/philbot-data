@@ -1204,3 +1204,16 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau mail d’usage, hard stop, ressource, arrêt ou failure; seul l’ancien Build failed OUTSIDER du 12 nov. apparaît et le déploiement courant est SUCCESS. Usage et hard limit actuels restent non exposés; aucun cap actuel supposé.
 - Hyperliquid officiel : All Systems Operational; maintenance Network upgrade du 14 nov. terminée à 03:50 EST, aucune nouvelle maintenance future visible dans les 24 h. Cela ne certifie pas chaque stop individuellement.
 - Tickets #63, #64 et #65 restent OPEN et servent de reprise. Conclusion : aucune nouvelle panne réelle, coupure générale, source Health configurée inaccessible, position native prouvée sans stop, flux 4xx soutenu, hard limit atteint ou nouvelle rupture Telegram distincte. Aucune alerte urgente répétitive envoyée.
+
+
+## Contrôle FinOps — 14 novembre 2026 (nouvelle vérification)
+
+- Rapport détaillé : operations/finops/2026-11-14_railway_cost_control.md (commit 9a038c19d49731408a810bd9b96023412e9d92b1).
+- Inventaire actuel : 28 services Railway (22 zesty, 4 DP60, 1 recent40, 1 R20). 24h CPU/RAM/RX/TX relevés pour les 28; mesures 7j et 1h ciblées, 7j global incomplet. environment_status zesty limite sa réponse à 10/22 services. R20 accessible pour métriques et statut (online), contrairement aux anciennes notes.
+- Tarif officiel revalidé : CPU 20 USD/vCPU-mois, RAM 10 USD/Go-mois, egress 0,05 USD/Go, stockage 0,15 USD/Go-mois; compute prorata du temps.
+- Projection CPU+RAM historique 24h : 89,23 USD/mois pour 28 services, dont 11,55 USD/mois historiques de QUATRE. QUATRE a été retiré le 13/11, confirmé par describe_service (commande d'arrêt inoffensive et cron annuel) et 1h CPU=RAM=0. Projection illustrative hors QUATRE : 77,68 USD/mois, pas une économie facturée.
+- HWR 24h CPU 0,133274 vCPU, RAM 2,944826 Go, projection 32,11 USD/mois; 7j 0,126944 / 2,963799, projection 32,18. Base pré-28/10 0,758 / 3,507; pas de gain causal démontré.
+- Nouveau BRIQUES cron horaire : 24h CPU 0,02285, RAM 0,85329, projection 8,99 USD/mois. Logs 14/11 : 1919 trades recalculés, 125–130 s/run, succès; contient ORDRE_SEC OUVERTURE. Ne pas interrompre sans analyse d'ownership, parité des signaux, tests et rollback. Cache/snapshot incrémental proposé sur clone, non testé.
+- CASCADE REAL 24h 4,08 USD/mois théoriques vs 7j 3,09 (+32 % relatif, +0,99 USD/mois); Replay 3,71 vs 2,68 (+38 %, +1,03 USD/mois). Pas de hausse absolue >10 USD/mois établie. ROTATION et ALIGNEMENT CPU=RAM=0 sur 1h; PERSONAL snapshots 0 sur 24h et cronFailed depuis 06/11. Aucun gain de compute fictif.
+- Dernier usage Railway par Gmail 10,04 USD au 07/11; aucun avis d'usage plus frais trouvé au 14/11. Facture précédente payée 71,91 USD le 03/11. HARD limit et usage courant inconnus; risque d'arrêt 24–48h non calculable, ni démontré ni exclu. Aucune modification de plafond.
+- DÉTECTÉ : nouveau coût BRIQUES, QUATRE déjà retiré, PERSONAL snapshots en échec, hausses relatives non matérielles. PROPOSÉ : clone BRIQUES incrémental et backoff Replay. TESTÉ : lectures, journaux, métriques, tarifs, Gmail uniquement. INSTALLÉ : aucun correctif FinOps. OBSERVÉ 24H : sans objet. Aucun bot LIVE, protection, volume, capital ou stratégie modifié.
