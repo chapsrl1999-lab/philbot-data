@@ -1063,3 +1063,18 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Hyperliquid officiel : All Systems Operational; API, L1 et frontend opérationnels. Aucun incident le 13 novembre et aucune maintenance planifiée visible dans les 24 h; la maintenance du 12 novembre est terminée.
 - Tickets GitHub relus : #63, #64 et #65 restent ouverts. Telegram demeure `RELAY_ACCEPTED` sans `message_id` natif : livraison NON VÉRIFIÉE, défaut connu non résolu.
 - Conclusion : aucune nouvelle panne P0 distincte, aucune coupure générale, aucune source Health principale inaccessible, aucun nouveau stop natif contractuellement requis manquant, aucune hausse d'exposition globale et aucun hard stop Railway actuel confirmé. Aucune alerte urgente répétitive déclenchée.
+
+
+
+## Garde indépendante — 13 novembre 2026, 23:34 EST (America/Toronto)
+
+- Passage différentiel strictement en lecture seule depuis 23:11. Révision relue avant écriture : `2e7c462ccf0bd98ab5495f25bef2f90ca57e8490`. Aucun ordre, replay, rollback, changement de risque, stop, variable, déploiement ou configuration Railway effectué.
+- Aucun nouveau déploiement dans les quatre projets depuis le relevé précédent. États auxiliaires connus inchangés : `philbot-personal-snapshots` CRASHED, proxy de contrôle SLEEPING, patch DP60 toujours staged et non appliqué.
+- Health à 23:34:27 EST : 7/7 sources, 67/67 positions suivies, conformité 37/37, 23/23 SL natifs requis présents, aucun SL requis manquant, aucun échec d'exécution/pipeline stall, 0 CRITICAL et 1 WARNING Telegram. Détail inchangé : R3 10/10, Triple 30 suivies/`protected=4`, Swing 14/14, HWR 4/4, OUTSIDER 9/9, RECENT40 0, Bande/Cycle 0.
+- HWR : clôture 23:30 d'abord bloquée par `CANDLE_FINALIZATION_PENDING`, puis `PREPARED_RUNTIME ok=true` à 23:31:03 et collecteur READY/`ordersPossible=true` à 23:31:34. EPIC reste un `PARTIAL_SILENCE` unitaire, `consecutiveFailures=0`, sans reconnexion globale ni halt. Le warning `MARKET_DATA_DELAY` HWR/OUTSIDER est retiré par Guardian à 23:31:45; aucun échec >5 min.
+- OUTSIDER : cycles 23:15 et 23:30 synchronisés, `lastError=null`; Health reste 9/9 suivies/protégées, sans nouvelle décision, erreur, halt ou anomalie de stop.
+- Guardian conserve les incidents connus R20 `EXECUTION_NOT_READY` CRITICAL, `EXTRA_SOURCE_UNHEALTHY` et `TELEGRAM_DELIVERY_UNVERIFIED`. R20 `/ready` sur 1 h : 0×2xx, 2×4xx, 8×5xx; `/guardian` 60/60 et `/monitor` 120/120 en 2xx. **BOT BLOQUÉ / TRADING IMPOSSIBLE pour les nouvelles entrées**, panne active déjà consignée, sans nouvelle cause ni preuve d'exposition non protégée.
+- RECENT40 : `POST /candles` 182×2xx et 0×4xx/5xx sur 1 h; 4 374×2xx et 0×4xx/5xx sur 24 h. Lot 23:30 CURRENT 63/63 après WAITING_FOR_DATA bref; aucun 409/feedConflict/checkpoint nouveau. Exécution volontairement DISABLED : blocage connu, #63 toujours ouvert.
+- CONTINUATION : 75 POST 2xx sur 1 h, aucun 4xx/5xx/499; 78/78 strict toujours NON VÉRIFIÉ.
+- Gmail : aucun nouveau mail Railway; dernier résultat toujours le build OUTSIDER du 12 nov. 20:48Z. Aucun nouvel avis usage/hard stop/ressources. Hyperliquid officiel reste All Systems Operational, sans maintenance nouvelle visible dans les 24 h. #63/#64/#65 restent ouverts.
+- Telegram reste `RELAY_ACCEPTED` sans `message_id` natif : livraison NON VÉRIFIÉE, défaut connu. Conclusion : aucune nouvelle panne P0, coupure générale, source Health inaccessible, perte de stop requis, hausse d'exposition ou hard stop Railway confirmé; aucune alerte urgente répétitive.
