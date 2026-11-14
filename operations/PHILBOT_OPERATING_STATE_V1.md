@@ -1095,3 +1095,16 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau courriel; dernier mail toujours le build OUTSIDER du 12 nov. 20:48Z. Aucun nouvel avis d'usage, hard limit, arrêt généralisé ou warning ressources; dernier montant confirmé 10,04 USD au 7 nov., hard cap actuel inconnu.
 - Hyperliquid officiel : All Systems Operational, API/L1/frontend opérationnels, aucun incident le 14 novembre et aucune maintenance nouvelle visible dans les 24 h. #63/#64/#65 restent ouverts.
 - Telegram demeure `RELAY_ACCEPTED` sans `message_id` natif : livraison NON VÉRIFIÉE, défaut connu. Une alerte indépendante ChatGPT est publiée pour la nouvelle rafale de 7 HTTP 499 CONTINUATION; aucune livraison Telegram n'est revendiquée.
+
+
+### Garde indépendante différentielle — 2026-11-14 01 h 32 min 54 s America/Toronto
+
+- Portée: passage immédiat après la garde de 01:29, strictement en lecture seule sur Railway/Gmail/Hyperliquid; aucun ordre, replay, changement de bot, de risque ou de protection.
+- Railway métier: Health revenu à WARNING stable, 7/7 sources, 66/66 positions conformes, 36/36 protections contractuelles et 22/22 SL natifs requis présents; 0 executionFailure, 0 pipelineStall, 0 criticité. Les avertissements transitoires de clôture 01:30 (HWR/OUTSIDER MARKET_DATA_DELAY et Recent40 batch incomplet) sont levés au contrôle 01:31:30: Recent40 63/63, missing=0, lastBatchComplete=true.
+- CONTINUATION: métriques inchangées à 75 POST = 68 réponses 2xx + 7 réponses 499 déjà signalées à 01:29; aucun 499 supplémentaire. Le lot strict 78/78 demeure NON VÉRIFIÉ par ces métriques seules.
+- RECENT40: 182/182 réponses 2xx sur 1 h et 4374/4374 sur 24 h; aucun 409/4xx/5xx observé.
+- R20 SHADOW: incident connu toujours actif dans Guardian — EXECUTION_NOT_READY; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Aucun nouvel échantillon /ready sur 1 h et aucune preuve de reprise.
+- Telegram: RELAY_ACCEPTED seulement, toujours sans message_id natif; DELIVERY_UNVERIFIED connu, non déclaré résolu.
+- Gmail Railway: aucun nouveau courriel de hard limit, arrêt, ressource ou failure depuis le passage précédent; dernier échec connu OUTSIDER du 12 nov. 20:48Z.
+- Hyperliquid officiel: All Systems Operational, API/L1/Frontend opérationnels, aucun incident le 14 nov. et aucune maintenance annoncée dans les prochaines 24 h (consulté pendant ce passage).
+- Décision notification: aucune nouvelle panne ni aggravation depuis l'alerte précédente; aucune notification répétitive publiée.
