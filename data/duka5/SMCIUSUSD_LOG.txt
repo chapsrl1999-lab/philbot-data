@@ -1,0 +1,2 @@
+SMCIUSUSD : reprise avec 0 jours déjà en main
+cette passe : 2575 jours demandés, 0 reçus, 29 vides, 61 en erreur ou hors délai, 347 s
