@@ -1,0 +1,8 @@
+PANWUSUSD : reprise avec 1071 jours déjà en main
+cette passe : 1378 jours demandés, 2 reçus, 76 vides, 372 en erreur ou hors délai, 2293 s
+2022 : 149 jours avec données, 5 vides, 12 jamais reçus ; manquants : 05-17 05-23 05-26 05-27 05-30 05-31 06-16 06-17 06-20 06-21 06-22 06-23 06-24 07-04 09-05 11-24 12-26
+2023 : 222 jours avec données, 9 vides, 29 jamais reçus ; manquants : 01-02 01-16 02-20 03-10 03-16 03-20 03-27 03-31 04-07 05-29 06-05 06-08 06-19 07-04 07-07 07-12 07-17 07-19 07-20 07-28 08-02 08-03 08-07 08-08 08-11 08-28 09-04 09-22 10-04 10-05 10-06 10-10 10-11 10-13 11-23 12-18 12-20 12-25
+2024 : 242 jours avec données, 14 vides, 6 jamais reçus ; manquants : 01-01 01-15 02-01 02-19 02-27 03-19 03-29 05-15 05-17 05-27 05-30 06-19 07-04 09-02 11-28 12-10 12-11 12-12 12-13 12-25
+2025 : 247 jours avec données, 11 vides, 3 jamais reçus ; manquants : 01-01 01-09 01-20 02-17 04-18 05-26 06-19 07-04 09-01 10-24 11-05 11-27 12-01 12-25
+2026 : 213 jours avec données, 8 vides, 6 jamais reçus ; manquants : 01-01 01-07 01-19 02-16 03-30 04-03 04-29 05-04 05-14 05-25 06-19 07-03 09-07 11-13
+total 83241 bougies 5 min, du 2022-05-13 au 2026-11-12 ; reste à redemander : 66 jours ; 2294 s
