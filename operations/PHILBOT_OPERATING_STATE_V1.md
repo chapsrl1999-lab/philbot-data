@@ -1620,3 +1620,20 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau courriel d'usage, hard stop, ressources, arrêt ou failure. Usage/cap actuel non vérifié.
 - Hyperliquid Statuspage officielle : systèmes, L1 et API opérationnels; aucun incident le 15 novembre ni maintenance future visible dans les 24 h.
 - Conclusion : aucune nouvelle panne LIVE réelle ni exposition sans protection confirmée. L'incohérence de classification Health doit être corrigée en maintenance autorisée pour respecter le contrat <2 min, sans modifier les moteurs ni les protections. Aucune alerte urgente répétitive.
+
+
+## Garde indépendante — 2026-11-15 11:31 EST (2026-11-15T16:33:45Z)
+
+- Portée : lecture seule indépendante des quatre projets Railway, journaux/HTTP, Health/Guardian, positions/protections, Gmail Railway, RECENT40 et Hyperliquid Statuspage; aucune mutation, ordre, replay ni désactivation.
+- Railway : services prioritaires SUCCESS; aucun nouveau déploiement prioritaire ni arrêt généralisé.
+- CONTINUATION/BLOFIN_R1 : lot 11:00 EST = 75 POST /continuation/webhook, tous HTTP 202, 0×4xx/5xx, latence 318–1 959 ms. Un POST isolé à 11:15 a aussi reçu 202. Avec 10:00, deux lots horaires consécutifs sont propres après les récidives de 06:00, 07:00 et 09:00. Incident en récupération mais non déclaré réparé : strict 78/78, contextes individuels et absence de données manquantes restent NON VÉRIFIÉS. Aucun replay.
+- Health à 11:32 EST : OK, sources 7/7, positions 59/59, conformité contractuelle 30/30, nativeSL requis-présents 16/16, noNativeSL=0, executionFailures=0, pipelineStalls=0, telegram=VERIFIED. Ne pas dire « 59 positions avec SL » : 29 positions TRIPLE_MOTEUR dont 3 protections natives recensées; sorties dynamiques dépendantes du moteur.
+- Telegram Health : aucun nouveau message_id dans cette fenêtre; l'état VERIFIED repose toujours sur les reçus natifs 20423–20425 du déploiement de 09:09. HWR reste deliveryVerified=false/receipt=null pour son propre émetteur.
+- Guardian : incidents courants connus R20_HL EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY. **R20 : BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les admissions. MARKET_DATA_DELAY HWR transitoires aux frontières 11:00, 11:15 et 11:30, retirés au poll suivant; 401 du sous-contrôle retraits inchangés.
+- HWR/BloFin : frontières 11:00, 11:15 et 11:30 récupérées sous deux minutes; après 11:31, readiness=READY, ordersPossible=true, entriesArmed=true, qualification=GO, halt=null, 1 position/1 protection. Flux connectés, consecutiveFailures=0. Un PARTIAL_SILENCE transitoire SUSHIUSDT a précédé le retour à EPICUSDT, sans reconnexion globale ni frontière échouée. À 11:30, Health a correctement classé la synchronisation MARKET_DATA_DELAY WARNING, contrairement aux faux CRITICAL consignés à 10:15/10:45.
+- RAFALE3 : clôture 11:00 traitée 30/30 en 1 h et 17/17 en 30 min, 0 erreur; Health 9/9 suivies/protégées. BANDECYCLE_LIVE reste sans position/ordre, absence de signal non assimilée à une panne.
+- OUTSIDER : frontières 10:45, 11:00, 11:15 et 11:30 structurées avec synchronized=true, processing=true, referenceQualified=true, admissionQualified=true, lastError=null, realOrdersEnabled=false; Health 6/6.
+- RECENT40 : POST /candles = 182×2xx, 0×4xx/5xx sur 1 h; 4 366×2xx, 0×4xx/5xx sur 24 h. À 11:30, scan brièvement lastBatchComplete=false pendant la frontière puis 63/63, missing=[], lastBatchComplete=true à 11:31; aucune preuve feedConflict/checkpoint.
+- Gmail Railway : aucun nouveau courriel d'usage, hard stop, ressources, arrêt ou failure. Usage/cap actuel non vérifié; aucun hard stop actuel confirmé.
+- Hyperliquid Statuspage officielle : All Systems Operational, L1 et API opérationnelles, aucun incident le 15 novembre ni maintenance future visible dans les 24 h.
+- Conclusion : aucune nouvelle panne LIVE réelle, exposition sans protection, hard stop ou défaut Telegram confirmé. CONTINUATION reste en observation après deux lots propres; aucune alerte répétitive.
