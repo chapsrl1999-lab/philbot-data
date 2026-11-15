@@ -1604,3 +1604,19 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau courriel de dépassement, hard stop, ressources, arrêt ou failure. Usage/cap actuels non vérifiés; aucun hard stop actuel confirmé.
 - Hyperliquid Statuspage officielle : All Systems Operational, L1 et API opérationnelles, aucun incident le 15 novembre et aucune maintenance future visible dans les 24 h.
 - Conclusion : aucune nouvelle panne distincte depuis l'alerte CONTINUATION de 09:28. La dégradation intermittente reste active/non résolue faute de deux cycles propres consécutifs et de preuve 78/78; aucune alerte répétitive émise.
+
+
+## Garde indépendante — 2026-11-15 10:45 EST (2026-11-15T15:47:49Z)
+
+- Portée : contrôle intermédiaire strictement en lecture seule depuis le relevé 10:10; Railway, journaux structurés, Health/Guardian, positions/protections, Gmail, RECENT40 et Hyperliquid. Aucune mutation, ordre, replay ni désactivation.
+- Railway : services prioritaires SUCCESS, aucun nouveau déploiement prioritaire, aucune coupure généralisée.
+- CONTINUATION/BLOFIN_R1 : fenêtre 1 h toujours 75 POST, tous HTTP 202, 0×4xx/5xx; aucun POST supplémentaire après le lot 10:00. Les 499 de 06:00, 07:00 et 09:00 restent une dégradation active non déclarée réparée; strict 78/78 et unicité des contextes NON VÉRIFIÉS. Aucun replay.
+- Health à 10:46 EST : revenu OK, sources 7/7, positions 59/59, conformité 30/30, nativeSL requis-présents 16/16, noNativeSL=0, executionFailures=0, pipelineStalls=0, telegram=VERIFIED. Ne pas dire « 59 positions avec SL ».
+- HWR/BloFin : frontières 10:15, 10:30 et 10:45 d'abord INCOMPLETE_SIGNALS/CANDLE_FINALIZATION_PENDING, puis PREPARED_RUNTIME ok respectivement en 58,761 s, 58,239 s et 57,096 s. Après 10:46, readiness=READY, ordersPossible=true, halt=null, entriesArmed=true, 1 position/1 protection; flux connectés, consecutiveFailures=0. PARTIAL_SILENCE limité à EPICUSDT, sans reconnexion globale.
+- **Anomalie de surveillance, pas panne de trading** : Health/Guardian ont classé les fenêtres 10:15 et 10:45 comme EXECUTION_NOT_READY CRITICAL pendant moins de deux minutes, puis les ont retirées au poll suivant; 10:30 a été MARKET_DATA_DELAY WARNING. Cette classification est incohérente avec la borne temporelle déployée (<2 min et cycle sain ⇒ WARNING MARKET_DATA_DELAY). Le moteur n'a pas été en échec >5 min et `ordersPossible` est revenu vrai. Aucun envoi Telegram natif nouveau n'est visible dans cette fenêtre.
+- Guardian courant après 10:46 : seuls les incidents connus R20_HL EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY restent actifs. **R20 : BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les admissions. 401 du sous-contrôle retraits inchangés.
+- OUTSIDER : frontières 10:15 et 10:30 structurées avec synchronized=true, processing=true, referenceQualified=true, admissionQualified=true, lastError=null, realOrdersEnabled=false; Health 6/6.
+- RECENT40 : POST /candles = 182×2xx, 0×4xx/5xx sur 1 h; 4 366×2xx, 0×4xx/5xx sur 24 h. Scan 63/63, missing=[], lastBatchComplete=true; aucune nouvelle preuve feedConflict/checkpoint.
+- Gmail Railway : aucun nouveau courriel d'usage, hard stop, ressources, arrêt ou failure. Usage/cap actuel non vérifié.
+- Hyperliquid Statuspage officielle : systèmes, L1 et API opérationnels; aucun incident le 15 novembre ni maintenance future visible dans les 24 h.
+- Conclusion : aucune nouvelle panne LIVE réelle ni exposition sans protection confirmée. L'incohérence de classification Health doit être corrigée en maintenance autorisée pour respecter le contrat <2 min, sans modifier les moteurs ni les protections. Aucune alerte urgente répétitive.
