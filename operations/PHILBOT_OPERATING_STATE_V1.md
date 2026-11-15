@@ -1560,3 +1560,13 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau mail de dépassement, hard stop, ressources, arrêt ou failure. Usage/cap actuels non vérifiés; aucun hard stop actuel confirmé.
 - Hyperliquid Statuspage officielle : All Systems Operational, API/L1 opérationnelles, aucun incident le 15 novembre et aucune maintenance future visible dans les 24 h.
 - Conclusion : aucune nouvelle panne distincte. L'anomalie CONTINUATION de 04:15 reste à surveiller et non validée comme corrigée; aucune nouvelle alerte répétitive émise.
+
+
+## FinOps — contrôle du 15 novembre 2026 (08:41 EST)
+
+- Preuves détaillées : [rapport 15/11](finops/2026-11-15_railway_cost_control.md), 28 services Railway (22+4+1+1), métriques CPU/RAM/RX/TX 24h complètes; 7j partiel, 1h ciblé, statuts et logs consultés. Projection CPU+RAM 24h 85,27 USD/mois vs 77,68 USD/mois hors QUATRE le 14/11; ni facture ni économie réalisée.
+- Principaux postes : HWR 32,45 USD/mois théoriques (CPU 0,13627, RAM 2,97223), BRIQUES 11,89 (CPU 0,04449, RAM 1,10027), REPLAY 5,74, SIGNER 5,30. Base HWR avant 28/10 : CPU 0,758/RAM 3,507, 50,23 USD/mois théoriques; aucune causalité ou réduction facturée établie, et un 24h mixte pré/post ne prouve rien.
+- **BRIQUES comporte un exécuteur RÉEL malgré son nom ombre** : logs du 15/11 13:17Z, équité ~273,75 USD, 4 positions, aucune ouverture/fermeture au cycle. Cron réussi mais 425 s contre 235 s au cycle précédent; 1930 trades historiques rejoués, RAM 1h moyenne 0,609 Go et courante 1,235 Go après CPU courant zéro : métrique résiduelle/facturation post-cron non établie. Ne jamais suspendre sans protocole métier et consentement. Cache/reprise incrémentale seulement proposés sur clone sans ordres.
+- QUATRE déjà retiré, zéro CPU/RAM 24h et 1h; PERSONAL snapshots cronFailed et zéro CPU/RAM; ne revendiquer aucune économie additionnelle. Health/Guardian online; patch DP60 readonly staged non appliqué. Aucune action sur LIVE/protections/volumes/stratégies/plafonds.
+- Gmail Railway après 07/11 : aucun nouvel avis d'usage ou hard-stop; dernier usage confirmé 10,04 USD le 07/11, cycle annoncé au 04/12, plafond courant inconnu et risque 24–48h non calculable. Facture 71,91 USD payée le 03/11 historique. Résultat net PhilBot 30j toujours non calculable faute de PnL consolidés et dépenses complètes.
+- DÉTECTÉ : BRIQUES coût/durée et nature LIVE. PROPOSÉ : optimisation réversible de cache après parité. TESTÉ : mesures/états/logs, pas de patch. INSTALLÉ : aucun. OBSERVÉ 24h : sans objet.
