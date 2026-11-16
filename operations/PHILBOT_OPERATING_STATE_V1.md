@@ -2118,3 +2118,29 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 10:52 à 10:58 America/T
 - `philbot-snapback-v10r1` reste absent de l'inventaire zesty-learning et donc NON VÉRIFIABLE.
 
 Conclusion : reprise HWR confirmée, aucune nouvelle panne distincte depuis l'alerte de 10:04; aucune notification répétitive émise.
+
+
+## PHILBOT_GUARD_2026-11-16_1152_EST — alerte de vérifiabilité CONTINUATION, garde indépendante lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 11:47 à 11:52 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection, configuration Railway ou mutation de bot n'a été effectué.
+
+### CONTINUATION/BloFin R1 — surveillance indépendante indisponible pour le lot de 11:00
+
+- Le lot horaire de 11:00 EST devait être observable au plus tard à 11:05. À 11:51, le connecteur Railway ne remonte aucun POST `/continuation/webhook` dans l'heure, aucun journal CONTINUATION et aucun trafic sur le service `philbot-signer`.
+- La vue `http_requests` du service indique aussi 0 requête sur 24 h, ce qui contredit les lots 07:00–10:00 déjà vérifiés et consignés dans ce même dossier. Cette incohérence empêche de conclure proprement que le moteur amont n'a pas scanné : **surveillance indépendante indisponible** sur cette source, et non preuve inventée d'une panne générale.
+- Le contrat 78/78, la persistance/idempotence des 499 antérieurs et l'absence de données manquantes restent NON VÉRIFIÉS. Aucun webhook rejeté n'est converti en trade manqué. Aucun replay.
+- Risque : un lot réellement absent ou un chemin d'ingestion déplacé pourrait laisser CONTINUATION sans admissions vérifiables; le défaut de visibilité peut masquer un blocage.
+- Action immédiate de maintenance autorisée : identifier la source effective et le domaine courant de `/continuation/webhook`, rapprocher le lot 11:00 avec les contextes durables et les logs client, puis rétablir une preuve 78/78 et 202/499 cohérente. Conserver les verrous et exclure tout signal périmé.
+
+### Couverture courante
+
+- Health à 11:50 EST : WARNING uniquement pour Telegram; sources 7/7, positions 60/60, conformité de contrat 28/28, SL natifs requis 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0. Répartition : RAFALE3 9/9 protégées; TRIPLE 32 positions dont 6 protections natives exigées; RAFALE2_SWING 14/14; OUTSIDER 5/5; HWR/RECENT40/BandeCycle 0. Ne pas dire « 60 positions avec SL ».
+- HWR/BloFin : clôtures 11:00, 11:15, 11:30 et 11:45 EST récupérées en ~1 minute avec `PREPARED_RUNTIME ok=true`; état courant `ordersPossible=true`, readiness READY, entriesArmed=true, managementAuthorized=true, qualification=GO, halt=null, 0 position. EPICUSDT reste un PARTIAL_SILENCE unitaire, consecutiveFailures=0, sans reconnexion globale. La preuve post-redémarrage `connectedValidation.twoConsecutiveHourlyBoundaries` reste false/0 : validation horaire encore incomplète, déjà connue.
+- OUTSIDER : attributs structurés des cycles 11:00, 11:15, 11:30 et 11:45 montrent synchronized=true, processing=true, referenceQualified/admissionQualified=true et lastError=null.
+- RAFALE3 : lot 11:00 complet, 1h 30/30 et 30m 17/17, erreurs=0; 11:30 17/17, erreurs=0.
+- Guardian : source=ok. R20 reste l'unique CRITICAL connu `EXECUTION_NOT_READY` avec `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE** — sans aggravation. `TELEGRAM_DELIVERY_UNVERIFIED` persiste; Health indique RELAY_ACCEPTED, aucun message_id natif prouvé. Les 401 WITHDRAWAL périodiques restent la lacune de sous-contrôle connue.
+- RECENT40 : 178/178 POST `/candles` en 2xx sur 1 h et 4 335/4 335 en 2xx sur 24 h, aucun 4xx/5xx. Cycles 63/63 CURRENT; l'observateur demeure OBSERVATION_ONLY / executionStatus BLOCKED conformément à son verrou connu; aucun nouveau 409/feedConflict.
+- DP60 readonly : `/snapshot` répond HTTP 200; reduceOnly natif reste non confirmé par ce reader sans conclure à l'absence des stops. Snapback-v10r1 reste absent de l'inventaire zesty-learning et NON VÉRIFIABLE.
+- Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; le hard cap courant reste non vérifié.
+- Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible sous 24 h au contrôle.
+- Notification : alerte émise pour la nouvelle impossibilité de vérifier le lot CONTINUATION 11:00, sans présenter cette lacune comme une panne bot confirmée.
