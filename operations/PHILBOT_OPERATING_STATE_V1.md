@@ -2173,3 +2173,22 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 12:32 à 12:35 America/T
 - Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; hard cap courant non vérifié.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h.
 - Notification : alerte indépendante émise pour le nouveau faux vert Telegram sans `message_id` natif.
+
+
+## PHILBOT_GUARD_2026-11-16_1336_EST — contrôle indépendant lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 13:33 à 13:36 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection, configuration Railway ou mutation de bot n'a été effectué.
+
+- Aucun nouveau défaut distinct ni aggravation critique depuis l'alerte Telegram de 12:35.
+- Telegram : Health demeure `telegram=VERIFIED` et Guardian continue d'omettre `TELEGRAM_DELIVERY_UNVERIFIED`, sans nouvelle preuve de `message_id` natif. Le faux vert alerté à 12:35 reste donc ACTIF, livraison NON PROUVÉE; pas de répétition d'alerte identique à ce passage.
+- CONTINUATION, lot 13:00 EST : 75 POST observés, 73×202 et 2×499 à 13:00:12.226 et 13:00:12.637 EST. Les deux 499 portent `client has closed the request before the server could send a response` (2,132 s et 2,000 s). C'est une récidive limitée de l'incident actif déjà alerté, après le lot 12:00 propre; couverture 78/78 toujours NON VÉRIFIÉE. Aucun rejet n'est converti en trade manqué, aucun replay.
+- Health courant : sources 7/7, positions 62/62, conformité 30/30, SL natifs requis 16/16, noNativeSL=0, executionFailures=0, pipelineStalls=0. Répartition stable : RAFALE3 9/9, TRIPLE 32 dont 6 protections natives exigées, RAFALE2_SWING 14/14, OUTSIDER 7/7, HWR/RECENT40/BandeCycle 0. Ne pas dire « 62 positions avec SL ».
+- HWR : clôtures 12:45, 13:00, 13:15 et 13:30 validées `PREPARED_RUNTIME ok=true` en environ 1 minute; état courant `ordersPossible=true`, readiness READY, entriesArmed=true, managementAuthorized=true, qualification=GO, halt=null, 0 position. EPICUSDT reste un PARTIAL_SILENCE ponctuel, consecutiveFailures=0. La preuve `connectedValidation.twoConsecutiveHourlyBoundaries` reste false/0 : lacune post-déploiement active, sans blocage courant.
+- OUTSIDER : cycles structurés 12:45, 13:00, 13:15 et 13:30 synchronized=true, processing=true, referenceQualified/admissionQualified=true, lastError=null.
+- RAFALE3 : lot 13:00 complet, 1h 30/30 et 30m 17/17, erreurs=0; 13:30 17/17, erreurs=0.
+- Guardian : source=ok; R20 reste l'unique CRITICAL connu `EXECUTION_NOT_READY` avec `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE** — sans aggravation. Les 401 WITHDRAWAL périodiques persistent.
+- RECENT40 : 178/178 POST `/candles` 2xx sur 1 h et 4 328/4 328 sur 24 h, aucun 4xx/5xx. Cycles 63/63 CURRENT; aucun nouveau 409/feedConflict. L'observateur reste OBSERVATION_ONLY / executionStatus BLOCKED selon son verrou connu.
+- DP60 readonly : 97 lectures HTTP 200 (`/snapshot`, `/cashflows`) dans la fenêtre, aucune erreur; reduceOnly natif toujours non confirmé par le reader.
+- Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; hard cap courant non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h.
+- Conclusion : incidents connus actifs (R20, Telegram faux vert, CONTINUATION 499/couverture et validation horaire HWR), mais aucune nouvelle panne distincte justifiant une nouvelle notification.
