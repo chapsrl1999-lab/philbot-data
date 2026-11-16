@@ -1742,3 +1742,33 @@ Contrôle strictement en lecture seule des bots et de Railway. Révision courant
 - Gmail Railway : aucun nouveau courriel de hard limit, usage, ressources, arrêt ou failure dans les deux dernières heures. Usage et plafond actuels non vérifiés; aucun hard stop actuel confirmé.
 - Hyperliquid Statuspage officielle : All Systems Operational; L1 et API opérationnelles; aucun incident le 15 novembre et aucune maintenance future visible dans les 24 h. La maintenance du 14 novembre est terminée.
 - Conclusion : aucune nouvelle panne LIVE réelle, exposition sans protection, hard stop, récidive Telegram ou nouveau 499 depuis l’alerte précédente. CONTINUATION demeure sous observation et R20 demeure une panne active connue; aucune nouvelle notification urgente.
+
+
+## Garde indépendante — 2026-11-15 20:15 EST (America/Toronto) — PHILBOT_GUARD_2026-11-15_2015_EST
+
+Contrôle strictement en lecture seule des bots et de Railway, effectué depuis ChatGPT hors Railway. Aucune action de trading, aucun ordre, aucun replay, aucun changement de risque, de protection, de variable ou de déploiement.
+
+### Nouveaux écarts confirmés
+
+- **CONTINUATION / BLOFIN_R1 — récurrence HTTP 499.** À 19:00:45.446 EST (2026-11-16T00:00:45.446839239Z), Railway observe un POST `/continuation/webhook` TradingView en **499** après 2258 ms, avec l'erreur `client has closed the request before the server could send a response`. Lot de 19:00 : **75 requêtes = 74×202 + 1×499**. Lot de 20:00 : **75×202**, sans 4xx/5xx. C'est une récurrence nouvelle après les lots propres de 17:00 et 18:00; elle ne prouve ni un trade manqué ni une réparation durable. Le contrat strict 78/78, l'unicité des contextes et la persistance métier restent non vérifiés. Aucun signal périmé n'a été rejoué.
+- **DP60 / Telegram — livraison native non prouvée pour un test.** À 19:01:08.002 EST, Health journalise `downstream accepté ... deliveryVerified=false receipt=none` puis `[DP60-TELEGRAM] kind=TEST accepted=true receipt=none`. Guardian maintient `TELEGRAM_DELIVERY_UNVERIFIED` jusqu'à 19:09. Des notifications DP60 distinctes ont ensuite reçu les `message_id` natifs **20445** (19:09) et **20449** (20:09), ce qui rétablit l'état global VERIFIED mais **ne prouve pas rétroactivement la livraison du test de 19:01**.
+- **HYBRID_R4 / BloFin HWR — deux blocages métier > 2 minutes.** Pour la clôture 19:15, admissions bloquées de ~19:15:00.580 à 19:19:11.540 EST, soit environ **4 min 11 s**; Health/Guardian passent `EXECUTION_NOT_READY` CRITICAL vers 19:17 et reviennent prêts vers 19:19. Pour la clôture 19:30, `INCOMPLETE_SIGNALS` persiste jusqu'à `PREPARED_RUNTIME ok=true` à 19:34:13.271, soit environ **4 min 13 s**. Pendant ces intervalles : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les nouvelles admissions HWR. Les clôtures suivantes ont récupéré sous 2 minutes : 19:45 prête à 19:45:58.027 et 20:00 prête à 20:01:06.800. L'exécuteur n'est pas resté en échec >5 minutes; position/protection HWR = 1/1 après reprise. Aucun élargissement du délai ni relâchement de protection.
+
+### État courant et couverture
+
+- Railway : services prioritaires observés en SUCCESS, sans nouveau déploiement prioritaire; ce statut ne vaut pas validation métier.
+- Health à 20:13:14 EST : **OK, sources 7/7, positions 60/60, conformité 29/29, SL natifs requis-présents 15/15, noNativeSL 0, executionFailures 0, pipelineStalls 0, critical 0, warning 0, Telegram global VERIFIED**. Répartition observée : RAFALE3 14 positions/14 protections et cycles 19:00/19:30/20:00 complets sans erreur; TRIPLE_MOTEUR 31 positions/5 protections (sorties dynamiques par contrat); RAFALE2_SWING 14/14; HWR 1/1; OUTSIDER 5/5.
+- **Ne pas formuler “60 positions avec SL”** : seuls **15/15 SL natifs requis** sont confirmés; les positions Triple/Swing suivent leurs contrats dynamiques.
+- OUTSIDER : attributs structurés inspectés malgré message vide; synchronisé, `admissionQualified=true`, pas de `lastError`, 5 positions/5 protections. Le service d'observation indique `realOrdersEnabled=false`; aucune conclusion d'exécution LIVE n'est tirée de son seul SUCCESS.
+- Recent40 : **182×2xx, 0×4xx/5xx sur 1 h; 4363×2xx, 0×4xx/5xx sur 24 h**. Scan courant 63/63 complet, aucun 409/feedConflict/checkpoint nouveau. Mode `OBSERVATION_ONLY` et exécution désactivée intentionnellement; aucun nombre de trades manqués n'est déduit.
+- DP60 reader : 94 lectures `GET /snapshot` observées, toutes 200 dans la fenêtre.
+- **R20 reste une panne active connue** : `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY`; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Pas de preuve de changement significatif pendant cette garde; pas de renotification horaire identique.
+- Gmail : aucun nouveau courriel Railway de dépassement, hard stop, warning ressources ou failure sur les 3 dernières heures. L'ancien hard cap ne permet pas d'inférer le cap courant; montant/cap courant restent non vérifiés.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident les 15–16 novembre et aucune maintenance à venir visible dans la fenêtre de 24 h; maintenance du 14 novembre indiquée terminée.
+
+### Risques et escalade exploitable
+
+1. Examiner côté maintenance autorisée la persistance/idempotence du POST CONTINUATION de 19:00:45.446 et la corrélation contextuelle, **sans replay de signal périmé**.
+2. Exiger un accusé natif par notification Telegram; conserver le test DP60 19:01 en `DELIVERY_UNVERIFIED` malgré les reçus ultérieurs d'autres messages.
+3. Diagnostiquer la latence de finalisation HWR des clôtures 19:15 et 19:30 (`INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP`), surveiller les cycles suivants et ne pas allonger la borne de 2 minutes ni lever les verrous.
+4. Aucun ordre, rollback, changement de risque ou modification live n'a été effectué. Une alerte française est émise dans la réponse ChatGPT de cette garde; sa livraison externe/Telegram n'est pas revendiquée.
