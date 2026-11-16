@@ -1939,3 +1939,27 @@ Risque : acquisition CONTINUATION devenue plus ambiguë avec six acquittements p
 - Vérifier la politique `CONTRACT_ENTRIES_DISABLED` du candidat ALGO sur source/configuration versionnée avant toute conclusion; aucune levée automatique de verrou.
 
 Aucun ordre, replay, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
+
+
+## PHILBOT_GUARD_2026-11-16_0345_EST — contrôle indépendant en lecture seule
+
+Contrôle effectué le 16 novembre 2026 vers 03:45–03:50 America/Toronto (08:45–08:50Z), hors Railway. Aucun ordre, replay, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
+
+### Incident nouveau confirmé — HWR/Blofin, blocage supérieur à la borne de 2 minutes
+
+- À la clôture 02:45 America/Toronto, `HYBRID_R4_PREPARED_RUNTIME` a signalé `INCOMPLETE_SIGNALS / CURRENT_HISTORY_GAP`.
+- Le collecteur a confirmé `readiness.status=BLOCKED`, `ordersPossible=false`, `signalsReady=false`, `blockedSince=02:45:01.094` et une position ouverte. La reprise interne est horodatée 02:47:09.894, soit environ 128,8 secondes de blocage.
+- Pendant cette fenêtre, Guardian n'a publié que `MARKET_DATA_DELAY` WARNING à 02:45:44 et 02:46:45. La borne contractuelle >2 minutes devait produire `EXECUTION_NOT_READY` CRITICAL; aucun sondage Guardian n'est tombé dans les 8,8 secondes entre le franchissement de la borne et la reprise. Il s'agit donc d'une lacune de détection/classification, pas d'une panne encore active.
+- Reprise observée : `PREPARED_RUNTIME ok=true mode=EXECUTION` puis `ordersPossible=true`; les clôtures 03:00, 03:15, 03:30 et 03:45 ont récupéré en moins de deux minutes. Health est redevenu `OK` à 03:46:24, puis encore OK à 03:47 et 03:48.
+- Couverture après reprise : Health `sources=7/7`, `positions=61/61`, `contractConformity=29/29`, `nativeSL=15/15`, `noNativeSL=0`; HWR `positions=1 tracked=1 protected=1`. Cette couverture agrégée ne remplace pas une preuve native ordre par ordre.
+- Action d'escalade : analyser la latence `CURRENT_HISTORY_GAP` de 02:45 et corriger la classification/temporisation d'observation afin qu'un blocage dépassant 2 minutes soit effectivement émis CRITICAL, sans allonger la borne, réarmer le moteur ni rejouer de signal.
+
+### Autres contrôles de ce passage
+
+- CONTINUATION, lot 03:00 : 75 POST observés, tous HTTP 202, aucun 499. Amélioration par rapport aux trois lots précédents; le contrat strict 78/78 reste NON VÉRIFIÉ faute de preuve officielle expliquant les trois contextes absents.
+- Telegram : Health affiche de nouveau `VERIFIED`, mais HWR expose encore `deliveryVerified=false`, `receipt=null`; aucun `message_id` natif n'a été trouvé pour prouver rétrospectivement la livraison de l'alerte antérieure. Ne pas déclarer ce défaut définitivement résolu.
+- R20 Hyperliquid reste l'incident connu `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` : BOT BLOQUÉ / TRADING IMPOSSIBLE. Pas de changement significatif pendant ce passage.
+- RECENT40 : 1 h = 178 réponses 2xx et 0 réponse 4xx/5xx; 24 h = 4 366 réponses 2xx et 0 réponse 4xx/5xx. Les états structurés restent observation-only, 63/63, sans nouveau `feedConflict` ni 409.
+- Gmail : aucun nouveau courriel Railway critique, arrêt de déploiement, warning ressource ou hard-limit dans la fenêtre récente. Le plafond monétaire courant reste non vérifié; ne pas réutiliser l'ancien hard cap comme état présent.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident courant ni maintenance future visible dans les 24 heures lors du contrôle.
+- Les derniers déploiements Railway des services prioritaires restent SUCCESS sans nouveau déploiement; ce constat n'est pas utilisé seul comme preuve métier. Snapback reste absent de l'inventaire accessible et demeure non vérifiable.
