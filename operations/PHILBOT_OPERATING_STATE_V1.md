@@ -1898,3 +1898,44 @@ Risque : acquisition CONTINUATION devenue plus ambiguë avec six acquittements p
 - Référentiels : issues #63, #64 et #65 toujours ouvertes; #77 fermée comme migration volontaire/intégration terminée. Aucun nouveau déploiement SHADOW Phoenix observé dans l'inventaire courant.
 
 **Conclusion :** aucune nouvelle panne ni aggravation depuis l'alerte CONTINUATION de 00:23 EST. Surveillance horaire complémentaire seulement; aucune garantie de notification immédiate ou de livraison Telegram.
+
+
+---
+
+## PHILBOT_GUARD_2026-11-16_0226_EST
+
+**Contrôle indépendant lecture seule : 2026-11-16 02:26 America/Toronto — alerte émise.**
+
+### Nouveaux éléments nécessitant notification
+
+1. **CONTINUATION/BloFin R1 — défaut 499 persistant sur deux lots supplémentaires.**
+   - Lot 01:00 EST : 75 POST observés = 74×202 + 1×499. 499 à 01:00:13.502 EST, durée 1484 ms, Railway : `client has closed the request before the server could send a response`.
+   - Lot 02:00 EST : 75 POST observés = 73×202 + 2×499. 499 à 02:00:11.200 (2065 ms) et 02:00:22.798 EST (2375 ms), même erreur Railway.
+   - Après 6×499 au lot 00:00, trois lots horaires consécutifs sont donc touchés. Le contrat strict 78/78 n'est pas prouvé : 75 POST par lot seulement, sans preuve courante d'un retrait officiel autorisant ce périmètre. Ne pas convertir ces rejets en nombre de trades manqués; unicité, contexte, persistance et idempotence restent à corréler. Aucun replay.
+2. **Telegram — nouvelle perte de preuve native.**
+   - Health était `telegram=VERIFIED` à 00:59:18 EST puis est observé `telegram=RELAY_ACCEPTED` à 01:31:14.951 EST et encore à 02:26:18 EST.
+   - Guardian publie `TELEGRAM_DELIVERY_UNVERIFIED` à partir de 01:31:48.381 EST et le conserve à 02:16:44; aucun `message_id` Telegram natif n'a été trouvé. Le relais a accepté, la livraison n'est pas prouvée.
+3. **HWR/BloFin — rejet d'admission spécifique à 01:30.**
+   - Frontière 01:30 : PREPARED_RUNTIME revient READY à 01:31:05.940 EST (~60 s), mais le candidat certifié ALGO LONG, contrat `RAFALE2 Diamant Étiré`, retourne `ok=false reason=CONTRACT_ENTRIES_DISABLED`.
+   - Le moteur global reste `ordersPossible=true`, entriesArmed=true, qualification=GO, 1 position, halt=null; ce n'est pas un blocage global. Le rejet exige cependant de vérifier si ce verrou de contrat est intentionnel et cohérent. Ne pas appeler ce candidat un trade manqué.
+
+### Couverture courante
+
+- Railway : services prioritaires toujours sur leur dernier déploiement SUCCESS, aucun nouveau déploiement; patch DP60 staged inchangé, patch R20 vide inchangé.
+- Health à 02:26:18 EST : WARNING uniquement à cause de Telegram; sources 7/7, positions 61/61, conformité 29/29, SL natifs requis-présents 15/15, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0. Détail : RAFALE3 9/9; TRIPLE_MOTEUR 32 positions/6 protections recensées; RAFALE2_SWING 14/14; HWR 1/1; OUTSIDER 5/5. Ne pas écrire « 61 positions avec SL ».
+- HWR : frontières 01:00, 01:15, 01:30, 01:45, 02:00 et 02:15 revenues READY en ~44–63 s, donc aucun échec exécuteur >5 min. PARTIAL_SILENCE ponctuels, consecutiveFailures=0 et aucune reconnexion globale observée.
+- OUTSIDER : six clôtures 01:00–02:15 synchronisées, admissionQualified=true, lastError=null; Health 5/5.
+- RAFALE3 : lots 01:00 et 02:00 complets, 30/30 en 1 h et 17/17 en 30 min, erreurs=0; 01:30 17/17.
+- Recent40 : 178×2xx et 0×4xx/5xx sur 1 h; 4372×2xx et 0×4xx/5xx sur 24 h. Frontières revenues CURRENT 63/63; aucun 409/feedConflict/checkpoint nouveau. Observer execution DISABLED/BLOCKED par contrat.
+- DP60 reader : 87 HTTP 200, aucun défaut. R20 : 261 HTTP 200 mais Guardian conserve `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE**, incident connu sans aggravation.
+- BloFin R1 moteur : barres 01:00 et 02:00 traitées, positions=[], ordres=[], equity ~461.77/461.74, aucun défaut d'exécution observé dans ces journaux.
+- Gmail : aucun nouveau courriel Railway critique sur trois heures; montant et hard cap actuels non vérifiés.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible dans les 24 h.
+
+### Action immédiate sûre
+
+- Corréler les trois nouveaux 499 aux contextes et aux écritures persistées/idempotentes; vérifier pourquoi 75 POST sont observés contre 78 attendus, sans rejouer de signal.
+- Obtenir un reçu Telegram natif `message_id` pour le prochain événement de test autorisé; ne pas qualifier `RELAY_ACCEPTED` de livraison.
+- Vérifier la politique `CONTRACT_ENTRIES_DISABLED` du candidat ALGO sur source/configuration versionnée avant toute conclusion; aucune levée automatique de verrou.
+
+Aucun ordre, replay, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
