@@ -2192,3 +2192,26 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 13:33 à 13:36 America/T
 - Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; hard cap courant non vérifié.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h.
 - Conclusion : incidents connus actifs (R20, Telegram faux vert, CONTINUATION 499/couverture et validation horaire HWR), mais aucune nouvelle panne distincte justifiant une nouvelle notification.
+
+
+
+## PHILBOT_GUARD_2026-11-16_1458_EST — contrôle indépendant lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection, configuration Railway ou mutation de bot n'a été effectué.
+
+- Aucun nouveau défaut distinct ni aggravation critique depuis le contrôle de 13:36.
+- Health à 14:55:28 EST : OK, sources 7/7, positions 61/61, conformité de contrat 30/30, SL natifs requis-présents 16/16, noNativeSL=0, executionFailures=0, pipelineStalls=0. Répartition : BANDE_CYCLE 0; RAFALE3 9/9 protégées; TRIPLE 31 positions dont 5 protections natives requises; RAFALE2_SWING 14/14; HWR 0; OUTSIDER 7/7; RECENT40 0. Ne pas dire « 61 positions avec SL ».
+- Telegram : nouvelle preuve native trouvée à 14:09:12.546 EST, ligne exacte `[TG-ENVOYÉ] source=health message_id=20476 tentative=1`. Le défaut de preuve signalé à 12:35 est donc résolu pour cet envoi précis. Cette preuve ne garantit pas tous les envois futurs; continuer d'exiger un `message_id` natif à chaque validation et ne pas assimiler un simple receipt de relais à une livraison.
+- Guardian : source=ok. R20 reste l'unique CRITICAL connu `EXECUTION_NOT_READY` avec `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE** — sans aggravation distincte. Les 401 WITHDRAWAL périodiques persistent comme lacune connue de sous-contrôle, sans rendre Health inaccessible.
+- CONTINUATION, lot 14:00 EST : 75 POST `/continuation/webhook/*` observés, 74×202 et 1×499 à 14:00:17.303 EST, durée 1,893 s. Récidive limitée de l'incident actif déjà alerté; couverture 78/78 toujours NON VÉRIFIÉE. Aucun rejet n'est converti en trade manqué et aucun replay n'a été effectué.
+- HWR/BloFin : frontières 13:45, 14:00, 14:15, 14:30 et 14:45 EST validées `PREPARED_RUNTIME ok=true mode=EXECUTION`. État courant : `ordersPossible=true`, readiness READY, entriesArmed=true, managementAuthorized=true, qualification=GO, halt=null, 0 position, révision `012fbfd72c9afc007ef7c8081f5e155bd872c088`. Un PARTIAL_SILENCE unitaire GWEIUSDT est observé avec consecutiveFailures=0 et sans reconnexion globale. `connectedValidation.twoConsecutiveHourlyBoundaries` reste false/0 : lacune post-déploiement connue, sans blocage courant.
+- OUTSIDER : cycles structurés 13:45, 14:00, 14:15, 14:30 et 14:45 EST avec synchronized=true, processing=true, referenceQualified/admissionQualified=true et lastError=null. Health confirme 7 positions suivies et 7 protégées.
+- RAFALE3 : lot 14:00 complet, 1 h 30/30 et 30 min 17/17, erreurs=0; 14:30 17/17, erreurs=0. Aucun HTTP 4xx/5xx dans la fenêtre; Health confirme 9 positions natives suivies/protégées.
+- BANDE_CYCLE/BloFin R1 : barre 14:00 EST sans signal, position ni ordre, equity 461,73; 162 lectures HTTP 200, aucune erreur.
+- RECENT40 : 178/178 POST `/candles` en 2xx sur 1 h et 4 324/4 324 sur 24 h, aucun 3xx/4xx/5xx. Scan Health 63/63, lastBatchComplete=true, missingContexts=[]; aucun nouveau 409/feedConflict/checkpoint. Une bougie APT 15 min manquante a été réparée par source officielle Binance REST, 6 barres natives concordantes, ordersSubmitted=0; cycle ensuite CURRENT. L'observateur demeure OBSERVATION_ONLY / executionStatus BLOCKED conformément au verrou connu.
+- DP60 readonly : 210 lectures HTTP 200 (`/snapshot`, `/cashflows`, `/history`), aucune erreur; le champ reduceOnly natif reste non confirmé par ce reader sans conclure à l'absence des stops.
+- Déploiements prioritaires : derniers états Railway SUCCESS; aucun nouveau déploiement prioritaire depuis le passage précédent. Le commit HWR installé reste `012fbfd72c9afc007ef7c8081f5e155bd872c088`. Les statuts SUCCESS n'ont pas été utilisés seuls pour conclure.
+- Référentiels #63, #64, #65 et #77 relus comme dossiers d'incident; aucune nouvelle preuve exigeant une alerte distincte. Les anciens services Phoenix restent absents de l'inventaire courant; aucune performance SHADOW n'est déduite. `philbot-snapback-v10r1` reste absent de zesty-learning et NON VÉRIFIABLE.
+- Gmail : aucun nouveau courriel Railway de hard limit, arrêt, warning ressources ou failure dans les deux dernières heures; hard cap courant toujours non vérifié.
+- Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible sous 24 h au contrôle. Source : https://hyperliquid.statuspage.io/
+- Conclusion : incidents connus actifs (R20, CONTINUATION 499/couverture et validation horaire HWR), mais aucune nouvelle panne distincte. La preuve native Telegram constitue une résolution vérifiée, pas une nouvelle alerte.
