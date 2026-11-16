@@ -2144,3 +2144,32 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 11:47 à 11:52 America/T
 - Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; le hard cap courant reste non vérifié.
 - Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible sous 24 h au contrôle.
 - Notification : alerte émise pour la nouvelle impossibilité de vérifier le lot CONTINUATION 11:00, sans présenter cette lacune comme une panne bot confirmée.
+
+
+## PHILBOT_GUARD_2026-11-16_1235_EST — alerte Telegram faux vert, garde indépendante lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 12:32 à 12:35 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection, configuration Railway ou mutation de bot n'a été effectué.
+
+### Nouveau défaut de notification — Telegram déclaré VERIFIED sans message_id natif
+
+- Jusqu'à 12:30:28 EST, Health indiquait `telegram=RELAY_ACCEPTED` et Guardian gardait `TELEGRAM_DELIVERY_UNVERIFIED`.
+- À 12:31:29.428 EST, après deux nouvelles entrées protégées, Health a journalisé seulement `downstream accepté ... deliveryVerified=true receipt=20474` et `receipt=20475`, puis est passé à `telegram=VERIFIED`. Les lignes suivantes restent `VERIFIED`.
+- À 12:31:51.961 EST, Guardian a retiré `TELEGRAM_DELIVERY_UNVERIFIED`; son actif ne contient plus que R20.
+- Aucun champ Telegram natif `message_id` n'apparaît dans les preuves Railway. Les numéros `receipt` sont des accusés du relais, pas une preuve native explicitement identifiée. Selon le contrat de garde, **la livraison Telegram reste NON PROUVÉE** et le passage au vert constitue un faux positif de notification.
+- Risque : Health/Guardian peuvent masquer une non-livraison réelle d'alertes pendant que l'interface annonce VERIFIED.
+- Action immédiate de maintenance autorisée : conserver WARNING `TELEGRAM_DELIVERY_UNVERIFIED` tant que la réponse native Telegram n'expose pas un `message_id` vérifiable; distinguer explicitement `relayAccepted`, `nativeAccepted` et `nativeMessageId`. Ne pas présenter les receipts 20474/20475 comme des messages livrés sans cette preuve.
+
+### CONTINUATION et couverture métier
+
+- L'alerte d'accès du contrôle 11:52 est levée : le lot 11:00 est maintenant lisible avec 75 POST, 74×202 et 1×499 à 11:00:07.527 EST (client fermé avant réponse, 1,684 s). Le lot 12:00 contient 75 POST, tous HTTP 202, de 12:00:01.018 à 12:00:37.426 EST. Le chemin réel comprend un suffixe hashé, ce qui expliquait le filtre métrique exact vide.
+- Le contrat 78/78 reste néanmoins NON VÉRIFIÉ (75 requêtes visibles); un lot propre ne ferme pas l'incident 499 ni la preuve de couverture. Aucun 499 n'est converti en trade manqué et aucun replay n'a été effectué.
+- Health à 12:34 EST : OK hors réserve Telegram contractuelle; sources 7/7, positions 62/62, conformité 30/30, SL natifs requis 16/16, noNativeSL=0, executionFailures=0, pipelineStalls=0. Deux positions OUTSIDER nouvelles portent le total OUTSIDER à 7/7 protégées. Ne pas dire « 62 positions avec SL ».
+- HWR : frontières 12:00, 12:15 et 12:30 récupérées ensuite avec succès; état courant `ordersPossible=true`, readiness READY, entriesArmed=true, managementAuthorized=true, qualification=GO, halt=null, 0 position. EPICUSDT reste un PARTIAL_SILENCE unitaire, consecutiveFailures=0. La preuve `connectedValidation.twoConsecutiveHourlyBoundaries` reste false/0 même après les frontières horaires 11:00 et 12:00 : lacune de validation post-déploiement, sans blocage courant observé.
+- OUTSIDER : cycles structurés 12:00, 12:15 et 12:30 synchronized=true, processing=true, referenceQualified/admissionQualified=true, lastError=null.
+- RAFALE3 : lot 12:00 complet, 1h 30/30 et 30m 17/17, erreurs=0; 12:30 17/17, erreurs=0. Un POST `/rafale2-hl/signal` a répondu 401 à 12:30:19, sans interruption du scan ni incident Health; à surveiller comme intégration, pas preuve d'ordre perdu.
+- Guardian : source=ok; R20 reste l'unique CRITICAL connu `EXECUTION_NOT_READY` avec `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE** — sans aggravation. Les 401 WITHDRAWAL périodiques persistent.
+- RECENT40 : 177/177 POST `/candles` 2xx sur 1 h et 4 331/4 331 sur 24 h, aucun 4xx/5xx. Cycles 63/63 CURRENT; aucun nouveau 409/feedConflict. L'observateur reste OBSERVATION_ONLY / executionStatus BLOCKED conformément au verrou connu.
+- DP60 readonly : 115 lectures HTTP 200 (`/snapshot`, `/cashflows`) dans la fenêtre, aucune erreur; reduceOnly natif toujours non confirmé par le reader.
+- Gmail : aucun nouveau courriel Railway critique dans les deux dernières heures; hard cap courant non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h.
+- Notification : alerte indépendante émise pour le nouveau faux vert Telegram sans `message_id` natif.
