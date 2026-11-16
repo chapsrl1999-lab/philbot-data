@@ -1963,3 +1963,34 @@ Contrôle effectué le 16 novembre 2026 vers 03:45–03:50 America/Toronto (08:4
 - Gmail : aucun nouveau courriel Railway critique, arrêt de déploiement, warning ressource ou hard-limit dans la fenêtre récente. Le plafond monétaire courant reste non vérifié; ne pas réutiliser l'ancien hard cap comme état présent.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident courant ni maintenance future visible dans les 24 heures lors du contrôle.
 - Les derniers déploiements Railway des services prioritaires restent SUCCESS sans nouveau déploiement; ce constat n'est pas utilisé seul comme preuve métier. Snapback reste absent de l'inventaire accessible et demeure non vérifiable.
+
+
+## PHILBOT_GUARD_2026-11-16_0457_EST — contrôle indépendant en lecture seule
+
+Contrôle effectué le 16 novembre 2026 vers 04:57–05:00 America/Toronto (09:57–10:00Z), hors Railway. Aucun ordre, replay, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
+
+### Incident nouveau confirmé — livraison Telegram non prouvée
+
+- Health était encore `telegram=VERIFIED` à 03:59:19 America/Toronto.
+- À 04:01:09, le test `DP60-TELEGRAM kind=TEST` a été accepté par le relais, mais les journaux disent explicitement `deliveryVerified=false receipt=none` et `accepted=true receipt=none`.
+- À 04:01:17, Health est passé à `telegram=RELAY_ACCEPTED`; cet état persistait encore à 04:59:26. Guardian maintient `TELEGRAM_DELIVERY_UNVERIFIED`.
+- Aucun `message_id` natif n'est présent dans les journaux de la fenêtre. Le HTTP/relay accepté ne prouve donc pas une livraison Telegram. Ne pas affirmer qu'un message n'a pas été reçu; la livraison est NON VÉRIFIÉE.
+- Action immédiate sûre : contrôler le relais et obtenir un reçu Telegram natif `message_id` sur le prochain test autorisé; conserver la garde indépendante ChatGPT et une surveillance externe plus fréquente. Aucun changement automatique de bot ou de canal.
+
+### Couverture métier et protections
+
+- Health courant : `sources=7/7`, `positions=61/61`, `contractConformity=29/29`, `nativeSL=15/15`, `noNativeSL=0`, `executionFailures=0`, `pipelineStalls=0`.
+- Détail : RAFALE3 9/9 positions suivies/protégées; TRIPLE 32 suivies, 6 protections natives requises; RAFALE2_SWING 14/14; HWR 1/1; OUTSIDER 5/5; RECENT40 0. Ce sont des agrégats Health, pas une garantie ordre par ordre au-delà des champs exposés.
+- HWR : cinq clôtures postérieures (03:45, 04:00, 04:15, 04:30, 04:45) ont récupéré en moins de deux minutes. À 04:59 : `readiness=READY`, `ordersPossible=true`, `signalsReady=true`, `entriesArmed=true`, `managementAuthorized=true`, une position. Les PARTIAL_SILENCE restaient ponctuels, sans échec consécutif ni reconnexion globale.
+- Le défaut de classification >2 minutes observé à 02:45 reste à corriger, mais aucun nouveau dépassement n'a été observé pendant ce passage.
+- RAFALE3 : scan 04:00 complet 30/30 en 1 h et 17/17 en 30 min, puis 04:30 complet 17/17, zéro erreur et zéro nouveau signal.
+- OUTSIDER : cycles 04:00, 04:15, 04:30 et 04:45 synchronisés; référence qualifiée, admission qualifiée, `lastError=null`.
+- CONTINUATION 04:00 : 75 POST observés, 75 HTTP 202, aucun 499. Le contrat strict 78/78 reste NON VÉRIFIÉ faute de preuve officielle expliquant les trois contextes absents.
+- RECENT40 `POST /candles` : 1 h = 178 réponses 2xx, 0 réponse 4xx/5xx; 24 h = 4 362 réponses 2xx, 0 réponse 4xx/5xx. Scan Health complet 63/63, aucun contexte manquant; aucun nouveau 409 ou `feedConflict`.
+- DP60 reader : 75/75 lectures `/snapshot` HTTP 200 dans la fenêtre. R20 : 225/225 lectures `/monitor` et `/guardian` HTTP 200, mais l'incident métier connu reste `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` : BOT BLOQUÉ / TRADING IMPOSSIBLE.
+- Les derniers déploiements des services prioritaires restent SUCCESS et inchangés; aucun nouveau déploiement n'est utilisé comme preuve de réparation. Snapback reste absent de l'inventaire accessible.
+
+### Fournisseurs externes
+
+- Gmail : aucun nouveau courriel Railway critique, arrêt de déploiement, warning ressource ou hard-limit dans les deux dernières heures. Le hard cap monétaire courant reste non vérifié.
+- Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible dans les 24 heures.
