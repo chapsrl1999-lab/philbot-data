@@ -2052,3 +2052,39 @@ Contrôle effectué le 16 novembre 2026 vers 04:57–05:00 America/Toronto (09:5
 - SIGNER 5,33, REPLAY 5,64, CASCADE REAL 4,50, R20 3,93 USD/mois théoriques. QUATRE, ALIGNEMENT, PERSONAL snapshots et shadow proxy zéro CPU/RAM sur 24h : aucune économie revendiquée pour arrêt/sommeil. PERSONAL snapshots reste cronFailed depuis 06/11.
 - Gmail Railway : dernier usage confirmé 10,04 USD le 07/11; aucun nouvel avis hard-stop trouvé, plafond courant inconnu. Reçu payé Railway 71,91 USD du 03/11 distinct. Rentabilité nette globale 30j non calculable faute de PnL consolidé et dépenses complètes.
 - **DÉTECTÉ** : recalcul historique BRIQUES, coût HWR, lacune plafond. **PROPOSÉ** : clone incrémental BRIQUES avec parité et rollback. **TESTÉ** : mesures/états/journaux/tarifs/Gmail en lecture seule. **INSTALLÉ** : rien. **OBSERVÉ 24h APRÈS** : sans objet. Aucun bot LIVE, volume, protection, stratégie, ordre, stop, risque, capital ou limite modifié.
+
+
+
+## PHILBOT_GUARD_2026-11-16_1004_EST — alerte indépendante lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 10:04 à 10:10 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection, configuration Railway ni mutation de bot n'a été effectué.
+
+### Nouvelle panne réelle — HYBRID_R4/BloFin
+
+- Dernier état non critique observé par Guardian à 07:46:50 EST : HWR était encore seulement `MARKET_DATA_DELAY`.
+- À 07:47:51.263 EST, Guardian a basculé HWR en `EXECUTION_NOT_READY` CRITICAL. L'incident est toujours actif à 10:01:48 EST. Health le confirme chaque minute : source lisible (`ok=true`) mais `incidents={"EXECUTION_NOT_READY":1}`.
+- Conclusion métier explicite : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Le dernier déploiement Railway demeure pourtant SUCCESS, id `42282fbb-9c4a-48ec-bf39-50b0bf04ae36`, commit `5b43377f557d1530cb53f1f57e18b4fddbbb3e36`. SUCCESS n'est donc pas une preuve de disponibilité métier.
+- L'état courant Health indique HWR 0 position, donc aucune position HWR exposée n'est observée à cet instant. La panne bloque les admissions/exécutions nouvelles; elle ne prouve ni ordre perdu ni exposition sans stop.
+- Les appels directs du connecteur Railway aux journaux HWR ont échoué deux fois par fermeture de transport. Ce défaut d'accès est consigné séparément et n'est pas utilisé comme preuve de panne; la panne métier est confirmée indépendamment par Health et Guardian.
+- Action immédiate de maintenance autorisée : inspecter le processus/exécuteur HWR et la cause de `EXECUTION_NOT_READY`, puis exiger deux clôtures 15 min saines avec `PREPARED_RUNTIME ok=true` et `ordersPossible=true` avant de déclarer une reprise. Conserver tous les verrous; aucun replay de signal périmé.
+
+### CONTINUATION/BloFin R1 — incident 499 aggravé et actif depuis plus de deux heures
+
+- Lot 08:00 EST : 75 POST observés = 71×202 + 4×499.
+- Lot 09:00 EST : 77 POST observés = 64×202 + 13×499; pic nettement supérieur aux lots précédents.
+- Lot 10:00 EST : 75 POST observés = 71×202 + 4×499.
+- Les 21 rejets 499 portent tous l'erreur Railway « client has closed the request before the server could send a response », avec durées d'environ 1,6 à 2,7 secondes. Quatre lots horaires consécutifs 07:00–10:00 restent touchés après l'alerte initiale de 06:17.
+- Ces 499 ne sont ni des webhooks acceptés ni un nombre de trades manqués. Persistance, unicité et idempotence internes restent non démontrées. Le contrat 78/78 demeure NON VÉRIFIÉ; les lots visibles comptent 75, 77 et 75 requêtes. Aucun replay.
+- Action immédiate : corréler chaque horodatage 499 aux contextes durables du lot, expliquer le périmètre variable, vérifier persistance/idempotence et timeouts client/serveur sans réinjecter de signal périmé.
+
+### Couverture et autres contrôles
+
+- Health à 10:05:31 EST : CRITICAL, sources 7/7, positions 60/60, conformité 28/28, SL natifs requis-présents 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0. Répartition : RAFALE3 9/9; TRIPLE 32 positions dont 6 protections natives requises; RAFALE2_SWING 14/14; OUTSIDER 5/5; HWR 0; RECENT40 0. Ne pas dire « 60 positions avec SL ».
+- R20 reste l'incident connu `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` : **BOT BLOQUÉ / TRADING IMPOSSIBLE**, sans nouvelle aggravation distincte.
+- Recent40 `POST /candles` : 178×2xx, 0×4xx/5xx sur 1 h; 4 342×2xx, 0×4xx/5xx sur 24 h. Scan Health complet 63/63, missingContexts=[], aucun nouveau 409/feedConflict/checkpoint.
+- Telegram : Health affiche `VERIFIED` et Guardian a retiré `TELEGRAM_DELIVERY_UNVERIFIED` après 08:01:48 EST, mais aucun `message_id` natif n'a été trouvé dans les preuves de cette fenêtre. La livraison reste donc NON PROUVÉE; ne pas la déclarer résolue.
+- Gmail : aucun nouveau courriel Railway de hard limit, arrêt de déploiements, warning ressources ou failure dans les quatre dernières heures. Le hard cap monétaire courant reste non vérifié.
+- Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible dans les 24 h lors du contrôle.
+- `philbot-snapback-v10r1` reste absent de l'inventaire zesty-learning et donc NON VÉRIFIABLE sans invention.
+
+Alerte française émise par la garde ChatGPT pour la panne HWR et l'aggravation CONTINUATION. Cette garde horaire reste complémentaire et ne garantit ni notification immédiate ni livraison Telegram.
