@@ -1841,3 +1841,38 @@ Contrôle strictement en lecture seule après l'alerte CONTINUATION de 22:22. Au
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucune maintenance à venir visible dans les 24 h.
 
 Conclusion : aucun nouveau défaut depuis l'alerte de 22:22; pas de nouvelle notification urgente. Le défaut intermittent CONTINUATION reste actif/non résolu jusqu'à preuve durable et corrélation métier.
+
+
+## Garde indépendante — 2026-11-16 00:23 EST (America/Toronto) — PHILBOT_GUARD_2026-11-16_0023_EST
+
+Contrôle strictement en lecture seule. Aucun ordre, replay, changement de risque, de protection, de variable ou de déploiement.
+
+### Nouvel écart confirmé — CONTINUATION/BLOFIN_R1
+
+- Lot de 00:00 EST : **75 POST /continuation/webhook = 69×202 + 6×499**.
+- Six rejets concentrés :
+  - 00:00:14.102365 EST, 499, 1748 ms;
+  - 00:00:14.102750 EST, 499, 1749 ms;
+  - 00:00:14.128468 EST, 499, 1776 ms;
+  - 00:00:14.280828 EST, 499, 2234 ms;
+  - 00:00:14.290913 EST, 499, 2244 ms;
+  - 00:00:14.291245 EST, 499, 2244 ms.
+- Erreur Railway commune : `client has closed the request before the server could send a response`.
+- Aggravation après 1×499 à 19:00 et 3×499 à 21:00, malgré les lots propres de 22:00 et 23:00. Le défaut intermittent d'acquittement n'est pas résolu. Les 75 requêtes ne prouvent pas 75 contextes uniques; strict 78/78, contenu/unicité des contextes et persistance des six requêtes restent NON VÉRIFIÉS. Aucun nombre de trades manqués n'est déduit et aucun replay n'a été effectué.
+
+### État courant et couverture
+
+- Railway : services prioritaires SUCCESS, aucun nouveau déploiement prioritaire; patches DP60/R20 staged inchangés/non appliqués.
+- Health à 00:22:19 EST : OK, sources 7/7, positions 61/61, conformité 29/29, SL natifs requis-présents 15/15, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, Telegram global=VERIFIED. Détail : RAFALE3 natif 9/9, TRIPLE_MOTEUR 32 positions/6 protections recensées, RAFALE2_SWING 14/14, HWR 1/1, OUTSIDER 5/5. Ne pas écrire « 61 positions avec SL ».
+- Telegram : DP60 CLOSE à 00:09:23 EST reçu avec message_id natif 20454. Cela prouve seulement cette livraison; le DP60 TEST de 19:01 reste sans reçu natif.
+- HWR/BloFin : clôtures 23:15, 23:30, 23:45, 00:00 et 00:15 revenues PREPARED_RUNTIME ok=true en ~49–60 s, ordersPossible=true après reprise, position/protection 1/1. Aucun EXECUTION_NOT_READY CRITICAL.
+- RAFALE3 : 23:30 traité 17/17; 00:00 traité 30/30 en 1 h et 17/17 en 30 min, erreurs=0; compteur moteur 14 « ouverts » distinct du Health natif 9/9.
+- OUTSIDER : cinq cycles structurés synchronisés, admissionQualified=true, lastError=null; Health 5/5.
+- Recent40 : 182×2xx, 0×4xx/5xx sur 1 h; 4363×2xx, 0×4xx/5xx sur 24 h. Frontières à CURRENT 63/63 en 9–30 s, aucun 409/feedConflict/checkpoint nouveau.
+- DP60 reader : 73 lectures HTTP, toutes 200. R20 répond 200 mais reste `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE**.
+- Gmail : aucun nouveau courriel Railway critique sur quatre heures; montant/cap courants non vérifiés.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucune maintenance à venir visible dans les 24 h.
+
+### Risque et action immédiate
+
+Risque : acquisition CONTINUATION devenue plus ambiguë avec six acquittements perdus simultanément; possible perte d'admission, sans preuve suffisante pour compter des trades. Action de maintenance autorisée : corréler chaque 499 à son contexte, vérifier la persistance/idempotence et les timeouts client/serveur autour de 00:00:14, sans replay de signal périmé. Ne pas lever les verrous ni changer le risque. Alerte française émise par la garde ChatGPT; aucune livraison Telegram de cette alerte n'est revendiquée.
