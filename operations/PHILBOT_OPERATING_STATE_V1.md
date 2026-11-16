@@ -1772,3 +1772,21 @@ Contrôle strictement en lecture seule des bots et de Railway, effectué depuis 
 2. Exiger un accusé natif par notification Telegram; conserver le test DP60 19:01 en `DELIVERY_UNVERIFIED` malgré les reçus ultérieurs d'autres messages.
 3. Diagnostiquer la latence de finalisation HWR des clôtures 19:15 et 19:30 (`INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP`), surveiller les cycles suivants et ne pas allonger la borne de 2 minutes ni lever les verrous.
 4. Aucun ordre, rollback, changement de risque ou modification live n'a été effectué. Une alerte française est émise dans la réponse ChatGPT de cette garde; sa livraison externe/Telegram n'est pas revendiquée.
+
+
+## Garde indépendante — 2026-11-15 20:50 EST (America/Toronto) — PHILBOT_GUARD_2026-11-15_2050_EST
+
+Contrôle strictement en lecture seule des bots et de Railway depuis ChatGPT, après l'alerte de 20:15. Aucun ordre, replay, changement de risque, de protection, de variable ou de déploiement.
+
+- Railway : services prioritaires toujours en SUCCESS, aucun nouveau déploiement prioritaire ni opération en cours. Les patches staged DP60 `361a8631-042b-4bfd-bbd6-b3ee39068ad2` et R20 `a51b2f33-45cd-464a-8708-8bfc192f97e3` restent non appliqués. L'ancien `philbot-personal-snapshots` demeure CRASHED, sans changement et hors services prioritaires LIVE.
+- Health au dernier poll 20:49:20 EST : **OK**, sources 7/7, positions 60/60, conformité 29/29, SL natifs requis-présents 15/15, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, Telegram global=VERIFIED. Détail natif : RAFALE3 9/9, TRIPLE_MOTEUR 31 positions/5 protections recensées, RAFALE2_SWING 14/14, HWR 1/1, OUTSIDER 5/5. Ne pas dire « 60 positions avec SL ».
+- **Rectification du relevé de 20:15 :** la phrase « RAFALE3 14 positions/14 protections » était erronée. Le Health natif indique **RAFALE3 9/9**. Le journal du moteur RAFALE3 indique séparément **14 “ouverts”**; comme déjà documenté dans les gardes précédentes, ce compteur moteur ne doit pas être extrapolé à 14 positions natives distinctes. À 20:30, le moteur a traité 17/17 actifs en 30 min, erreurs=0, ouverts=14, tandis que Health maintient 9/9 natifs sans incident.
+- HWR/BloFin : clôtures 20:15, 20:30 et 20:45 initialement `INCOMPLETE_SIGNALS/CANDLE_FINALIZATION_PENDING`, puis `PREPARED_RUNTIME ok=true` respectivement à 20:15:58.106, 20:31:07.963 et 20:46:07.229 EST. Chaque récupération est <2 minutes; seulement `MARKET_DATA_DELAY` transitoire, retiré au poll Guardian suivant. `ordersPossible=true` après reprise, position/protection 1/1. Les `PARTIAL_SILENCE` EPICUSDT/GRTUSDT/GWEIUSDT restent par symbole avec `consecutiveFailures=0` et sans reconnexion globale.
+- CONTINUATION : aucune nouvelle requête `POST /continuation/webhook` depuis l'alerte; le prochain lot horaire n'était pas encore dû dans cette fenêtre. Le 499 de 19:00:45 reste non résolu/non expliqué; aucune preuve de trade manqué et aucun replay.
+- OUTSIDER : cycles 20:15, 20:30 et 20:45 structurés avec synchronized=true, processing=true, admissionQualified=true, lastError=null; Health 5/5. `realOrdersEnabled=false` sur ce service de validation.
+- Recent40 : 182×2xx, 0×4xx/5xx sur 1 h; 4363×2xx, 0×4xx/5xx sur 24 h. Frontières 20:15, 20:30 et 20:45 passées de WAITING_FOR_DATA à CURRENT 63/63 en 20–30 s, aucun 409, feedConflict ou checkpoint nouveau. Mode OBSERVATION_ONLY/exécution désactivée inchangé.
+- DP60 reader : 37 lectures HTTP dans la fenêtre, toutes 200. R20 répond 200 sur /monitor et /guardian mais reste l'incident métier connu `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` : **BOT BLOQUÉ / TRADING IMPOSSIBLE**.
+- Gmail : aucun nouveau courriel Railway de hard limit, arrêt, warning ressources ou failure sur les 3 dernières heures; montant et cap courants non vérifiés.
+- Hyperliquid officiel : All Systems Operational, L1 et API opérationnels, aucun incident les 15–16 novembre et aucune maintenance à venir visible dans les 24 h.
+
+Conclusion : aucun nouveau défaut depuis l'alerte de 20:15; pas de nouvelle notification urgente. Les incidents CONTINUATION 499, Telegram DP60 TEST sans reçu natif et R20 bloqué restent à suivre selon leur cadence d'escalade.
