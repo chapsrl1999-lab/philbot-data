@@ -2041,3 +2041,14 @@ Contrôle effectué le 16 novembre 2026 vers 04:57–05:00 America/Toronto (09:5
 - RECENT40 /candles : 178/178 POST 2xx sur 1 h et 4 353/4 353 sur 24 h; aucun 4xx/5xx ni feedConflict nouveau. DP60 readonly : 73/73 /snapshot HTTP 200. Aucun nouveau courriel Gmail Railway critique dans les deux dernières heures.
 - Hyperliquid officiel toujours All Systems Operational; L1 et API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h. Source : https://hyperliquid.statuspage.io/ .
 - Aucun ordre, stop, risque, stratégie, configuration, protection, plafond, déploiement ou replay modifié. Pas de notification émise, conformément à la règle anti-répétition.
+
+
+## Contrôle FinOps — 2026-11-16 08:45 EST
+
+- Rapport source : operations/finops/2026-11-16_railway_cost_control.md (commit 68b1d98cfa7948ba4096f5e14e00b5d03f1c8e8b).
+- 28 services inventoriés sur quatre projets; 24h et 7j CPU/RAM/RX/TX lus pour les 28, 1h ciblée et journaux. Projection CPU+RAM à charge constante 24h **85,74 USD/mois**, contre 85,27 USD/mois la veille (+0,47 USD, +0,5 %). Ce n'est ni un usage facturé ni une facture; egress et autres postes exclus.
+- HWR 33,64 USD/mois théoriques (CPU 0,164629, RAM 3,034971 Go); base pré-correctif 28/10 0,758 vCPU / 3,507 Go; aucun gain causal/facturé prouvé. Dernière heure CPU 0,731 vCPU, RAM 3,891 Go; logs 13:39Z INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP, ordersPossible=false, après un READY vu à 07:30 EST : fluctuation métier à surveiller, ne pas dégrader la collecte.
+- BRIQUES 13,93 USD/mois théoriques (contre 11,89 veille), recalcul horaire de 1930 trades, cycle 138 s. **Exécuteur REEL** et 4 positions natives observées; aucune désactivation ni modification sans tests de parité et accord si impact métier. Optimisation cache/reprise incrémentale uniquement proposée.
+- SIGNER 5,33, REPLAY 5,64, CASCADE REAL 4,50, R20 3,93 USD/mois théoriques. QUATRE, ALIGNEMENT, PERSONAL snapshots et shadow proxy zéro CPU/RAM sur 24h : aucune économie revendiquée pour arrêt/sommeil. PERSONAL snapshots reste cronFailed depuis 06/11.
+- Gmail Railway : dernier usage confirmé 10,04 USD le 07/11; aucun nouvel avis hard-stop trouvé, plafond courant inconnu. Reçu payé Railway 71,91 USD du 03/11 distinct. Rentabilité nette globale 30j non calculable faute de PnL consolidé et dépenses complètes.
+- **DÉTECTÉ** : recalcul historique BRIQUES, coût HWR, lacune plafond. **PROPOSÉ** : clone incrémental BRIQUES avec parité et rollback. **TESTÉ** : mesures/états/journaux/tarifs/Gmail en lecture seule. **INSTALLÉ** : rien. **OBSERVÉ 24h APRÈS** : sans objet. Aucun bot LIVE, volume, protection, stratégie, ordre, stop, risque, capital ou limite modifié.
