@@ -2088,3 +2088,33 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 10:04 à 10:10 America/T
 - `philbot-snapback-v10r1` reste absent de l'inventaire zesty-learning et donc NON VÉRIFIABLE sans invention.
 
 Alerte française émise par la garde ChatGPT pour la panne HWR et l'aggravation CONTINUATION. Cette garde horaire reste complémentaire et ne garantit ni notification immédiate ni livraison Telegram.
+
+
+
+## PHILBOT_GUARD_2026-11-16_1052_EST — contrôle indépendant lecture seule
+
+Contrôle hors Railway effectué le 16 novembre 2026 de 10:52 à 10:58 America/Toronto (EST). Aucun ordre, replay, changement de risque, désactivation de protection ou mutation Railway n'a été effectué.
+
+### HWR/BloFin — reprise métier confirmée après correctif, sans conclure sur le seul SUCCESS
+
+- Le blocage `EXECUTION_NOT_READY` alerté à 10:04 a été attribué par le nouveau déploiement à une révision tardive officielle de la bougie POLUSDT : la première lecture environ dix secondes après clôture différait de deux lectures officielles fraîches ultérieures, provoquant `MARKET_REPAIR_MISMATCH` et l'arrêt de publication.
+- Correctif installé : deployment `a822edec-b0e8-4b23-93c9-02b72270781d` SUCCESS créé à 10:24:46 EST, commit Railway et source GitHub concordants `012fbfd72c9afc007ef7c8081f5e155bd872c088`. La règle n'accepte qu'une révision fraîche de moins d'une heure, confirmée deux fois, avec dérive <=0,5 %, sans réécrire la bougie consommée; les autres conflits restent bloquants.
+- Tests de build observés : 57/57, 2/2, 3/3, 27/27, 90/90 et 41/41, zéro échec dans chacune des six suites.
+- Validation post-déploiement : `PREPARED_RUNTIME ok=true mode=EXECUTION` à 10:27:30 pour la frontière 10:15, à 10:31:09 pour 10:30 et à 10:46:08 pour 10:45. Les collecteurs correspondants exposent `ordersPossible=true`, readiness READY, entriesArmed=true, managementAuthorized=true, qualification=GO, halt=null et 0 position.
+- Guardian a retiré HWR `EXECUTION_NOT_READY` à 10:28:51; l'avertissement `SOURCE_RESTARTED_RECENTLY` a disparu à 10:37:54. Health à 10:53:27 lit HWR ok=true, 0 position, incidents={}. La reprise est donc corroborée par deux nouvelles clôtures métier post-code, pas seulement par Railway SUCCESS.
+- EPICUSDT reste un `MARKET_STREAM_PARTIAL_SILENCE` unitaire avec consecutiveFailures=0 et nextReconnectAt=null; aucune reconnexion globale observée.
+- À surveiller : la preuve `connectedValidation.twoConsecutiveHourlyBoundaries` reste false/0 après redémarrage; elle ne contredit pas les trois clôtures 15 min saines mais la validation horaire post-redémarrage reste incomplète.
+
+### Incidents connus et couverture
+
+- CONTINUATION : aucun nouveau POST `/continuation/webhook` entre 10:05 et 10:53 EST; l'incident 499 des lots 06:00–10:00 reste actif/non réconcilié, 78/78 NON VÉRIFIÉ. Pas de répétition d'alerte sans nouvelle preuve et aucun replay.
+- Telegram : Health a basculé de nouveau à `RELAY_ACCEPTED` à 10:29 EST et Guardian maintient `TELEGRAM_DELIVERY_UNVERIFIED`; aucun `message_id` natif n'est prouvé pour Health. C'est la continuité du défaut déjà signalé, pas une preuve de non-livraison ni une résolution.
+- Health courant : WARNING Telegram seulement, sources 7/7, positions 60/60, conformité 28/28, SL natifs requis-présents 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0. Répartition inchangée : RAFALE3 9/9; TRIPLE 32 avec 6 protections natives requises; RAFALE2_SWING 14/14; OUTSIDER 5/5; HWR 0.
+- R20 reste `EXECUTION_NOT_READY` / `EXTRA_SOURCE_UNHEALTHY` : **BOT BLOQUÉ / TRADING IMPOSSIBLE**, incident connu sans aggravation distincte.
+- RAFALE3 : clôture 10:30 complète 17/17, erreurs=0. OUTSIDER : cycles 10:15, 10:30 et 10:45 observés; avertissements de frontière disparus au poll suivant. DP60 reader : lectures HTTP 200, pas d'erreur.
+- Recent40 `POST /candles` : 178×2xx, 0×4xx/5xx sur 1 h; 4 339×2xx, 0×4xx/5xx sur 24 h. Scan Health 63/63, lastBatchComplete=true, missingContexts=[], aucun nouveau 409/feedConflict/checkpoint.
+- Gmail : aucun nouveau courriel Railway critique dans les quatre dernières heures; hard cap actuel toujours non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h.
+- `philbot-snapback-v10r1` reste absent de l'inventaire zesty-learning et donc NON VÉRIFIABLE.
+
+Conclusion : reprise HWR confirmée, aucune nouvelle panne distincte depuis l'alerte de 10:04; aucune notification répétitive émise.
