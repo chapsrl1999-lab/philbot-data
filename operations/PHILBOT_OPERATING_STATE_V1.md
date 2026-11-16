@@ -1876,3 +1876,25 @@ Contrôle strictement en lecture seule. Aucun ordre, replay, changement de risqu
 ### Risque et action immédiate
 
 Risque : acquisition CONTINUATION devenue plus ambiguë avec six acquittements perdus simultanément; possible perte d'admission, sans preuve suffisante pour compter des trades. Action de maintenance autorisée : corréler chaque 499 à son contexte, vérifier la persistance/idempotence et les timeouts client/serveur autour de 00:00:14, sans replay de signal périmé. Ne pas lever les verrous ni changer le risque. Alerte française émise par la garde ChatGPT; aucune livraison Telegram de cette alerte n'est revendiquée.
+
+
+---
+
+## PHILBOT_GUARD_2026-11-16_0058_EST
+
+**Contrôle indépendant lecture seule : 2026-11-16 00:58 America/Toronto.**
+
+- Railway : tous les services prioritaires observés restent sur leur dernier déploiement SUCCESS; aucun nouveau déploiement prioritaire. Patch DP60 staged inchangé `361a8631-042b-4bfd-bbd6-b3ee39068ad2`; patch R20 vide inchangé `a51b2f33-45cd-464a-8708-8bfc192f97e3`. `philbot-snapback-v10r1` n'est pas présent dans l'inventaire courant des quatre projets, donc statut non vérifiable sans invention.
+- Health à 00:58:17 EST : OK, sources 7/7, positions 61/61, conformité 29/29, SL natifs requis-présents 15/15, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, Telegram global=VERIFIED. Détail natif : RAFALE3 9/9; TRIPLE_MOTEUR 32 positions/6 protections recensées; RAFALE2_SWING 14/14; HWR 1/1; OUTSIDER 5/5. Ne pas écrire « 61 positions avec SL ».
+- CONTINUATION/BloFin R1 : aucun nouveau POST `/continuation/webhook` entre 00:20 et 00:59 EST; prochain lot horaire non encore exigible. La dégradation du lot de 00:00 (69×202 + 6×499 sur 75 POST) reste non résolue/non réconciliée; 78/78, unicité et persistance restent NON VÉRIFIÉS. Aucun replay.
+- HWR/BloFin : frontières 00:30 et 00:45 d'abord `INCOMPLETE_SIGNALS/CANDLE_FINALIZATION_PENDING`, puis `PREPARED_RUNTIME ok=true` respectivement à 00:31:06 et 00:46:05 EST (~60 s et ~57 s), ordersPossible=true, readiness READY, 1 position, halt=null. Les `MARKET_DATA_DELAY` Guardian correspondants ont disparu au poll suivant. Des `MARKET_STREAM_PARTIAL_SILENCE` unitaires ont touché EPIC/XTZ/JST/SNX/SUSHI/APE, tous avec consecutiveFailures=0 et nextReconnectAt=null; aucune reconnexion globale observée.
+- RAFALE3 : clôture 00:30 traitée 17/17, signaux=0, erreurs=0; Health natif 9/9.
+- OUTSIDER : clôtures 00:30 et 00:45 synchronisées, admissionQualified=true, lastError=null; Health 5/5.
+- Recent40 : 184×2xx, 0×4xx/5xx sur 1 h; 4364×2xx, 0×4xx/5xx sur 24 h. Frontières 00:30 et 00:45 revenues CURRENT 63/63 sans 409, feedConflict ou checkpoint nouveau. L'exécution de l'observer reste volontairement DISABLED/BLOCKED.
+- DP60 reader : 39 lectures HTTP 200, aucune erreur. R20 : 117 lectures HTTP 200 mais Guardian conserve `EXECUTION_NOT_READY` et `EXTRA_SOURCE_UNHEALTHY` — **BOT BLOQUÉ / TRADING IMPOSSIBLE** (incident connu, sans changement significatif).
+- Guardian : seules anomalies persistantes métier = R20 ci-dessus; avertissements HWR/OUTSIDER transitoires aux frontières. Les 401 périodiques du contrôle de retrait persistent, sans preuve nouvelle de panne d'exécution.
+- Gmail : aucun nouveau courriel Railway critique sur les deux dernières heures; montant et hard cap courants toujours non vérifiés.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 16 novembre et aucune maintenance à venir visible dans les 24 h.
+- Référentiels : issues #63, #64 et #65 toujours ouvertes; #77 fermée comme migration volontaire/intégration terminée. Aucun nouveau déploiement SHADOW Phoenix observé dans l'inventaire courant.
+
+**Conclusion :** aucune nouvelle panne ni aggravation depuis l'alerte CONTINUATION de 00:23 EST. Surveillance horaire complémentaire seulement; aucune garantie de notification immédiate ou de livraison Telegram.
