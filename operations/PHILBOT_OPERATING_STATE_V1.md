@@ -2028,3 +2028,16 @@ Contrôle effectué le 16 novembre 2026 vers 04:57–05:00 America/Toronto (09:5
 - Gmail : aucun nouveau courriel Railway de hard limit, arrêt de déploiements, warning ressources ou failure dans les deux dernières heures. Le plafond actuel reste inconnu; aucun hard stop courant n'est inféré d'un ancien courriel.
 - Hyperliquid officiel : All Systems Operational; L1 et API opérationnels; aucun incident le 16 novembre et aucune maintenance future visible dans les 24 h. Source : https://hyperliquid.statuspage.io/ .
 - Conclusion de notification : aucune nouvelle panne distincte ni aggravation critique. Les 2 nouveaux 499 prolongent l'incident CONTINUATION déjà alerté moins d'une heure auparavant; pas de répétition d'alerte identique à ce passage. Aucun ordre, stop, risque, stratégie, configuration, protection, plafond, déploiement ou replay modifié.
+
+
+## PHILBOT_GUARD_2026-11-16_0737_EST
+
+- Contrôle indépendant hors Railway, strictement en lecture seule sur les bots, effectué le 16 novembre 2026 de 07:37 à 07:40 America/Toronto (EST), après relecture du blob 2697d60d1f94e34ac3867e0e71faf022f2ad340b.
+- Aucun nouveau défaut ni aggravation critique depuis le passage 07:10. Aucun POST CONTINUATION n'était attendu ni observé dans cette fenêtre intermédiaire; 56 contrôles HTTP du signer ont répondu 200. L'incident 499 du lot 07:00 reste actif/non résolu et son état 78/78 reste NON VÉRIFIÉ, sans nouvelle preuve justifiant une alerte répétée.
+- Health courant inchangé : WARNING uniquement pour Telegram; 7/7 sources, 60/60 positions, conformité 28/28, SL natifs requis 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0. RECENT40 scan 63/63, lastBatchComplete=true, missingContexts=[].
+- HWR : clôtures 07:15 et 07:30 EST validées PREPARED_RUNTIME ok=true respectivement en environ 56 s et 57 s; état métier READY, ordersPossible=true, entriesArmed=true, managementAuthorized=true, qualification=GO, 0 position, aucun halt. Les PARTIAL_SILENCE restent ponctuels, consecutiveFailures=0, sans reconnexion globale.
+- OUTSIDER : cycles 07:15 et 07:30 synchronisés=true, qualifiés=true, lastError=null via attributs structurés event/error/halted. RAFALE3 : cycle 30m de 07:30 complet 17/17, erreurs=0.
+- Guardian : source=ok; uniquement R20 EXECUTION_NOT_READY CRITICAL connu, EXTRA_SOURCE_UNHEALTHY et TELEGRAM_DELIVERY_UNVERIFIED. **R20 reste BOT BLOQUÉ / TRADING IMPOSSIBLE**; /ready a répondu 503 à 23 reprises dans la fenêtre, continuité de l'incident connu, sans nouvelle aggravation. Le 401 WITHDRAWAL périodique reste la lacune de sous-contrôle connue.
+- RECENT40 /candles : 178/178 POST 2xx sur 1 h et 4 353/4 353 sur 24 h; aucun 4xx/5xx ni feedConflict nouveau. DP60 readonly : 73/73 /snapshot HTTP 200. Aucun nouveau courriel Gmail Railway critique dans les deux dernières heures.
+- Hyperliquid officiel toujours All Systems Operational; L1 et API opérationnels, aucun incident le 16 novembre et aucune maintenance future visible sous 24 h. Source : https://hyperliquid.statuspage.io/ .
+- Aucun ordre, stop, risque, stratégie, configuration, protection, plafond, déploiement ou replay modifié. Pas de notification émise, conformément à la règle anti-répétition.
