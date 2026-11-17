@@ -2522,3 +2522,5 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning de ressources ou failure sur les deux dernières heures. Usage facturé et hard cap actuels non exposés.
 - Hyperliquid Statuspage officielle : All Systems Operational, API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
 - Escalade : contrôler le prochain cycle RAFALE3 30 min, conserver la preuve des deux 429 et mesurer la pression de rate limit partagée; vérifier qu'une nouvelle sortie refusée reste couverte par son stop natif et est réessayée sans doublon. Ne rejouer aucun signal périmé.
+
+- Addendum 09:16:48 EST (PHILBOT_GUARD_2026-11-17_0916_HWR0915) : frontière HWR 09:15, PREPARED_RUNTIME ok=true à 09:15:55 puis READY/ordersPossible=true à 09:16:48 (<2 min), halt/error null, 1 position/1 protégée. Le MARKET_DATA_DELAY transitoire ne devient pas EXECUTION_NOT_READY.
