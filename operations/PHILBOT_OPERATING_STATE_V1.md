@@ -2478,3 +2478,15 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - R20 : Guardian conserve uniquement EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Incident connu inchangé.
 - Railway : services prioritaires observés SUCCESS; aucune nouvelle panne LIVE ni travail staged/applying nouveau établi. Gmail : aucun nouveau mail Railway de limite, arrêt, warning ou failure sur la dernière heure. Hyperliquid Statuspage : All Systems Operational, aucune maintenance future visible dans les 24 h.
 - Aucun nouvel incident distinct ni changement justifiant une nouvelle alerte après celle de 06:33.
+
+
+## Contrôle FinOps — 2026-11-17 08:00 EST
+
+- Rapport vérifié : `operations/finops/2026-11-17_railway_cost_control.md` (28 services, métriques 24h complètes, 7j sur huit services principaux, 1h sur six; ne pas qualifier les 7j d'exhaustives).
+- Projection CPU+RAM **86,26 USD/mois** à charge 24h constante contre 85,74 USD/mois le 16/11, +0,52 USD (+0,6%), hors egress/volumes/Agent/abonnement/taxes. Ni coût facturé ni économie réalisée.
+- HWR 24h **0,202339 vCPU / 3,060639 Go**, **34,65 USD/mois**; 7j **0,143018 vCPU / 2,985356 Go**, **32,71 USD/mois**. CPU 24h +41,5% vs 7j, différence de coût ~1,94 USD/mois. Baseline avant 28/10 0,758/3,507, comparaison sans attribution causale; ancien 24h mixte pré/post non probant. Déploiement SUCCESS 17/11 08:43Z : exiger 24h post-commit avant conclusion.
+- BRIQUES REAL : **10,72 USD/mois** théoriques, cron réussi à 12:15Z, recalcul de 1930 trades en 72s, exécuteur REEL équité 274,45 USD / 3 positions réelles; 1h CPU 0,0272 et RAM 0,7102 Go, dernière valeur CPU=0/RAM=0,8689 Go. La métrique RAM persistante ne prouve ni fuite ni facturation après fin du cron. Aucun changement de stratégie/exécution.
+- Autres postes : SIGNER 5,49, Replay R7 5,63, CASCADE REAL 4,30, R20 4,12, RECENT40 3,56 USD/mois. QUATRE, PERSONAL snapshots, proxy SHADOW : CPU/RAM 0 sur 24h; aucun gain de suppression à revendiquer. PERSONAL snapshots cronFailed historique. Patch DP60 reader staged et patch R20 vide staged, non appliqués.
+- Gmail Railway : dernier avis d'usage 10,04 USD le 07/11, aucun nouveau hard cap/usage vérifié. Plafond actuel inconnu; risque d'arrêt sous 24–48h indéterminable. Reçu Railway 71,91 USD du 03/11 distinct. PnL net consolidé 30j et factures fournisseurs complètes indisponibles : rentabilité globale non calculable.
+- DÉTECTÉ : hausse relative CPU HWR, RAM BRIQUES après CPU nul, anciennes erreurs replay 429. PROPOSÉ : profilage post-déploiement HWR, vérification du cycle de vie cron BRIQUES, cache incrémental clone avec parité et rollback, backoff/cache Replay. TESTÉ : lectures métriques/statuts/journaux/tarifs/Gmail; aucun correctif de code. INSTALLÉ : aucun correctif FinOps. OBSERVÉ 24h après : sans objet.
+- Aucune modification LIVE, Health/Guardian, volume, stop, stratégie, risque, alerte ou budget. Issue FinOps #67.
