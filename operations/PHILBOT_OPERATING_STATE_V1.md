@@ -2418,3 +2418,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure dans les deux dernières heures. Usage et cap courants non exposés; aucune extrapolation.
 - Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
 - Aucun nouvel incident distinct ni changement justifiant une alerte après celle de 02:26; pas de répétition.
+
+
+## Garde indépendante — 2026-11-17 04:10:47 America/Toronto (PHILBOT_GUARD_2026-11-17_0410_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- **NOUVEL INCIDENT HWR/BloFin — BOT BLOQUÉ / TRADING IMPOSSIBLE, récupéré au contrôle :** dernier état prêt à 03:26; à 03:33:51, `ordersPossible=false`, `marketReconciliation=BLOCKED`, conflit DEXEUSDT `RECONCILE_CONSUMED_CONFLICT` et verrou `STREAM_SCHEMA_OR_CONFLICT`. Blocage observé jusqu'à 03:42:54. Déploiement SUCCESS du commit `9da6d454c190a48a067ca73aab3ca33f6b4e9f52` à 03:43:11; premier `ordersPossible=true`, READY, halt/error null à 03:46:34. Durée métier observée ≈12 min 43 s. Compte HWR plat pendant l'incident (0 position), donc aucune position HWR exposée sans stop établie.
+- Correctif HWR : l'archive Binance confirmant exactement la révision tardive auditée DEXEUSDT est acceptée sans réécrire la bougie consommée; `ARCHIVE_CONFIRMS_LATE_REVISION` observé. Tests de build visibles : 90/90 et 44/44, zéro échec. Deux clôtures post-déploiement 03:45 et 04:00 ont retrouvé PREPARED_RUNTIME ok=true puis READY/ordersPossible=true en moins de 2 min; EPICUSDT reste un PARTIAL_SILENCE isolé, consecutiveFailures=0, sans reconnexion. La permanence du correctif au-delà de ces deux cycles n'est pas garantie.
+- **NOUVEAU DÉFAUT DE NOTIFICATION :** Health était `telegram=VERIFIED` à 03:32:43 puis passe `telegram=RELAY_ACCEPTED` / WARNING à 03:46:44. À 04:09:43, le warning reste actif; Guardian confirme `TELEGRAM_DELIVERY_UNVERIFIED`. Aucun `message_id` natif propre n'est visible pour cette transition. Un HTTP 200/relais accepté ne prouve pas une livraison Telegram.
+- Couverture courante Health : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis présents, noNativeSL=0, 0 executionFailure, 0 pipelineStall. Répartition inchangée : RAFALE3 7/7 protégées; TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0. Ne pas dire « 59 positions avec SL ».
+- CONTINUATION/BloFin lot 04:00 : 75 HTTP 202 et 0 HTTP 499 observé; amélioration du transport mais lot 78/78 strict NON VÉRIFIÉ. Aucun nombre de trades manqués et aucun replay.
+- RECENT40 : 185/185 POST /candles 2xx sur 1 h, 4 277/4 277 sur 24 h, aucun 4xx/5xx/409. CURRENT 63/63; moteur DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées.
+- R20 reste EXECUTION_NOT_READY CRITICAL / EXTRA_SOURCE_UNHEALTHY WARNING : **BOT BLOQUÉ / TRADING IMPOSSIBLE**, incident connu.
+- Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Cap et usage courants non exposés.
+- Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
+- Alerte indépendante requise : incident HWR réel >5 min, même récupéré, et défaut Telegram nouveau/non résolu. Action : vérifier en maintenance autorisée le parseur de réponse Telegram jusqu'au `message_id` natif et poursuivre les prochains cycles HWR sans replay de signal périmé.
