@@ -2340,3 +2340,19 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Déploiement externe observé sur `philbot-suivi` à 21:43 EST : commit réel `644cbc39d1d7fee3f9abf5d1c2ff1505747a469b`, branche `feat/cascade-shadow-20261106`, motif BRIQUES/concordance. Le build Railway ne contient aucun rapport de tests applicatifs; aucun accusé Telegram natif post-déploiement n'a été observé. Deux cycles métier post-déploiement et correction du défaut Telegram restent NON VÉRIFIÉS.
 - Gmail : aucun nouveau courriel Railway de hard limit, arrêt, usage ou failure dans les deux dernières heures. L'usage facturé et le hard cap courants ne sont pas exposés par les contrôles disponibles; les anciens caps restent historiques, sans supposition.
 - Hyperliquid Statuspage officielle : All Systems Operational; aucun incident le 16 ou 17 nov. et aucune maintenance future visible dans les 24 h. Pas de coupure /info généralisée démontrée.
+
+
+## Garde indépendante — 2026-11-16 23:17:48 America/Toronto (PHILBOT_GUARD_2026-11-16_2318_EST)
+
+- Contrôle externe strictement en lecture seule des quatre projets Railway; aucune mutation de bot, ordre, stop, risque, variable, déploiement, replay ou protection. Seule cette entrée versionnée est écrite.
+- CONTINUATION / BloFin, lot 23:00 EST : 68 HTTP 202 et 7 HTTP 499 sur `POST /continuation/webhook`; les 499 sont groupés à 23:00:12–23:00:13. Le défaut d'admission reste actif et le lot 78/78 demeure NON VÉRIFIÉ. Ce passage n'ajoute pas une nouvelle classe d'incident au bilan de 22:31; ne pas convertir ces requêtes en trades manqués et ne rejouer aucun signal.
+- Health à 23:17 EST : 7/7 sources, 61/61 positions suivies, conformité 30/30, 16/16 SL natifs requis présents, 0 défaut SL natif requis, 0 executionFailure, 0 pipelineStall, 0 CRITICAL et 0 WARNING. Répartition inchangée : RAFALE3 9/9 protégées; TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0. Ne pas écrire « 61 positions avec SL ».
+- RAFALE3 : clôture 23:00 EST traitée 30/30 en 1 h et 17/17 en 30 min, erreurs=0. Bande/Cycle : clôture 23:00 traitée, aucune position ni ordre applicatif, equity 461,68.
+- HYBRID R4 : `readiness=READY`, `ordersPossible=true`, compte 0 position, halt=null, error=null; dernier `PARTIAL_SILENCE` revenu à EPICUSDT seul, `consecutiveFailures=0`, aucune reconnexion. L'avertissement temporel de 23:15 a disparu à 23:16; aucun échec exécuteur >5 min.
+- OUTSIDER : synchronisation 15 min et `lastError=null`; Health 7/7 positions protégées. Aucun halt structuré observé.
+- RECENT40 : 178/178 POST /candles HTTP 2xx sur 1 h et 4 291/4 291 sur 24 h, aucun 4xx/5xx/409. À 23:16, status CURRENT, 63/63 séries, aucun manque; une bougie APT 15m a été réparée depuis Binance USDM REST avec preuve de 6 barres concordantes et 0 ordre soumis. `executionMode=DISABLED` / `executionStatus=BLOCKED` demeure : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les nouvelles entrées, blocage connu #63.
+- R20 : Guardian conserve `EXECUTION_NOT_READY` CRITICAL et `EXTRA_SOURCE_UNHEALTHY` WARNING; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Les routes /monitor et /guardian répondent 200, sans preuve de readiness métier, positions ou stops individuels.
+- Telegram : événement Health/DP60 CLOSE à 23:09:32 EST livré avec accusé natif `message_id=20484`. Cette preuve est limitée à cet événement et ne résout pas l'ancien événement `source=suivi`, toujours sans message_id propre.
+- Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans la dernière heure. Cap et usage facturé courants non accessibles; aucune extrapolation des anciens caps.
+- Hyperliquid Statuspage officielle : All Systems Operational; aucun incident les 16–17 nov. et aucune maintenance future visible dans les 24 h.
+- Issues de reprise relues : #63 OPEN, #64 OPEN, #65 OPEN. Aucun nouvel élément justifiant une alerte identique moins d'une heure après le bilan de 22:31.
