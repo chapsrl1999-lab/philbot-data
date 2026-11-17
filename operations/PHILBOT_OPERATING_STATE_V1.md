@@ -2373,3 +2373,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans la dernière heure. Cap et usage courants non exposés; aucune extrapolation.
 - Hyperliquid Statuspage : All Systems Operational; aucun incident le 17 nov. ni maintenance future visible dans les 24 h.
 - Aucun nouvel incident distinct ni seuil de rappel six heures atteint depuis le bilan de 22:31; pas d'alerte répétitive.
+
+
+## Garde indépendante — 2026-11-17 01:21:59 America/Toronto (PHILBOT_GUARD_2026-11-17_0122_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- CONTINUATION / BloFin, lot 01:00 EST : 73 HTTP 202 et 2 HTTP 499 (01:00:15 et 01:00:39). Défaut d'admission toujours actif, sans aggravation; lot 78/78 NON VÉRIFIÉ. Aucun nombre de trades manqués et aucun replay.
+- Health à 01:21 : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis présents, noNativeSL=0, 0 executionFailure, 0 pipelineStall, 0 CRITICAL, 0 WARNING. Répartition : RAFALE3 7/7 protégées; TRIPLE 31/5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0.
+- RAFALE3 : clôtures 01:00, 30/30 en 1 h et 17/17 en 30 min, erreurs=0, aucune nouvelle entrée/sortie. Bande/Cycle : aucune position, equity 461,69.
+- HYBRID R4 : READY, ordersPossible=true, 0 position, halt/error null; EPICUSDT seul en PARTIAL_SILENCE, failureCount=0, aucune reconnexion. OUTSIDER synchronisé jusqu'à 01:15, lastError=null, 7/7 protégées.
+- RECENT40 : 178/178 POST /candles 2xx sur 1 h; 4 270/4 270 sur 24 h; aucun 4xx/5xx/409. CURRENT, 63/63, aucun manque; réparation officielle d'une bougie APT 15m, 0 ordre. Moteur DISABLED/BLOCKED : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées, incident connu #63.
+- R20 : Guardian garde EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. /monitor et /guardian 200 ne certifient ni readiness ni positions/stops.
+- Telegram : aucun nouvel événement à qualifier dans cette fenêtre; les message_id 20485–20487 du passage précédent restent propres à leurs événements. L'ancien source=suivi demeure sans preuve native.
+- Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Usage et cap courants non exposés.
+- Hyperliquid Statuspage : All Systems Operational, aucune maintenance future visible dans les 24 h.
+- Aucun nouvel incident distinct et seuil de rappel six heures non atteint depuis 22:31; pas d'alerte répétitive.
