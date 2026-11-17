@@ -2611,3 +2611,20 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway d'usage, hard limit, arrêt, ressource ou failure. Usage facturé et hard cap actuels non exposés.
 - Hyperliquid Statuspage officielle : All Systems Operational, API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
 - Alerte urgente indépendante publiée pour l'épisode FET `SL_MISSING`, sans le présenter comme panne générale ni comme incident encore actif.
+
+
+## Garde indépendante — 2026-11-17 14:36:06 America/Toronto (PHILBOT_GUARD_2026-11-17_1436_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- Railway : services prioritaires LIVE toujours SUCCESS dans les quatre projets; aucun échec de déploiement nouveau sur la fenêtre. Patch DP60 ancien toujours staged; pending R20 ancien toujours visible; aucune application. `philbot-personal-snapshots` reste CRASHED historique non-LIVE.
+- Health à 14:33:01 : OK, sources 7/7, positions suivies 59/59, conformité contractuelle 28/28, stops natifs requis 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, telegram=VERIFIED. OUTSIDER reste 8/8 protégées : aucune récidive du FET `SL_MISSING` signalé à la garde précédente. La quantité exacte, OID et reduceOnly du stop FET ne sont toujours pas exposés ici, donc la garantie native détaillée reste NON VÉRIFIÉE.
+- Guardian : source=ok; seuls incidents actifs à 14:32 sont le CRITICAL connu `EXECUTION_NOT_READY` et le WARNING `EXTRA_SOURCE_UNHEALTHY` de R20. **R20 BOT BLOQUÉ / TRADING IMPOSSIBLE**, sans aggravation distincte. Les HTTP 401 WITHDRAWAL se répètent environ toutes les 15 min et restent la lacune connue de sous-contrôle; ils ne rendent pas Health inaccessible.
+- RAFALE3 : cycle 14:30 complet 17/17, signaux=0, erreurs=0; Health voit 5/5 positions protégées. Cycle 14:00 également 30/30 en 1 h et 17/17 en 30 min, erreurs=0.
+- HYBRID R4 : frontière 14:30 brièvement BLOCKED `INCOMPLETE_SIGNALS/CANDLE_FINALIZATION_PENDING` à 14:30:00.545, puis PREPARED_RUNTIME ok à 14:30:56.036 et READY/ordersPossible=true à 14:31:45; récupération <2 min, halt=null, 1 position/1 protection. Dernier PARTIAL_SILENCE BRETTUSDT, consecutiveFailures=0, nextReconnectAt=null, aucune reconnexion globale.
+- OUTSIDER : observations natives 14:15 et 14:30, lastError=null, modèle mensuel prêt; service de validation reste observation/admission `realOrdersEnabled=false` et n'est pas assimilé à l'exécuteur LIVE.
+- RECENT40 : `POST /candles` 178/178 HTTP 200 sur 1 h et 4 282/4 282 HTTP 200 sur 24 h, 0 4xx/5xx/409. Cycle 14:30 CURRENT, 63/63 séries après réparation REST officielle APT, missingContexts=[], ordersSubmitted=0. Mode OBSERVATION_ONLY/DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées; aucun nombre de trades manqués déduit.
+- CONTINUATION : 76 POST webhook HTTP 202 et 0 HTTP 499 sur 1 h; couverture stricte 78/78 reste NON VÉRIFIÉE. Aucun replay.
+- Telegram : Health courant VERIFIED après reçu natif 20508 de l'incident FET précédent; aucune nouvelle alerte à livrer sur cette fenêtre. Cette preuve ne garantit pas les messages futurs.
+- Gmail : aucun nouveau courriel Railway d'usage, hard limit, arrêt, ressource, warning ou failure sur 24 h. Usage facturé et hard cap actuels non exposés par les contrôles disponibles; aucune extrapolation.
+- Hyperliquid Statuspage officielle consultée : All Systems Operational, API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
+- Conclusion : aucun nouveau défaut distinct depuis la garde 14:15; aucune notification urgente publiée. Référentiels #63/#64/#65 conservés.
