@@ -2403,3 +2403,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Usage et cap courants non exposés.
 - Hyperliquid Statuspage : All Systems Operational; aucune maintenance future visible dans les 24 h.
 - L'aggravation CONTINUATION justifie une alerte indépendante malgré un bilan précédent à 22:31.
+
+
+## Garde indépendante — 2026-11-17 03:16:44 America/Toronto (PHILBOT_GUARD_2026-11-17_0316_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- CONTINUATION / BloFin, lot 03:00 EST : 73 HTTP 202 et 2 HTTP 499. Retour au niveau observé à 00:00/01:00 après l'aggravation 02:00 (53×202/22×499), mais le défaut d'admission reste actif et le lot 78/78 demeure NON VÉRIFIÉ. Aucun nombre de trades manqués et aucun replay.
+- Health à 03:15 EST : 7/7 sources; 59/59 positions suivies; conformité 28/28; 14/14 SL natifs requis; noNativeSL=0; 0 executionFailure; 0 pipelineStall; avant la clôture 03:15, 0 CRITICAL/0 WARNING. Répartition inchangée : RAFALE3 7/7 protégées; TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0. Ne pas résumer par « 59 positions avec SL ».
+- HYBRID R4 : au passage 15 min de 03:15, PREPARED_RUNTIME temporairement faux / INCOMPLETE_SIGNALS et MARKET_DATA_DELAY; ordersPossible=false à 03:15:42, sans position ni halt. PREPARED_RUNTIME est revenu ok=true à 03:16:02, soit moins de 2 minutes; PARTIAL_SILENCE EPICUSDT ensuite avec consecutiveFailures=0 et aucune reconnexion. Ce n'est pas un échec exécuteur >5 min.
+- OUTSIDER : synchronisé jusqu'à 03:00, lastError=null; Health 7/7 protégées. Bande/Cycle : 0 position/ordre, equity 461,78. RAFALE3 demeure couvert 7/7 par Health; aucun défaut nouveau établi.
+- RECENT40 : 178/178 POST /candles 2xx sur 1 h; 4 270/4 270 sur 24 h; 0 4xx/5xx/409. Série 63/63 et scan complet; moteur volontairement DISABLED/BLOCKED : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées, incident connu #63.
+- R20 : Guardian conserve EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Incident connu, pas de changement significatif dans cette fenêtre.
+- Nouveau déploiement philbot-suivi identifié : SUCCESS, commit 644cbc39d1d7fee3f9abf5d1c2ff1505747a469b à 21:43:11 EST le 16 nov. (concordance BRIQUES). Logs post-déploiement présents à 02:13 et 03:13; aucune failure/halt nouvelle établie. Cela ne prouve pas la livraison Telegram de l'ancien événement source=suivi sans message_id.
+- Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure dans les deux dernières heures. Usage et cap courants non exposés; aucune extrapolation.
+- Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
+- Aucun nouvel incident distinct ni changement justifiant une alerte après celle de 02:26; pas de répétition.
