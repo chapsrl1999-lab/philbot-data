@@ -2628,3 +2628,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway d'usage, hard limit, arrêt, ressource, warning ou failure sur 24 h. Usage facturé et hard cap actuels non exposés par les contrôles disponibles; aucune extrapolation.
 - Hyperliquid Statuspage officielle consultée : All Systems Operational, API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
 - Conclusion : aucun nouveau défaut distinct depuis la garde 14:15; aucune notification urgente publiée. Référentiels #63/#64/#65 conservés.
+
+
+## Garde indépendante — 2026-11-17 15:53:21 America/Toronto (PHILBOT_GUARD_2026-11-17_1553_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- Railway : services prioritaires LIVE toujours SUCCESS dans les quatre projets; aucun nouveau déploiement ni échec sur la fenêtre. Patch DP60 ancien toujours staged; pending R20 ancien toujours visible; aucune application. `philbot-personal-snapshots` reste CRASHED historique non-LIVE.
+- Health à 15:52:59 : OK, sources 7/7, positions suivies 59/59, conformité contractuelle 28/28, stops natifs requis 14/14, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, telegram=VERIFIED. OUTSIDER reste 8/8 protégées : aucune récidive du FET `SL_MISSING`. Quantité exacte, OID et reduceOnly du stop FET toujours non exposés, donc garantie native détaillée NON VÉRIFIÉE.
+- Guardian : source=ok; seuls incidents actifs sont le CRITICAL connu `EXECUTION_NOT_READY` et le WARNING `EXTRA_SOURCE_UNHEALTHY` de R20. **R20 BOT BLOQUÉ / TRADING IMPOSSIBLE**, sans aggravation distincte. Un seul GET /ready 499 à 15:41:35, client fermé après 2,674 s; pas de flux soutenu. Les 401 WITHDRAWAL périodiques persistent comme lacune connue de sous-contrôle sans rendre Health inaccessible.
+- RAFALE3 : cycle 15:00 complet 30/30 en 1 h et 17/17 en 30 min; cycle 15:30 complet 17/17; signaux=0, erreurs=0. HTTP /health 78/78 en 200; Health voit 5/5 positions protégées.
+- HYBRID R4 : frontières 14:45, 15:00, 15:15, 15:30 et 15:45 brièvement `INCOMPLETE_SIGNALS/CANDLE_FINALIZATION_PENDING`, puis PREPARED_RUNTIME ok respectivement en ~51 s, 67 s, 50 s, 52 s et 62 s; toutes <2 min. État courant READY/ordersPossible=true, halt=null, 1 position/1 protection; warnings MARKET_DATA_DELAY transitoires retirés au contrôle suivant, aucune panne >5 min ni reconnexion globale.
+- OUTSIDER : observations natives 14:45, 15:00, 15:15, 15:30 et 15:45; lastError=null, modèle mensuel prêt. Service de validation reste observation/admission `realOrdersEnabled=false` et n'est pas assimilé à l'exécuteur LIVE.
+- RECENT40 : `POST /candles` 178/178 HTTP 200 sur 1 h et 4 282/4 282 HTTP 200 sur 24 h, 0 4xx/5xx/409. Cycles 15:15, 15:30 et 15:45 CURRENT après réparation REST officielle APT, 63/63 séries, missingContexts=[], ordersSubmitted=0. Mode OBSERVATION_ONLY/DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées; aucun nombre de trades manqués déduit.
+- CONTINUATION : 75 POST webhook HTTP 202 et 0 HTTP 499 sur 1 h; couverture stricte 78/78 reste NON VÉRIFIÉE. Aucun replay.
+- Positions/protections : ne pas interpréter 59/59 suivies comme 59 SL natifs. Health sépare bien 28/28 conformités contractuelles et 14/14 SL natifs requis; TRIPLE_MOTEUR 31 positions suivies mais 5 protégées selon son contrat, RAFALE2_SWING 14/14, HWR 1/1, OUTSIDER 8/8 et RAFALE3 5/5.
+- Telegram : Health courant VERIFIED grâce au reçu natif 20508 de l'incident FET antérieur; aucune nouvelle notification à livrer sur cette fenêtre. Cette preuve ne garantit pas les messages futurs.
+- Gmail : aucun nouveau courriel Railway d'usage, hard limit, arrêt, ressource, warning ou failure sur 24 h. Usage facturé et hard cap actuels non exposés; aucune extrapolation.
+- Hyperliquid Statuspage officielle : All Systems Operational, API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
+- Conclusion : aucun nouveau défaut distinct depuis la garde 14:36; aucune notification urgente publiée. Référentiels #63/#64/#65 conservés.
