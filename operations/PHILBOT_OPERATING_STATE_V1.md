@@ -2433,3 +2433,19 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Cap et usage courants non exposés.
 - Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
 - Alerte indépendante requise : incident HWR réel >5 min, même récupéré, et défaut Telegram nouveau/non résolu. Action : vérifier en maintenance autorisée le parseur de réponse Telegram jusqu'au `message_id` natif et poursuivre les prochains cycles HWR sans replay de signal périmé.
+
+
+## Garde indépendante — 2026-11-17 04:51:00 America/Toronto (PHILBOT_GUARD_2026-11-17_0451_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- HWR/BloFin post-correctif `9da6d454c190a48a067ca73aab3ca33f6b4e9f52` : trois nouvelles clôtures 15 min validées. PREPARED_RUNTIME ok=true à 04:15:59, 04:31:01 et 04:45:53; après le bref état INCOMPLETE_SIGNALS/MARKET_DATA_DELAY de chaque frontière, READY et `ordersPossible=true` reviennent en moins de 2 minutes (04:16, 04:31 et 04:46). halt=null, error=null, 0 position HWR. EPICUSDT/quelques flux restent des PARTIAL_SILENCE isolés avec consecutiveFailures=0 et sans reconnexion générale. Aucun échec exécuteur >5 min dans cette fenêtre. La correction possède désormais trois cycles post-déploiement observés, sans constituer une garantie future.
+- Telegram : défaut déjà alerté à 04:10 toujours actif. Health reste `telegram=RELAY_ACCEPTED` jusqu'à 04:48:44; Guardian conserve `TELEGRAM_DELIVERY_UNVERIFIED` à 04:46:52. Aucun `message_id` natif nouveau ne prouve la livraison; ne pas déclarer résolu. Pas de renotification identique à moins d'une heure.
+- Health courant : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis présents, noNativeSL=0, 0 executionFailure, 0 pipelineStall, critical=0. Répartition : RAFALE3 7/7; TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0. Ne pas dire « 59 positions avec SL ».
+- RAFALE3 : scan 30m 04:30 complet, 17/17 actifs, 0 erreur, 0 signal. OUTSIDER : observations natives 04:15/04:30/04:45; Health 7/7 protégées.
+- CONTINUATION : aucun nouveau lot horaire depuis le contrôle 04:10; le lot 04:00 reste 75 HTTP 202, 0 HTTP 499 et 78/78 strict NON VÉRIFIÉ. Aucun replay et aucun nombre de trades manqués déduit.
+- RECENT40 : POST /candles 184/184 2xx sur 1 h et 4 280/4 280 2xx sur 24 h, 0 4xx/5xx/409. Scans 63/63 complets; mode OBSERVATION_ONLY, executionMode DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées.
+- R20 : Guardian conserve EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Incident connu sans changement significatif dans cette fenêtre.
+- Railway : services prioritaires observés SUCCESS; aucun travail staged/applying nouveau dans zesty-learning/recent40. Le patch DP60 ancien reste staged et le patch R20 vide reste visible; aucune panne LIVE nouvelle déduite de ces éléments.
+- Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans les deux dernières heures. Cap et usage courants non exposés; aucune extrapolation.
+- Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
+- Aucun nouvel incident distinct ni changement justifiant une seconde alerte après 04:10; conservation des preuves seulement.
