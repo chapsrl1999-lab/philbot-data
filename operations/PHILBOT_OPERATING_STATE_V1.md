@@ -2356,3 +2356,20 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans la dernière heure. Cap et usage facturé courants non accessibles; aucune extrapolation des anciens caps.
 - Hyperliquid Statuspage officielle : All Systems Operational; aucun incident les 16–17 nov. et aucune maintenance future visible dans les 24 h.
 - Issues de reprise relues : #63 OPEN, #64 OPEN, #65 OPEN. Aucun nouvel élément justifiant une alerte identique moins d'une heure après le bilan de 22:31.
+
+
+## Garde indépendante — 2026-11-17 00:20:43 America/Toronto (PHILBOT_GUARD_2026-11-17_0021_EST)
+
+- Contrôle externe strictement en lecture seule; aucun ordre, stop, variable, risque, replay, déploiement, réarmement ou protection modifié. Seule cette entrée versionnée est écrite.
+- CONTINUATION / BloFin, lot 00:00 EST : 73 HTTP 202 et 2 HTTP 499, groupés à 00:00:23. Le défaut d'admission reste actif mais s'améliore par rapport aux lots précédents; 78/78 contextes reste NON VÉRIFIÉ. Aucun nombre de trades manqués déduit et aucun replay.
+- Health à 00:20 EST : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis présents, 0 défaut SL natif requis, 0 executionFailure, 0 pipelineStall, 0 CRITICAL, 0 WARNING. La baisse depuis 61/61 et 16/16 est expliquée par deux sorties RAFALE3 normales, pas par des stops disparus.
+- RAFALE3 : à 00:01:12, sortie SOLUSDT `VIRAGE` (R=1,41; pnl=2,17), puis à 00:01:15 sortie UNIUSDT `VIRAGE` (R=1,46; pnl=2,13). Accusés Telegram natifs `message_id=20485` et `20486`. Après clôtures, Health confirme 7 positions natives / 7 suivies / 7 protégées. Clôture 1 h 30/30 et 30 min 17/17, erreurs=0.
+- Répartition Health : TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0. Ne pas écrire « 59 positions avec SL ».
+- HYBRID R4 : `readiness=READY`, `ordersPossible=true`, compte 0 position, halt=null, error=null. Dernier `PARTIAL_SILENCE` XTZUSDT isolé, `consecutiveFailures=0`, aucune reconnexion; aucun échec exécuteur >5 min.
+- OUTSIDER synchronisé jusqu'à 00:15, `lastError=null`; 7/7 positions protégées.
+- RECENT40 : 178/178 POST /candles HTTP 2xx sur 1 h et 4 287/4 287 sur 24 h, aucun 4xx/5xx/409. Status CURRENT, 63/63 séries, aucun manque; réparation officielle d'une bougie APT 15m avec 6 barres concordantes, 0 ordre soumis. `executionMode=DISABLED` / `executionStatus=BLOCKED` : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées, blocage connu #63.
+- R20 : Guardian conserve `EXECUTION_NOT_READY` CRITICAL et `EXTRA_SOURCE_UNHEALTHY` WARNING; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. /monitor et /guardian répondent 200 sans certifier readiness, positions ou stops individuels.
+- Telegram : outre les deux sorties RAFALE3, événement Health/DP60 CLOSE reçu avec `message_id=20487` à 00:09. Ces preuves sont propres à leurs événements et ne résolvent pas l'ancien événement `source=suivi` sans message_id.
+- Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans la dernière heure. Cap et usage courants non exposés; aucune extrapolation.
+- Hyperliquid Statuspage : All Systems Operational; aucun incident le 17 nov. ni maintenance future visible dans les 24 h.
+- Aucun nouvel incident distinct ni seuil de rappel six heures atteint depuis le bilan de 22:31; pas d'alerte répétitive.
