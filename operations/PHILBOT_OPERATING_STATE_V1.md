@@ -2388,3 +2388,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Usage et cap courants non exposés.
 - Hyperliquid Statuspage : All Systems Operational, aucune maintenance future visible dans les 24 h.
 - Aucun nouvel incident distinct et seuil de rappel six heures non atteint depuis 22:31; pas d'alerte répétitive.
+
+
+## Garde indépendante — 2026-11-17 02:26:07 America/Toronto (PHILBOT_GUARD_2026-11-17_0226_EST)
+
+- Contrôle externe strictement en lecture seule; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- **AGGRAVATION SIGNIFICATIVE CONTINUATION / BloFin** : lot 02:00 EST = 53 HTTP 202 et **22 HTTP 499**, groupés entre 02:00:16 et 02:00:28. Les deux lots précédents avaient 73×202 / 2×499. Le contrat 78/78 demeure NON VÉRIFIÉ; 499 n'est pas une acceptation. Aucun 400 ni 5xx observé et aucun nombre de trades manqués déduit. Escalade #64 : corréler les 22 requêtes avec identifiants/idempotence/file durable, vérifier timeout client et fermeture du batch, sans replay de signaux périmés.
+- Health à 02:25 EST : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis présents, noNativeSL=0, 0 executionFailure, 0 pipelineStall, 0 CRITICAL, 0 WARNING. Répartition : RAFALE3 7/7 protégées; TRIPLE 31 positions / 5 protections selon contrat; Swing 14/14; OUTSIDER 7/7; HWR 0; Bande/Cycle 0.
+- RAFALE3 : clôture 02:00 EST 30/30 en 1 h et 17/17 en 30 min, erreurs=0, aucune entrée/sortie. Bande/Cycle : aucune position, equity 461,68.
+- HYBRID R4 : READY, ordersPossible=true, 0 position, halt/error null; PARTIAL_SILENCE IMXUSDT isolé, consecutiveFailures=0, aucune reconnexion; aucun échec exécuteur >5 min. OUTSIDER synchronisé à 02:15, lastError=null, 7/7 protégées.
+- RECENT40 : 178/178 POST /candles 2xx sur 1 h et 4 270/4 270 sur 24 h, aucun 4xx/5xx/409. CURRENT, 63/63, aucun manque; réparation officielle APT 15m, 0 ordre. DISABLED/BLOCKED : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées, incident connu #63.
+- R20 : Guardian garde EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Les 200 /monitor et /guardian ne certifient pas readiness, positions ni stops.
+- Telegram : message_id=20488 prouve uniquement la livraison de l'événement Health/DP60 CLOSE à 02:09. L'ancien source=suivi reste sans message_id propre.
+- Gmail : aucun nouveau mail Railway de hard limit, usage, arrêt, warning ou failure. Usage et cap courants non exposés.
+- Hyperliquid Statuspage : All Systems Operational; aucune maintenance future visible dans les 24 h.
+- L'aggravation CONTINUATION justifie une alerte indépendante malgré un bilan précédent à 22:31.
