@@ -2466,3 +2466,15 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway de hard limit, usage, arrêt, warning ou failure dans les trois dernières heures. Cap et usage courants non exposés; aucune extrapolation.
 - Hyperliquid Statuspage : All Systems Operational, aucun incident le 17 nov. et aucune maintenance future visible dans les 24 h.
 - Escalade exploitable : contrôler en maintenance autorisée le chemin du test Telegram qui renvoie `receipt=none`, préserver les preuves 20491/20492 et maintenir une alerte externe indépendante. Aucun changement live réalisé par cette garde.
+
+
+## Garde indépendante — 2026-11-17 06:52:00 America/Toronto (PHILBOT_GUARD_2026-11-17_0652_EST)
+
+- Contrôle externe strictement en lecture seule depuis la garde de 06:33; aucune mutation de bot, ordre, stop, risque, variable, replay, déploiement ou protection.
+- Telegram : aucun nouvel épisode après la récupération native `message_id=20492` de 06:09:15. Health reste `telegram=VERIFIED` jusqu'à 06:50:52; Guardian ne réaffiche pas TELEGRAM_DELIVERY_UNVERIFIED dans cette fenêtre. La fiabilité intermittente signalée à 06:33 reste à surveiller; ce passage court ne constitue pas une garantie durable.
+- Health : 7/7 sources, 59/59 positions suivies, conformité 28/28, 14/14 SL natifs requis, noNativeSL=0, 0 executionFailure, 0 pipelineStall, critical=0. Répartition inchangée; ne pas dire « 59 positions avec SL ».
+- HYBRID R4/BloFin : clôture 06:45, PREPARED_RUNTIME ok=true à 06:45:54 puis READY/ordersPossible=true à 06:46:55 (<2 min), halt/error null, 0 position HWR. PARTIAL_SILENCE ponctuels avec consecutiveFailures=0, sans reconnexion générale ni échec exécuteur >5 min.
+- RECENT40 : clôture 06:45 CURRENT à 06:47:01, 63/63 séries, aucune donnée manquante; 179/179 POST /candles 2xx sur 1 h et 4 281/4 281 2xx sur 24 h, aucun 4xx/5xx/409. executionMode DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées.
+- R20 : Guardian conserve uniquement EXECUTION_NOT_READY CRITICAL et EXTRA_SOURCE_UNHEALTHY WARNING : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Incident connu inchangé.
+- Railway : services prioritaires observés SUCCESS; aucune nouvelle panne LIVE ni travail staged/applying nouveau établi. Gmail : aucun nouveau mail Railway de limite, arrêt, warning ou failure sur la dernière heure. Hyperliquid Statuspage : All Systems Operational, aucune maintenance future visible dans les 24 h.
+- Aucun nouvel incident distinct ni changement justifiant une nouvelle alerte après celle de 06:33.
