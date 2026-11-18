@@ -2759,3 +2759,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Référentiels #63, #64 et #65 relus ouverts; #77 fermé/completed. Aucune réparation automatique supposée.
 
 <!-- PHILBOT_GUARD_2026-11-17_2214_EST -->
+
+
+### Addendum garde — 2026-11-18 03:53Z (22:53 America/Toronto)
+
+- Nouveau contrôle extérieur strictement en lecture seule depuis l'alerte 22:14; aucun changement de bot, ordre, stop, risque, variable, déploiement, replay ou limite monétaire.
+- R20/Hyperliquid : aucune nouvelle transition Guardian `SOURCE_UNAVAILABLE` entre 22:14 et 22:53. L'alerte de 22:14 reste active comme défaut de surveillance non résolu : une lecture `/monitor` par minute continue de finir HTTP 200 en environ 3,20–3,54 s, tandis qu'une lecture voisine reste rapide; 39 lectures lentes observées sur cette fenêtre. Guardian conserve seulement les incidents connus `EXECUTION_NOT_READY` CRITICAL et `EXTRA_SOURCE_UNHEALTHY` WARNING. **R20 BOT BLOQUÉ / TRADING IMPOSSIBLE**; positions et stops natifs individuels restent NON VÉRIFIÉS. Aucun nouvel événement distinct à notifier.
+- Health courant à 22:52:09 : OK, sources 7/7, positions suivies 58/58, conformité contractuelle 27/27, SL natifs requis 13/13, `noNativeSL=0`, executionFailures=0, pipelineStalls=0, critical=0, warning=0, telegram=VERIFIED. Ne pas écrire « 58 positions avec SL »; R20 ne fait pas partie des 7 sources Health.
+- HYBRID R4/BloFin : frontières 22:15, 22:30 et 22:45 récupérées en environ 52,8 s, 52,4 s et 56,7 s, toutes sous la borne de 2 min. Les classements Health/Guardian ont été transitoirement CRITICAL aux clôtures 22:15 et 22:30 puis WARNING à 22:45, retirés au contrôle suivant. PREPARED_RUNTIME ok, collector READY/ordersPossible=true, halt=null, 1 position/1 protection; aucun échec exécuteur >5 min. Les PARTIAL_SILENCE restent à consecutiveFailures=0 et sans reconnexion globale.
+- RECENT40 : `POST /candles` 178/178 HTTP 2xx sur 1 h et 4 282/4 282 sur 24 h, 0 4xx/5xx/409. Les lots 22:15, 22:30 et 22:45 sont devenus CURRENT 63/63 après réparation REST Binance officielle d'une bougie APT 15m à chaque cycle; missingContexts=[], ordersSubmitted=0. Mode OBSERVATION_ONLY/DISABLED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées; aucun nombre de trades manqués déduit.
+- RAFALE3 : clôture 22:30 complète 17/17, signaux=0, erreurs=0. OUTSIDER : clôtures 22:15, 22:30 et 22:45 synchronisées, admissionQualified=true, lastError=null, realOrdersEnabled=false. Health maintient RAFALE3 4/4, Swing 14/14, HWR 1/1 et OUTSIDER 8/8 protégés selon leurs contrats; TRIPLE_MOTEUR 31 positions/4 protections.
+- CONTINUATION : métrique glissante 1 h inchangée à 75 POST HTTP 2xx, 0 4xx/5xx; couverture stricte 78/78 NON VÉRIFIÉE. Aucun replay, aucun 499/409 observé sur la fenêtre et aucun rejet converti en trade manqué.
+- Railway : aucun nouveau déploiement prioritaire; états et exceptions historiques inchangés. Gmail : aucun nouveau mail Railway ciblé usage/hard limit/arrêt/ressources/failure. Hyperliquid Statuspage : All Systems Operational, L1/API Operational, aucune maintenance future visible.
+- Telegram : aucun nouvel événement critique distinct depuis l'alerte de 22:14 et aucun nouveau message_id requis; la livraison des transitions précédemment alertées reste NON VÉRIFIÉE. Référentiels #63/#64/#65 ouverts, #77 fermé. Conclusion : aucune nouvelle panne distincte; aucune nouvelle notification publiée.
+
+<!-- PHILBOT_GUARD_2026-11-17_2253_EST -->
