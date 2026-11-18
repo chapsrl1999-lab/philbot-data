@@ -2790,3 +2790,23 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Référentiels #63/#64/#65 ouverts et inchangés; #77 fermé/completed. Conclusion : aucune nouvelle panne distincte depuis l'alerte 22:14; aucune notification urgente publiée.
 
 <!-- PHILBOT_GUARD_2026-11-18_0019_EST -->
+
+
+## Garde indépendante — 18 novembre 2026, 01:27 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-18_0127_EST -->
+
+- Contrôle hors Railway, strictement en lecture seule pour les bots, fenêtre observée approximative 00:19–01:27 EST (05:19–06:27Z). Aucun ordre, replay, changement de stratégie, risque, stop, protection, service ou plafond budgétaire.
+- Railway : derniers déploiements des services prioritaires des quatre projets toujours SUCCESS, sans nouveau déploiement ni modification en attente depuis le contrôle précédent. Le statut Railway seul n'est pas retenu comme preuve métier.
+- Health : dernière synthèse observée à 01:26:15 EST, sources 7/7, positions 58/58, conformité contractuelle 27/27, SL natifs requis 13/13, sans stop natif requis 0, échecs d'exécution 0, stalls 0, critical 0, warning 0, telegram=VERIFIED. Ne pas interpréter ceci comme « 58 positions avec SL » : les comptes restent distincts et la preuve individuelle native n'est pas disponible pour toutes les positions.
+- Guardian : source=ok sur toute la fenêtre; aucune nouvelle transition SOURCE_UNAVAILABLE. R20 reste en incidents persistants EXECUTION_NOT_READY (CRITICAL) et EXTRA_SOURCE_UNHEALTHY (WARNING) : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Son /monitor a répondu HTTP 200 mais lentement à chaque minute (68 observations, environ 3,2–3,5 s). Il s'agit du défaut déjà alerté; aucune aggravation distincte ni preuve de nouvelle panne, donc aucune nouvelle notification identique.
+- HWR/Blofin : quatre clôtures 15 min observées (00:30, 00:45, 01:00, 01:15 EST). Retards transitoires MARKET_DATA_DELAY de 47–53 s puis retour PREPARED_RUNTIME/READY avec ordersPossible=true, halt=null, 1 position/1 protection. Les PARTIAL_SILENCE observés gardent consecutiveFailures=0 et ne déclenchent pas de reconnexion globale. Aucun exécuteur en échec >5 min.
+- CONTINUATION/Blofin R1 : sur 1 h, 75 POST au webhook, tous HTTP 202; aucun 4xx/5xx ni 499. Le contrat strict 78/78 reste **NON VÉRIFIÉ** faute de preuve complète du lot; aucun signal rejoué.
+- RECENT40 : POST /candles accepté 178/178 sur 1 h et 4282/4282 sur 24 h, tous 2xx, aucun 409/4xx/5xx. Les lots 00:30, 00:45, 01:00 et 01:15 sont CURRENT 63/63, missing=[], après réparation REST Binance d'une bougie APT 15m. Le service reste OBSERVATION_ONLY/DISABLED/BLOCKED suivant #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les nouvelles entrées. Aucun nombre de trades manqués n'est déduit des webhooks.
+- RAFALE3 Hyperliquid : clôtures observées 00:30 (17/17) et 01:00 (30/30 en 1h, 17/17 en 30m), sans signal ni erreur. Health agrège 4/4 positions protégées; aucune extrapolation à des stops natifs individuels non lus.
+- OUTSIDER : clôtures 00:30, 00:45, 01:00 et 01:15 synchronisées, lastError=null, admissionQualified=true, realOrdersEnabled=false; Health agrège 8/8 protégées, sans preuve individuelle OID/taille/reduceOnly.
+- Bande/Cycle : clôture 01:00 traitée, positions et ordres vides, sans anomalie démontrée. Triple : clôture 01:00 traitée après 111 actifs; quatre flux absents Blofin connus (BTW, JCT, PAXG, AIN) ignorés, sans entrée/sortie/erreur démontrée.
+- Gmail : aucun nouveau courriel Railway ciblé de hard limit, arrêt de déploiements, warning ressources ou failure dans les deux derniers jours. Le plafond actuel reste non vérifié; ne pas réutiliser l'ancien cap.
+- Hyperliquid officiel : All Systems Operational, L1/API Operational; aucune maintenance future visible dans les 24 h et aucun incident daté du 18/11 au moment du contrôle.
+- Référentiels : #63, #64 et #65 toujours ouverts sans mise à jour récente; #77 fermé/completed. Aucun nouvel élément exigeant une alerte distincte.
+- Notification : aucune nouvelle alerte publiée. Le précédent défaut R20 persiste sans changement significatif; la livraison Telegram d'une alerte spécifique n'est pas réaffirmée sans message_id natif.
