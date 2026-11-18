@@ -2810,3 +2810,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Hyperliquid officiel : All Systems Operational, L1/API Operational; aucune maintenance future visible dans les 24 h et aucun incident daté du 18/11 au moment du contrôle.
 - Référentiels : #63, #64 et #65 toujours ouverts sans mise à jour récente; #77 fermé/completed. Aucun nouvel élément exigeant une alerte distincte.
 - Notification : aucune nouvelle alerte publiée. Le précédent défaut R20 persiste sans changement significatif; la livraison Telegram d'une alerte spécifique n'est pas réaffirmée sans message_id natif.
+
+
+## Garde indépendante différentielle — 18 novembre 2026, 01:39 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-18_0139_EST -->
+
+- Périmètre différentiel depuis la garde 01:27 EST, hors Railway et strictement sans mutation des bots. Aucun ordre, replay, changement de risque, stop, protection, service, configuration ou plafond.
+- Railway : aucun nouveau déploiement dans les quatre projets depuis 01:27 EST; services prioritaires toujours sur leurs déploiements LIVE SUCCESS antérieurs. Aucun pendingWork nouveau; patchs historiques DP60 et R20 inchangés.
+- Health à 01:38:08 EST : OK, sources 7/7, positions 58/58, conformité contractuelle 27/27, nativeSL requis 13/13, noNativeSL=0, executionFailures=0, pipelineStalls=0, critical=0, warning=0, telegram=VERIFIED. Les 58 positions ne sont pas assimilées à 58 SL natifs; détail agrégé inchangé (RAFALE3 4/4, Triple 31 positions/4 protections, Swing 14/14, HWR 1/1, Outsider 8/8).
+- Guardian : avertissement HWR MARKET_DATA_DELAY à 01:30:12 EST supprimé à 01:31:12; incidents persistants uniquement R20 EXECUTION_NOT_READY (CRITICAL) et EXTRA_SOURCE_UNHEALTHY (WARNING). Aucune nouvelle transition SOURCE_UNAVAILABLE. R20 /monitor et /guardian répondent HTTP 200; les appels de contrôle restent lents (~3,2–3,4 s pour /monitor). **BOT BLOQUÉ / TRADING IMPOSSIBLE** demeure le statut métier R20, sans changement significatif depuis l'alerte précédente.
+- HWR/Blofin : clôture 01:30 récupérée vers 01:30:53 EST, PREPARED/READY, ordersPossible=true, halt=null, 1 position/1 protection. Les PARTIAL_SILENCE ont consecutiveFailures=0 et nextReconnectAt=null; aucun échec exécuteur >5 min.
+- OUTSIDER : clôture 01:30 synchronisée, lastError=null, admissionQualified=true, realOrdersEnabled=false.
+- RECENT40 : lot 01:30 devenu CURRENT 63/63, missing=[], après réparation officielle REST Binance d'une bougie APT 15m; 178/178 POST /candles en 1 h et 4282/4282 en 24 h sont 2xx, sans 409/4xx/5xx. Le verrou OBSERVATION_ONLY/DISABLED/BLOCKED de #63 demeure : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour les nouvelles entrées.
+- CONTINUATION : 75 POST observés sur 1 h, tous HTTP 202 sur le chemin webhook authentifié; aucun 4xx/5xx ni 499. Le lot strict 78/78 reste **NON VÉRIFIÉ**; aucun replay.
+- Telegram : Health agrège VERIFIED, mais HWR expose encore deliveryVerified=false et receipt=null; aucune preuve native message_id pour ce relais, donc TELEGRAM_DELIVERY_UNVERIFIED n'est pas déclaré résolu.
+- Gmail : aucun nouveau courriel Railway ciblé de limite, arrêt de déploiements, warning ressources ou failure dans les deux derniers jours. Hard cap courant toujours non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1 et API Operational; aucun incident le 18/11 et aucune maintenance future visible dans les 24 h.
+- Référentiels #63/#64/#65 inchangés et ouverts; #77 fermé. Aucun nouveau défaut distinct ni nouvelle notification publiée.
