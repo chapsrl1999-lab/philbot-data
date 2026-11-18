@@ -2704,3 +2704,22 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Référentiels : #63, #64 et #65 ouverts; #77 fermé/completed. Aucune réparation automatique supposée.
 
 <!-- PHILBOT_GUARD_2026-11-17_1921_EST -->
+
+
+## Garde indépendante — 2026-11-18 01:18Z (20:18 America/Toronto)
+
+- Contrôle extérieur strictement en lecture seule sur les quatre projets Railway. Aucun ordre, stop, bot, variable, volume, déploiement, replay, risque ou limite monétaire modifié. Seul ce journal versionné est mis à jour.
+- Railway : services prioritaires des quatre projets au dernier déploiement SUCCESS, sans nouveau déploiement sur la fenêtre. Le patch DP60 ancien reste staged, le pending R20 ancien reste visible, `philbot-personal-snapshots` demeure CRASHED historique non-LIVE et le proxy shadow sleeping; aucune application ni requalification en nouvelle panne LIVE.
+- Health à 20:16:58 EST : OK, sources 7/7, positions suivies 58/58, conformité contractuelle 27/27, SL natifs requis 13/13, `noNativeSL=0`, executionFailures=0, pipelineStalls=0, critical=0, warning=0, telegram=VERIFIED. Ne pas écrire « 58 positions avec SL » : RAFALE3 4/4, RAFALE2_SWING 14/14, HWR 1/1 et OUTSIDER 8/8 sont protégés selon leurs contrats; TRIPLE_MOTEUR compte 31 positions et 4 protections à ce relevé, sans anomalie contractuelle signalée.
+- HYBRID R4/BloFin : à la frontière 20:15, `INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP` a brièvement mis `ordersPossible=false` à 20:15:47. PREPARED_RUNTIME est devenu ok à 20:15:53 puis READY/ordersPossible=true à 20:16:53, soit ≈1 min 52 s depuis `blockedSince=20:15:00.677`, sous la borne critique de 2 min. Health est resté OK; halt=null, 1 position/1 protection. EPICUSDT a eu un PARTIAL_SILENCE isolé, `consecutiveFailures=0`, `nextReconnectAt=null`, sans reconnexion globale. Aucune récidive critique de l'incident 19:15–19:19.
+- RECENT40 : `POST /candles` 178/178 HTTP 2xx sur 1 h et 4 282/4 282 sur 24 h, 0 4xx/5xx/409. À 20:16:54, réparation REST officielle APT 15m, puis statut CURRENT, 63/63 séries, missingContexts=[], ordersSubmitted=0; scan Health complet à 20:16:58. Mode OBSERVATION_ONLY/DISABLED/BLOCKED connu #63 : **BOT BLOQUÉ / TRADING IMPOSSIBLE** pour nouvelles entrées; aucun nombre de trades manqués déduit.
+- RAFALE3/Hyperliquid : cycle 20:00 complet, 30/30 contextes 1 h puis 17/17 en 30 min, erreurs=0. Health lit 4/4 positions protégées. Hyperliquid Statuspage officielle : All Systems Operational, L1 et API Operational, aucun incident le 17 novembre et aucune maintenance future visible dans les 24 h.
+- OUTSIDER : observations structurées 20:00 synchronisées, admissionQualified=true, lastError=null, modèle courant; validateur `realOrdersEnabled=false`. Health lit 8/8 protégées; OID/quantité/reduceOnly individuels restent non exposés.
+- CONTINUATION/BloFin : 75 POST webhook HTTP 202 et 0 4xx/5xx sur la fenêtre inspectée; le nombre ne prouve ni unicité ni couverture. Contrat strict 78/78 **NON VÉRIFIÉ**, aucun replay et aucun nombre de trades manqués déduit.
+- Guardian : seuls incidents actifs sont le CRITICAL connu `EXECUTION_NOT_READY` et le WARNING `EXTRA_SOURCE_UNHEALTHY` de R20. **R20 BOT BLOQUÉ / TRADING IMPOSSIBLE**; aucune nouvelle récidive `SOURCE_UNAVAILABLE`. Les routes /monitor et /guardian ont répondu HTTP 200 sur la fenêtre; positions/stops natifs individuels R20 restent NON VÉRIFIÉS.
+- Telegram : aucun nouvel événement critique à notifier. Des reçus natifs 20518 et 20519 prouvent deux notifications DP60 à 20:09 seulement; ils ne garantissent pas les messages futurs. HWR expose toujours `deliveryVerified=false` en interne, sans incident critique courant à notifier.
+- Gmail Railway : aucun nouveau courriel d'usage, hard limit, arrêt, resource warning ou failure sur les dernières 48 h selon la recherche ciblée. Usage facturé et hard cap courants non exposés par les lectures disponibles; anciens caps non extrapolés.
+- Ressources Railway sur 1 h : aucun service prioritaire proche de sa limite observée; pic HWR 1,31 vCPU / 8 et 3,81 Go / 8, Outsider 0,355 Go / 1. Aucune saturation ni OOM démontrée.
+- Référentiels #63, #64 et #65 restent ouverts; #77 est fermé/completed. Conclusion : aucun nouveau défaut distinct depuis l'alerte HWR de 19:21; aucune notification urgente publiée.
+
+<!-- PHILBOT_GUARD_2026-11-17_2018_EST -->
