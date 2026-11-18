@@ -2828,3 +2828,14 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway ciblé de limite, arrêt de déploiements, warning ressources ou failure dans les deux derniers jours. Hard cap courant toujours non vérifié.
 - Hyperliquid officiel : All Systems Operational, L1 et API Operational; aucun incident le 18/11 et aucune maintenance future visible dans les 24 h.
 - Référentiels #63/#64/#65 inchangés et ouverts; #77 fermé. Aucun nouveau défaut distinct ni nouvelle notification publiée.
+
+
+## FinOps — 18 novembre 2026 (08:05 EST)
+
+<!-- PHILBOT_FINOPS_2026-11-18 -->
+- Source vérifiée : [rapport 28 services](finops/2026-11-18_railway_cost_control.md), mesures Railway CPU/RAM/RX/TX sur 24h et 7j pour 28/28 services (zesty 22, DP60 4, RECENT40 1, R20 1), statuts et journaux ciblés.
+- Projection CPU+RAM 24h **83,86 USD/mois** vs 86,26 le 17/11; 7j **92,99 USD/mois** dont QUATRE retiré 12,42 USD/mois historiques; 7j hors QUATRE ~80,57. Ni factures ni économies démontrées. Tarifs Railway officiels revérifiés 20 USD/vCPU-mois, 10 USD/Go-mois, egress 0,05 USD/Go; facturation proratisée à la minute.
+- HWR 24h CPU 0,13400, RAM 2,99532, projection 32,63; base pré-28/10 CPU 0,758 RAM 3,507. Échantillon 24h mixte pré/post non probant; aucune économie causale affirmée. LIVE avec volume, aucun changement.
+- BRIQUES cron horaire 10,16 USD/mois 24h vs 8,01 7j (+26,8% relatif); logs 18/11 12:14Z : 1933 trades recalculés, 144s de run, exécuteur REEL, 6 positions. REPLAY 5,63 vs 4,48 (+25,7% relatif), 429 anciens du 12/11, persistance actuelle non prouvée. ROTATION cron quotidien réussi, 1,83 vs 0,53 fenêtre mixte. QUATRE et PERSONAL snapshots CPU=RAM=0 sur 24h; SHADOW proxy idem. Aucune économie fictive pour services déjà inactifs.
+- Gmail : dernier usage Railway confirmé 10,04 USD le 07/11; hard cap actuel inconnu, risque arrêt 24–48h non calculable. Ancien cap 55 USD du 28/10 historique seulement. PnL net réel consolidé 30j et factures multi-fournisseurs complètes non disponibles : rentabilité globale non calculée.
+- DÉTECTÉ : hausses relatives BRIQUES/REPLAY, sans dépassement +10 USD/mois global. PROPOSÉ : cache/snapshot incrémental BRIQUES testé sur clone et parité stricte, backoff/cache REPLAY après diagnostic. TESTÉ : mesures, tarifs, statuts, journaux. INSTALLÉ : aucun correctif FinOps. OBSERVÉ 24h après : sans objet. Aucun bot LIVE, Health/Guardian, volume, stratégie, risque, ordre, stop, capital ou plafond modifié.
