@@ -19,7 +19,7 @@ Tarifs officiels : https://docs.railway.com/pricing et https://docs.railway.com/
 | ROTATION cron | 1,83 | 0,53 |
 | ALIGNEMENT cron | 1,29 | 1,95 |
 | QUATRE retiré | 0,00 | 12,42 |
-| Autres 17 services | 12,12 | 12,47 |
+| Autres 17 services | 11,92 | 12,57 |
 | **Total 28** | **83,86** | **92,99** |
 
 Total 7j hors QUATRE déjà retiré = ~80,57 USD/mois; 7j mélange des régimes historiques, donc ne pas présenter 92,99 comme charge actuelle. Comparaison projection 24h 17/11 86,26 => baisse indicative ~2,40 USD/mois, **pas économie démontrée**.
