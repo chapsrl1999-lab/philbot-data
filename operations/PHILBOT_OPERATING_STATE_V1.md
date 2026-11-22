@@ -2995,3 +2995,20 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway ciblé dans les deux derniers jours; aucun nouvel avis de hard limit, arrêt généralisé, warning ressources ou failure. Plafond courant toujours non vérifié.
 - Hyperliquid officiel : All Systems Operational; L1/API opérationnels, aucun incident le 22 novembre et aucune maintenance future visible dans les 24 h.
 - Notification : aucune nouvelle alerte publiée. Le bilan de blocage RECENT40/R20 a été émis à 15:21 EST; aucun changement significatif ne justifie une répétition une heure plus tard.
+
+
+## Garde indépendante différentielle — 22 novembre 2026, 17:21 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-22_1721_EST -->
+
+- Contrôle strictement en lecture seule pour les bots et Railway. Aucun ordre, replay, déploiement, variable, stop, protection, risque, stratégie ou plafond modifié.
+- **RECENT40 inchangé — PANNE ACTIVE, BOT BLOQUÉ / TRADING IMPOSSIBLE.** Railway reste ONLINE/SUCCESS, mais `POST /candles` demeure à 0 % d’acceptation : 178/178 HTTP 409 sur 1 h et 4 270/4 270 sur 24 h. Health à 17:22 EST expose toujours `lastBatchComplete=false` et `lastProcessedAt=2026-11-20T10:00:00Z`, malgré 63/63 contextes reçus et aucun actif manquant. Aucune preuve de correction ni de livraison Telegram native; pas de replay.
+- **R20 inchangé — PANNE ACTIVE connue, BOT BLOQUÉ / TRADING IMPOSSIBLE.** Guardian à 17:20 EST reste CRITICAL `EXECUTION_NOT_READY` avec WARNING `EXTRA_SOURCE_UNHEALTHY`. Un `SOURCE_UNAVAILABLE` CRITICAL transitoire est apparu à 17:17:36 puis a disparu à 17:18:36; la source Guardian est revenue `source=ok`. Sur 16:20–17:22, `/monitor` a répondu 125 fois HTTP 200 et `/guardian` 63 fois HTTP 200; aucune requête `/ready` visible, donc aucune preuve de reprise. Ce bref défaut de source n’est pas requalifié en nouvelle panne durable ni en coupure généralisée.
+- Health à 17:22:31 EST : 7/7 sources, 68/68 positions suivies, conformité 35/35, **17/17 SL natifs requis présents**, 0 sans SL natif requis, 0 échec d’exécution, 0 stall et aucun incident Health courant. Ne pas dire « 68 positions avec SL » : B&C 5/5, RAFALE3 8/8, OUTSIDER 4/4; Triple 33 positions/5 protections partielles et Swing 18/18 sous contrats distincts.
+- HWR : frontière 17:15 EST récupérée vers 17:15:52, READY, `ordersPossible=true`, halt/error nuls, 0 position. PARTIAL_SILENCE reste local, dont EPICUSDT, `consecutiveFailures=0`, sans reconnexion globale. Telegram HWR expose toujours le reçu précis 20782, sans portée rétroactive.
+- OUTSIDER : cycles 16:30, 16:45, 17:00 et 17:15 EST synchronisés; processing/referenceQualified/admissionQualified vrais, `lastError=null`, `realOrdersEnabled=false`; 4/4 protections dans Health. RAFALE3 : lot 17:00 EST complet 30/30 en 1 h et 17/17 en 30 min, erreurs=0; 8/8 protégées dans Health. B&C poursuit ses clôtures 5 min, feed direct, missing=0 et erreur réelle nulle; 5 positions LIVE visibles et 5/5 protégées par Health.
+- CONTINUATION : lot 17:00 EST observé avec 75 POST, tous HTTP 202 entre 17:00:01 et 17:00:25; aucun 4xx/5xx/499. Le contrat strict 78/78 reste **NON VÉRIFIÉ**.
+- Railway : aucun nouvel échec de déploiement sur les quatre projets. États historiques inchangés : snapshots auxiliaire non-LIVE offline, Snapback absent, patch DP60 et pending R20 non appliqués.
+- Gmail : aucun nouveau courriel Railway ciblé; aucun nouvel avis de hard limit, arrêt généralisé, warning ressources ou failure. Plafond courant toujours non vérifié.
+- Hyperliquid officiel : All Systems Operational; L1/API opérationnels, aucun incident le 22 novembre et aucune maintenance future visible dans les 24 h.
+- Notification : aucune nouvelle alerte publiée. Le `SOURCE_UNAVAILABLE` R20 a été bref et résolu au poll suivant; les blocages RECENT40/R20 ont déjà fait l’objet du bilan de 15:21 EST et aucun changement durable ne justifie une répétition.
