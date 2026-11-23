@@ -3108,3 +3108,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Telegram : aucun `message_id` natif distinct ne prouve la livraison des alertes RECENT40/R20; ne pas déclarer résolu malgré `telegram=VERIFIED` dans Health.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
 - Notification : aucune nouvelle alerte publiée; pas de nouvelle panne critique et incidents connus inchangés.
+
+
+## Garde indépendante — ALERTE couverture CONTINUATION — 23 novembre 2026, 00:21 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-23_0021_EST -->
+
+- Contrôle strictement en lecture seule pour les bots et Railway. Aucun ordre, replay, déploiement, variable, stop, protection, risque, stratégie ou plafond modifié.
+- **NOUVELLE RÉGRESSION DE COUVERTURE CONTINUATION/BLOFIN_R1 : le lot strict 78/78 n'est plus confirmé après sa première validation à 22:00 EST.** À 23:00 EST, Railway observe 75 POST vers `/continuation/webhook`, tous HTTP 202, puis un POST isolé supplémentaire à 23:15 EST; à 00:00 EST, seulement 76 POST, tous HTTP 202. Aucun 4xx/5xx/499. Les deux cycles donnent donc 76 réceptions acceptées, mais pas un lot horaire simultané 78/78.
+- Les journaux HTTP Railway n'exposent pas les identifiants de contexte ni le corps des requêtes : les **deux actifs/contextes absents ne peuvent pas être nommés** avec cette preuve. Aucune annonce officielle Binance récente consultée ne justifie un retrait de deux contrats dans cette fenêtre. Ne pas déclarer CONTINUATION réparé ni opérationnel sur les seuls HTTP 202; l'impact exact sur les admissions/trades n'est pas observable et aucun replay ne doit être lancé.
+- Action immédiate exploitable : en maintenance autorisée, rapprocher le catalogue Binance natif, la liste attendue 78, les identifiants réellement émis à 23:00/00:00 et le contexte tardif de 23:15; vérifier `executionReady/liveReady` et le prochain lot complet avant toute conclusion. Ne pas rejouer les signaux périmés.
+- HWR/BloFin : frontières 23:00, 23:15, 23:30, 23:45, 00:00 et 00:15 revenues `PREPARED_RUNTIME ok=true` en environ 51–62 s, donc sous 2 min; Guardian n'a émis que `MARKET_DATA_DELAY` transitoire. État Health courant : HWR 0 position.
+- Health à 00:17:50 EST : 7/7 sources, 67/67 positions suivies, conformité 34/34, **16/16 SL natifs requis présents**, 0 sans SL natif requis, 0 échec d'exécution et 0 stall. Ne pas écrire « 67 positions avec SL » : Triple et Swing suivent des contrats distincts. RAFALE3 a complété 30/30 et 17/17 à 23:00 et 00:00, plus 17/17 à 23:30, erreurs=0; 7/7 positions suivies/protégées dans Health.
+- R20 reste une PANNE ACTIVE connue : Guardian `EXECUTION_NOT_READY` + `EXTRA_SOURCE_UNHEALTHY`. Un `SOURCE_UNAVAILABLE` bref a été vu de 00:11:51 à 00:12:51 EST puis retiré; les endpoints /monitor et /guardian sont restés HTTP 200. Il s'agit d'une récurrence transitoire déjà connue, pas d'une coupure généralisée nouvelle.
+- RECENT40 reste ONLINE/SUCCESS mais BOT BLOQUÉ / TRADING IMPOSSIBLE : 178/178 POST `/candles` en 409 sur 1 h et 4 270/4 270 sur 24 h, 0 réponse 2xx; `lastBatchComplete=false`, 63/63 contextes reçus et dernier traitement 2026-11-20T10:00:00Z. Les 409 sont des webhooks rejetés, pas des trades manqués.
+- Railway : aucun nouvel échec de déploiement sur les quatre projets; seul le cron auxiliaire non-LIVE personal-snapshots reste offline. DP60 a exécuté ses lots 23:00 et 00:00 avec 112 actifs chargés; PAXG/JCT/BTW/GTC absents et IRYS bloqué ont été ignorés comme précédemment, sans nouvel ordre.
+- Gmail : aucun nouveau courriel Railway ciblé de coût, hard stop, ressources ou failure. Plafond courant toujours non vérifié; aucun arrêt actuel déduit de l'ancien hard cap.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
+- Telegram : aucun `message_id` natif distinct ne prouve la livraison d'une alerte CONTINUATION; cette garde ChatGPT indépendante publie donc l'alerte. Le statut Health `telegram=VERIFIED` ne certifie pas cette notification particulière.
