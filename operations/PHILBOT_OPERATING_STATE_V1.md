@@ -3090,3 +3090,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Railway : aucun nouvel échec de déploiement sur les quatre projets. Gmail : aucun nouveau mail Railway ciblé de coût, hard stop, ressources ou failure. Plafond courant toujours non vérifié.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
 - Notification : aucune nouvelle alerte publiée; incidents connus inchangés et dernier bilan âgé de moins d’une heure.
+
+
+## Garde indépendante — contrôle sans nouvelle alerte — 22 novembre 2026, 22:49 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-22_2249_EST -->
+
+- Lecture seule confirmée; aucune mutation de bot, Railway, ordre, replay, stop, protection, risque, stratégie ou plafond.
+- HWR/BloFin : frontières 22:00, 22:15, 22:30 et 22:45 toutes revenues `READY`, `ordersPossible=true`, halt/error nuls en environ 52–58 s après `INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP`, donc sous la borne CRITICAL de 2 min. HWR avait 0 position; Guardian a uniquement classé `MARKET_DATA_DELAY` transitoire. Les `PARTIAL_SILENCE` restent localisés, `consecutiveFailures=0`, sans reconnexion globale.
+- CONTINUATION : lot horaire observé **78/78 POST**, tous HTTP 202, aucun 4xx/5xx/499. Le lot de cette heure est vérifié sur le transport Railway; cela ne prouve pas à lui seul l’exécution de trades ni une livraison Telegram.
+- RAFALE3/HYPERLIQUID : scans 22:00 complets 30/30 (1 h) et 17/17 (30 min), erreurs=0. À 22:30, deux sorties ETH `VIRAGE` sont journalisées; la première a subi un retry 429 puis une sortie réussie, la seconde a réussi, et le scan 17/17 finit avec erreurs=0. Health passe de 8 à 7 positions RAFALE3 agrégées et constate 7/7 suivies/protégées; aucun défaut de stop n’est démontré, mais les OID/tailles/reduceOnly individuels ne sont pas certifiés par ces logs.
+- Health à 22:46:43 EST : 7/7 sources, 67/67 positions suivies, conformité 34/34, **16/16 SL natifs requis présents**, 0 sans SL natif requis, 0 échec d’exécution, 0 stall, telegram=VERIFIED. Ne pas écrire « 67 positions avec SL ».
+- OUTSIDER a traité 22:00, 22:15, 22:30 et 22:45 avec `synchronized=true`, `lastError=null`, `realOrdersEnabled=false`.
+- RECENT40 reste ONLINE/SUCCESS mais BOT BLOQUÉ / TRADING IMPOSSIBLE, inchangé : 178/178 POST `/candles` en 409 sur 1 h et 4 270/4 270 sur 24 h, `lastBatchComplete=false`, dernier traitement 2026-11-20T10:00:00Z. Les 409 sont des webhooks rejetés, pas des trades manqués.
+- R20 reste ONLINE/SUCCESS mais BOT BLOQUÉ / TRADING IMPOSSIBLE : Guardian CRITICAL `EXECUTION_NOT_READY` + WARNING `EXTRA_SOURCE_UNHEALTHY`, source Guardian `ok`; aucun nouvel `SOURCE_UNAVAILABLE`. Bilan périodique déjà publié à 21:24, pas de répétition.
+- Railway : aucun nouvel échec de déploiement sur les quatre projets. Gmail : aucun nouveau mail Railway ciblé de coût, hard stop, ressources ou failure; plafond courant non vérifié.
+- Telegram : aucun `message_id` natif distinct ne prouve la livraison des alertes RECENT40/R20; ne pas déclarer résolu malgré `telegram=VERIFIED` dans Health.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
+- Notification : aucune nouvelle alerte publiée; pas de nouvelle panne critique et incidents connus inchangés.
