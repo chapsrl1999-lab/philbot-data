@@ -3372,3 +3372,17 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail Railway : aucun nouveau courriel de limite, hard-stop, ressource ou failure dans les deux dernières heures. Limite monétaire courante non exposée; aucun cap actuel déduit des anciens mails.
 - Hyperliquid Statuspage officielle (https://hyperliquid.statuspage.io/) : tous les systèmes opérationnels, aucun incident le 23 novembre et aucune maintenance planifiée dans les 24 h.
 - **Décision :** aucun nouvel incident critique ni changement significatif justifiant une notification. La sortie SWING est réconciliée et livrée; les incidents persistants restent actifs sans répétition horaire.
+
+
+## Garde indépendante — 2026-11-23 19:45Z (14:45 EST, America/Toronto)
+
+- Contrôle rapproché strictement en lecture seule depuis 19:20Z : Railway, diagnostics Health/Guardian, attributs OUTSIDER, trafic RECENT40, Gmail et Statuspage Hyperliquid. Aucun ordre, stop, replay, réarmement, déploiement ni changement de configuration.
+- Aucun nouveau déploiement ni état terminal dégradé. Services prioritaires toujours SUCCESS; patch DP60 historique toujours STAGED et non appliqué.
+- Health à 19:43:42Z : `OK sources=7/7 positions=47/47 contractConformity=17/17 nativeSL=4/4 noNativeSL=0 critical=0 warning=0 telegram=VERIFIED`. Répartition inchangée : RAFALE3 4/4 protégées nativement; TRIPLE 30 sans stop natif par contrat; SWING 13 selon contrat; autres sources 0 position.
+- RAFALE3 : clôture 30m de 19:30Z complète 17/17, signaux 0, erreurs 0, mais 5 états internes ouverts contre 4 positions natives lues par Health. Divergence connue inchangée, aucune cinquième exposition native déduite.
+- Guardian conserve R20 `EXECUTION_NOT_READY` CRITICAL et `EXTRA_SOURCE_UNHEALTHY`; **BOT BLOQUÉ / TRADING IMPOSSIBLE** connu. OUTSIDER a eu un `MARKET_DATA_DELAY` à 19:31Z, résolu à 19:32Z; son cycle structuré de 19:30Z est `synchronized=true`, `processing=true`, `referenceQualified=true`, `admissionQualified=true`, `lastError=null`, `realOrdersEnabled=false`.
+- HWR reste `READY/ordersPossible=true/entriesArmed=true` avec équité quasi nulle et 0 position; `hwrReady=false` reflète la pause attendue côté Health mais le runtime reste actif-looking. Bande/Cycle scanne jusqu'à 19:40Z avec `real.equity=0`, 0 position, aucune erreur. Défaut fail-closed connu, sans aggravation nouvelle.
+- RECENT40 inchangé : 178 `POST /candles` 4xx et 0×2xx sur 1 h; 4 282 4xx et 0×2xx sur 24 h; checkpoint figé et `lastBatchComplete=false`. **BOT BLOQUÉ / TRADING IMPOSSIBLE.** Aucun nouveau lot CONTINUATION attendu avant 20:00Z; dernier lot 19:00Z = 75×202, 78/78 NON VÉRIFIÉ.
+- Aucun nouveau `TG-ERREUR` ni échec de livraison observé; les preuves `message_id=20833/20834` du passage précédent restent limitées à ces messages précis.
+- Gmail Railway : aucun nouveau courriel de limite, hard-stop, ressource ou failure sur la dernière heure. Hyperliquid Statuspage : tous les systèmes opérationnels, aucun incident le 23 novembre et aucune maintenance planifiée dans les 24 h.
+- **Décision :** aucune nouvelle panne ni évolution significative; aucune notification répétitive.
