@@ -3278,3 +3278,16 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Railway : services prioritaires SUCCESS, aucun nouveau FAILED/CRASHED; patch DP60 staged non live. Phoenix historiques absents de l’inventaire zesty courant, aucun redéploiement fictif observé; #65 ouvert.
 - Gmail : aucun nouveau mail Railway ciblé de hard limit, arrêt, ressources ou failure; plafond courant non vérifié. Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident du 23 novembre ni maintenance future visible dans les 24 h.
 - Notification : alerte urgente publiée pour les quatre pertes de source R20 et l’absence de preuve native de livraison Telegram.
+
+
+## PHILBOT_GUARD_2026-11-23_0849_EST — contrôle après alerte, aucune nouvelle notification
+
+- Horodatage : 2026-11-23 08:49:02 EST (America/Toronto). Lecture seule stricte; aucune mutation de bot, Railway, ordre, replay, stop, protection, risque, stratégie ou plafond.
+- R20 : aucune nouvelle transition `SOURCE_UNAVAILABLE` après celle déjà alertée à 08:14:56–08:15:56 EST. De 08:18 à 08:47, 59 GET `/monitor` et 29 GET `/guardian`, tous 200. Guardian courant source=`ok`, mais CRITICAL `EXECUTION_NOT_READY` + WARNING `EXTRA_SOURCE_UNHEALTHY` persistent : **BOT BLOQUÉ / TRADING IMPOSSIBLE**. Contrôle retraits toujours 401 à 08:19:57 et 08:35:01; défaut déjà signalé.
+- Health à 08:46:57 EST : `OK`, 7/7 sources internes, 62/62 positions suivies, conformité 30/30, **13/13 SL natifs requis présents**, 0 sans SL requis, 0 échec/stall; R20 reste hors de ce total. Aucun nouveau défaut d’exposition.
+- HWR : clôtures 08:30 et 08:45 revenues `PREPARED_RUNTIME ok=true` en environ 59 s et 52 s, puis collecteur READY/ordersPossible=true, halt=null; 0 position. Les WARNING de frontière ont disparu au poll suivant; aucun blocage >2 min ni panne >5 min.
+- OUTSIDER : 08:30 et 08:45 synchronisés, `admissionQualified=true`, `lastError=null`; 1 position/1 protection. RAFALE3 : 08:30 complet 17/17, erreurs=0.
+- CONTINUATION : aucun nouveau lot horaire dans cette courte fenêtre; contrat 78/78 reste NON VÉRIFIÉ après le 75/78 de 08:00 déjà consigné.
+- RECENT40 : sur 08:18–08:47, 89 POST `/candles`, tous 409, 0 succès; fenêtre glissante 24 h segmentée sans troncature : 4 282 rejets 409 et 0 succès 2xx. **BOT BLOQUÉ / TRADING IMPOSSIBLE**, inchangé; rejets ≠ trades manqués.
+- Railway : déploiements prioritaires inchangés, tous SUCCESS; patch DP60 staged non live. Gmail : aucun nouveau mail Railway ciblé. Hyperliquid officiel : All Systems Operational, aucun incident du 23 novembre ni maintenance future visible dans les 24 h.
+- Telegram : aucune nouvelle alerte à livrer; absence de `message_id` pour la salve R20 précédente reste non résolue. Notification : aucune publication supplémentaire, l’alerte de 08:22 couvre le changement.
