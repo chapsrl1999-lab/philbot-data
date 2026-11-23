@@ -3126,3 +3126,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau courriel Railway ciblé de coût, hard stop, ressources ou failure. Plafond courant toujours non vérifié; aucun arrêt actuel déduit de l'ancien hard cap.
 - Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
 - Telegram : aucun `message_id` natif distinct ne prouve la livraison d'une alerte CONTINUATION; cette garde ChatGPT indépendante publie donc l'alerte. Le statut Health `telegram=VERIFIED` ne certifie pas cette notification particulière.
+
+
+## Garde indépendante — ALERTE surveillance R20 intermittente — 23 novembre 2026, 00:46 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-23_0046_EST -->
+
+- Contrôle strictement en lecture seule pour les bots et Railway. Aucun ordre, replay, déploiement, variable, stop, protection, risque, stratégie ou plafond modifié.
+- **NOUVELLE AGGRAVATION DE LA SURVEILLANCE R20/HYPERLIQUID : BOT BLOQUÉ / TRADING IMPOSSIBLE demeure actif et la source de santé est devenue intermittente.** Après l'épisode déjà consigné de 00:11:51–00:12:51 EST, Guardian a confirmé deux nouveaux `SOURCE_UNAVAILABLE` : 00:27:46–00:28:46 et 00:33:49–00:34:49 EST. À 00:33:49, le même poll journalise `[GUARDIAN][WITHDRAWAL] PhilBot Control HTTP 401`.
+- Guardian revient ensuite à `source=ok`, mais maintient CRITICAL `EXECUTION_NOT_READY` et WARNING `EXTRA_SOURCE_UNHEALTHY`. Les endpoints Railway R20 ont répondu dans la fenêtre : 51 GET `/monitor` HTTP 200 et 25 GET `/guardian` HTTP 200. Les réponses HTTP 200 ne prouvent ni `liveReady` ni les protections natives individuelles.
+- Risque : trous d'observation répétés de la source R20 et du contrôle des retraits pendant un blocage métier déjà actif; impossibilité de garantir une détection continue des changements de positions/stops durant ces minutes. Ce n'est pas une preuve de positions exposées, d'ordres perdus ni de panne Hyperliquid générale.
+- Action immédiate exploitable : en maintenance autorisée, corréler les trois fenêtres avec les réponses/authentifications de la source R20 et le 401 PhilBot Control, vérifier directement compte/positions/stops natifs, puis exiger plusieurs polls continus sans `SOURCE_UNAVAILABLE` avant toute reprise. Ne pas lever le verrou ni modifier les ordres depuis cette garde.
+- Health à 00:44:49 EST : 7/7 sources, 67/67 positions suivies, conformité 34/34, **16/16 SL natifs requis présents**, 0 sans SL natif requis, 0 échec d'exécution, 0 stall et telegram=VERIFIED. Ne pas écrire « 67 positions avec SL ».
+- HWR/BloFin : frontière 00:30 revenue `PREPARED_RUNTIME ok=true` à 00:30:55 EST, soit ≈55 s, sous la borne de 2 min; Guardian a retiré les WARNING `MARKET_DATA_DELAY` HWR/OUTSIDER au poll suivant. OUTSIDER 00:30 synchronisé, admissionQualified=true, lastError=null. RAFALE3 00:30 : 17/17, erreurs=0.
+- CONTINUATION : trois POST HTTP 202 supplémentaires à 00:30:09–00:30:14 EST; ils ne constituent pas un lot horaire 78/78 et ne résolvent pas la régression signalée à 00:21. Aucun 4xx/5xx/499 observé.
+- RECENT40 reste inchangé, BOT BLOQUÉ / TRADING IMPOSSIBLE : 175/175 POST `/candles` en 4xx sur 1 h et 4 261/4 261 sur 24 h, 0 réponse 2xx; `lastBatchComplete=false` et dernier traitement 2026-11-20T10:00:00Z. Les refus ne sont pas des trades manqués attestés.
+- Railway : aucun nouvel échec de déploiement sur les quatre projets. Gmail : aucun nouveau courriel Railway ciblé de hard limit, arrêt, ressources ou failure.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
+- Telegram : aucune ligne de notification ni `message_id` natif ne prouve la livraison des alarmes `SOURCE_UNAVAILABLE`; cette garde ChatGPT indépendante publie l'alerte.
