@@ -3075,3 +3075,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Gmail : aucun nouveau mail Railway ciblé de coût, hard stop, ressources ou failure. Le plafond courant reste non vérifié; aucun hard stop actuel déduit de l’ancien avis du 28 octobre.
 - Hyperliquid officiel : All Systems Operational, L1 et API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h. Contrôle post-maintenance non requis sur cette fenêtre.
 - Notification : bilan de blocage périodique publié, environ six heures après celui de 15:21 EST; aucune alerte identique supplémentaire avant preuve nouvelle ou prochaine échéance.
+
+
+## Garde indépendante — contrôle sans nouvelle alerte — 22 novembre 2026, 21:52 America/Toronto
+
+<!-- PHILBOT_GUARD_2026-11-22_2152_EST -->
+
+- Lecture seule confirmée; aucune mutation de bot, Railway, ordre, replay, stop, protection, risque, stratégie ou plafond.
+- Depuis le bilan de 21:24, HWR/BloFin a validé les frontières 21:30 et 21:45 : `INCOMPLETE_SIGNALS/CURRENT_HISTORY_GAP` transitoire, puis `PREPARED_RUNTIME ok=true` à 21:30:59 et 21:45:58 EST; reprise en environ 54 s, `READY`, `ordersPossible=true`, halt/error nuls, 0 position. Guardian n’a émis que `MARKET_DATA_DELAY` transitoire et l’a retiré au cycle suivant; aucune récidive CRITICAL.
+- Health à 21:50:46 EST : 7/7 sources, 68/68 positions suivies, conformité 35/35, **17/17 SL natifs requis présents**, 0 sans SL natif requis, 0 échec d’exécution, 0 stall, telegram=VERIFIED. Ne pas écrire « 68 positions avec SL ».
+- RECENT40 reste ONLINE/SUCCESS mais BOT BLOQUÉ / TRADING IMPOSSIBLE, sans changement significatif depuis le bilan publié : POST `/candles` 178/178 en 409 sur 1 h et 4 270/4 270 sur 24 h, `lastBatchComplete=false`, dernier traitement 2026-11-20T10:00:00Z. Les 409 sont des webhooks rejetés, pas des trades manqués.
+- R20 reste ONLINE/SUCCESS mais BOT BLOQUÉ / TRADING IMPOSSIBLE : Guardian CRITICAL `EXECUTION_NOT_READY` + WARNING `EXTRA_SOURCE_UNHEALTHY`, source Guardian `ok`; aucun nouvel `SOURCE_UNAVAILABLE` observé. Le bilan périodique a déjà été publié à 21:24; ne pas répéter.
+- CONTINUATION : aucun nouveau lot horaire dans cette fenêtre; 78/78 reste NON VÉRIFIÉ. OUTSIDER a traité 21:30 et 21:45 synchronisé, `lastError=null`; RAFALE3 et autres sources Health restent lisibles.
+- Railway : aucun nouvel échec de déploiement sur les quatre projets. Gmail : aucun nouveau mail Railway ciblé de coût, hard stop, ressources ou failure. Plafond courant toujours non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident le 23 novembre et aucune maintenance future visible dans les 24 h.
+- Notification : aucune nouvelle alerte publiée; incidents connus inchangés et dernier bilan âgé de moins d’une heure.
