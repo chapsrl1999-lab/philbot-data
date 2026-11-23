@@ -3216,3 +3216,20 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - Action immédiate recommandée, sans mutation : auditer la séquence de fermeture OUTSIDER GALA et l’atomicité annulation du SL/clôture native, corréler les timestamps d’ordres/fills/stops du compte et conserver le fail-closed si la position demeure ouverte; ne modifier aucun ordre depuis cette garde.
 - Notification : récidive critique OUTSIDER signalée par cette garde, distincte du bilan périodique de 03:54 EST.
 
+## PHILBOT_GUARD_2026-11-23_0534_EST — nouveau lot CONTINUATION 75/78, lecture seule
+
+- Horodatage du contrôle : 2026-11-23 05:33:58 EST (America/Toronto). Contrôle externe strictement en lecture seule des bots, ordres, risques, protections et déploiements.
+- Nouvel écart CONTINUATION : le lot horaire a produit exactement 75 POST `/continuation/webhook/bfd3...` HTTP 202 entre 05:00:03.286 et 05:00:39.957 EST. Aucun 4xx, 5xx ni 499 n’est présent. À +33 minutes, aucun contexte tardif supplémentaire n’est observé. Contrat attendu : 78/78; lot précédent observé : 76. Les trois identifiants de contextes manquants ne sont pas exposés dans les logs Railway disponibles et restent NON VÉRIFIÉS.
+- Conséquence : batch CONTINUATION incomplet, disponibilité métier non certifiée pour les admissions dépendantes de ces contextes. Aucun rejet HTTP n’explique l’écart et aucun replay n’a été effectué.
+- OUTSIDER : aucune récidive de `SL_MISSING` après l’événement de 04:30:55 EST. Cycles 05:00, 05:15 et 05:30 synchronisés, `admissionQualified=true`, `lastError=null`; Health courant 1 position/1 protection.
+- Health à 05:31:58.717 EST : `OK`, 7/7 sources, 64/64 positions, conformité 31/31, 13/13 SL natifs requis présents, `noNativeSL=0`, 0 échec d’exécution, 0 pipeline stall, 0 critical et 0 warning. Les avertissements HWR de frontière à 05:00, 05:15 et 05:30 ont disparu au contrôle suivant.
+- HWR : `PREPARED_RUNTIME` réussi à 05:00:52, 05:15:54 et 05:30:54 EST; Health est revenu OK à 05:31:58. Le dernier collecteur antérieur au succès de 05:30 affichait temporairement `INCOMPLETE_SIGNALS`; aucun halt ni panne exécuteur >5 min. Plusieurs `MARKET_STREAM_PARTIAL_SILENCE` isolés ont concerné différentes paires, `consecutiveFailures=0`, sans reconnexion globale.
+- RAFALE3 : scans 05:00 EST 30/30 (1 h) et 17/17 (30 min), puis 05:30 EST 17/17, erreurs 0; compteur applicatif `ouverts=10` contre 7 positions natives Health, toujours non résolu sans preuve de positions fantômes.
+- B&C Blofin : flux direct, `missing=0`, erreur réelle nulle; 5 positions Health/5 protections. DP60 : 112 actifs chargés, PAXG/JCT/BTW/GTC absents et IRYS ouverture bloquée, aucune entrée.
+- R20 : 84 GET `/monitor` 200 et 42 GET `/guardian` 200 depuis 04:50 EST, mais Guardian maintient `CRITICAL EXECUTION_NOT_READY` et `EXTRA_SOURCE_UNHEALTHY`; 401 Control à 05:03 et 05:18 EST. **BOT BLOQUÉ / TRADING IMPOSSIBLE.**
+- RECENT40 : heure exacte 04:32–05:32 EST, 0 POST `/candles` 2xx, 188 rejets 409, 0 5xx; sur 24 h segmentées sans troncature, 0 succès, 4 281 rejets 409, 0 5xx. `lastBatchComplete=false`, traitement bloqué au 2026-11-20 10:00Z. **BOT BLOQUÉ / TRADING IMPOSSIBLE.** Les rejets ne sont pas convertis en trades manqués.
+- Railway : aucun nouveau déploiement prioritaire; derniers déploiements inchangés et SUCCESS. Patch DP60 du 5 novembre toujours staged, non live. Gmail : aucun nouveau courriel Railway ciblé de hard limit, arrêt, ressource ou failure; plafond courant non vérifié.
+- Hyperliquid officiel : All Systems Operational, L1/API opérationnels, aucun incident du 23 novembre et aucune maintenance future visible dans les 24 h.
+- Action immédiate recommandée, sans mutation : comparer la liste native des 78 identifiants attendus au lot 75 accepté, nommer précisément les trois absents, vérifier catalogue/source et disponibilité des données, puis valider un lot ultérieur 78/78; ne pas rejouer de signal périmé et ne pas lever de verrou.
+- Notification : nouvelle dégradation CONTINUATION 75/78 signalée par cette garde. Aucune preuve de `message_id` Telegram natif n’est attribuée à cette alerte ChatGPT.
+
