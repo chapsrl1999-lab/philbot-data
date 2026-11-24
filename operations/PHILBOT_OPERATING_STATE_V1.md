@@ -3731,3 +3731,17 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - **Référentiel** : #63, #64 et #65 ouvertes; #77 fermée.
 - **Décision / notification** : **alerte urgente ChatGPT à émettre** pour le nouveau lot CONTINUATION incomplet 74×202 + 1×499 sur 78 attendus. Les protections natives agrégées restent conformes; aucune exposition sans stop n’est confirmée.
 
+## Garde indépendante — 2026-11-24 14:47:12 EST (19:47:12Z)
+
+- **Mode** : contrôle externe strictement en lecture seule; aucune mutation de service, ordre, protection ou état.
+- **CONTINUATION — suivi de l’alerte 14:22** : le lot de 14:00 EST reste exactement à **75 POST observés : 74×202 + 1×499**, avec zéro requête tardive après 19:00:32.705Z. Aucune preuve 78/78, aucune identification des contextes absents et aucune preuve que le 499 a été persisté. Incident actif, déjà notifié; **pas de nouvelle alerte identique** à ce passage. Aucun replay autorisé.
+- **Health / protections** : à 19:46:22.373Z, `sources=6/6`, `positions=44/44`, conformité `19/19`, SL natifs requis `6/6`, `noNativeSL=0`, `critical=0`, `warning=0`. OUTSIDER 2/2 protégé, RAFALE3 4/4; aucune exposition sans protection ni nouvelle anomalie d’exécution confirmée.
+- **OUTSIDER** : cycles 19:30Z et 19:45Z synchronisés, `admissionQualified=true`, `lastError=null`. Les warnings `MARKET_DATA_DELAY` à 14:30 et 14:45 EST ont disparu au contrôle minute suivant; aucune escalade `EXECUTION_NOT_READY`.
+- **RAFALE3 / B&C** : scan 30 min 17/17 à 19:30Z, 0 erreur; signal STRK ignoré car notional trop petit, aucune nouvelle position. B&C plat et sans erreur jusqu’à 19:45Z.
+- **R20** : Guardian maintient l’incident connu `EXECUTION_NOT_READY` avec `source=ok`; **BOT BLOQUÉ / TRADING IMPOSSIBLE**. 72 requêtes HTTP depuis le dernier passage, toutes 200; positions/stops natifs non vérifiés.
+- **RECENT40** : inchangé, 178×4xx/0×2xx sur 1 h et 4 287×4xx/0×2xx sur 24 h; checkpoint toujours figé, incident #63/#64 actif.
+- **DP60** : 60 lectures `/snapshot` 2xx sur 1 h; `reduceOnly` toujours non vérifiable.
+- **Railway / Gmail / Hyperliquid** : aucun nouveau déploiement échoué ni crash; seul `philbot-personal-snapshots` reste hors ligne. Aucun nouveau courriel Railway après l’avis 50,05 USD. Hyperliquid L1/API opérationnels, aucun incident ou maintenance affiché dans les 24 h.
+- **Telegram** : aucun `message_id` natif; livraison indépendante toujours non prouvée, sans nouveau changement.
+- **Décision** : incident CONTINUATION toujours actif mais déjà alerté, aucune aggravation ou nouvelle panne distincte; aucune nouvelle notification urgente.
+
