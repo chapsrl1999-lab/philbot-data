@@ -3999,3 +3999,18 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - **Hyperliquid officiel** : Statuspage affiche « All Systems Operational », L1 et API opérationnels, aucun incident le 25 novembre et aucune maintenance future affichée.
 - **Telegram** : Health affiche `telegram=VERIFIED`; aucun nouveau `message_id` natif n'est exposé. Aucune nouvelle défaillance générale confirmée.
 - **Décision** : aucun nouveau défaut significatif depuis le bilan de 02:22. CONTINUATION reste incomplet, R20 et RECENT40 restent des pannes actives connues, sans aggravation nécessitant une alerte horaire supplémentaire. **Aucune nouvelle notification envoyée.**
+
+
+## Garde indépendante — 25 novembre 2026, 06:35 HNE (contrôle court, lecture seule)
+
+- Horodatage de preuve : 2026-11-25 06:35:42 America/Toronto (11:35:42Z). Fenêtre Railway observée : 11:27:11Z–11:36Z.
+- Déploiements : aucun nouveau déploiement depuis le contrôle de 06:27 HNE dans les quatre projets; aucun état FAILED/CRASHED nouvellement observé.
+- Health (06:34:46 HNE) : `OK sources=5/5 positions=42/42 contractConformity=17/17 nativeSL=4/4 noNativeSL=0 executionFailures=0 pipelineStalls=0 critical=0 warning=0 registry=0/31 retired=22 telegram=VERIFIED`. Répartition inchangée : B&C 0 position, RAFALE3 4/4 protégées, Triple25 1 protection conforme à sa politique, Swing 13/13 à sortie dynamique, RECENT40 0 position.
+- RECENT40 : panne active connue inchangée. `lastBatchComplete=false`, 63/63 contextes déclarés, aucun contexte manquant mais checkpoint `lastProcessedAt=1795168800000` toujours figé. Mesure HTTP exacte : 1 h = 179 POST `/candles` en 409 et 0 accepté; 24 h = 4 282 en 409 et 0 accepté. Aucun nombre de trades manqués n'est déduit.
+- R20 : panne active connue inchangée — **BOT BLOQUÉ / TRADING IMPOSSIBLE** (`EXECUTION_NOT_READY`). Dans la fenêtre courte : 16 GET `/monitor` 200 et 8 GET `/guardian` 200; ces HTTP 200 ne prouvent ni l'admission ni les positions/stops natifs. Guardian a encore vu le contrôle withdrawal en 401 à 06:34:46 HNE. Dernier statut complet à 06:22:41 HNE : CRITICAL, R20 `EXECUTION_NOT_READY` + `EXTRA_SOURCE_UNHEALTHY`.
+- CONTINUATION : aucun nouveau lot depuis 06:00 HNE. Le lot de 06:00 reste 75 réponses 202, 0 réponse 499/5xx et 75 contextes observés sur 78 attendus; contrat strict 78/78 **NON VÉRIFIÉ**. Aucun replay effectué.
+- Cycles métier : RAFALE3 a traité la clôture 06:30 HNE sur 17/17 contextes, 0 signal, 5 ouverts, 0 erreur; B&C a exécuté les cycles 06:30 et 06:35 avec `regimeReady=true`, `missing=0`, erreur réelle nulle. Swing répond sur Health/Control/History mais ses cycles décisionnels explicites postdéploiement restent non vérifiés. DP60 répond sur snapshot; `reduceOnly` reste non confirmé.
+- Gmail Railway : aucun nouveau courriel d'arrêt, hard limit, ressource ou failure. Derniers éléments inchangés : build Swing échoué puis rétabli le 24 novembre, crash OUTSIDER connu/parké, avis d'usage à 50,05 USD le 23 novembre; hard cap actuel non vérifié.
+- Hyperliquid officiel : « All Systems Operational », L1/API opérationnels, aucun incident du 25 novembre ni maintenance future affichée au moment du contrôle.
+- Telegram : Health indique `VERIFIED` et un POST de suivi a répondu 200; aucun `message_id` Telegram natif n'a été relevé dans cette fenêtre. Aucune nouvelle défaillance générale de livraison n'est confirmée.
+- Décision : aucune nouvelle panne ni aggravation significative par rapport au bilan de 02:22 HNE; pas d'alerte répétitive. Prochain bilan périodique des pannes actives attendu vers 08:22 HNE sauf aggravation préalable. Aucune mutation des bots, aucun ordre, aucun replay, aucun changement de risque.
