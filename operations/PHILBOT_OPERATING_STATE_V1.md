@@ -3899,3 +3899,21 @@ Contrôle hors Railway effectué le 16 novembre 2026 de 14:52 à 14:58 America/T
 - **Telegram** : Health affiche `telegram=VERIFIED`, mais aucun nouveau `message_id` natif n’est exposé. Aucune nouvelle défaillance générale de livraison confirmée.
 - **Référentiel** : #63, #64 et #65 ouvertes; #77 fermée, sans changement de qualification.
 - **Décision** : aucune nouvelle panne critique, coupure généralisée, exposition sans protection confirmée, hard limit ou nouveau défaut Telegram. CONTINUATION, RECENT40 et R20 restent actifs mais connus et sans changement significatif. **Aucune nouvelle alerte urgente envoyée.**
+
+
+## Garde indépendante — 2026-11-25 00 h 55 min 47 s HNE (2026-11-25T05:55:47.122Z)
+
+- **Mode** : contrôle externe ChatGPT strictement en lecture seule. Aucun ordre, stop, variable, service, déploiement, risque, replay, verrou ni plafond modifié.
+- **Railway** : aucun nouveau déploiement prioritaire FAILED/CRASHED depuis 00:13 HNE. Les derniers déploiements et états des services prioritaires sont inchangés; le patch staged ancien du reader DP60 reste non appliqué.
+- **Health / protections** : dernier snapshot 00:54:32 HNE : `OK sources=5/5 positions=42/42 contractConformity=17/17 nativeSL=4/4 noNativeSL=0 executionFailures=0 pipelineStalls=0 critical=0 warning=0 registry=0/31 retired=22 telegram=VERIFIED`. Répartition inchangée : RAFALE3 4 positions natives/4 protégées, TRIPLE 25 suivies avec 1 protection selon politique, SWING 13 selon contrat dynamique, B&C et RECENT40 0. Ne pas écrire « 42 positions avec SL natif ».
+- **RAFALE3** : clôture 00:30 HNE traitée à 17/17, 0 signal, 0 erreur. Le `429` isolé de 21:45 reste récupéré et non répété; divergence connue `ouverts=5` interne contre 4 positions natives protégées, inchangée.
+- **CONTINUATION** : aucun nouveau lot exigible avant 01:00 HNE. Le lot 00:00 reste exactement à **75×202 sur 78 attendus**, sans arrivée tardive, 499 ni 5xx. Incident actif connu, aucune nouvelle aggravation et aucun replay.
+- **SWING/BloFin** : 42 lectures Health et 3 Control ont répondu 200 depuis 00:13; Health reste 13/13. Aucun journal explicite de décision horaire n’est exposé : validation métier post-code toujours **NON VÉRIFIÉE**.
+- **R20** : Guardian à 00:53:34 HNE maintient `EXECUTION_NOT_READY` CRITICAL et `EXTRA_SOURCE_UNHEALTHY` WARNING avec `source=ok`. **BOT BLOQUÉ / TRADING IMPOSSIBLE.** Sur l’heure, `/monitor` 120×200 et `/guardian` 60×200; positions et stops natifs restent non vérifiés. Le sous-contrôle retrait reste HTTP401.
+- **RECENT40** : `POST /candles` = **178×409 / 0×2xx sur 1 h** et **4 288×409 / 0×2xx sur 24 h**. Checkpoint toujours `lastBatchComplete=false`, 63/63 reçus, `missingContexts=[]`, `lastProcessedAt=1795168800000`. Panne active connue #63/#64, sans changement; les 409 sont des rejets, pas des webhooks acceptés ni des trades manqués.
+- **DP60** : 60 lectures `/snapshot` 200 sur l’heure; preuve native `reduceOnly` toujours non confirmée.
+- **Gmail / coûts** : aucun nouveau courriel Railway. Dernier usage confirmé 50,05 USD au 23 novembre 21:16:11 HNE; aucun hard stop ni warning ressources nouveau. Hard cap courant non vérifié.
+- **Hyperliquid officiel** : Statuspage affiche tous les systèmes, L1 et API opérationnels; aucun incident le 25 novembre et aucune maintenance future affichée dans les 24 h.
+- **Telegram** : Health affiche `telegram=VERIFIED`, mais aucun nouveau `message_id` natif n’est exposé. Aucune nouvelle défaillance générale de livraison confirmée.
+- **Référentiel** : #63, #64 et #65 ouvertes; #77 fermée, sans changement de qualification.
+- **Décision** : aucune nouvelle panne critique, coupure généralisée, exposition sans protection confirmée, hard limit ou nouveau défaut Telegram. CONTINUATION, RECENT40 et R20 restent actifs mais connus et inchangés. **Aucune nouvelle alerte urgente envoyée.**
